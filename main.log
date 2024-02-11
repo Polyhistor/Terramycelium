@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Homebrew) (preloaded format=pdflatex 2023.6.22)  9 FEB 2024 22:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Homebrew) (preloaded format=pdflatex 2023.6.22)  11 FEB 2024 18:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -96,7 +96,8 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)) (./main.aux)
+))
+No file main.aux.
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 57.
@@ -113,7 +114,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 57.
 LaTeX Font Info:    ... okay on input line 57.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 57.
 LaTeX Font Info:    ... okay on input line 57.
- (/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+(/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count268
 \scratchdimen=\dimen148
@@ -141,7 +142,17 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 149.
  (/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (./main.bbl
+)
+
+Package natbib Warning: Citation `AtaeiACIS' on page 1 undefined on input line 155.
+
+
+Package natbib Warning: Citation `AtaeiBigDataEnvirons' on page 1 undefined on input line 155.
+
+
+Package natbib Warning: Citation `ataei2023towards' on page 1 undefined on input line 157.
+
+
 Overfull \hbox (2.61108pt too wide) has occurred while \output is active
 [] 
  []
@@ -149,17 +160,39 @@ Overfull \hbox (2.61108pt too wide) has occurred while \output is active
 [1
 
 
-]) [2] (./main.aux) ) 
+]
+
+Package natbib Warning: Citation `DataBricksSurvey' on page 2 undefined on input line 159.
+
+/Users/pataei/Desktop/Projects/Terramycelium/main.tex:159: Misplaced alignment tab character &.
+l.159 ...rated by research conducted by McKinsey &
+                                                   Company (analytics2016age...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+(./main.bbl)
+
+Package natbib Warning: There were undefined citations.
+
+[2] (./main.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 3015 strings out of 476025
- 46015 string characters out of 5779036
+ 3003 strings out of 476025
+ 45842 string characters out of 5779036
  1855388 words of memory out of 5000000
- 23455 multiletter control sequences out of 15000+600000
+ 23445 multiletter control sequences out of 15000+600000
  520616 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,6n,76p,656b,270s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,6n,76p,1038b,270s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (3 pages, 100868 bytes).
+Output written on main.pdf (3 pages, 103252 bytes).
 PDF statistics:
  55 PDF objects out of 1000 (max. 8388607)
  33 compressed objects within 1 object stream

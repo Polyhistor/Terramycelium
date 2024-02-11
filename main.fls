@@ -174,9 +174,6 @@ INPUT /opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/amsfont
 INPUT /opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 INPUT /opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 INPUT /opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
-INPUT ./main.aux
-INPUT main.aux
-INPUT main.aux
 OUTPUT main.aux
 INPUT /opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
