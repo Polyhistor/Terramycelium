@@ -1,0 +1,26 @@
+\begin{thebibliography}{1}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{#2} \def\path#1{#1}\fi
+
+\bibitem{AtaeiACIS}
+P.~Ataei, A.~Litchfield, Big data reference architectures: A systematic literature review, in: 2020 31st Australasian Conference on Information Systems (ACIS), IEEE, 2020, pp. 1--11.
+\newblock \href {https://doi.org/10.5130/acis2020.bf} {\path{doi:10.5130/acis2020.bf}}.
+
+\bibitem{AtaeiBigDataEnvirons}
+B.~B. Rad, P.~Ataei, The big data ecosystem and its environs, International Journal of Computer Science and Network Security (IJCSNS) 17~(3) (2017) 38.
+
+\bibitem{ataei2023towards}
+P.~Ataei, A.~Litchfield, Towards a domain-driven distributed reference architecture for big data systems, in: AMCIS 2023, 2023.
+
+\bibitem{DataBricksSurvey}
+M.~technology review insights in partnership~with Databricks, \href{https://databricks.com/p/whitepaper/mit-technology-review-insights-report}{Building a high-performance data organization} (2021).
+\newline\urlprefix\url{https://databricks.com/p/whitepaper/mit-technology-review-insights-report}
+
+\bibitem{Cloutier2010}
+R.~Cloutier, G.~Muller, D.~Verma, R.~Nilchiani, E.~Hole, M.~Bone, The concept of reference architectures, Systems Engineering 13~(1) (2010) 14--27.
+\newblock \href {https://doi.org/10.2514/6.2017-5118} {\path{doi:10.2514/6.2017-5118}}.
+
+\end{thebibliography}

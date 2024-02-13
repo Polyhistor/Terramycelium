@@ -83,7 +83,7 @@
 %%             country={}}
 %% \fntext[label3]{}
 
-\title{Title of Your Manuscript}
+\title{Terramycelium: A Domain-driven Reference Architecture for Big Data Systems}
 
 %% use optional labels to link authors explicitly to addresses:
 %% \author[label1,label2]{}
@@ -156,7 +156,14 @@ The advent of the internet and widespread use of digital devices have sparked a 
 
 Data needs have dramatically evolved, transitioning from basic business intelligence (BI) functions, like generating reports for risk management and compliance, to incorporating machine learning across various organisational facets \cite{ataei2023towards}. These range from product design with automated assistants to personalised customer service and optimised operations.  Also, as machine learning becomes more popular, application development needs to change from rule-based, deterministic models to more flexible, probabilistic models that can handle a wider range of outcomes and need to be improved all the time with access to the newest data. This evolution underscores the need to reevaluate and simplify our data management strategies to address the growing and diverse expectations placed on data.
 
-Currently, the success rate of BD projects is low. Recent surveys have identified the fact that current approaches to big data do not seem to be effectively addressing these expectations. According to a survey conducted by \citeauthor{DataBricksSurvey}, only 13\% of organisations are highly successful in their data strategy. Additionally, a report by NewVantage Partners reveals that only 24\% of organisations have successfully converted to being data-driven, and a measly 30\% have a well-established big data strategy. These observations, additionally corroborated by research conducted by McKinsey & Company (analytics2016age) and Gartner (Nash), emphasise the difficulties of successfully using big data in the industry. These difficulties include the lack of a clear understanding of how to extract value from data, the challenge of integrating data from multiple sources, data architecture, and the need for skilled data analysts and scientists. 
+Currently, the success rate of BD projects is low. Recent surveys have identified the fact that current approaches to big data do not seem to be effectively addressing these expectations. According to a survey conducted by \cite{DataBricksSurvey}, only 13\% of organisations are highly successful in their data strategy. Additionally, a report by NewVantage Partners reveals that only 24\% of organisations have successfully converted to being data-driven, and a measly 30\% have a well-established big data strategy. These observations, additionally corroborated by research conducted by McKinsey \& Company (analytics2016age) and Gartner (Nash), emphasise the difficulties of successfully using big data in the industry. These difficulties include the lack of a clear understanding of how to extract value from data, the challenge of integrating data from multiple sources, data architecture, and the need for skilled data analysts and scientists. 
+
+Without a well-established big data strategy, companies may struggle to navigate these challenges and fully leverage the potential of their data. One effective artefact to overcome some of these challenges is Reference Architectures (RAs) \cite{Cloutier2010}. RAs extract the essence of the practice as a series of patterns and architectural constructs and manifest it through high-level semantics. This allows stakeholders to refrain from reinventing the wheel and instead focus on utilising existing knowledge and best practices to harness the full potential of their data. While there are various BD RAs available to help practitioners design their BD systems, these RAs are overly cetnralised, lack attention to cross-cutting concerns such as privacy, security, and metadata, and may not effectively handle the proliferation of data sources and consumers.
+
+To this end, this study presents TerrMycelium, a distributed RA designed specifically for BD systems with a focus on domain-driven design. TerrMycelium seeks to surpass the constraints of current RAs by utilising domain-driven and distributed approaches derived from contemporary software engineering. This method aims to improve the ability of BD systems to scale, be maintained, and evolve, surpassing the constraints of traditional monolithic data architectures.
+
+The paper is structured as follows: Section~\ref{sec:background} provides an overview of the foundational concepts and technologies pertinent to BD reference architecture, aiming to forge a conceptual framework that is required for this paper. An overview of the existing research on the topic is presented in Section~\ref{sec:related_work}. The significance of reference architectures in the context of big data is explored in Section~\ref{sec:why_reference_architectures}. Section~\ref{sec:software_and_system_requirements} details the software and system requirements necessary for implementing the proposed architecture. Section~\ref{sec:theory} delves into the theoretical foundation underpinning the challenges in contemporary big data systems. The design and development of the TerrMycelium artifact are described in Section~\ref{sec:artifact}. Section~\ref{sec:discussion} examines the evaluation findings, their implications, limitations, and relevance to existing and future research. Finally, Section~\ref{sec:conclusion} summarizes the main contributions of the study, its practical implications, and suggests directions for future research.
+
 
 \section{Background}
 \label{sec:background}
@@ -201,17 +208,6 @@ Currently, the success rate of BD projects is low. Recent surveys have identifie
  \bibliographystyle{elsarticle-num} 
  \bibliography{bibfile}
 
-%% else use the following coding to input the bibitems directly in the
-%% TeX file.
-
-% \begin{thebibliography}{00}
-
-% %% \bibitem{label}
-% %% Text of bibliographic item
-
-% \bibitem{}
-
-% \end{thebibliography}
 \end{document}
 \endinput
 %%
