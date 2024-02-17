@@ -1,26 +1,117 @@
-\begin{thebibliography}{1}
-\expandafter\ifx\csname url\endcsname\relax
-  \def\url#1{\texttt{#1}}\fi
-\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
-\expandafter\ifx\csname href\endcsname\relax
-  \def\href#1#2{#2} \def\path#1{#1}\fi
-
-\bibitem{AtaeiACIS}
-P.~Ataei, A.~Litchfield, Big data reference architectures: A systematic literature review, in: 2020 31st Australasian Conference on Information Systems (ACIS), IEEE, 2020, pp. 1--11.
-\newblock \href {https://doi.org/10.5130/acis2020.bf} {\path{doi:10.5130/acis2020.bf}}.
-
-\bibitem{AtaeiBigDataEnvirons}
-B.~B. Rad, P.~Ataei, The big data ecosystem and its environs, International Journal of Computer Science and Network Security (IJCSNS) 17~(3) (2017) 38.
-
-\bibitem{ataei2023towards}
-P.~Ataei, A.~Litchfield, Towards a domain-driven distributed reference architecture for big data systems, in: AMCIS 2023, 2023.
-
-\bibitem{DataBricksSurvey}
-M.~technology review insights in partnership~with Databricks, \href{https://databricks.com/p/whitepaper/mit-technology-review-insights-report}{Building a high-performance data organization} (2021).
-\newline\urlprefix\url{https://databricks.com/p/whitepaper/mit-technology-review-insights-report}
-
-\bibitem{Cloutier2010}
-R.~Cloutier, G.~Muller, D.~Verma, R.~Nilchiani, E.~Hole, M.~Bone, The concept of reference architectures, Systems Engineering 13~(1) (2010) 14--27.
-\newblock \href {https://doi.org/10.2514/6.2017-5118} {\path{doi:10.2514/6.2017-5118}}.
+\begin{thebibliography}{20}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\href}[2]{#2}
+\providecommand{\path}[1]{#1}
+\providecommand{\DOIprefix}{doi:}
+\providecommand{\ArXivprefix}{arXiv:}
+\providecommand{\URLprefix}{URL: }
+\providecommand{\Pubmedprefix}{pmid:}
+\providecommand{\doi}[1]{\href{http://dx.doi.org/#1}{\path{#1}}}
+\providecommand{\Pubmed}[1]{\href{pmid:#1}{\path{#1}}}
+\providecommand{\bibinfo}[2]{#2}
+\ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
+%Type = Inproceedings
+\bibitem[{Amatriain(2013)}]{Amatriain2013}
+\bibinfo{author}{Amatriain, X.}, \bibinfo{year}{2013}.
+\newblock \bibinfo{title}{Beyond data: from user information to business value through personalized recommendations and consumer science}, \bibinfo{publisher}{ACM}. pp. \bibinfo{pages}{2201--2208}.
+\newblock \DOIprefix\doi{10.1145/2505515.2514691}.
+%Type = Article
+\bibitem[{ANSI(1975)}]{ANSI}
+\bibinfo{author}{ANSI, A.}, \bibinfo{year}{1975}.
+\newblock \bibinfo{title}{X3/sparc study group on dbms, interim report}.
+\newblock \bibinfo{journal}{SIGMOD FDT Bull} \bibinfo{volume}{7}.
+%Type = Inproceedings
+\bibitem[{Ataei and Litchfield(2020)}]{AtaeiACIS}
+\bibinfo{author}{Ataei, P.}, \bibinfo{author}{Litchfield, A.}, \bibinfo{year}{2020}.
+\newblock \bibinfo{title}{Big data reference architectures: A systematic literature review}, in: \bibinfo{booktitle}{2020 31st Australasian Conference on Information Systems (ACIS)}, \bibinfo{organization}{IEEE}. pp. \bibinfo{pages}{1--11}.
+\newblock \DOIprefix\doi{10.5130/acis2020.bf}.
+%Type = Article
+\bibitem[{Ataei and Litchfield(2022)}]{ataei2022state}
+\bibinfo{author}{Ataei, P.}, \bibinfo{author}{Litchfield, A.}, \bibinfo{year}{2022}.
+\newblock \bibinfo{title}{The state of big data reference architectures: a systematic literature review}.
+\newblock \bibinfo{journal}{IEEE Access} .
+%Type = Inproceedings
+\bibitem[{Ataei and Litchfield(2023)}]{ataei2023towards}
+\bibinfo{author}{Ataei, P.}, \bibinfo{author}{Litchfield, A.}, \bibinfo{year}{2023}.
+\newblock \bibinfo{title}{Towards a domain-driven distributed reference architecture for big data systems}, in: \bibinfo{booktitle}{AMCIS 2023}.
+%Type = Article
+\bibitem[{Bucchiarone et~al.(2020)Bucchiarone, Dragoni, Dustdar, Lago, Mazzara, Rivera and Sadovykh}]{bucchiarone2020microservices}
+\bibinfo{author}{Bucchiarone, A.}, \bibinfo{author}{Dragoni, N.}, \bibinfo{author}{Dustdar, S.}, \bibinfo{author}{Lago, P.}, \bibinfo{author}{Mazzara, M.}, \bibinfo{author}{Rivera, V.}, \bibinfo{author}{Sadovykh, A.}, \bibinfo{year}{2020}.
+\newblock \bibinfo{title}{Microservices}.
+\newblock \bibinfo{journal}{Science and Engineering. Springer} .
+%Type = Article
+\bibitem[{Chen et~al.(2012)Chen, Chiang and Storey}]{Chen2012}
+\bibinfo{author}{Chen, H.}, \bibinfo{author}{Chiang, R.H.}, \bibinfo{author}{Storey, V.C.}, \bibinfo{year}{2012}.
+\newblock \bibinfo{title}{Business intelligence and analytics: From big data to big impact}.
+\newblock \bibinfo{journal}{MIS quarterly} \bibinfo{volume}{36}, \bibinfo{pages}{1165}.
+\newblock \DOIprefix\doi{10.2307/41703503}.
+%Type = Article
+\bibitem[{Cloutier et~al.(2010)Cloutier, Muller, Verma, Nilchiani, Hole and Bone}]{Cloutier2010}
+\bibinfo{author}{Cloutier, R.}, \bibinfo{author}{Muller, G.}, \bibinfo{author}{Verma, D.}, \bibinfo{author}{Nilchiani, R.}, \bibinfo{author}{Hole, E.}, \bibinfo{author}{Bone, M.}, \bibinfo{year}{2010}.
+\newblock \bibinfo{title}{The concept of reference architectures}.
+\newblock \bibinfo{journal}{Systems Engineering} \bibinfo{volume}{13}, \bibinfo{pages}{14--27}.
+\newblock \DOIprefix\doi{10.2514/6.2017-5118}.
+%Type = Book
+\bibitem[{Coulouris et~al.(2005)Coulouris, Dollimore and Kindberg}]{Coulouris2005}
+\bibinfo{author}{Coulouris, G.}, \bibinfo{author}{Dollimore, J.}, \bibinfo{author}{Kindberg, T.}, \bibinfo{year}{2005}.
+\newblock \bibinfo{title}{Distributed Systems: Concepts and Design}.
+\newblock \bibinfo{edition}{4} ed., \bibinfo{publisher}{Addison-Wesley}.
+%Type = Misc
+\bibitem[{technology review insights in partnership~with Databricks(2021)}]{DataBricksSurvey}
+\bibinfo{author}{technology review insights in partnership~with Databricks, M.}, \bibinfo{year}{2021}.
+\newblock \bibinfo{title}{Building a high-performance data organization}.
+\newblock \URLprefix \url{https://databricks.com/p/whitepaper/mit-technology-review-insights-report}.
+%Type = Inproceedings
+\bibitem[{Kaisler et~al.(2013)Kaisler, Armour, Espinosa and Money}]{Kaisler2013}
+\bibinfo{author}{Kaisler, S.}, \bibinfo{author}{Armour, F.}, \bibinfo{author}{Espinosa, J.A.}, \bibinfo{author}{Money, W.}, \bibinfo{year}{2013}.
+\newblock \bibinfo{title}{Big data: Issues and challenges moving forward}, in: \bibinfo{booktitle}{2013 46th Hawaii International Conference on System Sciences}, \bibinfo{publisher}{IEEE}. pp. \bibinfo{pages}{995--1004}.
+\newblock \DOIprefix\doi{10.1109/hicss.2013.645}.
+%Type = Book
+\bibitem[{Marr(2016)}]{Marr2016}
+\bibinfo{author}{Marr, B.}, \bibinfo{year}{2016}.
+\newblock \bibinfo{title}{Big data in practice: how 45 successful companies used big data analytics to deliver extraordinary results}.
+\newblock \bibinfo{publisher}{John Wiley and Sons}.
+\newblock \DOIprefix\doi{10.1109/bigdata.2018.8622333}.
+%Type = Book
+\bibitem[{Newman(2015)}]{Newman2015}
+\bibinfo{author}{Newman, S.}, \bibinfo{year}{2015}.
+\newblock \bibinfo{title}{Building Microservices: Designing Fine-Grained Systems}.
+\newblock \bibinfo{publisher}{O'Reilly Media, Inc.}
+%Type = Article
+\bibitem[{OATH(2007)}]{OATH}
+\bibinfo{author}{OATH}, \bibinfo{year}{2007}.
+\newblock \bibinfo{title}{Oath reference architecture, release 2.0 initiative for open authentication}.
+\newblock \bibinfo{journal}{OATH} \URLprefix \url{https://openauthentication.org/wp-content/uploads/2015/09/ReferenceArchitectureVersion2.pdf}.
+%Type = Article
+\bibitem[{Rad and Ataei(2017)}]{AtaeiBigDataEnvirons}
+\bibinfo{author}{Rad, B.B.}, \bibinfo{author}{Ataei, P.}, \bibinfo{year}{2017}.
+\newblock \bibinfo{title}{The big data ecosystem and its environs}.
+\newblock \bibinfo{journal}{International Journal of Computer Science and Network Security (IJCSNS)} \bibinfo{volume}{17}, \bibinfo{pages}{38}.
+%Type = Article
+\bibitem[{Rada et~al.(2017)Rada, Ataeib, Khakbizc and Akbarzadehd}]{Rada2017}
+\bibinfo{author}{Rada, B.B.}, \bibinfo{author}{Ataeib, P.}, \bibinfo{author}{Khakbizc, Y.}, \bibinfo{author}{Akbarzadehd, N.}, \bibinfo{year}{2017}.
+\newblock \bibinfo{title}{The hype of emerging technologies: Big data as a service}.
+\newblock \bibinfo{journal}{Int. J. Control Theory Appl} \bibinfo{volume}{9}, \bibinfo{pages}{1--18}.
+%Type = Book
+\bibitem[{Richards(2015)}]{Richards2015}
+\bibinfo{author}{Richards, M.}, \bibinfo{year}{2015}.
+\newblock \bibinfo{title}{Microservices vs. Service-Oriented Architecture}.
+\newblock \bibinfo{publisher}{O'Reilly Media, Inc.}
+%Type = Inproceedings
+\bibitem[{Sagiroglu and Sinanc(2013)}]{Sagiroglu2013}
+\bibinfo{author}{Sagiroglu, S.}, \bibinfo{author}{Sinanc, D.}, \bibinfo{year}{2013}.
+\newblock \bibinfo{title}{Big data: A review}, in: \bibinfo{booktitle}{2013 International Conference on Collaboration Technologies and Systems (CTS)}, \bibinfo{publisher}{IEEE}. pp. \bibinfo{pages}{42--47}.
+\newblock \DOIprefix\doi{10.1109/cts.2013.6567202}.
+%Type = Article
+\bibitem[{Srivastava(2018)}]{Srivastava2018}
+\bibinfo{author}{Srivastava, R.}, \bibinfo{year}{2018}.
+\newblock \bibinfo{title}{Big data: Issues and challenges}.
+\newblock \bibinfo{journal}{International Journal Of Scientific And Innovative Research} .
+%Type = Article
+\bibitem[{Wang et~al.(2020)Wang, Ng and Brook}]{wang2020response}
+\bibinfo{author}{Wang, C.J.}, \bibinfo{author}{Ng, C.Y.}, \bibinfo{author}{Brook, R.H.}, \bibinfo{year}{2020}.
+\newblock \bibinfo{title}{Response to covid-19 in taiwan: big data analytics, new technology, and proactive testing}.
+\newblock \bibinfo{journal}{Jama} \bibinfo{volume}{323}, \bibinfo{pages}{1341--1342}.
 
 \end{thebibliography}

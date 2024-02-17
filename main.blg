@@ -1,48 +1,50 @@
 This is BibTeX, Version 0.99d (TeX Live 2023/Homebrew)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
-The style file: elsarticle-num.bst
+The style file: elsarticle-harv.bst
 Database file #1: bibfile.bib
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--empty booktitle in Amatriain2013
 Warning--empty pages in ataei2023towards
-You've used 5 entries,
-            2952 wiz_defined-function locations,
-            708 strings with 6078 characters,
-and the built_in function-call counts, 1494 in all, are:
-= -- 130
-> -- 44
-< -- 1
-+ -- 18
-- -- 13
-* -- 101
-:= -- 212
-add.period$ -- 7
-call.type$ -- 5
-change.case$ -- 5
-chr.to.int$ -- 0
-cite$ -- 6
-duplicate$ -- 51
-empty$ -- 185
-format.name$ -- 17
-if$ -- 392
-int.to.chr$ -- 0
-int.to.str$ -- 5
-missing$ -- 4
-newline$ -- 26
-num.names$ -- 5
-pop$ -- 40
+You've used 20 entries,
+            2990 wiz_defined-function locations,
+            764 strings with 8525 characters,
+and the built_in function-call counts, 12209 in all, are:
+= -- 932
+> -- 424
+< -- 17
++ -- 172
+- -- 144
+* -- 1220
+:= -- 1787
+add.period$ -- 62
+call.type$ -- 20
+change.case$ -- 145
+chr.to.int$ -- 20
+cite$ -- 22
+duplicate$ -- 966
+empty$ -- 947
+format.name$ -- 198
+if$ -- 2329
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 175
+newline$ -- 117
+num.names$ -- 80
+pop$ -- 373
 preamble$ -- 1
-purify$ -- 0
+purify$ -- 128
 quote$ -- 0
-skip$ -- 103
+skip$ -- 340
 stack$ -- 0
-substring$ -- 40
-swap$ -- 13
-text.length$ -- 1
+substring$ -- 414
+swap$ -- 626
+text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 0
-warning$ -- 1
-while$ -- 10
-width$ -- 6
-write$ -- 52
-(There was 1 warning)
+type$ -- 168
+warning$ -- 2
+while$ -- 76
+width$ -- 0
+write$ -- 298
+(There were 2 warnings)

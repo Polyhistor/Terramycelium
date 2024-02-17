@@ -167,7 +167,49 @@ The paper is structured as follows: Section~\ref{sec:background} provides an ove
 
 \section{Background}
 \label{sec:background}
-% Provide an overview of the foundational concepts and technologies pertinent to the BD reference architecture.
+
+This section provides foundational definitions essential for comprehending the nuances of the research. This chapter aims to create the conceptual framework necessary to understand the terminology used in the thesis.
+
+\subsection{What is Big Data?}
+
+To define BD within the scope of this research, various academic definitions have been examined. \citet{Kaisler2013} define BD as ``the amount of data which is beyond technology’s capability to store, manage and process efficiently''.
+\citet{Srivastava2018} state that BD pertains to ``the use of large data sets to handle the collection or reporting of data that serves various recipients in decision making''.
+
+\citet{Sagiroglu2013} describe BD as ``a term for massive data sets having large, more varied and complex structure with the difficulties of storing, analyzing and visualizing for further processes or results''. 
+
+Drawing from these definitions, BD in this research is conceptualised as the endeavour to discern patterns from vast amounts of data for the objectives of advancement, governance, and predictive analysis in domain-specific applications.
+
+\subsection{The Value of Big Data}\label{sec:The Value of Big Data}
+
+The significance and value derived from BD remain pronounced \cite{ataei2022state}. Extensive discussions on the concept permeate reports, statistics, researches, and conferences \cite{Chen2012}. Notably, prominent companies like Google, Facebook, Netflix, and Amazon have propelled this momentum with substantial investments in BD initiatives \cite{Rada2017}.
+
+A compelling illustration of the tangible benefits that BD offers can be seen in the Netflix Prize recommender system. This system capitalized on a diverse array of data sources, including user queries, ratings, search terms, and various demographic indicators \cite{Amatriain2013}. By implementing BD-powered recommendation algorithms, Netflix not only achieved a considerable increase in TV series consumption but also observed certain series experiencing up to a fourfold surge in viewership \cite{Amatriain2013}.
+
+
+In a healthcare context, the Taiwanese government adeptly merged its national health insurance database with customs and immigration datasets as part of a BD strategy \cite{wang2020response}. The resulting real-time alerts during clinical visits, informed by clinical symptoms and travel history among other factors, facilitated proactive identification of potential COVID-19 cases. Such strategic data-driven initiatives significantly bolstered Taiwan's effectiveness in managing the epidemic.
+
+In the realm of energy exploration, Shell harnesses BD to optimise the decision-making process and reduce exploration costs \cite{Marr2016}. By uploading and comparing data from various drilling sites globally, decisions pivot towards locations that mirror those with confirmed abundant resources. Prior to BD's integration, identifying energy resources presented formidable challenges. Traditional exploration methods, which relied heavily on deciphering waves of energy travelling through the earth's crust, were not only error-prone but also exorbitantly expensive and time-intensive.
+
+Similarly, Rolls Royce capitalises on BD's potential by collecting intricate performance data from sensors fitted on its aircraft products \cite{Marr2016}. Such data, transmitted wirelessly, provides insights into key operational phases, from take-off to maintenance. Leveraging this wealth of information, Rolls Royce can more accurately detect degradation, enhance diagnostic and prognostic accuracy, and effectively reduce false positives.
+
+\subsection{Reference Architectures}
+
+RAs have emerged as pivotal elements in contemporary system development, guiding the construction, maintenance, and evolution of increasingly complex systems \cite{Cloutier2010}. They offer a clear depiction of the essential components of a system and the interactions necessary to realize overarching objectives. This clarity fosters the creation of manageable modules, each addressing distinct aspects of complex problems, and provides a high-level platform for stakeholders to engage, contribute, and collaborate.
+
+The significance of RAs in IT is underscored by the success of widely adopted technologies like OAuth \cite{OATH} and ANSI-SPARC architecture \cite{ANSI}, which have their origins in well-structured RAs. These RAs not only define the qualities of a system but also shape its evolution. While every system inherently possesses an architecture, RAs distinguish themselves by focusing on more abstract qualities and higher levels of abstraction. They aim to capture the essence of practice and integrate well-established patterns into cohesive frameworks, encompassing elements, properties, and interrelationships.
+
+The significance of RAs in BD is multifaceted, encompassing aspects like communication, complexity control, knowledge management, risk mitigation, fostering future architectural visions, defining common ground, enhancing understanding of BD systems, and facilitating further analysis.
+
+\subsection{Microservices and Decentralised, Distributed Architectures}
+
+Microservices architecture, representing an evolution in software engineering, involves structuring applications as a collection of loosely coupled services \cite{bucchiarone2020microservices}. This approach, emerging from the broader concept of Service Oriented Architectures (SOA), focuses on developing small, independently deployable modules that collaborate to form a comprehensive application. As \citet{Newman2015} elucidates, microservices enhance scalability, facilitate continuous deployment, and foster a more agile development environment. They enable teams to develop, deploy, and scale parts of a system independently, thus improving overall system resilience and facilitating rapid adaptation to changing demands.
+
+Decentralised and distributed architectures are integral to the modern computing landscape, characterised by systems spread across multiple nodes, often in different geographic locations. This architectural style, as highlighted by \citet{Richards2015}, mitigates the limitations of traditional monolithic structures, offering enhanced scalability, fault tolerance, and flexibility. In distributed systems, data and processing are dispersed across multiple nodes, which interact with each other to perform tasks, as discussed by \citet{Coulouris2005}. Decentralisation in this context implies the lack of a single controlling node, instead opting for a more democratic and resilient network structure.
+
+The convergence of microservices within these architectures represents a progressive step in software engineering. It reflects a move towards systems that are not only distributed in nature but also modular and adaptable. This architectural approach aligns well with contemporary demands for systems that are scalable, resilient, and capable of leveraging the distributed nature of modern computing environments. The adoption of microservices in decentralised, distributed architectures heralds a new era in software development, where flexibility, scalability, and resilience are paramount.
+
+
+
 
 \section{Related Work}
 \label{sec:related_work}
@@ -205,7 +247,8 @@ The paper is structured as follows: Section~\ref{sec:background} provides an ove
 
 
 
- \bibliographystyle{elsarticle-num} 
+\bibliographystyle{elsarticle-harv}
+
  \bibliography{bibfile}
 
 \end{document}
