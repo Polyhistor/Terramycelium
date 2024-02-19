@@ -213,11 +213,31 @@ The convergence of microservices within these architectures represents a progres
 
 \section{Related Work}
 \label{sec:related_work}
-% Discuss existing research in the domain, highlighting gaps that your work aims to address.
+
+This section reviews seminal works in BD RAs, delineating their scope, methodologies, and inherent limitations, thereby justifying the novel approach of this study's domain-driven distributed RA, \textit{Terramycelium}.
+
+Lambda architecture \cite{kiran2015lambda} and Kappa architecture \cite{kreps2014questioning} represent pivotal industry contributions to BD RAs, introducing foundational paradigms for data processing. However, these architectures have faced criticism for their lack of comprehensive data management strategies, particularly regarding data quality, security, and metadata \cite{AtaeiACIS}. This gap is further evidenced in domain-specific RAs like those proposed by \cite{quintero2019ibm} for healthcare, which, while addressing domain-specific needs, often overlook cross-cutting concerns such as privacy and interoperability.
+
+Academic efforts, as in \cite{viana2014proposal} and \cite{paakkonen2015reference}, have aimed to broaden the conceptual understanding of BD systems, proposing RAs that attempt to encapsulate more holistic views of data analytics ecosystems. Yet, these proposals frequently fall short in addressing the dynamic and distributed nature of modern data landscapes, particularly in terms of scalability and modifiability.
+
+The limitations of current BD RAs, as summarized in the works of \citeauthor{ataei2022state}, highlight a common trend: a pronounced reliance on monolithic data pipeline architectures. This reliance is manifest in the inadequacy of existing RAs to effectively manage data quality, security, privacy, and metadata. Furthermore, the monolithic nature of these architectures often results in scalability and modifiability issues, as they struggle to adapt to the evolving data and technology landscapes.
+
+Against this backdrop, \textit{Terramycelium} emerges as a novel RA for BD systems. By embracing a domain-driven, distributed approach, \textit{Terramycelium} addresses the critical limitations identified in existing RAs. Unlike its predecessors, which often encapsulate data management within rigid, monolithic structures, \textit{Terramycelium} advocates for decentralized data stewardship and a modular architecture. This approach not only enhances scalability and flexibility but also ensures that cross-cutting concerns such as security, privacy, and data quality are inherently integrated into the system's design.
+
+In essence, \textit{Terramycelium} represents a significant departure from traditional BD RAs. By prioritizing domain-driven design and distributed processing, it offers a scalable and adaptable framework that aligns more closely with contemporary data management needs and the principles of modern software architecture. In doing so, \textit{Terramycelium} not only addresses the limitations of existing RAs but also positions itself as a vanguard in the evolution of BD system design, paving the way for future research and development in this critical field.
 
 \section{Why Reference Architectures}
 \label{sec:why_reference_architectures}
-% Justify the need for reference architectures in the context of Big Data and how they can address existing challenges.
+
+Conceptualisation of the system as an RA, helps with understanding of the system’s key components, behaviour, composition and evolution of it, which in turn affect quality attributes such as maintainability, scalability and performance \cite{Cloutier}. 
+
+Therefore, RAs can be a good standardisation artefact and a communication medium that not only results in concrete architectures for BD systems, but also provide stakeholders with unified elements and symbols to discuss and progress BD projects.
+
+The practice of leveraging RAs for both system conceptualisation and as a standardisation artefact is not new to practitioners of complex systems. In Software Product Line (SPL) development, RAs are utilised as generic artifacts that are instantiated and configured for a particular domain of systems \cite{Derras}. 
+
+In software engineering, renowned IT corporations such as IBM have consistently advocated for RAs, considering them exemplary practices in addressing intricate system design challenges \cite{Cloutier2010}. Similarly, in the realm of international standards, RAs frequently serve as tools to standardize emerging domains. 
+
+Morover, the BS ISO/IEC 18384-1 RA for service-oriented architectures \cite{Iso18384-1} demonstrates the utility of RAs in creating standardized frameworks in specific fields.
 
 \section{Software and System Requirements}
 \label{sec:software_and_system_requirements}

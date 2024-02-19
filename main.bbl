@@ -1,4 +1,4 @@
-\begin{thebibliography}{20}
+\begin{thebibliography}{28}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\href}[2]{#2}
@@ -47,11 +47,16 @@
 \newblock \bibinfo{journal}{MIS quarterly} \bibinfo{volume}{36}, \bibinfo{pages}{1165}.
 \newblock \DOIprefix\doi{10.2307/41703503}.
 %Type = Article
-\bibitem[{Cloutier et~al.(2010)Cloutier, Muller, Verma, Nilchiani, Hole and Bone}]{Cloutier2010}
-\bibinfo{author}{Cloutier, R.}, \bibinfo{author}{Muller, G.}, \bibinfo{author}{Verma, D.}, \bibinfo{author}{Nilchiani, R.}, \bibinfo{author}{Hole, E.}, \bibinfo{author}{Bone, M.}, \bibinfo{year}{2010}.
+\bibitem[{Cloutier et~al.(2010a)Cloutier, Muller, Verma, Nilchiani, Hole and Bone}]{Cloutier2010}
+\bibinfo{author}{Cloutier, R.}, \bibinfo{author}{Muller, G.}, \bibinfo{author}{Verma, D.}, \bibinfo{author}{Nilchiani, R.}, \bibinfo{author}{Hole, E.}, \bibinfo{author}{Bone, M.}, \bibinfo{year}{2010}a.
 \newblock \bibinfo{title}{The concept of reference architectures}.
 \newblock \bibinfo{journal}{Systems Engineering} \bibinfo{volume}{13}, \bibinfo{pages}{14--27}.
 \newblock \DOIprefix\doi{10.2514/6.2017-5118}.
+%Type = Article
+\bibitem[{Cloutier et~al.(2010b)Cloutier, Muller, Verma, Nilchiani, Hole and Bone}]{Cloutier}
+\bibinfo{author}{Cloutier, R.}, \bibinfo{author}{Muller, G.}, \bibinfo{author}{Verma, D.}, \bibinfo{author}{Nilchiani, R.}, \bibinfo{author}{Hole, E.}, \bibinfo{author}{Bone, M.}, \bibinfo{year}{2010}b.
+\newblock \bibinfo{title}{The concept of reference architectures}.
+\newblock \bibinfo{journal}{Systems Engineering} \bibinfo{volume}{13}, \bibinfo{pages}{14--27}.
 %Type = Book
 \bibitem[{Coulouris et~al.(2005)Coulouris, Dollimore and Kindberg}]{Coulouris2005}
 \bibinfo{author}{Coulouris, G.}, \bibinfo{author}{Dollimore, J.}, \bibinfo{author}{Kindberg, T.}, \bibinfo{year}{2005}.
@@ -63,10 +68,29 @@
 \newblock \bibinfo{title}{Building a high-performance data organization}.
 \newblock \URLprefix \url{https://databricks.com/p/whitepaper/mit-technology-review-insights-report}.
 %Type = Inproceedings
+\bibitem[{Derras et~al.(2018)Derras, Deruelle, Douin, Levy, Losavio, Pollet and Reiner}]{Derras}
+\bibinfo{author}{Derras, M.}, \bibinfo{author}{Deruelle, L.}, \bibinfo{author}{Douin, J.M.}, \bibinfo{author}{Levy, N.}, \bibinfo{author}{Losavio, F.}, \bibinfo{author}{Pollet, Y.}, \bibinfo{author}{Reiner, V.}, \bibinfo{year}{2018}.
+\newblock \bibinfo{title}{Reference architecture design: a practical approach}, in: \bibinfo{booktitle}{13th International Conference on Software Technologies (ICSOFT)}, \bibinfo{organization}{SciTePress-Science and Technology Publications}. pp. \bibinfo{pages}{633--640}.
+%Type = Article
+\bibitem[{ISO(2016)}]{Iso18384-1}
+\bibinfo{author}{ISO, I.}, \bibinfo{year}{2016}.
+\newblock \bibinfo{title}{Information technology — reference architecture for service oriented architecture (soa ra) — part 1: Terminology and concepts for soa}.
+\newblock \bibinfo{journal}{International Organization for Standardization} , \bibinfo{pages}{51}\URLprefix \url{https://www.iso.org/standard/63104.html}.
+%Type = Inproceedings
 \bibitem[{Kaisler et~al.(2013)Kaisler, Armour, Espinosa and Money}]{Kaisler2013}
 \bibinfo{author}{Kaisler, S.}, \bibinfo{author}{Armour, F.}, \bibinfo{author}{Espinosa, J.A.}, \bibinfo{author}{Money, W.}, \bibinfo{year}{2013}.
 \newblock \bibinfo{title}{Big data: Issues and challenges moving forward}, in: \bibinfo{booktitle}{2013 46th Hawaii International Conference on System Sciences}, \bibinfo{publisher}{IEEE}. pp. \bibinfo{pages}{995--1004}.
 \newblock \DOIprefix\doi{10.1109/hicss.2013.645}.
+%Type = Inproceedings
+\bibitem[{Kiran et~al.(2015)Kiran, Murphy, Monga, Dugan and Baveja}]{kiran2015lambda}
+\bibinfo{author}{Kiran, M.}, \bibinfo{author}{Murphy, P.}, \bibinfo{author}{Monga, I.}, \bibinfo{author}{Dugan, J.}, \bibinfo{author}{Baveja, S.S.}, \bibinfo{year}{2015}.
+\newblock \bibinfo{title}{Lambda architecture for cost-effective batch and speed big data processing}, in: \bibinfo{booktitle}{2015 IEEE International Conference on Big Data (Big Data)}, \bibinfo{organization}{IEEE}. pp. \bibinfo{pages}{2785--2792}.
+%Type = Article
+\bibitem[{Kreps(2014)}]{kreps2014questioning}
+\bibinfo{author}{Kreps, J.}, \bibinfo{year}{2014}.
+\newblock \bibinfo{title}{Questioning the lambda architecture}.
+\newblock \bibinfo{journal}{Online article, July} \bibinfo{volume}{205}.
+\newblock \URLprefix \url{https://www.oreilly.com/radar/questioning-the-lambda-architecture/}.
 %Type = Book
 \bibitem[{Marr(2016)}]{Marr2016}
 \bibinfo{author}{Marr, B.}, \bibinfo{year}{2016}.
@@ -83,6 +107,16 @@
 \bibinfo{author}{OATH}, \bibinfo{year}{2007}.
 \newblock \bibinfo{title}{Oath reference architecture, release 2.0 initiative for open authentication}.
 \newblock \bibinfo{journal}{OATH} \URLprefix \url{https://openauthentication.org/wp-content/uploads/2015/09/ReferenceArchitectureVersion2.pdf}.
+%Type = Article
+\bibitem[{P{\"a}{\"a}kk{\"o}nen and Pakkala(2015)}]{paakkonen2015reference}
+\bibinfo{author}{P{\"a}{\"a}kk{\"o}nen, P.}, \bibinfo{author}{Pakkala, D.}, \bibinfo{year}{2015}.
+\newblock \bibinfo{title}{Reference architecture and classification of technologies, products and services for big data systems}.
+\newblock \bibinfo{journal}{Big data research} \bibinfo{volume}{2}, \bibinfo{pages}{166--186}.
+%Type = Book
+\bibitem[{Quintero et~al.(2019)Quintero, Lee et~al.}]{quintero2019ibm}
+\bibinfo{author}{Quintero, D.}, \bibinfo{author}{Lee, F.N.}, et~al., \bibinfo{year}{2019}.
+\newblock \bibinfo{title}{IBM reference architecture for high performance data and AI in healthcare and life sciences}.
+\newblock \bibinfo{publisher}{IBM Redbooks}.
 %Type = Article
 \bibitem[{Rad and Ataei(2017)}]{AtaeiBigDataEnvirons}
 \bibinfo{author}{Rad, B.B.}, \bibinfo{author}{Ataei, P.}, \bibinfo{year}{2017}.
@@ -108,6 +142,10 @@
 \bibinfo{author}{Srivastava, R.}, \bibinfo{year}{2018}.
 \newblock \bibinfo{title}{Big data: Issues and challenges}.
 \newblock \bibinfo{journal}{International Journal Of Scientific And Innovative Research} .
+%Type = Inproceedings
+\bibitem[{Viana and Sato(2014)}]{viana2014proposal}
+\bibinfo{author}{Viana, P.}, \bibinfo{author}{Sato, L.}, \bibinfo{year}{2014}.
+\newblock \bibinfo{title}{A proposal for a reference architecture for long-term archiving, preservation, and retrieval of big data}, in: \bibinfo{booktitle}{2014 IEEE 13th International Conference on Trust, Security and Privacy in Computing and Communications}, \bibinfo{organization}{IEEE}. pp. \bibinfo{pages}{622--629}.
 %Type = Article
 \bibitem[{Wang et~al.(2020)Wang, Ng and Brook}]{wang2020response}
 \bibinfo{author}{Wang, C.J.}, \bibinfo{author}{Ng, C.Y.}, \bibinfo{author}{Brook, R.H.}, \bibinfo{year}{2020}.
