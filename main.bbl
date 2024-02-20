@@ -1,4 +1,4 @@
-\begin{thebibliography}{28}
+\begin{thebibliography}{48}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\href}[2]{#2}
@@ -11,6 +11,21 @@
 \providecommand{\Pubmed}[1]{\href{pmid:#1}{\path{#1}}}
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
+%Type = Techreport
+\bibitem[{mit(2023)}]{mit_tech_review_2023}
+, \bibinfo{year}{2023}.
+\newblock \bibinfo{title}{Building a High-Performance Data and AI Organization}.
+\newblock \bibinfo{type}{Technical Report}. MIT Technology Review Insights.
+\newblock \URLprefix \url{https://www.databricks.com/resources/whitepaper/mit-technology-review-insights-report}. \bibinfo{note}{accessed: 2023-06-03}.
+%Type = Article
+\bibitem[{Abran et~al.(2004)Abran, Moore, Bourque, Dupuis and Tripp}]{abran2004software}
+\bibinfo{author}{Abran, A.}, \bibinfo{author}{Moore, J.W.}, \bibinfo{author}{Bourque, P.}, \bibinfo{author}{Dupuis, R.}, \bibinfo{author}{Tripp, L.}, \bibinfo{year}{2004}.
+\newblock \bibinfo{title}{Software engineering body of knowledge}.
+\newblock \bibinfo{journal}{IEEE Computer Society, Angela Burgess} , \bibinfo{pages}{25}.
+%Type = Inproceedings
+\bibitem[{Al-Jaroodi and Mohamed(2016)}]{al2016characteristics}
+\bibinfo{author}{Al-Jaroodi, J.}, \bibinfo{author}{Mohamed, N.}, \bibinfo{year}{2016}.
+\newblock \bibinfo{title}{Characteristics and requirements of big data analytics applications}, in: \bibinfo{booktitle}{2016 IEEE 2nd International Conference on Collaboration and Internet Computing (CIC)}, pp. \bibinfo{pages}{426--432}.
 %Type = Inproceedings
 \bibitem[{Amatriain(2013)}]{Amatriain2013}
 \bibinfo{author}{Amatriain, X.}, \bibinfo{year}{2013}.
@@ -36,16 +51,42 @@
 \bibinfo{author}{Ataei, P.}, \bibinfo{author}{Litchfield, A.}, \bibinfo{year}{2023}.
 \newblock \bibinfo{title}{Towards a domain-driven distributed reference architecture for big data systems}, in: \bibinfo{booktitle}{AMCIS 2023}.
 %Type = Article
+\bibitem[{Ataei and Staegemann(2023)}]{ataei2023application}
+\bibinfo{author}{Ataei, P.}, \bibinfo{author}{Staegemann, D.}, \bibinfo{year}{2023}.
+\newblock \bibinfo{title}{Application of microservices patterns to big data systems}.
+\newblock \bibinfo{journal}{Journal of Big Data} \bibinfo{volume}{10}, \bibinfo{pages}{1--49}.
+%Type = Inbook
+\bibitem[{Bahrami and Singhal(2015)}]{Bahrami2015}
+\bibinfo{author}{Bahrami, M.}, \bibinfo{author}{Singhal, M.}, \bibinfo{year}{2015}.
+\newblock \bibinfo{title}{The role of cloud computing architecture in big data}. \bibinfo{publisher}{Springer}.
+\newblock pp. \bibinfo{pages}{275--295}.
+\newblock \DOIprefix\doi{10.1201/9781315155678-8}.
+%Type = Article
+\bibitem[{Bashari~Rad et~al.(2016)Bashari~Rad, Akbarzadeh, Ataei and Khakbiz}]{AtaeiSecurity}
+\bibinfo{author}{Bashari~Rad, B.}, \bibinfo{author}{Akbarzadeh, N.}, \bibinfo{author}{Ataei, P.}, \bibinfo{author}{Khakbiz, Y.}, \bibinfo{year}{2016}.
+\newblock \bibinfo{title}{Security and privacy challenges in big data era}.
+\newblock \bibinfo{journal}{International Journal of Control Theory and Applications} \bibinfo{volume}{9}, \bibinfo{pages}{437--448}.
+%Type = Article
 \bibitem[{Bucchiarone et~al.(2020)Bucchiarone, Dragoni, Dustdar, Lago, Mazzara, Rivera and Sadovykh}]{bucchiarone2020microservices}
 \bibinfo{author}{Bucchiarone, A.}, \bibinfo{author}{Dragoni, N.}, \bibinfo{author}{Dustdar, S.}, \bibinfo{author}{Lago, P.}, \bibinfo{author}{Mazzara, M.}, \bibinfo{author}{Rivera, V.}, \bibinfo{author}{Sadovykh, A.}, \bibinfo{year}{2020}.
 \newblock \bibinfo{title}{Microservices}.
 \newblock \bibinfo{journal}{Science and Engineering. Springer} .
+%Type = Techreport
+\bibitem[{Chang and Boyd(2018)}]{Chang}
+\bibinfo{author}{Chang, W.L.}, \bibinfo{author}{Boyd, D.}, \bibinfo{year}{2018}.
+\newblock \bibinfo{title}{NIST Big Data Interoperability Framework: Volume 6, Big Data Reference Architecture}.
+\newblock \bibinfo{type}{Technical Report}. National Institute of Standards and Technology (NIST). \bibinfo{address}{Gaithersburg, MD, USA}.
 %Type = Article
 \bibitem[{Chen et~al.(2012)Chen, Chiang and Storey}]{Chen2012}
 \bibinfo{author}{Chen, H.}, \bibinfo{author}{Chiang, R.H.}, \bibinfo{author}{Storey, V.C.}, \bibinfo{year}{2012}.
 \newblock \bibinfo{title}{Business intelligence and analytics: From big data to big impact}.
 \newblock \bibinfo{journal}{MIS quarterly} \bibinfo{volume}{36}, \bibinfo{pages}{1165}.
 \newblock \DOIprefix\doi{10.2307/41703503}.
+%Type = Inproceedings
+\bibitem[{Chen et~al.(2016)Chen, Kazman and Haziyev}]{Chen2016a}
+\bibinfo{author}{Chen, H.M.}, \bibinfo{author}{Kazman, R.}, \bibinfo{author}{Haziyev, S.}, \bibinfo{year}{2016}.
+\newblock \bibinfo{title}{Agile big data analytics development: An architecture-centric approach}, in: \bibinfo{booktitle}{2016 49th Hawaii International Conference on System Sciences (HICSS)}, \bibinfo{publisher}{IEEE}. pp. \bibinfo{pages}{5378--5387}.
+\newblock \DOIprefix\doi{10.1109/hicss.2016.665}.
 %Type = Article
 \bibitem[{Cloutier et~al.(2010a)Cloutier, Muller, Verma, Nilchiani, Hole and Bone}]{Cloutier2010}
 \bibinfo{author}{Cloutier, R.}, \bibinfo{author}{Muller, G.}, \bibinfo{author}{Verma, D.}, \bibinfo{author}{Nilchiani, R.}, \bibinfo{author}{Hole, E.}, \bibinfo{author}{Bone, M.}, \bibinfo{year}{2010}a.
@@ -71,16 +112,30 @@
 \bibitem[{Derras et~al.(2018)Derras, Deruelle, Douin, Levy, Losavio, Pollet and Reiner}]{Derras}
 \bibinfo{author}{Derras, M.}, \bibinfo{author}{Deruelle, L.}, \bibinfo{author}{Douin, J.M.}, \bibinfo{author}{Levy, N.}, \bibinfo{author}{Losavio, F.}, \bibinfo{author}{Pollet, Y.}, \bibinfo{author}{Reiner, V.}, \bibinfo{year}{2018}.
 \newblock \bibinfo{title}{Reference architecture design: a practical approach}, in: \bibinfo{booktitle}{13th International Conference on Software Technologies (ICSOFT)}, \bibinfo{organization}{SciTePress-Science and Technology Publications}. pp. \bibinfo{pages}{633--640}.
+%Type = Inproceedings
+\bibitem[{Eridaputra et~al.(2014)Eridaputra, Hendradjaya and Sunindyo}]{eridaputra2014modeling}
+\bibinfo{author}{Eridaputra, H.}, \bibinfo{author}{Hendradjaya, B.}, \bibinfo{author}{Sunindyo, W.D.}, \bibinfo{year}{2014}.
+\newblock \bibinfo{title}{Modeling the requirements for big data application using goal oriented approach}, in: \bibinfo{booktitle}{2014 international conference on data and software engineering (ICODSE)}, pp. \bibinfo{pages}{1--6}.
 %Type = Article
 \bibitem[{ISO(2016)}]{Iso18384-1}
 \bibinfo{author}{ISO, I.}, \bibinfo{year}{2016}.
 \newblock \bibinfo{title}{Information technology — reference architecture for service oriented architecture (soa ra) — part 1: Terminology and concepts for soa}.
 \newblock \bibinfo{journal}{International Organization for Standardization} , \bibinfo{pages}{51}\URLprefix \url{https://www.iso.org/standard/63104.html}.
+%Type = Misc
+\bibitem[{ISO/IEC(2018)}]{ISO29148}
+\bibinfo{author}{ISO/IEC}, \bibinfo{year}{2018}.
+\newblock \bibinfo{title}{Iso/iec 29148:2018. systems and software engineering --- life cycle processes --- requirements engineering}.
+\newblock \URLprefix \url{https://www.iso.org/standard/72089.html}.
 %Type = Inproceedings
 \bibitem[{Kaisler et~al.(2013)Kaisler, Armour, Espinosa and Money}]{Kaisler2013}
 \bibinfo{author}{Kaisler, S.}, \bibinfo{author}{Armour, F.}, \bibinfo{author}{Espinosa, J.A.}, \bibinfo{author}{Money, W.}, \bibinfo{year}{2013}.
 \newblock \bibinfo{title}{Big data: Issues and challenges moving forward}, in: \bibinfo{booktitle}{2013 46th Hawaii International Conference on System Sciences}, \bibinfo{publisher}{IEEE}. pp. \bibinfo{pages}{995--1004}.
 \newblock \DOIprefix\doi{10.1109/hicss.2013.645}.
+%Type = Article
+\bibitem[{Kassab et~al.(2014)Kassab, Neill and Laplante}]{kassab2014state}
+\bibinfo{author}{Kassab, M.}, \bibinfo{author}{Neill, C.}, \bibinfo{author}{Laplante, P.}, \bibinfo{year}{2014}.
+\newblock \bibinfo{title}{State of practice in requirements engineering: contemporary data}.
+\newblock \bibinfo{journal}{Innovations in Systems and Software Engineering} \bibinfo{volume}{10}, \bibinfo{pages}{235--241}.
 %Type = Inproceedings
 \bibitem[{Kiran et~al.(2015)Kiran, Murphy, Monga, Dugan and Baveja}]{kiran2015lambda}
 \bibinfo{author}{Kiran, M.}, \bibinfo{author}{Murphy, P.}, \bibinfo{author}{Monga, I.}, \bibinfo{author}{Dugan, J.}, \bibinfo{author}{Baveja, S.S.}, \bibinfo{year}{2015}.
@@ -91,6 +146,11 @@
 \newblock \bibinfo{title}{Questioning the lambda architecture}.
 \newblock \bibinfo{journal}{Online article, July} \bibinfo{volume}{205}.
 \newblock \URLprefix \url{https://www.oreilly.com/radar/questioning-the-lambda-architecture/}.
+%Type = Book
+\bibitem[{Laplante(2017)}]{laplante2017requirements}
+\bibinfo{author}{Laplante, P.A.}, \bibinfo{year}{2017}.
+\newblock \bibinfo{title}{Requirements engineering for software and systems}.
+\newblock \bibinfo{publisher}{Auerbach Publications}.
 %Type = Book
 \bibitem[{Marr(2016)}]{Marr2016}
 \bibinfo{author}{Marr, B.}, \bibinfo{year}{2016}.
@@ -118,38 +178,78 @@
 \newblock \bibinfo{title}{IBM reference architecture for high performance data and AI in healthcare and life sciences}.
 \newblock \bibinfo{publisher}{IBM Redbooks}.
 %Type = Article
-\bibitem[{Rad and Ataei(2017)}]{AtaeiBigDataEnvirons}
-\bibinfo{author}{Rad, B.B.}, \bibinfo{author}{Ataei, P.}, \bibinfo{year}{2017}.
+\bibitem[{Rad and Ataei(2017a)}]{AtaeiBigDataEnvirons}
+\bibinfo{author}{Rad, B.B.}, \bibinfo{author}{Ataei, P.}, \bibinfo{year}{2017}a.
 \newblock \bibinfo{title}{The big data ecosystem and its environs}.
 \newblock \bibinfo{journal}{International Journal of Computer Science and Network Security (IJCSNS)} \bibinfo{volume}{17}, \bibinfo{pages}{38}.
 %Type = Article
-\bibitem[{Rada et~al.(2017)Rada, Ataeib, Khakbizc and Akbarzadehd}]{Rada2017}
-\bibinfo{author}{Rada, B.B.}, \bibinfo{author}{Ataeib, P.}, \bibinfo{author}{Khakbizc, Y.}, \bibinfo{author}{Akbarzadehd, N.}, \bibinfo{year}{2017}.
+\bibitem[{Rad and Ataei(2017b)}]{rad2017big}
+\bibinfo{author}{Rad, B.B.}, \bibinfo{author}{Ataei, P.}, \bibinfo{year}{2017}b.
+\newblock \bibinfo{title}{The big data ecosystem and its environs}.
+\newblock \bibinfo{journal}{International Journal of Computer Science and Network Security (IJCSNS)} \bibinfo{volume}{17}, \bibinfo{pages}{38}.
+%Type = Article
+\bibitem[{Rada et~al.(2017a)Rada, Ataeib, Khakbizc and Akbarzadehd}]{Rada2017}
+\bibinfo{author}{Rada, B.B.}, \bibinfo{author}{Ataeib, P.}, \bibinfo{author}{Khakbizc, Y.}, \bibinfo{author}{Akbarzadehd, N.}, \bibinfo{year}{2017}a.
 \newblock \bibinfo{title}{The hype of emerging technologies: Big data as a service}.
 \newblock \bibinfo{journal}{Int. J. Control Theory Appl} \bibinfo{volume}{9}, \bibinfo{pages}{1--18}.
+%Type = Article
+\bibitem[{Rada et~al.(2017b)Rada, Ataeib, Khakbizc and Akbarzadehd}]{AtaeiHype}
+\bibinfo{author}{Rada, B.B.}, \bibinfo{author}{Ataeib, P.}, \bibinfo{author}{Khakbizc, Y.}, \bibinfo{author}{Akbarzadehd, N.}, \bibinfo{year}{2017}b.
+\newblock \bibinfo{title}{The hype of emerging technologies: Big data as a service}.
+\newblock \bibinfo{journal}{Int. J. Control Theory Appl} .
 %Type = Book
 \bibitem[{Richards(2015)}]{Richards2015}
 \bibinfo{author}{Richards, M.}, \bibinfo{year}{2015}.
 \newblock \bibinfo{title}{Microservices vs. Service-Oriented Architecture}.
 \newblock \bibinfo{publisher}{O'Reilly Media, Inc.}
+%Type = Book
+\bibitem[{Richards and Ford(2020)}]{richards2020fundamentals}
+\bibinfo{author}{Richards, M.}, \bibinfo{author}{Ford, N.}, \bibinfo{year}{2020}.
+\newblock \bibinfo{title}{Fundamentals of software architecture: an engineering approach}.
+\newblock \bibinfo{publisher}{O'Reilly Media}.
 %Type = Inproceedings
 \bibitem[{Sagiroglu and Sinanc(2013)}]{Sagiroglu2013}
 \bibinfo{author}{Sagiroglu, S.}, \bibinfo{author}{Sinanc, D.}, \bibinfo{year}{2013}.
 \newblock \bibinfo{title}{Big data: A review}, in: \bibinfo{booktitle}{2013 International Conference on Collaboration Technologies and Systems (CTS)}, \bibinfo{publisher}{IEEE}. pp. \bibinfo{pages}{42--47}.
 \newblock \DOIprefix\doi{10.1109/cts.2013.6567202}.
+%Type = Book
+\bibitem[{Sommerville(2011)}]{sommerville2011software}
+\bibinfo{author}{Sommerville, I.}, \bibinfo{year}{2011}.
+\newblock \bibinfo{title}{Software Engineering, 9/E}.
+\newblock \bibinfo{publisher}{Pearson Education India}.
 %Type = Article
 \bibitem[{Srivastava(2018)}]{Srivastava2018}
 \bibinfo{author}{Srivastava, R.}, \bibinfo{year}{2018}.
 \newblock \bibinfo{title}{Big data: Issues and challenges}.
 \newblock \bibinfo{journal}{International Journal Of Scientific And Innovative Research} .
+%Type = Misc
+\bibitem[{International Organization~for Standardization~(ISO/IEC)(2017)}]{ISO42010}
+\bibinfo{author}{International Organization~for Standardization~(ISO/IEC), I.}, \bibinfo{year}{2017}.
+\newblock \bibinfo{title}{Iso/iec/ieee 42010:2011}.
+\newblock \URLprefix \url{https://www.iso.org/standard/50508.html}.
 %Type = Inproceedings
 \bibitem[{Viana and Sato(2014)}]{viana2014proposal}
 \bibinfo{author}{Viana, P.}, \bibinfo{author}{Sato, L.}, \bibinfo{year}{2014}.
 \newblock \bibinfo{title}{A proposal for a reference architecture for long-term archiving, preservation, and retrieval of big data}, in: \bibinfo{booktitle}{2014 IEEE 13th International Conference on Trust, Security and Privacy in Computing and Communications}, \bibinfo{organization}{IEEE}. pp. \bibinfo{pages}{622--629}.
 %Type = Article
+\bibitem[{Volk et~al.(2020)Volk, Staegemann, Trifonova, Bosse and Turowski}]{volk2020identifying}
+\bibinfo{author}{Volk, M.}, \bibinfo{author}{Staegemann, D.}, \bibinfo{author}{Trifonova, I.}, \bibinfo{author}{Bosse, S.}, \bibinfo{author}{Turowski, K.}, \bibinfo{year}{2020}.
+\newblock \bibinfo{title}{Identifying similarities of big data projects--a use case driven approach}.
+\newblock \bibinfo{journal}{IEEE Access} \bibinfo{volume}{8}, \bibinfo{pages}{186599--186619}.
+%Type = Article
 \bibitem[{Wang et~al.(2020)Wang, Ng and Brook}]{wang2020response}
 \bibinfo{author}{Wang, C.J.}, \bibinfo{author}{Ng, C.Y.}, \bibinfo{author}{Brook, R.H.}, \bibinfo{year}{2020}.
 \newblock \bibinfo{title}{Response to covid-19 in taiwan: big data analytics, new technology, and proactive testing}.
 \newblock \bibinfo{journal}{Jama} \bibinfo{volume}{323}, \bibinfo{pages}{1341--1342}.
+%Type = Book
+\bibitem[{Wieringa(2014)}]{wieringa2014design}
+\bibinfo{author}{Wieringa, R.J.}, \bibinfo{year}{2014}.
+\newblock \bibinfo{title}{Design science methodology for information systems and software engineering}.
+\newblock \bibinfo{publisher}{Springer}.
+%Type = Article
+\bibitem[{Yu and Zhou(2019)}]{yu2019components}
+\bibinfo{author}{Yu, J.H.}, \bibinfo{author}{Zhou, Z.M.}, \bibinfo{year}{2019}.
+\newblock \bibinfo{title}{Components and development in big data system: A survey}.
+\newblock \bibinfo{journal}{Journal of Electronic Science and Technology} \bibinfo{volume}{17}, \bibinfo{pages}{51--72}.
 
 \end{thebibliography}

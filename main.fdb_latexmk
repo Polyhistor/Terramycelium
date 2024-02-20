@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex main"] 1708322648 "main.aux" "main.bbl" "main" 1708322648 0
+["bibtex main"] 1708413145 "main.aux" "main.bbl" "main" 1708413146 0
   "./bibfile.bib" 1708155111 252210 6612b1978433a8f515027ef8017f4184 ""
   "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/bibtex/bst/elsarticle/elsarticle-harv.bst" 1678549815 30002 8c0c5833f37bea3ec214cf315a72975d ""
-  "main.aux" 1708322648 4845 bf04283f773480c16040583351b548bb "pdflatex"
+  "main.aux" 1708413146 8403 626a1d9c680612972053b537083b82d5 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1708322648 "/Users/pataei/Desktop/Projects/Terramycelium/main.tex" "main.pdf" "main" 1708322648 0
-  "/Users/pataei/Desktop/Projects/Terramycelium/main.tex" 1708322646 22492 9514975eaa61fc11cae78bd4612335f7 ""
+["pdflatex"] 1708413145 "/Users/pataei/Desktop/Projects/Terramycelium/main.tex" "main.pdf" "main" 1708413146 0
+  "/Users/pataei/Desktop/Projects/Terramycelium/main.tex" 1708413144 40363 e2a6cf72b4992cc80c383abe42196599 ""
   "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1678549815 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/map/fontname/texfonts.map" 1678549815 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/map/pdftex/updmap/pdftex.map" 1678549815 4609045 74543da1ab9350ba886fce0af49a2cfd ""
@@ -38,6 +38,7 @@
   "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/tfm/public/cm/cmti7.tfm" 1678549815 1492 86331993fe614793f5e7e755835c31c5 ""
   "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/tfm/public/cm/cmtt12.tfm" 1678549815 772 9a936b7f5e2ff0557fce0f62822f0bbf ""
   "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1678549815 32080 340ef9bf63678554ee606688e7b5339d ""
+  "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1678549815 35752 024fb6c41858982481f6968b5fc26508 ""
   "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1678549815 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1678549815 32362 179c33bbf43f19adbb3825bb4e36e57a ""
   "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1678549815 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
@@ -67,12 +68,15 @@
   "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/l3packages/xparse/xparse.sty" 1678549815 6812 3c152a1c8d562d7b7291c4839b61a5c3 ""
   "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg" 1678549815 678 4792914a8f45be57bb98413425e4c7af ""
   "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/natbib/natbib.sty" 1678549815 45456 1c8843383c0bd05870c45fa0ebea6cc2 ""
+  "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/tools/array.sty" 1678549815 12691 5b542990fe866f3d772f71346cf85b95 ""
+  "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/tools/longtable.sty" 1678549815 12892 af5f5e872a6e322f3e5ba2c881288a56 ""
   "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/web2c/texmf.cnf" 1678549815 40748 4081c8bc921e56c865f975bd762e388c ""
   "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-var/web2c/pdftex/pdflatex.fmt" 1678549815 7884066 8197b5e86c7bf6d7352283907f10d5c2 ""
-  "main.aux" 1708322648 4845 bf04283f773480c16040583351b548bb "pdflatex"
-  "main.bbl" 1708322648 11590 00c8aa89d1fc3af0b66d89072bd3030a "bibtex main"
-  "main.spl" 1708322648 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.tex" 1708322646 22492 9514975eaa61fc11cae78bd4612335f7 ""
+  "images/data-planes.png" 1708412652 95049 bdb38fc756b71a618998ef920675e65c ""
+  "main.aux" 1708413146 8403 626a1d9c680612972053b537083b82d5 "pdflatex"
+  "main.bbl" 1708413145 19047 7676f1e850564588a4049386fa7a2a4a "bibtex main"
+  "main.spl" 1708413145 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.tex" 1708413144 40363 e2a6cf72b4992cc80c383abe42196599 ""
   (generated)
   "main.aux"
   "main.log"

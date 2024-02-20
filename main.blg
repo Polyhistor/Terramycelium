@@ -3,48 +3,51 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: elsarticle-harv.bst
 Database file #1: bibfile.bib
+Warning--to sort, need author or key in mit_tech_review_2023
 Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--empty author in mit_tech_review_2023
 Warning--empty booktitle in Amatriain2013
 Warning--empty pages in ataei2023towards
-You've used 28 entries,
+Warning--empty chapter and pages in Bahrami2015
+You've used 48 entries,
             2990 wiz_defined-function locations,
-            808 strings with 10146 characters,
-and the built_in function-call counts, 18008 in all, are:
-= -- 1384
-> -- 656
-< -- 24
-+ -- 266
-- -- 225
-* -- 1839
-:= -- 2611
-add.period$ -- 84
-call.type$ -- 28
-change.case$ -- 210
-chr.to.int$ -- 27
-cite$ -- 30
-duplicate$ -- 1400
-empty$ -- 1372
-format.name$ -- 303
-if$ -- 3448
-int.to.chr$ -- 2
+            910 strings with 13410 characters,
+and the built_in function-call counts, 30194 in all, are:
+= -- 2324
+> -- 1062
+< -- 40
++ -- 432
+- -- 363
+* -- 3066
+:= -- 4350
+add.period$ -- 144
+call.type$ -- 48
+change.case$ -- 352
+chr.to.int$ -- 45
+cite$ -- 55
+duplicate$ -- 2367
+empty$ -- 2331
+format.name$ -- 502
+if$ -- 5781
+int.to.chr$ -- 4
 int.to.str$ -- 1
-missing$ -- 255
-newline$ -- 155
-num.names$ -- 112
-pop$ -- 523
+missing$ -- 429
+newline$ -- 255
+num.names$ -- 188
+pop$ -- 912
 preamble$ -- 1
-purify$ -- 186
+purify$ -- 312
 quote$ -- 0
-skip$ -- 494
+skip$ -- 819
 stack$ -- 0
-substring$ -- 656
-swap$ -- 946
-text.length$ -- 7
+substring$ -- 1134
+swap$ -- 1580
+text.length$ -- 11
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 237
-warning$ -- 2
-while$ -- 113
+type$ -- 402
+warning$ -- 5
+while$ -- 191
 width$ -- 0
-write$ -- 411
-(There were 2 warnings)
+write$ -- 688
+(There were 5 warnings)

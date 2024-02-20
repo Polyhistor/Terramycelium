@@ -44,6 +44,9 @@
 
 %% The amssymb package provides various useful mathematical symbols
 \usepackage{amssymb}
+\usepackage{longtable}
+\usepackage{array}
+
 %% The amsthm package provides extended theorem environments
 %% \usepackage{amsthm}
 
@@ -241,11 +244,188 @@ Morover, the BS ISO/IEC 18384-1 RA for service-oriented architectures \cite{Iso1
 
 \section{Software and System Requirements}
 \label{sec:software_and_system_requirements}
-% Detail the software and system requirements necessary to implement and evaluate the proposed architecture.
+
+According to \citeauthor{wieringa2014design}\cite{wieringa2014design}, the requirement specification phase is an essential step in developing a new IS or artefact. This phase involves identifying the requirements that the artefact must satisfy to meet the needs of stakeholders and achieve the desired outcomes.
+
+\citeauthor{wieringa2014design}'s methodology distinguishes between functional requirements, which describe what the artefact should do, and non-functional requirements, which describe how the artefact should do it. Functional requirements are typically expressed as use cases, which describe the specific interactions between users and the system. Non-functional requirements may include performance requirements, security requirements, and usability requirements.
+
+The requirement specification designed for this study is made up of the following phases: 
+
+\begin{enumerate}
+    \item Determining the type of the requirements 
+    \item Determining the relevant requirements and 
+    \item Identifying the right approach for categorisation of the requirements 
+    \item Identifying the right approach for the presentation of the requirements 
+\end{enumerate}
+
+\paragraph{Determining the type of the requirements:}
+
+Defining and classifying software and system requirements is a common subject of debate. \citeauthor{sommerville2011software}\cite{sommerville2011software} classify requirements as three levels of abstraction; user requirements, system requirements, and design specifications. These abstractions are then mapped against user acceptance testing, integration testing, and unit testing. Nevertheless, in this study, a more general framework provided by \citeauthor{laplante2017requirements} is adopted. The adopted approach provides three types of requirements: functional, non-functional, and domain requirements. The objective of this step is to define the high-level requirements of BD systems, therefore the main focus is on non-functional and domain requirements. 
+
+\paragraph{Determining the relevant requirements:}
+
+In an extensive effort, the NIST Big Data Public Working Group embarked on a large-scale study to extract requirements from a variety of application domains such as Healthcare, Life Sciences, Commercial, Energy, Government, and Defense \cite{Chang}. The result of this study is the formation of general requirements under seven categories. In addition, \citeauthor{volk2020identifying} categorize nine use cases of BD projects sourced from published literature using a hierarchical clustering algorithm. 
+
+\citeauthor{AtaeiSecurity}\cite{AtaeiSecurity} focus on security and privacy requirements for BD systems, \citeauthor{yu2019components} present modern components of BD systems, using goal-oriented approaches, \citeauthor{eridaputra2014modeling} created a generic model for BD requirements, and  \citeauthor{al2016characteristics} investigate general requirements to support BD software development. 
+
+By analyzing the result of the first SLRs, the studies discussed above and by evaluating the design and requirement engineering required for BD RAs, a set of high-level requirements based on BD characteristics is established. 
+
+\paragraph{Identifying the right approach for categorisation of the requirements:}
+
+After clarifying the type of requirements and the relevant requirements, current BD RAs and their requirements have been assessed to increase understanding of the available BD requirement categorisation methods. A common theme among these studies connected the dot towards a common approach to classifying requirements. This approach is categorised through BD characteristics such as velocity, veracity, volume, variety, value, security and privacy \cite{ataei2022state, Bahrami2015,rad2017big,Chen2016a}.
+
+\paragraph{Identifying the right approach for the presentation of the requirements:}
+
+Then, a rigorous approach to present software and system requirements that offers informal methods of model verification is identified because such methods are well established in the industry and academia \cite{kassab2014state}. The approach for representing functional requirements follows the guidelines in \emph{ISO/IEC/IEEE standard 29148} \cite{ISO29148}. 
+
+The requirements representation is organized in system modes, where the major components of the system and then the requirements are described. This approach is inspired by the requirement specification expressed for NASA Wide-field InfraRed Explorer (WIRE) system \cite{laplante2017requirements} and the Software Engineering Body of Knowledge (SEBoK) \cite{abran2004software}. These requirements are described in Table~\ref{table:systemRequirements}.
+
+
+\begin{longtable}{|m{1.4cm}|m{12cm}|}
+  \caption{Terramycelium software and system requirements}
+  \label{table:systemRequirements}\\
+  \hline
+
+          Volume &
+  
+          \textbf{Vol-1)}\label{vol-1} System needs to support asynchronous, streaming, and batch processing to collect data from centralised, distributed, and other sources
+          
+          \textbf{Vol-2)} System needs to provide scalable storage for massive data sets 
+          \\
+          \hline
+          Velocity & 
+          
+          \textbf{Vel-1)} System needs to support slow, bursty, and high throughput data transmission between data sources
+          
+          \textbf{Vel-2)} System needs to stream data to data consumers in a timely manner
+          
+          \textbf{Vel-3)} System needs to be able to ingest multiple, continuous, time-varying data streams 
+          
+          \textbf{Vel-4)} System shall support fast search from streaming and processed data with high accuracy and relevancy 
+          
+          \textbf{Vel-5)} System should be able to process data in a real-time or near real-time manner 
+          \\ 
+  
+          \hline
+  
+          Variety & 
+  
+          \textbf{Var-1)} System needs to support data in various formats ranging from structured to semi-structured and unstructured data 
+          
+          \textbf{Var-2)} System needs to support aggregation, standardization, and normalization of data from disparate sources
+          
+          \textbf{Var-3)} System shall support adaptations mechanisms for schema evolution
+          
+          \textbf{Var-4)} System can provide mechanisms to automatically include new data sources 
+          \\
+  
+          \hline
+  
+          Value & 
+          
+          \textbf{Val-1)} System needs to able to handle compute-intensive analytical processing and machine learning techniques 
+          
+          \textbf{Val-2)} System needs to support two types of analytical processing: batch and streaming
+          
+          \textbf{Val-3)} System needs to support different output file formats for different purposes 
+          
+          \textbf{Val-4)} System needs to support streaming results to the consumers 
+          \\
+  
+          \hline
+  
+          Security \& Privacy & 
+          
+          \textbf{SaP-1)} System needs to protect and retain the privacy and security of sensitive data 
+          
+          \textbf{SaP-2)} System needs to have access control, and multi-level, policy-driven authentication on protected data and processing nodes. 
+          \\
+  
+          \hline
+          
+          Veracity &
+          
+          \textbf{Ver-1)} System needs to support data quality curation including classification, pre-processing, format, reduction, and  transformation 
+          
+          \textbf{Ver-2)} System needs to support data provenance including data life cycle management and long-term preservation.
+          \\
+          \hline
+  
+  \end{longtable}
+
 
 \section{Theory}
 \label{sec:theory}
-% Explain the theoretical underpinnings that guide the development of the reference architecture.
+
+In mathematical terms, an inflection point is a significant juncture where the curvature of a curve changes direction, signifying the transition from one behaviour to another. This pivotal point is marked by a dissolution of the prior shape and the emergence of a novel form. Today, there are empirical signals and derivers that point in the direction of a seismic shift \cite{mit_tech_review_2023}. 
+
+A glimpse of the New Vantage Partners report in 2023 communicates that despite potential economic headwinds, the investments in data are growing and remain strong. Nevertheless, the report also communicates that only 23.9\% of companies identify themselves as data-driven. 
+
+Before discussing these design theories, a clear communication method for architectural constructs is essential. This study employs the architecture definition from ISO/IEC 42010 \cite{ISO42010}, described as 'the fundamental concepts or properties of a system in its environment embodied in its elements, relationships, and in the principles of its design and evolution'.
+
+\subsection{The monolith}
+
+While the tools and technologies of data engineering have reached the Cambrian explosion \cite{AtaeiHype}, the underlying assumptions that govern the data architectures have not been much challenged.
+
+According to \citeauthor{richards2020fundamentals} there are two major categories of architectures; 1) monolithic (deployed as a single unit) and 2) distributed (the system is made up of sub-components that are deployed separately). Today, most data architectures are in the first category. 
+
+While starting as a monolith can be a simple and good approach for building a data-intensive system, it falls short as the solution scales. While this assumption is challenged in the software engineering world, data engineering seems to still be driven by monolithic designs \cite{ataei2022state}. These designs are enforced by enabler technologies such as data warehouses and data lakes. In addition, many organisations and books adopt the idea of a \emph{single source of truth}.
+
+\subsection{The data chasm}
+
+Analytical data and operational data are two distinct types of data used in businesses. Operational data is used to manage day-to-day business operations, while analytical data is used to support strategic decision-making by identifying patterns and trends in historical data.
+
+Many of the challenges of current BD architectures rely on its fundamental assumption of dividing operational and analytical data. While operational and analytical data have different properties and are processed differently, bringing operational data far from its original source can affect its integrity negatively, create organisational silos, and produce data quality issues. 
+
+These two different planes of data are usually operated underlying different organisational hierarchies. Data scientists, business intelligence analysts, machine learning engineers, data stewards, and data engineers are usually under the leadership of the Chief Data and Analytics Officer (CDAO) and are heavily involved in creating business value out of data. On the other hand, software engineers, product owners, and quality assurance engineers are usually working with the Chief Technology Officer (CTO).
+
+This has resulted in two segregated technology stacks and heavy investments in bridging the two. This chasm has resulted in two different topologies and fragile integration architectures through ETLs (Figure \ref{fig:dataPlanes}). This is usually achieved by some sort of batch ETL job that aims to extract data from operational databases. These ETLs usually don't have any clearly defined contract with the operational database and are sheer consumers of its data. This highlights the fragility of this architecture, as the upstream changes from operational databases can affect downstream analytical applications. Over time, ETL job complexity increases, maintainability becomes harder, and data quality decreases. 
+
+\begin{figure}[h]
+  \includegraphics[width=\textwidth]{images/data-planes.png}
+  \caption{The great divide of data}
+  \label{fig:dataPlanes}
+\end{figure}
+
+Many of the technologies created over the years are developed underlying this very assumption. While these technologies are effective in handling the volume, velocity and variety of data, today's data challenges are about the proliferation of origins, data quality and data architecture. 
+
+% For instance, intelligent pet healthcare would require longitudinal records on animal diagnostics, breed, environmental factors, particularities of the species, and even some of the owner's data. 
+
+Data are usually collected and consolidated through several systems. Some of these data may even go beyond the perimeters of the organisation. Herefore, based on the premises discussed hereinabove and the challenges explicated in Section \ref{firstSLR:findings:limitationsOfCurrentRAs}, it is posited that today's data architectures need a shift from the centralization of data in one big analytical database to connecting analytical data wherever it is. 
+
+Based on this, the artifact designed for this study learns from past solutions and addresses their shortcomings. This artifact aims to walk away from overly centralised and inflexible data architectures that act as a coordination bottleneck. Therefore, one of the objectives of this artifact is to bridge the gap between the point where data is generated and the point in which it is used, thus simplifying the process. This artifact aims to increase agility in the face of growth and respond effectively to organisational changes. Therefore the first architectural style of Metamycelium is as follows: 
+
+
+\subsubsection{Localized autonomy through domain-driven decentralisation}
+
+Today's businesses are dealing with a great deal of complexity. A typical business is made up of various domains with different domains and structures. These domains change at different rates and tend to be quite isolated from each other. The overall synergy of the business is dictated by the relationship between these domains and the ways in which these domains evolve. 
+
+At the heart of these synergies sits volatility and rapid change in the market and an ever-increasing number of regulations. How do businesses today manage the impact of these changes to their data? should they constantly modify ETL jobs, create new ETL backlogs, and consolidate data into operational stores? how can businesses create quality and trustworthy data without slowing down? this boils down to embracing the change in today's data landscape. 
+
+One way to tackle this complexity is to align technology with business. Businesses break down their problem into smaller problems that are handled in each domain; technology and data can be incorporated into those domains too. This approach is well-established in microservices architectures \cite{ataei2023application}. 
+
+
+
+
+
+% \subsubsection{Domain-driven design}
+
+% Integral to Metamycelium, is the distribution and decentralisation of services into domains that have clear bounded context. Perhaps one the most challenging things one might face when it comes to architecting a distributed system is: based on what architectural quanta should the system be broken down? This issue has been repeatedly discussed for example among adopters of microservices architecture \cite{DataMesh}. Metamycelium, inspired by the concept of domain-drive design (DDD), tends to sit data close to the product domain that relates to it. This implies that data inheres in the product domain and as a facet of it \cite{laigner2021data}. 
+
+% This is mainly driven by the fact that most organisations today are decomposed based on their products. These products are the capabilities of the business that are segregated into various domains. These domains usually define their bounded context, evolve at different rates, and are operated by cross-functional teams \cite{teamtopologiesSkelton}. Incorporating data into these bounded contexts can result in a synergy that can improve the management of continuous change. 
+
+% This can be micro, such as application developers communicating with data engineers about collecting user data in nested data structures, or macro, such as application developers thinking about redesigning their Graphql schema in an intermediary layer that may affect the downstream analytical services. Therefore, the concept of DDD is absorbed into this study to facilitate communication and increase the adoption, rigour and relevance of Metamycelium.
+
+% DDD is an approach to software development that focuses on understanding and modeling the problem domain of a software application. The goal of DDD is to create software that reflects the language, concepts, and behaviors of the problem domain, rather than being based solely on technical considerations. 
+
+% DDD can help Metamycelium by providing a systematic approach to modeling and managing data that is closely aligned with the problem domain of the application. By focusing on the language, concepts, and behaviors of the problem domain, DDD can help data architects gain a deeper understanding of the data that is needed and how it should be structured \cite{eridaputra2014modeling}
+
+% Communication is a key component of any software development endeavour \cite{sudhakar2012model}, and without it, essential knowledge sharing can be compromised. Often data engineers and business stakeholders have no direct interaction with one another. Instead, the domain knowledge is translated through intermediaries such as business analysts or project managers to a series of tasks to be done \cite{khrononov2021learning}. This implies at least two translations from two different ontologies. 
+
+% In each translation, information is lost, which is the essential domain knowledge, and this implies a risk to the overall data quality. In such a data engineering process, the requirement often gets distorted, and the data engineer has no awareness of the actual business domain and the problem being addressed. 
+
+% Often, problems being solved through data engineering, are not simple mathematical problems or a riddle but rather have broader scopes. An organisation may decide to optimize workflows and processes through continuous data-driven decision-making, and a data architecture that is overly centralised and not flexible can risk a project failure.
+
 
 \section{Artifact}
 \label{sec:artifact}
@@ -268,8 +448,7 @@ Morover, the BS ISO/IEC 18384-1 RA for service-oriented architectures \cite{Iso1
 
 
 \bibliographystyle{elsarticle-harv}
-
- \bibliography{bibfile}
+\bibliography{bibfile}
 
 \end{document}
 \endinput
