@@ -9,45 +9,45 @@ Warning--empty author in mit_tech_review_2023
 Warning--empty booktitle in Amatriain2013
 Warning--empty pages in ataei2023towards
 Warning--empty chapter and pages in Bahrami2015
-You've used 48 entries,
+You've used 65 entries,
             2990 wiz_defined-function locations,
-            910 strings with 13410 characters,
-and the built_in function-call counts, 30194 in all, are:
-= -- 2324
-> -- 1062
-< -- 40
-+ -- 432
-- -- 363
-* -- 3066
-:= -- 4350
-add.period$ -- 144
-call.type$ -- 48
-change.case$ -- 352
-chr.to.int$ -- 45
-cite$ -- 55
-duplicate$ -- 2367
-empty$ -- 2331
-format.name$ -- 502
-if$ -- 5781
-int.to.chr$ -- 4
+            998 strings with 16625 characters,
+and the built_in function-call counts, 40891 in all, are:
+= -- 3125
+> -- 1464
+< -- 60
++ -- 592
+- -- 501
+* -- 4131
+:= -- 5911
+add.period$ -- 192
+call.type$ -- 65
+change.case$ -- 475
+chr.to.int$ -- 61
+cite$ -- 72
+duplicate$ -- 3207
+empty$ -- 3166
+format.name$ -- 683
+if$ -- 7846
+int.to.chr$ -- 5
 int.to.str$ -- 1
-missing$ -- 429
-newline$ -- 255
-num.names$ -- 188
-pop$ -- 912
+missing$ -- 584
+newline$ -- 337
+num.names$ -- 256
+pop$ -- 1244
 preamble$ -- 1
-purify$ -- 312
+purify$ -- 424
 quote$ -- 0
-skip$ -- 819
+skip$ -- 1130
 stack$ -- 0
-substring$ -- 1134
-swap$ -- 1580
-text.length$ -- 11
+substring$ -- 1485
+swap$ -- 2133
+text.length$ -- 17
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 402
+type$ -- 537
 warning$ -- 5
-while$ -- 191
+while$ -- 261
 width$ -- 0
-write$ -- 688
+write$ -- 920
 (There were 5 warnings)

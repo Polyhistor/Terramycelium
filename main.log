@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Homebrew) (preloaded format=pdflatex 2023.6.22)  20 FEB 2024 20:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Homebrew) (preloaded format=pdflatex 2023.6.22)  3 MAR 2024 20:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -216,7 +216,23 @@ Package pdftex.def Info: images/data-planes.png  used on input line 385.
 
 LaTeX Warning: Reference `firstSLR:findings:limitationsOfCurrentRAs' on page 13 undefined on input line 394.
 
-(./main.bbl
+[13] [14] [15]
+Overfull \hbox (7.07643pt too wide) in paragraph at lines 458--459
+[]\OT1/cmr/m/n/12 Metamycelium's de-cen-tral-ized and dis-tributed ar-chi-tec-ture in-tro-duces chal-
+ []
+
+[16]
+Overfull \hbox (4.40007pt too wide) in paragraph at lines 464--465
+[]\OT1/cmr/m/n/12 While event-driven ar-chi-tec-tures typ-i-cally of-fer even-tual con-sis-tency, which
+ []
+
+[17]
+<images/Event-architecture.png, id=75, 1664.46844pt x 882.29625pt>
+File: images/Event-architecture.png Graphic file (type png)
+<use images/Event-architecture.png>
+Package pdftex.def Info: images/Event-architecture.png  used on input line 479.
+(pdftex.def)             Requested size: 390.0pt x 206.72035pt.
+ [18 <./images/Event-architecture.png>] (./main.bbl
 Underfull \hbox (badness 1924) in paragraph at lines 16--21
 []\OT1/cmr/m/n/12 , 2023.  Build-ing a High-Performance Data and AI Or-ga-ni-za-
  []
@@ -226,84 +242,129 @@ Overfull \hbox (162.29164pt too wide) in paragraph at lines 16--21
 \OT1/cmtt/m/n/12 https://www.databricks.com/resources/whitepaper/mit-technology-review-insights-report\OT1/cmr/m/n/12 .
  []
 
-[13] [14]
-Underfull \hbox (badness 3019) in paragraph at lines 108--112
+[19]
+Underfull \hbox (badness 2050) in paragraph at lines 46--50
+[]\OT1/cmr/m/n/12 Ataei, P., Litch-field, A., 2021.  Neomycelia: A soft-ware ref-
+ []
+
+
+Underfull \hbox (badness 3407) in paragraph at lines 46--50
+\OT1/cmr/m/n/12 er-ence ar-chi-tec-ture-for big data sys-tems, in: 2021 28th Asia-
+ []
+
+
+Underfull \hbox (badness 3557) in paragraph at lines 46--50
+\OT1/cmr/m/n/12 Pacific Soft-ware En-gi-neer-ing Con-fer-ence (APSEC), IEEE Com-
+ []
+
+
+Underfull \hbox (badness 2846) in paragraph at lines 46--50
+\OT1/cmr/m/n/12 puter So-ci-ety, Los Alami-tos, CA, USA. pp. 452--462.  URL:
+ []
+
+
+Overfull \hbox (38.79158pt too wide) in paragraph at lines 46--50
+\OT1/cmtt/m/n/12 https://doi.ieeecomputersociety.org/10.1109/APSEC53868.2021.00052\OT1/cmr/m/n/12 ,
+ []
+
+[20] [21]
+Underfull \hbox (badness 3019) in paragraph at lines 117--121
 []\OT1/cmr/m/n/12 technology re-view in-sights in part-ner-ship with Databricks, M.,
  []
 
 
-Underfull \hbox (badness 2443) in paragraph at lines 108--112
+Underfull \hbox (badness 2443) in paragraph at lines 117--121
 \OT1/cmr/m/n/12 2021.  Build-ing a high-performance data or-ga-ni-za-tion.  URL:
  []
 
 
-Overfull \hbox (88.1916pt too wide) in paragraph at lines 108--112
+Overfull \hbox (88.1916pt too wide) in paragraph at lines 117--121
 \OT1/cmtt/m/n/12 https://databricks.com/p/whitepaper/mit-technology-review-insights-report\OT1/cmr/m/n/12 . 
  []
 
-[15]
-Underfull \hbox (badness 1292) in paragraph at lines 126--130
+[22]
+Underfull \hbox (badness 1292) in paragraph at lines 159--163
 []\OT1/cmr/m/n/12 ISO/IEC, 2018.  Iso/iec 29148:2018. sys-tems and soft-ware en-gi-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 145--150
+Overfull \hbox (180.81665pt too wide) in paragraph at lines 178--183
+\OT1/cmtt/m/n/12 https://www.amazon.com/Learning-Domain-Driven-Design-Aligning-Architecture/dp/1098100131\OT1/cmr/m/n/12 . 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 188--193
 []\OT1/cmr/m/n/12 Kreps, J., 2014.  Ques-tion-ing the lambda ar-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 145--150
+Underfull \hbox (badness 10000) in paragraph at lines 188--193
 \OT1/cmr/m/n/12 chi-tec-ture.  On-line ar-ti-cle, July 205.  URL:
  []
 
 
-Overfull \hbox (44.96658pt too wide) in paragraph at lines 145--150
+Overfull \hbox (44.96658pt too wide) in paragraph at lines 188--193
 \OT1/cmtt/m/n/12 https://www.oreilly.com/radar/questioning-the-lambda-architecture/\OT1/cmr/m/n/12 . 
  []
 
+[23]
+Underfull \hbox (badness 2343) in paragraph at lines 220--225
+[]\OT1/cmr/m/n/12 Newman, S., 2015b.  Build-ing Mi-croser-vices: De-sign-ing Fine-
+ []
 
-Underfull \hbox (badness 10000) in paragraph at lines 167--171
+
+Underfull \hbox (badness 3884) in paragraph at lines 220--225
+\OT1/cmr/m/n/12 Grained Sys-tems.  O'Reilly Me-dia, Se-bastopol, CA.  URL:
+ []
+
+
+Overfull \hbox (193.16666pt too wide) in paragraph at lines 220--225
+\OT1/cmtt/m/n/12 https://www.amazon.com/Building-Microservices-Designing-Fine-Grained-Systems/dp/1492034029\OT1/cmr/m/n/12 . 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 226--230
 []\OT1/cmr/m/n/12 OATH, 2007.  Oath ref-er-ence ar-chi-tec-ture, re-lease
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 167--171
+Underfull \hbox (badness 10000) in paragraph at lines 226--230
 \OT1/cmr/m/n/12 2.0 ini-tia-tive for open au-then-ti-ca-tion.  OATH URL:
  []
 
 
-Overfull \hbox (199.34166pt too wide) in paragraph at lines 167--171
+Overfull \hbox (199.34166pt too wide) in paragraph at lines 226--230
 \OT1/cmtt/m/n/12 https://openauthentication.org/wp-content/uploads/2015/09/ReferenceArchitectureVersion2.pdf\OT1/cmr/m/n/12 . 
  []
 
-[16]
-Underfull \hbox (badness 10000) in paragraph at lines 227--231
+[24]
+Underfull \hbox (badness 10000) in paragraph at lines 299--303
 []\OT1/cmr/m/n/12 International Or-ga-ni-za-tion for Stan-dard-iza-tion (ISO/IEC),
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 227--231
+Underfull \hbox (badness 10000) in paragraph at lines 299--303
 \OT1/cmr/m/n/12 I., 2017.  Iso/iec/ieee 42010:2011.  URL:
  []
 
-[17]) [18] (./main.aux)
+[25]) [26] (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 3363 strings out of 476025
- 52378 string characters out of 5779036
+ 3423 strings out of 476025
+ 53919 string characters out of 5779036
  1862388 words of memory out of 5000000
- 23793 multiletter control sequences out of 15000+600000
+ 23852 multiletter control sequences out of 15000+600000
  520785 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,6n,76p,1248b,322s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (19 pages, 246386 bytes).
+ 72i,9n,76p,1248b,358s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on main.pdf (27 pages, 440491 bytes).
 PDF statistics:
- 120 PDF objects out of 1000 (max. 8388607)
- 76 compressed objects within 1 object stream
+ 173 PDF objects out of 1000 (max. 8388607)
+ 108 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -86,7 +86,7 @@
 %%             country={}}
 %% \fntext[label3]{}
 
-\title{Terramycelium: A Domain-driven Reference Architecture for Big Data Systems}
+\title{Terramycelium: A Complex Adaptive Reference Architecture for Big Data Sytems}
 
 %% use optional labels to link authors explicitly to addresses:
 %% \author[label1,label2]{}
@@ -358,7 +358,7 @@ The requirements representation is organized in system modes, where the major co
 \label{sec:theory}
 
 In mathematical terms, an inflection point is a significant juncture where the curvature of a curve changes direction, signifying the transition from one behaviour to another. This pivotal point is marked by a dissolution of the prior shape and the emergence of a novel form. Today, there are empirical signals and derivers that point in the direction of a seismic shift \cite{mit_tech_review_2023}. 
-
+s
 A glimpse of the New Vantage Partners report in 2023 communicates that despite potential economic headwinds, the investments in data are growing and remain strong. Nevertheless, the report also communicates that only 23.9\% of companies identify themselves as data-driven. 
 
 Before discussing these design theories, a clear communication method for architectural constructs is essential. This study employs the architecture definition from ISO/IEC 42010 \cite{ISO42010}, described as 'the fundamental concepts or properties of a system in its environment embodied in its elements, relationships, and in the principles of its design and evolution'.
@@ -404,28 +404,128 @@ At the heart of these synergies sits volatility and rapid change in the market a
 
 One way to tackle this complexity is to align technology with business. Businesses break down their problem into smaller problems that are handled in each domain; technology and data can be incorporated into those domains too. This approach is well-established in microservices architectures \cite{ataei2023application}. 
 
+\subsubsection{Domain-driven design}
 
 
+Integral to Metamycelium is the distribution and decentralisation of services into domains that have a clear, bounded context. Perhaps one of the most challenging things one might face when it comes to architecting a distributed system is: based on what architectural quanta should the system be broken down? This issue has been repeatedly discussed, for example, among adopters of microservices architecture \cite{DataMesh}. Metamycelium, inspired by the concept of domain-drive design (DDD), tends to sit data close to the product domain that relates to it. This implies that data is in the product domain and as a facet of it \cite{laigner2021data}.
+
+This is mainly driven by the fact that most organisations today are decomposed based on their products. These products are the capabilities of the business that are segregated into various domains. These domains usually define their bounded context, evolve at different rates, and are operated by cross-functional teams \cite{teamtopologiesSkelton}. Incorporating data into these bounded contexts can result in a synergy that can improve the management of continuous change.
+
+This can be micro, such as application developers communicating with data engineers about collecting user data in nested data structures, or macro, such as application developers thinking about redesigning their Graphql schema in an intermediary layer that may affect downstream analytical services. Therefore, the concept of DDD is incorporated into this study to facilitate communication and increase the adoption, rigour, and relevance of Metamycelium.
+
+DDD is an approach to software development that focuses on understanding and modelling the problem domain of a software application. The goal of DDD is to create software that reflects the language, concepts, and behaviours of the problem domain rather than being based solely on technical considerations. 
+
+DDD can help Metamycelium by providing a systematic approach to modelling and managing data that is closely aligned with the problem domain of the application. By focusing on the language, concepts, and behaviours of the problem domain, DDD can help data architects gain a deeper understanding of the data that is needed and how it should be structured (eridaputra 2014 modelling, DataMesh Communication is a key component of any software development endeavour \cite{sudhakar2012model}, and without it, essential knowledge sharing can be compromised. Often, data engineers and business stakeholders have no direct interaction with one another. Instead, domain knowledge is translated through intermediaries such as business analysts or project managers to a series of tasks to be done \cite{khrononov2021learning}. This implies at least two translations from two different ontologies.
+
+In each translation, information is lost, which is essential domain knowledge, and this implies a risk to the overall quality of the data. In such a data engineering process, the requirement often gets distorted, and the data engineer has no awareness of the actual business domain or the problem being addressed.
+
+Often, problems being solved through data engineering are not simple mathematical problems or riddles but rather have broader scopes. An organisation may decide to optimise workflows and processes through continuous data-driven decision-making, and a data architecture that is overly centralised and not flexible can risk project failure.
 
 
-% \subsubsection{Domain-driven design}
+\subsubsection{Complex adaptive systems}
 
-% Integral to Metamycelium, is the distribution and decentralisation of services into domains that have clear bounded context. Perhaps one the most challenging things one might face when it comes to architecting a distributed system is: based on what architectural quanta should the system be broken down? This issue has been repeatedly discussed for example among adopters of microservices architecture \cite{DataMesh}. Metamycelium, inspired by the concept of domain-drive design (DDD), tends to sit data close to the product domain that relates to it. This implies that data inheres in the product domain and as a facet of it \cite{laigner2021data}. 
+Architectures like Metamycelium share properties with complex adaptive systems \cite{holland1992complex}. The artifact designed for this thesis is especially inspired by the idea that powerful groups can emerge from an array of simple rules governing local agents. In one study, \citeauthor{reynolds1987flocks} analysed a synchronized flock of starling birds in autumn. This study presented the fact that every starling bird follows three simple rules: 1) alignment (following flockmates that are close by), 2) separation (so birds don't collide with each other), and 3) cohesion (keeping the same pace as the neighbouring flockmates). These rules can be mathematically expressed as follows:
 
-% This is mainly driven by the fact that most organisations today are decomposed based on their products. These products are the capabilities of the business that are segregated into various domains. These domains usually define their bounded context, evolve at different rates, and are operated by cross-functional teams \cite{teamtopologiesSkelton}. Incorporating data into these bounded contexts can result in a synergy that can improve the management of continuous change. 
+Alignment:
+$$
+v_i(t+1) = v_i(t) + \frac{1}{k} \sum_{j=1}^{N} (v_j(t) - v_i(t))
+$$
 
-% This can be micro, such as application developers communicating with data engineers about collecting user data in nested data structures, or macro, such as application developers thinking about redesigning their Graphql schema in an intermediary layer that may affect the downstream analytical services. Therefore, the concept of DDD is absorbed into this study to facilitate communication and increase the adoption, rigour and relevance of Metamycelium.
+where $v_i(t)$ is the velocity vector of bird $i$ at time $t$, $k$ is a normalization factor, and $N$ is the number of neighbouring birds.
 
-% DDD is an approach to software development that focuses on understanding and modeling the problem domain of a software application. The goal of DDD is to create software that reflects the language, concepts, and behaviors of the problem domain, rather than being based solely on technical considerations. 
+Cohesion:
+$$
+v_i(t+1) = v_i(t) + \frac{1}{k} (c_i(t) - p_i(t))
+$$
 
-% DDD can help Metamycelium by providing a systematic approach to modeling and managing data that is closely aligned with the problem domain of the application. By focusing on the language, concepts, and behaviors of the problem domain, DDD can help data architects gain a deeper understanding of the data that is needed and how it should be structured \cite{eridaputra2014modeling}
+where $c_i(t)$ is the center of mass of the neighbouring birds, $p_i(t)$ is the position of bird $i$ at time $t$, and $k$ is a normalization factor.
 
-% Communication is a key component of any software development endeavour \cite{sudhakar2012model}, and without it, essential knowledge sharing can be compromised. Often data engineers and business stakeholders have no direct interaction with one another. Instead, the domain knowledge is translated through intermediaries such as business analysts or project managers to a series of tasks to be done \cite{khrononov2021learning}. This implies at least two translations from two different ontologies. 
+Separation:
+$$
+v_i(t+1) = v_i(t) + \sum_{j=1}^{N} \frac{(p_i(t) - p_j(t))}{d_{ij}^2}
+$$
 
-% In each translation, information is lost, which is the essential domain knowledge, and this implies a risk to the overall data quality. In such a data engineering process, the requirement often gets distorted, and the data engineer has no awareness of the actual business domain and the problem being addressed. 
+where $p_i(t)$ is the position of bird $i$ at time $t$, $p_j(t)$ is the position of bird $j$ at time $t$, and $d_{ij}$ is the distance between birds $i$ and $j$.
 
-% Often, problems being solved through data engineering, are not simple mathematical problems or a riddle but rather have broader scopes. An organisation may decide to optimize workflows and processes through continuous data-driven decision-making, and a data architecture that is overly centralised and not flexible can risk a project failure.
+Starling birds don't need a centralised orchestrator to create this complex adaptive system. In Metamycelium the aim is to promote a domain-driven distribution of data ownership. This architecture is modeled in a way that a domain does not provide only operational data through a standard interface, but does provide analytical data too. For instance, in practice management software for veterinaries, the animal domain provides operational APIs for updating animal attributes, but it can also provide analytical interfaces for retrieving animal data within a window of time. Every domain owns its data.
 
+In this fashion, the domain can also choose to retrieve data from other domains with some sort of discovery mechanism, process the data and enrich its data. In some cases, there can be a creation of aggregate domains with the main concern of aggregating data from various domains and providing it for a specific use case. 
+
+This is to remove vertical dependency and allow teams to have their local autonomy while being empowered with the right level of discovery and APIs. This architecture promotes the idea of coequal nodes consolidated to achieve the overall goal of the system rather than a centralised database of all data owned by people who don't have domain knowledge. This concept is inspired by DDD in the book presented by \citeauthor{evans2004domain}, data mesh \cite{dehghani2020datamesh}, and microservices architecture \cite{newman2015building}.
+
+\subsubsection{Event driven services}
+
+Metamycelium's decentralized and distributed architecture introduces challenges in service communication as the network grows. Initially, simple point-to-point communication via REST API calls suffices, but this method proves inefficient with system expansion. Such synchronous interactions can lead to a 'distribution tax,' where one service's blocking state, often due to intensive processes, causes delays in dependent services \cite{montesi2016circuit}.
+
+The heavy network demands of distributed systems may further complicate matters, potentially causing \emph{tail latency}, \emph{context switching}, and \emph{gridlocks} \cite{sriraman2018mu,gan2019open,kakivaya2018service,AtaeiApsec}. This tight coupling is at odds with the distributed system's goals of autonomy and resilience.
+
+To overcome these issues, Metamycelium adopts asynchronous event-driven communication. This model enables services to publish and respond to events, thus decoupling their interactions. In this \emph{publish and forget} framework, services announce events to specific topics and move forward without awaiting direct responses. This is similar to restaurant staff responding to environmental cues instead of direct commands, promoting a smooth operational flow.
+
+While event-driven architectures typically offer eventual consistency, which might not be suitable for certain real-time stream processing scenarios requiring immediate consistency, it is a safe assumption that the majority of data engineering workloads can efficiently operate within an event-driven paradigm.
+
+According to \citeauthor{richards2020fundamentals}, event-driven architectures come in two major topologies: 1) broker topology and 2) mediator topology. Additionally, in the works of \citeauthor{stopford2018designing} the concept of streaming platforms is elaborated. Since Metamycelium is a BD architecture that aims to process analytical data, a lot of challenges of achieving ACID transactions are eliminated. Therefore Metamycelium adopts the architectural concepts of \emph{distributed asynchronous event-driven systems} using a hybrid topology. That is, Metamycelium is absorbing some elements of the broker topology, some elements of the mediator topology and many concepts from streaming platforms. Therefore in Metamycelium's CAP theorem \cite{brewer2000towards} partition tolerance and availability are top guarantees. 
+
+There are five primary architectural components within this hybrid topology: the event, the event consumer, the event producer, the event backbone and the eventing interface. Events are initiated by the event producer and are dispatched to the topic of interest. This event then goes through the event broker and is stored there for retrieval in a queue-like indexed data structure. The event consumers that are interested in this topic will then listen to the topic of interest using the eventing interface. The event backbone itself is internally a distributed system that is made up of an arbitrary number of event brokers. 
+
+Event brokers are services that are spawned and provisioned to facilitate event communication through Metamycelia. These brokers are coordinated with a distributed service coordinator. Brokers do also allow for the replication of topics. Furthermore, to allow for fault tolerance and recoverability, the event backbone has a dedicated event archive. This archive aims to store all events that are going through the brokers so they can be restored to a correct state if a failure occurs. 
+
+
+% Moreover, all events that are getting sent into the event backbone through the producer and all events that are being received from the even consumer go through schema validation. Schemas are defined and checked against all events from the domain in order to avoid hard-to-find issues and service failure. These schemas are part of the metadata API discussed in Section~\ref{section:aNewArchitecturalQuantum:metadata}.
+
+These components work together to create a distributed, fault-tolerant, and scalable data system that can handle both batch and stream processing as portrayed in Figure \ref{fig:eventDrivenArchitecture}. 
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\textwidth]{images/Event-architecture.png}
+  \caption{Metamycelium Event-driven Architecture}
+  \label{fig:eventDrivenArchitecture}
+\end{figure}
+
+
+\subsection{Architectural characteristics}
+
+The architectural characteristics of the Metamycelium architecture are notable for their focus on maintainability, scalability, fault tolerance, elasticity, and deployability. It aligns with modern engineering practices such as automated deployment and continous integration. The architecture emphasises the use of microservices, which are independently deployable and maintainable components.
+
+Maintainability is a high-scoring characteristic of this architecture. The use of event-driven microservices architecture allows for modular development and independent scaling, making it easier to maintain and update individual components without affecting the entire system. Additionally, the architecture supports automated deployment practices, facilitating efficient updates and reducing manual intervention.
+
+Scalability and elasticity are also prominent features. The architecture enables horizontal scalability, allowing for the addition or removal of services based on demand. This flexibility ensures that the system can handle varying workloads effectively.
+
+Fault tolerance is another strength of the architecture. While interservice communication can impact fault tolerance, redundant and scalable design of Metamycelium, along with service discovery mechanisms, mitigate this issue. The independent, single-purpose nature of microservices generally leads to high fault tolerance.
+
+Deployability is emphasised, thanks to the small deployment units and decoupled nature of Metamycelia. The architecture supports evolutionary change, aligning with modern business practices that require agility and adaptability. Small, independently deployable units allow for faster updates and iterations, keeping pace with the dynamic nature of business requirements.
+
+However, the architecture may receive a lower score in terms of cost and simplicity. The distributed nature of Metamycelium and the potential for increased communication overhead can introduce complexities in managing and optimizing costs. Strategies such as intelligent data caching and replication can address performance challenges associated with network calls, but cost management remains an ongoing consideration.
+
+Overall, the Metamycelium architecture embraces the strengths of microservices, prioritising maintainability, scalability, fault tolerance, elasticity, and deployability. It acknowledges the challenges inherent in distributed architectures and offers strategies to mitigate them. Architects must understand the rules of architecture to intelligently navigate and leverage its benefits effectively. An overview of architectural characteristics is portrayed in Table~\ref{tab:architecture-characteristics}
+
+\begin{table}
+  \centering
+  \caption{Metamycelium Architecture Characteristics}
+  \label{tab:architecture-characteristics}
+  \begin{tabular}{|l|c|}
+    \hline
+    \textbf{Characteristic} & \textbf{Score} \\
+    \hline
+    Maintainability & $\bigstar\bigstar\bigstar$ \\
+    \hline
+    Scalability & $\bigstar\bigstar\bigstar\bigstar$ \\
+    \hline
+    Fault Tolerance & $\bigstar\bigstar\bigstar$ \\
+    \hline
+    Elasticity & $\bigstar\bigstar\bigstar\bigstar$ \\
+    \hline
+    Deployability & $\bigstar\bigstar\bigstar\bigstar$ \\
+    \hline
+    Cost & $\bigstar\bigstar$ \\
+    \hline
+    Simplicity & $\bigstar$ \\
+    \hline
+    Performance & $\bigstar\bigstar\bigstar$ \\
+    \hline
+    Support for Modern Engineering Practices & $\bigstar\bigstar\bigstar\bigstar$ \\
+    \hline
+  \end{tabular}
+\end{table}
 
 \section{Artifact}
 \label{sec:artifact}
