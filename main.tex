@@ -46,6 +46,13 @@
 \usepackage{amssymb}
 \usepackage{longtable}
 \usepackage{array}
+\usepackage{mdframed}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{tabularx}
+\usepackage{booktabs}
 
 %% The amsthm package provides extended theorem environments
 %% \usepackage{amsthm}
@@ -241,7 +248,7 @@ This study chooses a research-driven strategy based on these ideas. The RA was c
 
 Due to limitations in the study technique, we have enhanced this phase by increasing the systematicity and transparency of data gathering and synthesis using academic approaches like SLR. For this purpose we have adopted the findings from a SLR on current state of BD RAs presented by \citeauthor{ataei2022state}.
 
-\subsection{Construction of the RA}
+\subsection{Step4: Construction of the RA}
 The construction phase of the RA was guided by the findings and elements identified in the earlier stages of the research. Based on the ISO/IEC/IEEE 42010 standard, the construction process involved selectively integrating its components.
 
 This phase prominently featured the implementation of the Archimate modelling language, which is part of the ISO/IEC/IEEE 42010 standard. Archimate's service-oriented strategy efficiently connected the application, business, and technological layers of the RA. The incorporation of themes, theories, and patterns from the empirical data gathering phase, as detailed in sections \ref{identification-data-sources} and \ref{data-synthesis}, guaranteed that the research analysis addressed the specific demands stated in the study.
@@ -567,10 +574,184 @@ The Metamycelium design emphasises the advantages of microservices, focusing on 
 \section{Artifact}
 \label{sec:artifact}
 
-After having discussed many kernel and design theories, the necessary theoretical foundation is created for the design and development of the artefact. Metamycelium is created with Archimate and displays the RA mostly in the technology layer. Displaying these services in the technology layer means that it is up to the architect to decide what flow and application should exist in each node. For the sake of completion, and as every software is designed to account for a business need, a very simple BD business process is assumed. While this business layer could vary in different contexts, Metamycelium should be able to have the elasticity required to account for various business models.
+After exploring several kernel and design theories, a solid theoretical foundation is established for creating and developing the artefact. Metamycelium is generated using Archimate and mostly showcases the RA within the technological layer. The architect has the responsibility to determine the flow and application that should be present in each node when showcasing these services in the technology layer. To ensure thoroughness, a basic business process is assumed as every software is created to fulfil a business requirement. Metamycelium should possess the flexibility needed to accommodate alternative business models, notwithstanding potential variations in the business layer across different settings.
 
-It should be noted that the BD RA does not represent the architecture of any specific BD system. Instead, it serves as a versatile tool for describing, discussing, and developing system-specific architectures using standardised principles. By offering comprehensive and high-level perspectives, Metamycelium facilitates productive discussions regarding the requirements, structures, and operations inherent in BD systems. Notably, it remains vendor-neutral, allowing flexibility in selecting products or services, and does not impose rigid solutions that limit innovation. 
+The BD RA does not depict the architecture of any particular BD system. It functions as a versatile tool for describing, discussing, and constructing system-specific designs based on standardised principles. Metamycelium enables in-depth and insightful talks about the needs, frameworks, and functions of BD systems. The system stays vendor-neutral, providing flexibility in choosing products or services, and avoids imposing strict solutions that restrict innovation. 
 
+To ensure thoroughness, we have assumed a basic BD business process, as all software is created to fulfil a specific business requirement. Metamycelium consists of 15 primary components and 5 variable components, as seen in Figure \ref{fig:Metamycelium}. The lowercase "a" in the top left corner of the diagram represents the auxiliary view, while the letter "m" represents the master view. When the same entity is utilised in various models, the auxiliary view is employed. This indicates that the entity already exists and is being reused. 
+
+
+\begin{sidewaysfigure}
+  \includegraphics[width=23cm]{images/Metamycelium.jpg}
+  \caption{Metamycelium}
+  \label{fig:Metamycelium}
+\end{sidewaysfigure}
+
+While this business layer could vary in different contexts, Metamycelium should be able to have the elasticity required to account for various business models. To ease understanding of the RA, we sub-diagrammed the product domain in Figure \ref{fig:MetamyceliumServiceMesh}.
+
+\begin{sidewaysfigure}
+  \includegraphics[width=23cm]{images/metamyceliumServiceMesh.jpg}
+  \caption{Service Mesh}
+  \label{fig:MetamyceliumServiceMesh}
+\end{sidewaysfigure}
+
+These components are;
+
+\begin{enumerate}
+    \item \textbf{Ingress Gateway:} The ingress gateway plays a crucial role in Metamycelium by serving as the primary entry point for all incoming requests from external parties. Its responsibilities include exposing the necessary port and endpoint to facilitate the flow of data into the system. Depending on the nature of the request, the ingress gateway intelligently load balances the traffic, directing it either to the batch processing controller or the stream processing controller. This load-balancing capability contributes to the architecture's scalability and performance, as requests are efficiently distributed and processed based on their specific requirements.
+
+    Beyond load balancing, the ingress gateway offers several architectural advantages. Firstly, it enhances security by preventing port proliferation and ensuring that services are not directly accessed. Acting as a central entry point, it enables fine-grained control and enforcement of security policies, such as SSL termination, authentication, and potentially name-based virtual hosting. This consolidation of security measures at the ingress gateway safeguards the system from unauthorised access and ensures secure communication with external parties.
+    
+    Secondly, the ingress gateway improves performance by efficiently handling the SSL termination process, relieving downstream services from this computational burden. Furthermore, it facilitates object mutation through a proxy, allowing for potential modifications or enrichments of incoming data before it reaches the processing controllers. This flexibility enables the architecture to accommodate customizations and integrations with other systems, enhancing its extensibility.
+    
+    Additionally, the ingress gateway brings benefits in terms of monitoring and observability. With a clear point of entry, monitoring the incoming requests becomes easier, and metrics, logging, and tracing can be focused on this central component. This heightened visibility enables efficient troubleshooting, performance analysis, and compliance monitoring.
+    
+    Moreover, the ingress gateway supports network segmentation by separating public-facing components from private network resources. It establishes an architectural boundary that isolates internal services and infrastructure, further enhancing security and ensuring better control over access and data flow.
+    
+    By encompassing all these advantages, the ingress gateway addresses several architectural requirements, such as Vol-1, Vol-2, Var-1, Var-3, Var-4, Val-1, Val-3, Val-4, SaP-1, and SaP-2. Its pivotal role in the architecture contributes to its overall robustness, security, scalability, performance, flexibility, and ease of monitoring.
+
+    \item \textbf{Batch Processing Controller:} The batch processing controller main job is to handles batch events by dispatching them to the event backbone. This dedicated service, which can be a small service or a Lambda function, receives batch-processing requests and transforms them into events for the event broker. Its distinct nature allows it to process batch requests in bulk and asynchronously, setting it apart from stream processing controllers.
+
+    The batch-processing controller brings several architectural benefits. Firstly, it significantly enhances monitoring capabilities, providing better visibility into the progress and performance of batch events. This streamlined monitoring facilitates troubleshooting and performance analysis, ensuring that batch processing meets specified requirements and performance expectations.
+    
+    Additionally, the batch processing controller enables customization and flexibility in producing batch events. It can perform additional tasks beyond compute-intensive operations, such as data scrubbing or adding custom headers. This customization capability allows businesses to tailor batch event production to their specific needs and requirements.
+    
+    Having a specific controller for batch processing acknowledges the unique requirements and characteristics of batch events, providing dedicated functionality and optimization. This component addresses the requirements Vel-1, Val-1, and Val-2.
+    
+    \item \textbf{Stream Processing Controller:} The stream processing controller plays an important role in the architecture by handling streaming events and dispatching them to the event backbone via the event handling interface. This component is distinguished from the batch processing service as it caters specifically to the unique characteristics of streaming events. Unlike batch processing, streams are synchronous and often require high throughput processing capabilities.
+
+    The stream processing controller, although also a small service, focuses on non-heavy computations that are optimized for stream processing requirements. It can enable stream provenance, which tracks the lineage and history of streaming events, providing valuable insights for data governance and traceability. Additionally, the stream processing controller can leverage one-pass algorithms, which optimize memory and processing requirements for stream analytics tasks.
+    
+    One of the key advantages of having a dedicated stream processing controller is the ability to associate custom attributes with stream events. This allows for the contextual enrichment of streaming data and enables differentiated treatment based on the nature of the system. For example, specific rules or transformations can be applied to certain streams, facilitating real-time decision-making or targeted actions based on the content of the events.
+    
+    The stream processing controller also simplifies monitoring and discovery within the architecture. By having a separate component dedicated to stream processing, it becomes easier to track and analyze the performance, latency, and throughput of streaming events. Additionally, it enables focused monitoring of stream-specific metrics, providing valuable insights into the behaviour and efficiency of the streaming data pipeline.
+    
+    Overall, the stream processing controller brings architectural value by catering specifically to the unique characteristics of streaming events. Its ability to handle high throughput, apply custom attributes, optimize computations, and simplify monitoring and discovery makes it an important component in architectures involving streaming data. Industry use cases further highlight the importance and applicability of stream processing controllers in various domains. This component addresses the requirements Vol-1, Vel-1, Vel-2, Vel-4, Vel-5, and Val-2.
+    
+    \item \textbf{Event Processing Interface:} Event brokers are designed to achieve \emph{inversion of control}. As the company evolves and requirements emerge, the number of nodes or services increases, new regions of operations may be added, and new events might need to be dispatched. As each service has to communicate with the rest through the event backbone, each service will be required to implement its event-handling module. This can easily turn into a spaghetti of incompatible implementations by various teams, and can even cause bugs and unexpected behaviours. 
+    
+    To overcome this challenge, an event broker is introduced to each service of the architecture. Each service connects to its local event broker and publishes and subscribes to events through that broker. One of the key success criteria of the event broker is a unified interface that sits at the right level of abstraction to account for all services of the architecture. Event brokers, being environmentally agnostic can be deployed to any on-premise, private or public infrastructure. This frees up engineers from having to think about the event interface they have to implement and how it should behave. 
+    
+    Event brokers can also account for more dynamism by learning which events should be routed to which consumer applications.  Moreover, event brokers do also implement circuit breaking, which means if the service they have to break to is not available and does not respond for a certain amount of time, the broker establishes unavailability of the service to the rest of the services, so no further requests come through. This is essential to preventing a ripple effect over the whole system if one system fails. This component indirectly addresses the
+    requirements Val-1, and Ver-1.
+
+    \item \textbf{Event Backbone:} This is the heart of the Metamycelium, facilitating communication among all the nodes. The event backbone in itself should be distributed and ideally clustered to account for the ever-increasing scale of the system. Communication occurs as choreographed events from services analogous to a dance troupe. In a dance troupe, the members respond to the rhythm of the music by moving according to their specific roles.
+    
+    Here, each service (dancer) listens and reacts to the event backbone (music) and takes the required action. This means services are only responsible for dispatching events in a \emph{dispatch and forget} model, and subscribe to the topics that are necessary to achieve their ends. Event backbone thus ensures a continuous flow of data among services so that all systems are in the correct state at all times. Event backbone can be used to mix several streams of events, cache events, archive events, and other manipulation of events, so long as it is not too smart! or does not become an ESB of SOA architectures. 
+    
+    Ideally, an architect should perceive the event backbone as a series of coherent nodes that aim to handle various topics of interest. Over time, the event backbone can be monitored for access patterns and can be tuned to facilitate communication in an efficient manner. This component addresses the requirements Vel-1, Vel-2, Vel-3, Vel-4, Vel-5, Val-1, Val-2, Ver-1, Ver-2, and Ver-3.
+
+    \item \textbf{Egress Gateway:} The inclusion of an egress gateway in Metamycelium offers numerous advantages, especially for external data consumers. In this architecture, data consumers first interact with the discovery component, known as Data Lichen, which serves as a central hub for accessing available data domains. Once connected to Data Lichen, data consumers can navigate to the relevant data domain to retrieve the desired data.
+
+    Furthermore, all external data consumers in the system go through a centralised secret management and centralised authentication and authorisation component. This centralised approach brings several benefits to the architecture. Firstly, it ensures a consistent and secure management of secrets, such as API keys, access tokens, or credentials, which are essential for data access and security. This centralised secret management enhances the overall system's security posture by reducing the chances of vulnerabilities or misconfigurations in secret handling.
+
+    Secondly, the centralised authentication and authorisation component streamlines the authentication and access control processes for external data consumers. By enforcing a unified authentication mechanism, it ensures that all users are properly authenticated and authorized before accessing the system's data resources. This centralised approach simplifies the management of user access rights, improves security, and provides granular control over data access permissions.
+
+    Thirdly, the centralised components simplify the maintenance and scalability of the system. With a single point for managing secrets, authentication, and authorisation, it becomes easier to update, monitor, and audit these components. Additionally, this architectural pattern allows for easier scaling and expansion as new data domains or data sources can be seamlessly integrated into the system with consistent authentication and authorisation mechanisms.
+
+    Overall, the inclusion of an egress gateway in Metamycelium offers a robust and efficient approach for external data consumers. It ensures standardised data access, enhances security, simplifies maintenance, and enables scalability, making it a highly favourable and beneficial architectural design. This component addresses the requirements Vel-2, Vel-4, Val-3, Val-4, SaP-1, and SaP-2.
+    
+    \item \textbf{Product Domain Service Mesh:} In the architectural context, the implementation of a service mesh as a fundamental component of each product's domain is an effective approach. This service mesh comprises various key components that collectively enable efficient data processing, storage, governance, and intercommunication within the domain. These components include batch and streaming ingress, the domain's analytical service, domain's operational service, API access to distributed storage services (such as AWS S3), an infrastructure-providing API for platform-as-a-service modules (e.g., Terraform), containers hosting the domain's analytical service, a control tower (e.g., Istio), and integration with a federated governance service's API for policy enforcement through sidecars.
+
+    The effectiveness of the service mesh stems from its architectural design and its ability to address critical requirements. By encapsulating the domain's capabilities within a service mesh, the coupling between teams is eliminated, allowing for enhanced team autonomy. This architectural approach empowers individuals across teams by granting them the computational resources, tools, and autonomy necessary to operate independently and scale without being negatively affected by other teams or encountering friction with platform teams or siloed data engineering teams.
+    
+    From an architectural viewpoint, the service mesh's components work in harmony to deliver its benefits. The batch and streaming ingress components facilitate the intake of data into the domain's analytical service, enabling efficient data processing. The analytical service itself leverages domain-specific algorithms and analytical techniques to derive meaningful insights and outputs from the ingested data. API access to distributed storage services provides seamless integration with scalable and reliable storage solutions like AWS S3, ensuring efficient data persistence.
+    
+    The platform-as-a-service module's API offers infrastructure provisioning capabilities, streamlining the deployment and management of the service mesh. Containers hosting the domain's analytical service provide a standardised and isolated execution environment, promoting modularity, scalability, and ease of deployment. The control tower, represented by popular frameworks like Istio, manages and orchestrates the communication and traffic flow within the service mesh, enabling features such as load balancing, routing, and policy enforcement.
+    
+    Additionally, the service mesh integrates with a federated governance service, using its API to retrieve and enforce policies through sidecars. This ensures adherence to governance and compliance requirements, supporting centralised control and management across the service mesh.
+     
+    Moreover, the service mesh architecture includes a noteworthy element: the analytical service's access to operational data in a native and accessible manner. This aspect bridges the gap between data analytics and operational systems, effectively removing the \emph{great divide of data} and bringing analytics closer to the source.
+
+    By enabling direct access to operational data within the service mesh, the analytical service gains real-time insights and a holistic view of the system's operations. This seamless integration of operational data eliminates the need for manual data extraction and transformation processes, reducing latency and enabling timely decision-making.
+    
+    Moreover, having native access to operational data enhances the analytical service's effectiveness and accuracy. It eliminates potential data discrepancies or inconsistencies that may arise when analytics are performed on ETLed data. By accessing the operational data directly, the analytical service can provide up-to-date and reliable insights, contributing to more accurate analysis and informed decision-making.
+    
+    This native and accessible access to operational data within the service mesh brings analytics closer to the source. It promotes a data-driven culture by empowering the analytical service to work in tandem with operational systems, enabling a feedback loop where insights from analytics can drive optimizations and improvements in real time. This closer integration fosters a more agile and responsive approach to decision-making, leading to enhanced operational efficiency, innovation, and business value. This also eliminates accidental data quality issues that can arise from upstream operational systems.
+    
+    By eliminating the divide between analytics and operational data, the service mesh architecture supports a unified view of the system, facilitating seamless collaboration between analytics and operations teams. This convergence promotes a holistic understanding of the business and operational dynamics, enabling data-driven insights to be readily incorporated into the operational workflows.
+
+    The service mesh's effectiveness lies in its ability to address key architectural concerns. It promotes scalability, allowing the domain to handle large volumes of data and increasing computational resources as needed (Vol-1). It facilitates rapid development and deployment of analytical capabilities (Vel-3, Vel-4, Vel-5). The service mesh architecture accommodates variability in business contexts, supporting the diverse needs and requirements of different product domains (Var-1, Var-2, Var-3). It ensures data validation, quality, and integrity by leveraging advanced analytics and processing techniques (Val-1, Val-2, Val-3, Val-4). Security and privacy requirements are fulfilled through policy enforcement, secure communication, and data governance mechanisms (Sap-1, SaP-2). Finally, the service mesh architecture allows for the verification of system behaviour, enabling efficient testing, monitoring, and verification of the domain's analytical outputs (Ver-1, Ver-2, Ver-3).
+    
+    
+    \item  \textbf{Federated Governance Service:} Evidently, Metamycelium is a distributed architecture that encompasses a variety of independent services with an independent lifecycle that are built and deployed by independent teams. Whereas teams have their autonomy established, in order to avoid haphazard, out-of-control and conflicting interfaces, there should be a global federated governance that aims to standardise these services. This will facilitate the interoperability between services, communication, and aggregates, and even allows for a smoother exchange of members across teams. This also means the most experienced people at a company such as technical leads and lead architects will prevent potential pitfalls that more novice engineers may fall into. However, the aim of this service is not to centralise control in any way, as that would be going a step backwards into the data warehouse era. 
+    
+    This service aims to allow autonomous flow in the river of standards and policies that tend to protect the company from external harm. For instance, failing to comply with GDPR while operating in Europe can set forth fines of up to 10 million euros, and this may not be something that novice data engineers or application developers are fully aware of. The real challenge of the governance team is then to figure out the necessary abstraction of the standards to the governance layer and the level of autonomy given to the teams. The federated governance service is made up of various components such as global policies, metadata elements and formats, standards and security regulations. These components are briefly discussed below;
+    
+    \begin{enumerate}
+        \item \textbf{Global Policies:} general policy that governs the organisational practice. This could be influenced by internal and external factors. For instance, complying with GDPR could be a company's policy and should be governed through the federated governance service.
+        \item \textbf{Metadata Properties and Formats:} This is an overarching metadata standard defining the required elements that should be captured as metadata by any service within the organisation; it can also include the shape of metadata and its properties of it. For instance, the governance team may decide that each geographic metadata should conform to ISO 19115-1 \cite{ISOMetadata}.
+        \item \textbf{Standards:} overall standards for APIs (for instance Open API), versioning (for instance SemVer), interpolation, documentation (for instance Swagger), data formats, languages supported, tools supported, technologies that are accepted and others.
+        \item \textbf{Security Regulations:} company-wide regulations on what's considered secured, what software is allowed, how interfaces should be conducted and how the data should be secured. For instance, the company may choose to alleviate risks associated with OWASP's top 10 application security risks.
+    \end{enumerate}
+
+    While the above-mentioned components are promoted as a bare minimum, an architect may decide to omit or add a few more components to the federated governance service. This component can indirectly affect all requirements.
+
+    \item \textbf{Data Lichen:} As the number of products increases, more data become available to be served to consumers, interoperability increases, and maintenance becomes more challenging. If then, there is no automatic way for various teams to have access to the data they desire, a rather coupled and slow BD culture will evolve. To avoid these challenges and to increase discoverability, collaboration, and guided navigation, the Data Lichen should be implemented. Data discovery mechanisms like Data lichen are listed as a must-have by Gartner \cite{GartnerDataCatalog} and introduce better communication dynamics, easier data serve by services and intelligent collaboration between services. This component addresses the requirements Vel-4, Var-1, Var-3, and Var-4.
+    
+    \item \textbf{Telemetry Processor:} If all services employ the idea of localized logging, and simply generate and store logs in their own respective environments, debugging, issue finding and maintenance can become a challenging task. This is due to the distributed nature of Metamycelium and the requirements to trace transactions among several services. In order to overcome this challenge, the log aggregation pattern discussed in Section~\ref{logAggregationPattern} is used.
+    
+    The centralised service for processing telemetry data in Metamycelium offers several architectural benefits. By routing all telemetry data through a centralised service, it becomes easier to aggregate, process, and analyze logs, metrics, and traces from various sources. This centralization simplifies the data processing pipeline and reduces the complexity of handling telemetry data across the architecture.
+
+    Moreover, the centralised service provides a unified view of logs, metrics, and traces, enabling comprehensive analysis and correlation of data across the entire system. This allows for holistic monitoring, troubleshooting, and performance optimization by leveraging data from different sources and identifying patterns or anomalies that might not be evident when considering individual services or components in isolation.
+
+    In terms of scalability and performance, centralizing the processing of telemetry data enables efficient resource allocation. The architecture can scale the centralised service horizontally or vertically based on the growing telemetry data volume, ensuring optimal performance and responsiveness.
+
+    Having a centralised service for telemetry data processing ensures consistent monitoring and governance practices across the entire architecture. It allows for the enforcement of standardised monitoring, alerting, and governance policies, ensuring that all microservices or components adhere to the defined guidelines. This consistency simplifies management, improves system-wide visibility, and promotes adherence to best practices.
+
+    In addition to its role in processing telemetry data, the centralised service in the architecture can serves as an important data source for various consumers, including the Data Lichen. Data Lichen leverages the processed telemetry data to generate valuable insights and support data discovery. However, the data processed within this centralised service is not limited to a single consumer. It can also be made available for consumption by custom systems and dashboards, providing flexibility and extensibility to meet specific business requirements. 
+    
+    By enabling the consumption of telemetry data by multiple systems and dashboards, the architecture fosters a data-driven ecosystem, empowering different stakeholders to extract meaningful information and gain insights from the processed telemetry data. This versatility and accessibility of the telemetry data further enhance the value proposition of the centralised service within the broader BD architecture. This component indirectly addresses the requirements Vol-1, Vel-1, Val-1, and Ver-1.
+
+
+    \item \textbf{Event Archive:} As the number of services grows, the topics in the event backbone increase, and the number of events surges. Along the lines of these events, there could be a failure, resulting in a timeout and a loss of a series of events. This brings the system in the wrong state and can have a detrimental ripple effect on all services. Metamycelium tends to handle these failures by using an event archive. The event archive as the name states, is responsible for registering events, so they can be retrieved in the time of failure. 
+    
+    If there is a blackout in a certain geographical location and the event backbone is down, the backbone can recover itself and bring back the right state of the system by reading the events from the event archive. The event interface is responsible for circuit breaking, so services do not request any more events to the backbone while it is down. The time to expiry, and what events should be archived are decided based on the context in which Metamycelium is implemented. This component indirectly addresses the requirements Vol-1, Vel-1, Val-1, and Ver-1.
+
+    \item \textbf{Distributed Storage Service:} Whereas Metamycelium is a great advocate of decentralised and distributed systems, it is not necessary for each product domain to have its own kind of data storage. This is to prevent duplication, contrasting data storage approaches, decreased operability among services and lack of unified data storage mechanisms. The distributed storage service has been designed to store large volumes of data in raw format before it can get accessed for analytics and other purposes. 
+    
+    This means data can be first stored in the distributed storage service with corresponding domain ownership before it needs to be accessed and consumed by various services. Structured, semi-structured, unstructured and pseudo-structured data can be stored in the distributed storage service before it gets retrieved for batch and stream processing. Nevertheless, this does not imply that all data should directly go to the this service; the flow of data is determined based on the particularities of the context in which the system is embodied. This component addresses the requirements Vol-2, Vel-1, Var-1, Var-3, Var-4, Val-3.
+
+
+    \item \textbf{Platform as a Service:} The platform as a service (PaaS) component serves as a central hub that offers an API to all other components in the system. This PaaS component plays a crucial role in enabling the autonomy and scalability of the overall infrastructure.
+
+    One of the key architectural values of this PaaS component is its ability to abstract the underlying infrastructure complexities. By providing a standardised API, it allows each component to independently manage and provision the required resources, such as compute, storage, and networking, without being burdened by the intricate details of the underlying infrastructure. This abstraction layer promotes loose coupling between components and facilitates easier development, deployment, and maintenance of the system as a whole.
+    
+    Another architectural value of the PaaS component is its emphasis on scalability and elasticity. It enables dynamic allocation and de-allocation of resources based on the varying demands of different data domains. By offering an API that allows components to request resources as needed, the PaaS component enables efficient utilisation of the infrastructure. It can dynamically scale resources up or down, ensuring optimal performance and cost-effectiveness across the entire BD architecture.
+    
+    Each data domain can make requests to the PaaS API to provision, configure, and manage the necessary resources, enabling them to operate independently and efficiently. This decentralisation of infrastructure management enhances agility and flexibility within the architecture. This component addresses SaP-1, SaP-2, Var-1, Var-3, Var-4, Vel-1, and Vol-2.
+    
+    \item \textbf{Identity and Access Management:} The Identity and Access Management (IAM) component role is in ensuring secure and controlled access to the system's resources and data. It encompasses various architectural values that are essential for maintaining data integrity, privacy, and regulatory compliance.
+
+    One of the key architectural values of the IAM component is its focus on authentication and authorisation. It provides robust mechanisms to authenticate users, components, and services within the architecture, ensuring that only authorized entities can access the resources and perform specific actions. These mechanisms help prevent unauthorised access, mitigate security risks, and safeguard sensitive data.
+    
+    Another architectural value of the IAM component is its emphasis on centralised user and access management. It serves as a centralised authority for managing user identities, roles, and permissions across Metamycelium. This centralization streamlines the administration of access controls, simplifies user onboarding and offboarding processes, and ensures consistent enforcement of security policies throughout the system.
+    
+    The IAM component ensures detailed access control and privilege management, allowing for the establishment of specific access policies. It supports robust authentication via standard protocols like OAuth and SAML, streamlining user access with SSO. Additionally, it underpins auditing by logging access events, thereby bolstering compliance, security oversight, and incident management. This component addresses the requirements SaP-1, and SaP-2. A comprehensive depiction of the component's functionality and its interaction with other system parts is illustrated in Figure~\ref{diagram:IAM}.
+
+    \begin{figure}[h]
+        \includegraphics[width=\textwidth]{images/Metamycelium-identity-and-access-control.jpg}
+        \caption{Identity and Access Control Management System}
+        \label{diagram:IAM}
+    \end{figure}
+
+    
+
+    \item \textbf{Secret Management System:} The central secret management system serves as an important component for securely storing and managing sensitive information such as passwords, API keys, cryptographic keys, and other secrets.
+    
+    One of the key architectural values of the central secret management system is its focus on the secure storage and encryption of secrets. It employs robust encryption algorithms and mechanisms to protect sensitive data at rest, ensuring that secrets are securely stored and inaccessible to unauthorised entities. This value helps prevent unauthorised access to secrets, mitigates the risk of data breaches, and ensures confidentiality.
+    
+    Additionally, the secret management system supports the secure distribution and retrieval of secrets to authorized components or services. It provides mechanisms such as secure APIs or client libraries that enable secure retrieval of secrets during runtime. This value ensures that sensitive information is only accessible to the authorized entities that require them, preventing unauthorised exposure of secrets.
+    
+    Furthermore, the secret management system promotes integration with other components and services within Metamycelium. It provides APIs or integration points that allow seamless integration of secrets into various data domains. This integration value facilitates secure and convenient access to secrets for authorized components, ensuring smooth operation and reducing friction in the development and deployment processes. This component addresses the requirements SaP-1 and SaP-2. 
+
+
+
+\end{enumerate}
+
+The variable elements in Metamycelium can be adjusted, modified and even omitted based on the architect's decision and the particularities of the context. The aim of this RA is not to limit the creativity of data architects but to facilitate their decision-making process, through the introduction of well-known patterns and best practices from different schools of thought. All alternative options for each variable module are not elaborated as the industry constantly changes, and architects constantly aim to design systems that address the emerging problem domains. 
+
+For instance, an architect may choose to omit IAM from the implementation as the company is not yet ready to invest in such system. The architect may choose to implement authentication per service as the company has not yet scaled to be fully domain-driven.
 
 \section{Discussion}
 \label{sec:discussion}
