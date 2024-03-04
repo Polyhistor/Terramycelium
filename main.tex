@@ -168,79 +168,114 @@ To this end, this study presents TerrMycelium, a distributed RA designed specifi
 The paper is structured as follows: Section~\ref{sec:background} provides an overview of the foundational concepts and technologies pertinent to BD reference architecture, aiming to forge a conceptual framework that is required for this paper. An overview of the existing research on the topic is presented in Section~\ref{sec:related_work}. The significance of reference architectures in the context of big data is explored in Section~\ref{sec:why_reference_architectures}. Section~\ref{sec:software_and_system_requirements} details the software and system requirements necessary for implementing the proposed architecture. Section~\ref{sec:theory} delves into the theoretical foundation underpinning the challenges in contemporary big data systems. The design and development of the TerrMycelium artifact are described in Section~\ref{sec:artifact}. Section~\ref{sec:discussion} examines the evaluation findings, their implications, limitations, and relevance to existing and future research. Finally, Section~\ref{sec:conclusion} summarizes the main contributions of the study, its practical implications, and suggests directions for future research.
 
 
-\section{Background}
-\label{sec:background}
+\section{Background} \label{sec:background} 
 
-This section provides foundational definitions essential for comprehending the nuances of the research. This chapter aims to create the conceptual framework necessary to understand the terminology used in the thesis.
+This section offers fundamental definitions necessary for understanding the intricacies of the research. This chapter seeks to establish the conceptual framework required for comprehending the terminology utilised in the thesis. 
 
-\subsection{What is Big Data?}
+\subsection{Definition of Big Data} Various academic definitions have been reviewed to define BD in this research. According to Kaisler et al. (2013), Big Data (BD) refers to data that exceeds the capacity of current technologies to store, manage, and process effectively. The authors Srivastava (2018) define big data as the use of extensive data sets for managing the gathering or reporting of data that aids multiple recipients in decision-making. The phrase "Big Data" (BD) is defined by \citet{Sagiroglu2013} as referring to extensive data sets characterised by their huge size, diverse and intricate structure, and the challenges associated with storing, analysing, and visualising them for subsequent processes or outcomes. In this research, Big Data (BD) is defined as the process of identifying patterns from large datasets to achieve progress, management, and predictive analysis in specialised fields. 
 
-To define BD within the scope of this research, various academic definitions have been examined. \citet{Kaisler2013} define BD as ``the amount of data which is beyond technology’s capability to store, manage and process efficiently''.
-\citet{Srivastava2018} state that BD pertains to ``the use of large data sets to handle the collection or reporting of data that serves various recipients in decision making''.
+\subsection{Significance of Big Data}\label{sec:The Value of Big Data} 
 
-\citet{Sagiroglu2013} describe BD as ``a term for massive data sets having large, more varied and complex structure with the difficulties of storing, analyzing and visualizing for further processes or results''. 
+The importance and worth obtained from Big Data are clear. Extensive discussions on the topic are prevalent in publications, statistics, research, and conferences \cite{Chen2012}. Prominent corporations such as Google, Facebook, Netflix, and Amazon have significantly boosted this trend by major investments in BD projects (Rada, 2017). 
 
-Drawing from these definitions, BD in this research is conceptualised as the endeavour to discern patterns from vast amounts of data for the objectives of advancement, governance, and predictive analysis in domain-specific applications.
+The Netflix Prize recommender system is a striking example of the real benefits of BD. The system utilised a wide range of data sources such as user queries, ratings, search phrases, and demographic factors to enhance its performance (Amatriain, 2013). Netflix saw a significant rise in TV series viewership and some series even quadrupled their audience by using Big Data-powered recommendation algorithms. 
 
-\subsection{The Value of Big Data}\label{sec:The Value of Big Data}
+The Taiwanese government effectively integrated its national health insurance database with customs and immigration statistics as part of a Big Data plan in the healthcare sector (Wang, 2020). The real-time notifications during clinical visits, based on clinical symptoms and travel history, helped identify possible COVID-19 cases proactively. Strategic data-driven initiatives greatly enhanced Taiwan's ability to manage the outbreak. Shell utilises Big Data in the field of energy exploration to enhance the decision-making process and minimise exploration expenses (Marr, 2016). 
 
-The significance and value derived from BD remain pronounced \cite{ataei2022state}. Extensive discussions on the concept permeate reports, statistics, researches, and conferences \cite{Chen2012}. Notably, prominent companies like Google, Facebook, Netflix, and Amazon have propelled this momentum with substantial investments in BD initiatives \cite{Rada2017}.
+By analysing and contrasting data from different drilling sites worldwide, judgements are directed towards places that resemble those with verified abundant resources. Before BD's integration, identifying energy resources was difficult. Conventional exploration techniques, based on interpreting seismic vibrations passing through the earth's crust, were both inaccurate and costly and time-consuming. Rolls Royce leverages Bangladesh's potential by gathering detailed performance data from sensors installed on its aircraft products. 
 
-A compelling illustration of the tangible benefits that BD offers can be seen in the Netflix Prize recommender system. This system capitalized on a diverse array of data sources, including user queries, ratings, search terms, and various demographic indicators \cite{Amatriain2013}. By implementing BD-powered recommendation algorithms, Netflix not only achieved a considerable increase in TV series consumption but also observed certain series experiencing up to a fourfold surge in viewership \cite{Amatriain2013}.
+Wirelessly transmitted data offers valuable insights into crucial operating stages, including take-off and maintenance. By utilising this abundance of information, Rolls Royce can more precisely identify deterioration, improve diagnostic and prognosis accuracy, and efficiently decrease false alarms. subsectionReference Architectures Reference Architectures (RAs) are crucial components in modern system development, providing guidance for building, maintaining, and evolving complex systems citeCloutier2010. 
 
+They provide a precise representation of the fundamental elements of a system and the interactions required to achieve broad goals. This clarity encourages the development of digestible modules, each focusing on certain parts of complicated issues, and offers a sophisticated platform for stakeholders to participate, contribute, and work together. The importance of RAs in IT is highlighted by the success of widely used technologies such as OAuth (OATH) and ANSI-SPARC architecture (ANSI), which have their roots in well-organized RAs. 
 
-In a healthcare context, the Taiwanese government adeptly merged its national health insurance database with customs and immigration datasets as part of a BD strategy \cite{wang2020response}. The resulting real-time alerts during clinical visits, informed by clinical symptoms and travel history among other factors, facilitated proactive identification of potential COVID-19 cases. Such strategic data-driven initiatives significantly bolstered Taiwan's effectiveness in managing the epidemic.
+RAs define the characteristics of a system and influence its development. RAs stand apart by emphasising abstract features and higher levels of abstraction, which are present in any system's architecture. They strive to encapsulate the core of practice and incorporate proven patterns into unified frameworks, covering elements, attributes, and interconnections. RAs play a crucial role in BD by managing communication, controlling complexity, handling knowledge, reducing risks, promoting architectural visions, establishing common ground, improving understanding of BD systems, and enabling additional analysis. 
 
-In the realm of energy exploration, Shell harnesses BD to optimise the decision-making process and reduce exploration costs \cite{Marr2016}. By uploading and comparing data from various drilling sites globally, decisions pivot towards locations that mirror those with confirmed abundant resources. Prior to BD's integration, identifying energy resources presented formidable challenges. Traditional exploration methods, which relied heavily on deciphering waves of energy travelling through the earth's crust, were not only error-prone but also exorbitantly expensive and time-intensive.
+\subsection{Microservices and Decentralised, Distributed Architectures} 
 
-Similarly, Rolls Royce capitalises on BD's potential by collecting intricate performance data from sensors fitted on its aircraft products \cite{Marr2016}. Such data, transmitted wirelessly, provides insights into key operational phases, from take-off to maintenance. Leveraging this wealth of information, Rolls Royce can more accurately detect degradation, enhance diagnostic and prognostic accuracy, and effectively reduce false positives.
+Microservices architecture is a modern approach in software engineering that organises applications as a set of independent services that are loosely connected \cite{bucchiarone2020microservices}. This method, derived from the wider idea of Service Oriented Architectures (SOA), concentrates on creating small, self-sufficient modules that work together to create a complete application. 
 
-\subsection{Reference Architectures}
-
-RAs have emerged as pivotal elements in contemporary system development, guiding the construction, maintenance, and evolution of increasingly complex systems \cite{Cloutier2010}. They offer a clear depiction of the essential components of a system and the interactions necessary to realize overarching objectives. This clarity fosters the creation of manageable modules, each addressing distinct aspects of complex problems, and provides a high-level platform for stakeholders to engage, contribute, and collaborate.
-
-The significance of RAs in IT is underscored by the success of widely adopted technologies like OAuth \cite{OATH} and ANSI-SPARC architecture \cite{ANSI}, which have their origins in well-structured RAs. These RAs not only define the qualities of a system but also shape its evolution. While every system inherently possesses an architecture, RAs distinguish themselves by focusing on more abstract qualities and higher levels of abstraction. They aim to capture the essence of practice and integrate well-established patterns into cohesive frameworks, encompassing elements, properties, and interrelationships.
-
-The significance of RAs in BD is multifaceted, encompassing aspects like communication, complexity control, knowledge management, risk mitigation, fostering future architectural visions, defining common ground, enhancing understanding of BD systems, and facilitating further analysis.
-
-\subsection{Microservices and Decentralised, Distributed Architectures}
-
-Microservices architecture, representing an evolution in software engineering, involves structuring applications as a collection of loosely coupled services \cite{bucchiarone2020microservices}. This approach, emerging from the broader concept of Service Oriented Architectures (SOA), focuses on developing small, independently deployable modules that collaborate to form a comprehensive application. As \citet{Newman2015} elucidates, microservices enhance scalability, facilitate continuous deployment, and foster a more agile development environment. They enable teams to develop, deploy, and scale parts of a system independently, thus improving overall system resilience and facilitating rapid adaptation to changing demands.
-
-Decentralised and distributed architectures are integral to the modern computing landscape, characterised by systems spread across multiple nodes, often in different geographic locations. This architectural style, as highlighted by \citet{Richards2015}, mitigates the limitations of traditional monolithic structures, offering enhanced scalability, fault tolerance, and flexibility. In distributed systems, data and processing are dispersed across multiple nodes, which interact with each other to perform tasks, as discussed by \citet{Coulouris2005}. Decentralisation in this context implies the lack of a single controlling node, instead opting for a more democratic and resilient network structure.
-
-The convergence of microservices within these architectures represents a progressive step in software engineering. It reflects a move towards systems that are not only distributed in nature but also modular and adaptable. This architectural approach aligns well with contemporary demands for systems that are scalable, resilient, and capable of leveraging the distributed nature of modern computing environments. The adoption of microservices in decentralised, distributed architectures heralds a new era in software development, where flexibility, scalability, and resilience are paramount.
+According to \citeauthor{newman2021building}, microservices improve scalability, enable continuous deployment, and promote a more agile development environment. They allow teams to design, deploy, and scale components of a system separately, enhancing system resilience and enabling quick adaptability to changing requirements. Decentralised and distributed architectures are essential in today's computer environment, featuring systems that are spread out among several nodes, typically in various geographic regions. 
 
 
+The architectural style, as emphasised by Richards (2015), addresses the drawbacks of conventional monolithic architectures by providing improved scalability, fault tolerance, and flexibility. Distributed systems involve the distribution of data and processing among several nodes that collaborate to execute tasks, as explained by Coulouris (2005). Decentralisation in this context is the absence of a central controlling node, choosing a more democratic and robust network structure instead. The integration of microservices in these systems signifies an advancement in software engineering. 
+
+The shift is towards systems that are dispersed, modular, and flexible. This architectural style is well-suited for current requirements for systems that can scale, withstand challenges, and take use of the decentralised structure of modern computing environments. Implementing microservices in decentralised, distributed architectures marks a new phase in software development, emphasising the importance of flexibility, scalability, and resilience.
 
 
 \section{Related Work}
 \label{sec:related_work}
 
-This section reviews seminal works in BD RAs, delineating their scope, methodologies, and inherent limitations, thereby justifying the novel approach of this study's domain-driven distributed RA, \textit{Terramycelium}.
+This section reviews significant works in BD RAs, detailing their emphasis, research methodologies, and inherent limitations, to endorse the distinctive approach of this study's domain-driven distributed RA, \textit{Terramycelium}. The Lambda design by Kiran (2015) and the Kappa architecture by Kreps (2014) are important industrial advancements in real-time analytics for big data, setting foundational principles for data processing. The architectures have faced criticism for their insufficient data management techniques, particularly concerning data quality, security, and metadata (AtaeiACIS). 
 
-Lambda architecture \cite{kiran2015lambda} and Kappa architecture \cite{kreps2014questioning} represent pivotal industry contributions to BD RAs, introducing foundational paradigms for data processing. However, these architectures have faced criticism for their lack of comprehensive data management strategies, particularly regarding data quality, security, and metadata \cite{AtaeiACIS}. This gap is further evidenced in domain-specific RAs like those proposed by \cite{quintero2019ibm} for healthcare, which, while addressing domain-specific needs, often overlook cross-cutting concerns such as privacy and interoperability.
+This gap is evident in domain-specific Regulatory Authorities (RAs) as those proposed by Quintero (2019) for healthcare. These RAs, while concentrating on certain domain requirements, sometimes overlook broader concerns such as privacy and interoperability. Academic research, like Viana (2014) and Paakkonen (2015), has concentrated on enhancing the conceptual comprehension of Big Data systems through proposed Reference Architectures to provide broader views on data analytics ecosystems. Yet, these recommendations frequently overlook the dynamic and pervasive features of modern data environments, particularly concerning scalability and adaptability. Ataei et al. (2022) highlighted the limitations of current BD RAs, emphasising a common trend: a substantial reliance on monolithic data pipeline architectures. 
 
-Academic efforts, as in \cite{viana2014proposal} and \cite{paakkonen2015reference}, have aimed to broaden the conceptual understanding of BD systems, proposing RAs that attempt to encapsulate more holistic views of data analytics ecosystems. Yet, these proposals frequently fall short in addressing the dynamic and distributed nature of modern data landscapes, particularly in terms of scalability and modifiability.
+Existing RAs' reliance is apparent due to their inefficiency in managing data quality, security, privacy, and metadata. Additionally, the inflexible framework of these systems often results in difficulties with scalability and adaptation, making it challenging for them to accommodate changes in data and technology settings. Within this framework, \textit{Terramycelium} is presented as a novel regulating agent for biological defence mechanisms. \textit{Terramycelium} addresses the major limitations of current RAs by implementing a domain-driven, distributed method. \textit{Terramycelium} advocates for decentralised data stewardship and a modular architecture, as opposed to traditional systems that usually have data management in rigid, monolithic structures. 
 
-The limitations of current BD RAs, as summarized in the works of \citeauthor{ataei2022state}, highlight a common trend: a pronounced reliance on monolithic data pipeline architectures. This reliance is manifest in the inadequacy of existing RAs to effectively manage data quality, security, privacy, and metadata. Furthermore, the monolithic nature of these architectures often results in scalability and modifiability issues, as they struggle to adapt to the evolving data and technology landscapes.
+This approach enhances scalability and adaptability by including overarching issues such as security, privacy, and data quality into the system's architecture. The term "Terramycelium" is a significant departure from traditional BD RAs. By focusing on domain-driven design and distributed processing, it offers a scalable and adaptable framework that aligns well with current data management needs and contemporary software architecture concepts. Terramycelium not only addresses the limitations of present RAs but also emerges as a trailblazer in the progress of BD system design, paving the way for future research and development in this vital field.
 
-Against this backdrop, \textit{Terramycelium} emerges as a novel RA for BD systems. By embracing a domain-driven, distributed approach, \textit{Terramycelium} addresses the critical limitations identified in existing RAs. Unlike its predecessors, which often encapsulate data management within rigid, monolithic structures, \textit{Terramycelium} advocates for decentralized data stewardship and a modular architecture. This approach not only enhances scalability and flexibility but also ensures that cross-cutting concerns such as security, privacy, and data quality are inherently integrated into the system's design.
+\section{Research Methodology}
 
-In essence, \textit{Terramycelium} represents a significant departure from traditional BD RAs. By prioritizing domain-driven design and distributed processing, it offers a scalable and adaptable framework that aligns more closely with contemporary data management needs and the principles of modern software architecture. In doing so, \textit{Terramycelium} not only addresses the limitations of existing RAs but also positions itself as a vanguard in the evolution of BD system design, paving the way for future research and development in this critical field.
+Various methods exist for the structured creation of RAs. \citeauthor{Cloutier2010} present a sophisticated strategy for creating RAs by gathering current architectural trends and innovations. citeauthorbayer1999pulse present a technique named PuLSE DSSA for generating RAs in product line development. The concept of a pattern-based Runtime Adaptation for service-based systems is introduced by Stricker et al. (2010), who emphasise the usage of patterns as primary entities. The authors Nakagawa et al. present a four-step method for creating and advancing RAs. 
+
+Guided by ISO/IEC 26550 \citeauthor{wg2015iso} and \citeauthor{Derras} provide a four-phase method for creating practical risk assessment in the domain engineering and software product line environment. The authors of GALSTER2011Empirically suggest a 6-step process based on two main concepts: empirical foundation and empirical validity. Considering all these factors, an empirically-based research technique is the most suitable approach for this study. This process for RA development is preferred over others and aligns with the objectives of this study.
+
+However, additional approaches must be incorporated into the methodology to achieve the appropriate level of rigour and relevance. Specific instructions for gathering empirical data in step 3 are absent. We were unsure how to proceed with data collection, synthesis, and modelling. \citeauthor{Nakagawa} presented research guidelines and introduced the RAModel concept. A more systematic and robust evaluation technique is needed as the methodology lacks details on how to assess the RA. To solve this issue, a case-mechanism experiment and expert opinion were used to assess the artefact.
+
+
+\subsection{Step 1: Determination of RA Type}
+
+The first step in creating the RA was choosing its kind using Angelov et al.'s classification framework, which divides RAs into standardisation RAs and facilitation RAs. This decision is fundamental as it directs the following stages of information gathering and risk assessment development. 
+
+The classification framework, which considers context, aims, and design dimensions, was crucial in determining the most suitable RA type for the study's objectives. The method takes a systematic approach by employing key interrogatives such as 'When', 'Where', 'Who' for context, 'Why' for goals, and 'How' and 'What' for design to efficiently categorise RAs.
+
+The study improved Angelov's classification by incorporating insights from a recent Systematic Literature Review (SLR) on Big Data Recommender Systems (BD RAs) cited as AtaeiACIS. The updated classification includes current instances, which can be found in Appendix A under the heading RA-classification. The selected Research Assistant for this project specialises in domain-driven distributed Big Data Research Analysis. The goal is to facilitate Big Data system development and enhance an efficient, adaptable data architecture. The standardisation RA is intended to be adaptable in many organisational settings.
+
+
+\subsection{Step 2: Design Strategy Selection}
+
+The design approach for the RA was influenced by the frameworks proposed by Angelov et al. (2008) and Galster et al. (2011), which describe two main methodologies: practice-driven (creating RAs from the beginning) and research-driven (building RAs based on pre-existing ones). Practice-driven RAs are uncommon and usually found in emerging areas, while research-driven RAs, which combine current designs, models, and best practices, are more common in established sectors.
+
+This study chooses a research-driven strategy based on these ideas. The RA was created by utilising existing RAs, concrete structures, and documented best practices. This method allows for the development of a detailed design theory that combines and expands on the existing knowledge in the topic.
+
+\subsection{Step 3: Empirical Data Collection} \label{theSLR}
+
+Due to limitations in the study technique, we have enhanced this phase by increasing the systematicity and transparency of data gathering and synthesis using academic approaches like SLR. For this purpose we have adopted the findings from a SLR on current state of BD RAs presented by \citeauthor{ataei2022state}.
+
+\subsection{Construction of the RA}
+The construction phase of the RA was guided by the findings and elements identified in the earlier stages of the research. Based on the ISO/IEC/IEEE 42010 standard, the construction process involved selectively integrating its components.
+
+This phase prominently featured the implementation of the Archimate modelling language, which is part of the ISO/IEC/IEEE 42010 standard. Archimate's service-oriented strategy efficiently connected the application, business, and technological layers of the RA. The incorporation of themes, theories, and patterns from the empirical data gathering phase, as detailed in sections \ref{identification-data-sources} and \ref{data-synthesis}, guaranteed that the research analysis addressed the specific demands stated in the study.
+
+Using Archimate's various viewpoints offered a comprehensive perspective on the RA, encompassing technical, business, and consumer context views. This method, in accordance with the ideas presented by Cloutier et al. and Stricker et al., facilitated a thorough comprehension of the RA, guaranteeing its congruence with the study's goals and context.
+
+
+\subsubsection{Step 5: Activating RA with variability}
+
+Integrating variability into RAs is crucial to ensure its application within organizational-specific legislation and regional policies. Variability management is essential in Business Process Management (BPM) and Software Product Line Engineering (SPLE) to customise business processes and software artefacts according to specific contextual requirements.
+
+Accurate identification and clear communication of variability are essential to encourage stakeholder discussion, maintain decision traceability, and aid the decision-making process \cite{czarnecki2012cool}. Data collected in previous analytical steps informs variability decision points. \citeauthor{galster2011empirically} outline three approaches to include variability into RAs: annotating the RA, constructing variability views, and forming variability models.
+
+Current literature lacks in-depth information on the criteria for choosing a method to facilitate variability. This study utilises Archimate annotations to incorporate variability into the RA, following the method proposed by Rurua (2019). The technique involves two stages: first, developing a customised layer to encompass fundamental variability principles, and second, annotating the RA. The aim is not to list every possible variability point, but to highlight the main architectural variabilities associated to the system for architects to consider in order to improve the design and make it easier to implement the RA.
+
+\subsection{Assessment of the RA}
+
+Evaluating the RA is essential to ensure it achieves its developmental goals, especially in terms of efficacy and usefulness (Galster, 2011). Assessing a Research Article (RA) presents distinct difficulties because of its elevated level of abstraction, varied stakeholder groups, and emphasis on architectural features.
+
+Common evaluation techniques for concrete architecture, like SAAM, ALMA, PASA, and ATAM, are not suitable for abstract architectural representations (RAs) because they heavily depend on stakeholder participation and scenario-based assessment. This requires a tailored method for evaluating RA.
+
+This work utilises a revised evaluation method based on techniques tailored for RAs by Angelov et al. (2008) and the expanded SAAM methodology by Graaf et al. (2005). The approach includes developing a prototype of the RA inside for a case-mechanism experiment  and expert opinion as presented by \citeauthor{wieringa2014design}.
 
 \section{Why Reference Architectures}
 \label{sec:why_reference_architectures}
 
-Conceptualisation of the system as an RA, helps with understanding of the system’s key components, behaviour, composition and evolution of it, which in turn affect quality attributes such as maintainability, scalability and performance \cite{Cloutier}. 
+Viewing the system as a RA aids in comprehending its main elements, behaviour, structure, and development, which subsequently impact quality characteristics like maintainability, scalability, and performance (Cloutier). RAs can serve as a valuable standardisation tool and a means of communication that leads to specific architectures for BD systems. 
 
-Therefore, RAs can be a good standardisation artefact and a communication medium that not only results in concrete architectures for BD systems, but also provide stakeholders with unified elements and symbols to discuss and progress BD projects.
+They also offer stakeholders a common set of elements and symbols to facilitate discussions and advance BD projects. Utilising RAs for system conceptualization and as a standardisation object is a common technique among those dealing with complex systems. Software Product Line (SPL) development uses RAs as generic artefacts that are customised and configured for a specific system domain. IBM and other top IT companies have continually supported the use of RAs as exemplary techniques for solving complex system design difficulties in software engineering. 
 
-The practice of leveraging RAs for both system conceptualisation and as a standardisation artefact is not new to practitioners of complex systems. In Software Product Line (SPL) development, RAs are utilised as generic artifacts that are instantiated and configured for a particular domain of systems \cite{Derras}. 
+RAs often act as instruments in establishing uniformity in new areas within international standards. The BS ISO/IEC 18384-1 RA for service-oriented architectures showcases the effectiveness of RAs in establishing standardised frameworks in particular domains. This study utilises a 6-phase technique for creating the RA as outlined by Galster (2011). The six phases are as follows: 1) Determination of the kind of the RA 2) Develop a design strategy 3) Gather empirical data 4) Construct the Risk Assessment 5) Activate RA with variability 6) Assessment of the RA. 
 
-In software engineering, renowned IT corporations such as IBM have consistently advocated for RAs, considering them exemplary practices in addressing intricate system design challenges \cite{Cloutier2010}. Similarly, in the realm of international standards, RAs frequently serve as tools to standardize emerging domains. 
+The term "empirically grounded" means that the risk assessment (RA) should be based on known principles and then assessed for applicability and validity. These principles are not exclusive to the methods of Galster (2011); other researchers like Cloutier and Derras have also advocated for them.
 
-Morover, the BS ISO/IEC 18384-1 RA for service-oriented architectures \cite{Iso18384-1} demonstrates the utility of RAs in creating standardized frameworks in specific fields.
 
 \section{Software and System Requirements}
 \label{sec:software_and_system_requirements}
@@ -258,11 +293,11 @@ The requirement specification designed for this study is made up of the followin
     \item Identifying the right approach for the presentation of the requirements 
 \end{enumerate}
 
-\paragraph{Determining the type of the requirements:}
+\subsection{Determining the type of the requirements:}
 
 Defining and classifying software and system requirements is a common subject of debate. \citeauthor{sommerville2011software}\cite{sommerville2011software} classify requirements as three levels of abstraction; user requirements, system requirements, and design specifications. These abstractions are then mapped against user acceptance testing, integration testing, and unit testing. Nevertheless, in this study, a more general framework provided by \citeauthor{laplante2017requirements} is adopted. The adopted approach provides three types of requirements: functional, non-functional, and domain requirements. The objective of this step is to define the high-level requirements of BD systems, therefore the main focus is on non-functional and domain requirements. 
 
-\paragraph{Determining the relevant requirements:}
+\subsection{Determining the relevant requirements:}
 
 In an extensive effort, the NIST Big Data Public Working Group embarked on a large-scale study to extract requirements from a variety of application domains such as Healthcare, Life Sciences, Commercial, Energy, Government, and Defense \cite{Chang}. The result of this study is the formation of general requirements under seven categories. In addition, \citeauthor{volk2020identifying} categorize nine use cases of BD projects sourced from published literature using a hierarchical clustering algorithm. 
 
@@ -270,15 +305,11 @@ In an extensive effort, the NIST Big Data Public Working Group embarked on a lar
 
 By analyzing the result of the first SLRs, the studies discussed above and by evaluating the design and requirement engineering required for BD RAs, a set of high-level requirements based on BD characteristics is established. 
 
-\paragraph{Identifying the right approach for categorisation of the requirements:}
+\subsection{Identifying the right approach for categorisation of the requirements:}
 
 After clarifying the type of requirements and the relevant requirements, current BD RAs and their requirements have been assessed to increase understanding of the available BD requirement categorisation methods. A common theme among these studies connected the dot towards a common approach to classifying requirements. This approach is categorised through BD characteristics such as velocity, veracity, volume, variety, value, security and privacy \cite{ataei2022state, Bahrami2015,rad2017big,Chen2016a}.
 
-\paragraph{Identifying the right approach for the presentation of the requirements:}
-
-Then, a rigorous approach to present software and system requirements that offers informal methods of model verification is identified because such methods are well established in the industry and academia \cite{kassab2014state}. The approach for representing functional requirements follows the guidelines in \emph{ISO/IEC/IEEE standard 29148} \cite{ISO29148}. 
-
-The requirements representation is organized in system modes, where the major components of the system and then the requirements are described. This approach is inspired by the requirement specification expressed for NASA Wide-field InfraRed Explorer (WIRE) system \cite{laplante2017requirements} and the Software Engineering Body of Knowledge (SEBoK) \cite{abran2004software}. These requirements are described in Table~\ref{table:systemRequirements}.
+\subsection{Determining the appropriate strategy for presenting the requirements:} A systematic strategy for presenting software and system requirements that includes informal model verification techniques is recognised due to its established use in both business and academics (Kassab, 2014). The method for illustrating functional requirements adheres to the principles stated in the ISO/IEC/IEEE standard 29148. The requirements representation is structured based on system modes, detailing the primary components of the system followed by the requirements. This technique is based on the requirement specification published for the NASA Wide-field InfraRed Explorer (WIRE) system and the Software Engineering Body of Knowledge (SEBoK). The requirements are outlined in Table~\ref{table:systemRequirements}.
 
 
 \begin{longtable}{|m{1.4cm}|m{12cm}|}
@@ -357,29 +388,25 @@ The requirements representation is organized in system modes, where the major co
 \section{Theory}
 \label{sec:theory}
 
-In mathematical terms, an inflection point is a significant juncture where the curvature of a curve changes direction, signifying the transition from one behaviour to another. This pivotal point is marked by a dissolution of the prior shape and the emergence of a novel form. Today, there are empirical signals and derivers that point in the direction of a seismic shift \cite{mit_tech_review_2023}. 
-s
-A glimpse of the New Vantage Partners report in 2023 communicates that despite potential economic headwinds, the investments in data are growing and remain strong. Nevertheless, the report also communicates that only 23.9\% of companies identify themselves as data-driven. 
-
-Before discussing these design theories, a clear communication method for architectural constructs is essential. This study employs the architecture definition from ISO/IEC 42010 \cite{ISO42010}, described as 'the fundamental concepts or properties of a system in its environment embodied in its elements, relationships, and in the principles of its design and evolution'.
+An inflection point in mathematics is a critical point where the curvature of a curve changes direction, indicating a shift from one behaviour to another. This significant moment is characterised by the breaking down of the previous structure and the appearance of a new shape. Currently, there are concrete indicators and factors that suggest a significant change is imminent. The 2023 New Vantage Partners research indicates that investments in data are increasing and staying robust, despite possible economic challenges. However, the survey indicates that only 23.9\% of organisations describe themselves as data-driven. Prior to delving into these design theories, it is crucial to establish a precise communication mechanism for architectural structures. This study utilises the architecture definition defined in ISO/IEC 42010, which defines architecture as the underlying concepts or properties of a system within its context, manifested in its elements, relationships, and design and evolution principles.
 
 \subsection{The monolith}
 
-While the tools and technologies of data engineering have reached the Cambrian explosion \cite{AtaeiHype}, the underlying assumptions that govern the data architectures have not been much challenged.
+The techniques and methods of data engineering have experienced rapid growth, similar to the Cambrian explosion, yet the fundamental assumptions guiding data designs have not been significantly questioned.
 
-According to \citeauthor{richards2020fundamentals} there are two major categories of architectures; 1) monolithic (deployed as a single unit) and 2) distributed (the system is made up of sub-components that are deployed separately). Today, most data architectures are in the first category. 
+As per Richards (2020), architectures can be classified into two main categories: monolithic, deployed as a single entity, and distributed, consisting of individually deployed sub-components. Currently, the majority of data architectures fall under the first type. 
 
-While starting as a monolith can be a simple and good approach for building a data-intensive system, it falls short as the solution scales. While this assumption is challenged in the software engineering world, data engineering seems to still be driven by monolithic designs \cite{ataei2022state}. These designs are enforced by enabler technologies such as data warehouses and data lakes. In addition, many organisations and books adopt the idea of a \emph{single source of truth}.
+Beginning with a monolith may be a straightforward and effective method for constructing a data-intensive system, but it becomes inadequate as the system grows. Although this notion is being questioned in the software engineering field, data engineering continues to be influenced by monolithic designs. Enabler technologies like data warehouses and data lakes support these concepts. Furthermore, numerous groups and publications embrace the concept of a "single source of truth."
 
 \subsection{The data chasm}
 
-Analytical data and operational data are two distinct types of data used in businesses. Operational data is used to manage day-to-day business operations, while analytical data is used to support strategic decision-making by identifying patterns and trends in historical data.
+Analytical data and operational data are two separate categories of data utilised in corporate operations. Operational data is utilised for daily corporate operations, whereas analytical data is employed for strategic decision-making by recognising patterns and trends in previous data.
 
-Many of the challenges of current BD architectures rely on its fundamental assumption of dividing operational and analytical data. While operational and analytical data have different properties and are processed differently, bringing operational data far from its original source can affect its integrity negatively, create organisational silos, and produce data quality issues. 
+The problems of current Big Data systems stem from the basic assumption of segregating operational and analytical data. Operational and analytical data have distinct characteristics and processing methods. Moving operational data distant from its source can harm its integrity, lead to organisational silos, and result in data quality problems. 
 
-These two different planes of data are usually operated underlying different organisational hierarchies. Data scientists, business intelligence analysts, machine learning engineers, data stewards, and data engineers are usually under the leadership of the Chief Data and Analytics Officer (CDAO) and are heavily involved in creating business value out of data. On the other hand, software engineers, product owners, and quality assurance engineers are usually working with the Chief Technology Officer (CTO).
+These two distinct data planes are often managed inside separate organisational hierarchies. Data scientists, business intelligence analysts, machine learning engineers, data stewards, and data engineers typically work under the guidance of the Chief Data and Analytics Officer (CDAO) to generate business value from data. Software developers, product owners, and quality assurance engineers typically collaborate with the Chief Technology Officer (CTO).
 
-This has resulted in two segregated technology stacks and heavy investments in bridging the two. This chasm has resulted in two different topologies and fragile integration architectures through ETLs (Figure \ref{fig:dataPlanes}). This is usually achieved by some sort of batch ETL job that aims to extract data from operational databases. These ETLs usually don't have any clearly defined contract with the operational database and are sheer consumers of its data. This highlights the fragility of this architecture, as the upstream changes from operational databases can affect downstream analytical applications. Over time, ETL job complexity increases, maintainability becomes harder, and data quality decreases. 
+As a consequence, there are now two separate technology systems in place, requiring significant resources to connect them. Two distinct topologies and delicate integration designs have emerged due to this gap, facilitated by ETLs (Figure \ref{fig:dataPlanes}). Data extraction from operational databases is often accomplished through a batch ETL process. These ETL processes typically lack a clearly defined agreement with the operational database and solely consume its data. This emphasises the vulnerability of this system, as modifications made to operational databases can impact analytical applications downstream. As time passes, the complexity of ETL jobs grows, making them harder to maintain and leading to a decline in data quality. 
 
 \begin{figure}[h]
   \includegraphics[width=\textwidth]{images/data-planes.png}
@@ -387,44 +414,46 @@ This has resulted in two segregated technology stacks and heavy investments in b
   \label{fig:dataPlanes}
 \end{figure}
 
-Many of the technologies created over the years are developed underlying this very assumption. While these technologies are effective in handling the volume, velocity and variety of data, today's data challenges are about the proliferation of origins, data quality and data architecture. 
+Many technologies developed over the years are based on this notion. Although these technologies excel in managing the amount, speed, and diversity of data, current data difficulties revolve around the increase in data sources, data quality, and data architecture. 
 
-% For instance, intelligent pet healthcare would require longitudinal records on animal diagnostics, breed, environmental factors, particularities of the species, and even some of the owner's data. 
 
-Data are usually collected and consolidated through several systems. Some of these data may even go beyond the perimeters of the organisation. Herefore, based on the premises discussed hereinabove and the challenges explicated in Section \ref{firstSLR:findings:limitationsOfCurrentRAs}, it is posited that today's data architectures need a shift from the centralization of data in one big analytical database to connecting analytical data wherever it is. 
 
-Based on this, the artifact designed for this study learns from past solutions and addresses their shortcomings. This artifact aims to walk away from overly centralised and inflexible data architectures that act as a coordination bottleneck. Therefore, one of the objectives of this artifact is to bridge the gap between the point where data is generated and the point in which it is used, thus simplifying the process. This artifact aims to increase agility in the face of growth and respond effectively to organisational changes. Therefore the first architectural style of Metamycelium is as follows: 
+
+
+Information is typically gathered and unified through multiple platforms. Some of this data may exceed the boundaries of the organisation. Therefore, considering the points mentioned earlier and the difficulties outlined in Section \ref{firstSLR:findings:limitationsOfCurrentRAs}, it is suggested that modern data architectures should move away from centralising data in a single large analytical database and instead focus on connecting analytical data from various sources. 
+
+The artefact created for this study utilises earlier solutions to improve and overcome their limitations. This artefact tries to move away from highly centralised and rigid data architectures that serve as a bottleneck for coordination. This artefact aims to connect the point of data generation with its utilisation, streamlining the process. This artefact is designed to enhance agility in response to growth and successfully adapt to organisational changes. The initial architectural style of Metamycelium is as described: 
 
 
 \subsubsection{Localized autonomy through domain-driven decentralisation}
 
-Today's businesses are dealing with a great deal of complexity. A typical business is made up of various domains with different domains and structures. These domains change at different rates and tend to be quite isolated from each other. The overall synergy of the business is dictated by the relationship between these domains and the ways in which these domains evolve. 
+Modern enterprises are facing significant complexity. A typical business consists of diverse domains with distinct structures. These domains exhibit varying rates of change and are typically segregated from one another. The business's overall synergy is determined by the relationship and evolution of various domains. 
 
-At the heart of these synergies sits volatility and rapid change in the market and an ever-increasing number of regulations. How do businesses today manage the impact of these changes to their data? should they constantly modify ETL jobs, create new ETL backlogs, and consolidate data into operational stores? how can businesses create quality and trustworthy data without slowing down? this boils down to embracing the change in today's data landscape. 
+The core of these synergies is characterised by volatility, frequent market changes, and a growing number of rules. How do modern organisations handle the effects of these developments on their data? Should they consistently update ETL tasks, develop new ETL pipelines, and merge data into operational repositories? How can firms generate reliable and high-quality data efficiently? It comes down to accepting the change in the current data environment. 
 
-One way to tackle this complexity is to align technology with business. Businesses break down their problem into smaller problems that are handled in each domain; technology and data can be incorporated into those domains too. This approach is well-established in microservices architectures \cite{ataei2023application}. 
+To address this complexity, one approach is to synchronise technology with business objectives. Businesses divide their challenge into smaller components within each domain, integrating technology and data into these areas. This method is well recognised in microservices architectures (Ataei, 2023). 
 
 \subsubsection{Domain-driven design}
 
 
-Integral to Metamycelium is the distribution and decentralisation of services into domains that have a clear, bounded context. Perhaps one of the most challenging things one might face when it comes to architecting a distributed system is: based on what architectural quanta should the system be broken down? This issue has been repeatedly discussed, for example, among adopters of microservices architecture \cite{DataMesh}. Metamycelium, inspired by the concept of domain-drive design (DDD), tends to sit data close to the product domain that relates to it. This implies that data is in the product domain and as a facet of it \cite{laigner2021data}.
+Central to Metamycelium is the dispersal and decentralisation of services into distinct areas with well-defined boundaries. One of the most difficult aspects of designing a distributed system is determining the architectural components on which the system should be divided. This matter has been frequently deliberated among proponents of microservices architecture, as evidenced in the citation from DataMesh. Metamycelium, influenced by domain-driven desigDataMesh places data in close proximity to the product domain it pertains to. This suggests that data is within the product domain and is a component of it \cite{laigner2021data}.
 
-This is mainly driven by the fact that most organisations today are decomposed based on their products. These products are the capabilities of the business that are segregated into various domains. These domains usually define their bounded context, evolve at different rates, and are operated by cross-functional teams \cite{teamtopologiesSkelton}. Incorporating data into these bounded contexts can result in a synergy that can improve the management of continuous change.
+Most businesses nowadays are structured around their goods, which is the fundamental driving force behind this. These items represent the business's talents that are divided into different domains. These domains often establish their defined scope, progress at varying speeds, and are managed by interdisciplinary teams \cite{teamtopologiesSkelton}. Integrating data into these specific areas can provide a synergistic effect that enhances the handling of ongoing changes.
 
-This can be micro, such as application developers communicating with data engineers about collecting user data in nested data structures, or macro, such as application developers thinking about redesigning their Graphql schema in an intermediary layer that may affect downstream analytical services. Therefore, the concept of DDD is incorporated into this study to facilitate communication and increase the adoption, rigour, and relevance of Metamycelium.
+Communication can occur on a micro level between application developers and data engineers over user data collection in layered data structures, or on a macro level when application developers consider rebuilding their Graphql schema in a way that impacts downstream analytical services. Thus, the study integrates the concept of Domain-Driven Design (DDD) to enhance communication and improve the acceptance, precision, and significance of Metamycelium.
 
-DDD is an approach to software development that focuses on understanding and modelling the problem domain of a software application. The goal of DDD is to create software that reflects the language, concepts, and behaviours of the problem domain rather than being based solely on technical considerations. 
+Domain-Driven Design (DDD) is a software development methodology that emphasises comprehending and representing the problem domain of a software application. The objective of Domain-Driven Design (DDD) is to develop software that mirrors the language, concepts, and behaviours of the problem domain, prioritising these aspects over technical factors. 
 
-DDD can help Metamycelium by providing a systematic approach to modelling and managing data that is closely aligned with the problem domain of the application. By focusing on the language, concepts, and behaviours of the problem domain, DDD can help data architects gain a deeper understanding of the data that is needed and how it should be structured (eridaputra 2014 modelling, DataMesh Communication is a key component of any software development endeavour \cite{sudhakar2012model}, and without it, essential knowledge sharing can be compromised. Often, data engineers and business stakeholders have no direct interaction with one another. Instead, domain knowledge is translated through intermediaries such as business analysts or project managers to a series of tasks to be done \cite{khrononov2021learning}. This implies at least two translations from two different ontologies.
+DDD can assist Metamycelium by offering a structured method for modelling and handling data that is well-matched with the application's issue domain. Domain-Driven Design (DDD) can assist data architects in obtaining a more profound comprehension of the necessary data and its structure by concentrating on the language, concepts, and behaviours of the problem domain (eridaputra 2014 modelling). DataMesh Effective communication is crucial in software development projects, as it facilitates the sharing of vital knowledge \cite{sudhakar2012model}. Data developers and business stakeholders frequently do not connect directly. Domain knowledge is conveyed through intermediaries like business analysts or project managers into a set of activities to be completed (Khrononov, 2021). This indicates the need for at least two translations from two distinct ontologies.
 
-In each translation, information is lost, which is essential domain knowledge, and this implies a risk to the overall quality of the data. In such a data engineering process, the requirement often gets distorted, and the data engineer has no awareness of the actual business domain or the problem being addressed.
+Each translation results in the loss of crucial subject expertise, posing a danger to the overall data quality. During a data engineering process, the requirements can become twisted, and the data engineer may lack awareness of the specific business domain or problem being addressed.
 
-Often, problems being solved through data engineering are not simple mathematical problems or riddles but rather have broader scopes. An organisation may decide to optimise workflows and processes through continuous data-driven decision-making, and a data architecture that is overly centralised and not flexible can risk project failure.
+Data engineering challenges are typically complex and wide-ranging, rather than simple mathematics problems or puzzles. An organisation may choose to enhance workflows and processes by consistently making decisions based on data. However, a rigid and inflexible centralised data architecture can increase the likelihood of project failure.
 
 
 \subsubsection{Complex adaptive systems}
 
-Architectures like Metamycelium share properties with complex adaptive systems \cite{holland1992complex}. The artifact designed for this thesis is especially inspired by the idea that powerful groups can emerge from an array of simple rules governing local agents. In one study, \citeauthor{reynolds1987flocks} analysed a synchronized flock of starling birds in autumn. This study presented the fact that every starling bird follows three simple rules: 1) alignment (following flockmates that are close by), 2) separation (so birds don't collide with each other), and 3) cohesion (keeping the same pace as the neighbouring flockmates). These rules can be mathematically expressed as follows:
+Metamycelium architectures have characteristics similar to those of complex adaptive systems (Holland, 1992). The artefact created for this thesis is inspired by the concept that influential groups might form based on basic rules that control individual agents in a certain area. Reynolds (1987) examined a coordinated group of starling birds during the autumn season. The study revealed that each starling bird adheres to three basic rules: alignment, separation, and cohesion. The rules can be mathematically articulated as follows:
 
 Alignment:
 $$
@@ -447,32 +476,32 @@ $$
 
 where $p_i(t)$ is the position of bird $i$ at time $t$, $p_j(t)$ is the position of bird $j$ at time $t$, and $d_{ij}$ is the distance between birds $i$ and $j$.
 
-Starling birds don't need a centralised orchestrator to create this complex adaptive system. In Metamycelium the aim is to promote a domain-driven distribution of data ownership. This architecture is modeled in a way that a domain does not provide only operational data through a standard interface, but does provide analytical data too. For instance, in practice management software for veterinaries, the animal domain provides operational APIs for updating animal attributes, but it can also provide analytical interfaces for retrieving animal data within a window of time. Every domain owns its data.
+Starling birds do not require a centralised orchestrator to form this intricate adaptive system. Metamycelium aims to encourage a domain-driven allocation of data ownership. This architecture is designed to offer not just operational data but also analytical data through a standard interface. The practice management software for veterinarians includes operational APIs for updating animal attributes and analytical interfaces for retrieving animal data within a specific time frame. Each domain possesses its own data.
 
-In this fashion, the domain can also choose to retrieve data from other domains with some sort of discovery mechanism, process the data and enrich its data. In some cases, there can be a creation of aggregate domains with the main concern of aggregating data from various domains and providing it for a specific use case. 
+The domain can retrieve data from other domains using a discovery mechanism, process the data, and augment its own data. Aggregate domains are created to collect data from different domains and make it available for a certain purpose. 
 
-This is to remove vertical dependency and allow teams to have their local autonomy while being empowered with the right level of discovery and APIs. This architecture promotes the idea of coequal nodes consolidated to achieve the overall goal of the system rather than a centralised database of all data owned by people who don't have domain knowledge. This concept is inspired by DDD in the book presented by \citeauthor{evans2004domain}, data mesh \cite{dehghani2020datamesh}, and microservices architecture \cite{newman2015building}.
+This aims to eliminate vertical dependency and enable teams to have local autonomy while being equipped with the appropriate amount of discovery and APIs. This architecture emphasises the concept of coequal nodes working together to accomplish the system's overarching objective, rather than relying on a centralised database managed by individuals lacking domain expertise. This idea is influenced by Domain-Driven Design (DDD) as described by Evans (2004), data mesh by Dehghani (2020), and microservices architecture by Newman (2015).
 
 \subsubsection{Event driven services}
 
-Metamycelium's decentralized and distributed architecture introduces challenges in service communication as the network grows. Initially, simple point-to-point communication via REST API calls suffices, but this method proves inefficient with system expansion. Such synchronous interactions can lead to a 'distribution tax,' where one service's blocking state, often due to intensive processes, causes delays in dependent services \cite{montesi2016circuit}.
+Metamycelium's decentralised and distributed structure poses difficulties in service communication as the network expands. At first, basic point-to-point communication via REST API calls is adequate, but it becomes inefficient as the system grows. Synchronous interactions can result in a 'distribution tax,' where one service's blocked state, generally caused by costly procedures, leads to delays in dependent services \cite{montesi2016circuit}.
 
-The heavy network demands of distributed systems may further complicate matters, potentially causing \emph{tail latency}, \emph{context switching}, and \emph{gridlocks} \cite{sriraman2018mu,gan2019open,kakivaya2018service,AtaeiApsec}. This tight coupling is at odds with the distributed system's goals of autonomy and resilience.
+Distributed systems' extensive network requirements can lead to complications such as tail latency, context switching, and gridlocks. This strong interconnection contradicts the distributed system's objectives of independence and robustness.
 
-To overcome these issues, Metamycelium adopts asynchronous event-driven communication. This model enables services to publish and respond to events, thus decoupling their interactions. In this \emph{publish and forget} framework, services announce events to specific topics and move forward without awaiting direct responses. This is similar to restaurant staff responding to environmental cues instead of direct commands, promoting a smooth operational flow.
+Metamycelium uses asynchronous event-driven communication to address these concerns. This approach allows services to publish and respond to events, so separating their interactions. Within the "publish and forget" paradigm, services broadcast events to designated topics and proceed without waiting for immediate reactions. Restaurant personnel respond to environmental signals rather than direct directives to enhance operational efficiency.
 
-While event-driven architectures typically offer eventual consistency, which might not be suitable for certain real-time stream processing scenarios requiring immediate consistency, it is a safe assumption that the majority of data engineering workloads can efficiently operate within an event-driven paradigm.
+Event-driven architectures usually provide eventual consistency, which may not be ideal for some real-time stream processing situations that need immediate consistency. However, it is generally safe to assume that most data engineering tasks can effectively function within an event-driven framework.
 
-According to \citeauthor{richards2020fundamentals}, event-driven architectures come in two major topologies: 1) broker topology and 2) mediator topology. Additionally, in the works of \citeauthor{stopford2018designing} the concept of streaming platforms is elaborated. Since Metamycelium is a BD architecture that aims to process analytical data, a lot of challenges of achieving ACID transactions are eliminated. Therefore Metamycelium adopts the architectural concepts of \emph{distributed asynchronous event-driven systems} using a hybrid topology. That is, Metamycelium is absorbing some elements of the broker topology, some elements of the mediator topology and many concepts from streaming platforms. Therefore in Metamycelium's CAP theorem \cite{brewer2000towards} partition tolerance and availability are top guarantees. 
+As per Richards (2020), event-driven architectures consist of two primary topologies: 1) broker topology and 2) mediator topology. The concept of streaming platforms is further explained in the writings of Stopford (2018). Metamycelium, as a BD architecture designed for processing analytical data, eliminates several issues associated with accomplishing ACID transactions. Metamycelium utilises the architectural principles of distributed asynchronous event-driven systems with a mixed topology. Metamycelium is incorporating aspects from the broker topology, mediator topology, and several notions from streaming platforms. Metamycelium's CAP theorem prioritises partition tolerance and availability as key assurances. 
 
-There are five primary architectural components within this hybrid topology: the event, the event consumer, the event producer, the event backbone and the eventing interface. Events are initiated by the event producer and are dispatched to the topic of interest. This event then goes through the event broker and is stored there for retrieval in a queue-like indexed data structure. The event consumers that are interested in this topic will then listen to the topic of interest using the eventing interface. The event backbone itself is internally a distributed system that is made up of an arbitrary number of event brokers. 
+The hybrid topology consists of five main architectural components: the event, the event consumer, the event producer, the event backbone, and the eventing interface. Events are triggered by the event producer and sent to the relevant topic. The event is processed by the event broker and stored in a queue-like indexed data structure for later retrieval. Interested event consumers will listen to the topic of interest using the eventing interface. The event backbone is an internally distributed system composed of numerous event brokers. 
 
-Event brokers are services that are spawned and provisioned to facilitate event communication through Metamycelia. These brokers are coordinated with a distributed service coordinator. Brokers do also allow for the replication of topics. Furthermore, to allow for fault tolerance and recoverability, the event backbone has a dedicated event archive. This archive aims to store all events that are going through the brokers so they can be restored to a correct state if a failure occurs. 
+Event brokers are services created and provided to enable event communication via Metamycelia. The brokers are synchronised with a decentralised service coordinator. Brokers also enable the replication of subjects. Additionally, the event backbone includes a specialised event archive to ensure fault tolerance and recoverability. The purpose of this archive is to retain all events processed by the brokers for potential restoration in case of a failure. 
 
 
-% Moreover, all events that are getting sent into the event backbone through the producer and all events that are being received from the even consumer go through schema validation. Schemas are defined and checked against all events from the domain in order to avoid hard-to-find issues and service failure. These schemas are part of the metadata API discussed in Section~\ref{section:aNewArchitecturalQuantum:metadata}.
 
-These components work together to create a distributed, fault-tolerant, and scalable data system that can handle both batch and stream processing as portrayed in Figure \ref{fig:eventDrivenArchitecture}. 
+
+The components collaborate to establish a distributed, fault-tolerant, and scalable data system capable of managing both batch and stream processing, as seen in Figure \ref{fig:eventDrivenArchitecture}. 
 
 \begin{figure}[h]
   \centering
@@ -484,21 +513,21 @@ These components work together to create a distributed, fault-tolerant, and scal
 
 \subsection{Architectural characteristics}
 
-The architectural characteristics of the Metamycelium architecture are notable for their focus on maintainability, scalability, fault tolerance, elasticity, and deployability. It aligns with modern engineering practices such as automated deployment and continous integration. The architecture emphasises the use of microservices, which are independently deployable and maintainable components.
+The Metamycelium architecture is distinguished by its emphasis on maintainability, scalability, fault tolerance, elasticity, and deployability. It is in line with contemporary engineering methodologies like automated deployment and continuous integration. The architecture focuses on utilising microservices, which are autonomous components that can be deployed and maintained separately.
 
-Maintainability is a high-scoring characteristic of this architecture. The use of event-driven microservices architecture allows for modular development and independent scaling, making it easier to maintain and update individual components without affecting the entire system. Additionally, the architecture supports automated deployment practices, facilitating efficient updates and reducing manual intervention.
+This architecture excels in maintainability. Event-driven microservices architecture enables modular development and independent scaling, facilitating the maintenance and updating of individual components without impacting the entire system. The design also enables automated deployment processes, which help streamline upgrades and minimise manual interaction.
 
-Scalability and elasticity are also prominent features. The architecture enables horizontal scalability, allowing for the addition or removal of services based on demand. This flexibility ensures that the system can handle varying workloads effectively.
+Scalability and elasticity are significant aspects as well. The architecture allows for horizontal scalability, enabling the addition or removal of services according to demand. This adaptability guarantees that the system can efficiently manage different workloads.
 
-Fault tolerance is another strength of the architecture. While interservice communication can impact fault tolerance, redundant and scalable design of Metamycelium, along with service discovery mechanisms, mitigate this issue. The independent, single-purpose nature of microservices generally leads to high fault tolerance.
+The architecture also demonstrates strong fault tolerance. Interservice communication can affect fault tolerance, however a redundant and scalable design of Metamycelium, combined with service discovery techniques, helps alleviate this problem. Microservices' standalone and single-purpose design typically results in a high level of fault tolerance.
 
-Deployability is emphasised, thanks to the small deployment units and decoupled nature of Metamycelia. The architecture supports evolutionary change, aligning with modern business practices that require agility and adaptability. Small, independently deployable units allow for faster updates and iterations, keeping pace with the dynamic nature of business requirements.
+Metamycelia's minimal deployment components and decoupled design highlight deployability. The design facilitates evolutionary transformation to correspond with contemporary business practices that demand agility and adaptability. Modular and autonomous units provide quicker updates and iterations, ensuring alignment with the ever-changing business needs.
 
-However, the architecture may receive a lower score in terms of cost and simplicity. The distributed nature of Metamycelium and the potential for increased communication overhead can introduce complexities in managing and optimizing costs. Strategies such as intelligent data caching and replication can address performance challenges associated with network calls, but cost management remains an ongoing consideration.
+The architecture might be rated lower in terms of cost and simplicity. The decentralised structure of Metamycelium and the possibility of higher communication overhead can create challenges in cost management and optimisation. Implementing strategies like intelligent data caching and replication can help overcome performance issues related to network calls, but managing costs is still a continuous concern.
 
-Overall, the Metamycelium architecture embraces the strengths of microservices, prioritising maintainability, scalability, fault tolerance, elasticity, and deployability. It acknowledges the challenges inherent in distributed architectures and offers strategies to mitigate them. Architects must understand the rules of architecture to intelligently navigate and leverage its benefits effectively. An overview of architectural characteristics is portrayed in Table~\ref{tab:architecture-characteristics}
+The Metamycelium design emphasises the advantages of microservices, focusing on maintainability, scalability, fault tolerance, elasticity, and deployability. The text recognises the difficulties that come with distributed architectures and provides methods to reduce their impact. Architects need to comprehend the principles of architecture in order to skillfully traverse and capitalise on its advantages. An overview of architectural characteristics is portrayed in Table~\ref{tab:architecture-characteristics}
 
-\begin{table}
+\begin{table}[t]
   \centering
   \caption{Metamycelium Architecture Characteristics}
   \label{tab:architecture-characteristics}
@@ -527,9 +556,21 @@ Overall, the Metamycelium architecture embraces the strengths of microservices, 
   \end{tabular}
 \end{table}
 
+
+
+
+
+
+
+
+
 \section{Artifact}
 \label{sec:artifact}
-% Describe the design and development of the reference architecture artifact, focusing on its structure and components.
+
+After having discussed many kernel and design theories, the necessary theoretical foundation is created for the design and development of the artefact. Metamycelium is created with Archimate and displays the RA mostly in the technology layer. Displaying these services in the technology layer means that it is up to the architect to decide what flow and application should exist in each node. For the sake of completion, and as every software is designed to account for a business need, a very simple BD business process is assumed. While this business layer could vary in different contexts, Metamycelium should be able to have the elasticity required to account for various business models.
+
+It should be noted that the BD RA does not represent the architecture of any specific BD system. Instead, it serves as a versatile tool for describing, discussing, and developing system-specific architectures using standardised principles. By offering comprehensive and high-level perspectives, Metamycelium facilitates productive discussions regarding the requirements, structures, and operations inherent in BD systems. Notably, it remains vendor-neutral, allowing flexibility in selecting products or services, and does not impose rigid solutions that limit innovation. 
+
 
 \section{Discussion}
 \label{sec:discussion}
