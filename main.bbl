@@ -1,4 +1,4 @@
-\begin{thebibliography}{31}
+\begin{thebibliography}{35}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\href}[2]{#2}
@@ -93,6 +93,11 @@
 \bibinfo{author}{Galster, M.}, \bibinfo{author}{Avgeriou, P.}, \bibinfo{year}{2011}.
 \newblock \bibinfo{title}{Empirically-grounded reference architectures: a proposal}.
 \newblock \bibinfo{journal}{Joint ACM} \DOIprefix\doi{10.1145/2000259.2000285}.
+%Type = Misc
+\bibitem[{HashiCorp(2023)}]{HashiCorpVaultHelm2023}
+\bibinfo{author}{HashiCorp}, \bibinfo{year}{2023}.
+\newblock \bibinfo{title}{Vault helm chart}.
+\newblock \URLprefix \url{https://artifacthub.io/packages/helm/hashicorp/vault}.
 %Type = Article
 \bibitem[{Laigner et~al.(2021)Laigner, Zhou, Salles, Liu and Kalinowski}]{laigner2021data}
 \bibinfo{author}{Laigner, R.}, \bibinfo{author}{Zhou, Y.}, \bibinfo{author}{Salles, M.A.V.}, \bibinfo{author}{Liu, Y.}, \bibinfo{author}{Kalinowski, M.}, \bibinfo{year}{2021}.
@@ -117,6 +122,11 @@
 \bibinfo{author}{Newman, S.}, \bibinfo{year}{2021}.
 \newblock \bibinfo{title}{Building microservices}.
 \newblock \bibinfo{publisher}{" O'Reilly Media, Inc."}.
+%Type = Misc
+\bibitem[{Polyhistor(2023)}]{InfrastructureForMetamycelium2023}
+\bibinfo{author}{Polyhistor}, \bibinfo{year}{2023}.
+\newblock \bibinfo{title}{Infrastructureformetamycelium}.
+\newblock \bibinfo{howpublished}{\url{https://github.com/Polyhistor/InfrastructureForMetamycelium}}.
 %Type = Article
 \bibitem[{Rad and Ataei(2017a)}]{AtaeiBigDataEnvirons}
 \bibinfo{author}{Rad, B.B.}, \bibinfo{author}{Ataei, P.}, \bibinfo{year}{2017}a.
@@ -132,6 +142,11 @@
 \bibinfo{author}{Sagiroglu, S.}, \bibinfo{author}{Sinanc, D.}, \bibinfo{year}{2013}.
 \newblock \bibinfo{title}{Big data: A review}, in: \bibinfo{booktitle}{2013 International Conference on Collaboration Technologies and Systems (CTS)}, \bibinfo{publisher}{IEEE}. pp. \bibinfo{pages}{42--47}.
 \newblock \DOIprefix\doi{10.1109/cts.2013.6567202}.
+%Type = Misc
+\bibitem[{(SIG)(2023)}]{KIND2023}
+\bibinfo{author}{(SIG), K.S.I.G.}, \bibinfo{year}{2023}.
+\newblock \bibinfo{title}{kind - kubernetes in docker}.
+\newblock \URLprefix \url{https://kind.sigs.k8s.io/}.
 %Type = Book
 \bibitem[{Skelton and Pais(2019)}]{teamtopologiesSkelton}
 \bibinfo{author}{Skelton, M.}, \bibinfo{author}{Pais, M.}, \bibinfo{year}{2019}.
@@ -147,6 +162,11 @@
 \bibinfo{author}{Sudhakar, G.P.}, \bibinfo{year}{2012}.
 \newblock \bibinfo{title}{A model of critical success factors for software projects}.
 \newblock \bibinfo{journal}{Journal of Enterprise Information Management} .
+%Type = Misc
+\bibitem[{Team(2023)}]{ArtifactHub2023}
+\bibinfo{author}{Team, A.H.}, \bibinfo{year}{2023}.
+\newblock \bibinfo{title}{Artifact hub}.
+\newblock \URLprefix \url{https://artifacthub.io/}.
 %Type = Article
 \bibitem[{Volk et~al.(2020)Volk, Staegemann, Trifonova, Bosse and Turowski}]{volk2020identifying}
 \bibinfo{author}{Volk, M.}, \bibinfo{author}{Staegemann, D.}, \bibinfo{author}{Trifonova, I.}, \bibinfo{author}{Bosse, S.}, \bibinfo{author}{Turowski, K.}, \bibinfo{year}{2020}.

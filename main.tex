@@ -740,6 +740,303 @@ These components are;
 
 The variable components in Metamycelium can be altered, adapted, or excluded according to the architect's discretion and the specific characteristics of the situation. This RA aims to enhance data architects' decision-making process by introducing established patterns and best practices from several perspectives, rather than restricting their innovation. Alternative choices for each variable module are not detailed due to the dynamic nature of the industry, and architects strive to create systems that tackle new issue areas. 
 
+\section{Evaluation}
+\label{sec:discussion}
+
+The validation of treatment is crucial in its research, development, and implementation phase. Validating a treatment involves determining its possible impact on stakeholder objectives when applied to the specific problem at hand. 
+
+Clearly outlining and justifying the treatment needs establishes a straightforward avenue for validation. This implies that the treatment may be verified by showing that it fulfils certain predetermined criteria. A key challenge in treatment validation is the absence of real-world implementation to assess the treatment's impact on stakeholder objectives. This challenge emphasises the need for thorough, diverse, and well-thought-out assessment methods, as discussed more in the next sections of this chapter. 
+
+The initial phase of assessing this thesis is a single-case mechanism experiment based on the parameters outlined by \citeauthor{wieringa2014design}. Although his works reference a single experiment, this study considers a few situations. A multi-case experiment is required because the artefact is complex, which improves the thoroughness and significance of the evaluation process, leading to a more detailed and nuanced comprehension of the artifact's capabilities and possibilities. 
+
+The research design for this case mechanism experiment is described in Section~\ref{caseMechanismResearchDesignAndValidation}. This part includes the current prototyping of the artefact and the following presentation of outcomes.
+
+
+\section{Prototyping an Architecture}
+
+
+Prototyping is the creation of a working model that physically represents the structure, demonstrating the design principles and ideas. This is frequently referred to as the "concrete architecture." This technique enables researchers to validate and develop the design to assess its practicality, performance, and alignment with research objectives.
+
+Implementing the essential components and functionalities stated in the RA, Metamycelium, is part of prototyping the architecture. The selected technologies, supported by academic justification and in line with the research goals, serve as the basis for developing the prototype. The architecture's ability to manage large-scale data processing and meet various needs can be evaluated by systematically implementing its architectural components. 
+
+Figure~\ref{metamyceliumPrototype} shows a concrete structure created with Metamycelium.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=12cm]{images/metamyceliumConcrete.jpg}
+    \caption{Metamycelium Prototype}
+    \label{metamyceliumPrototype}
+\end{figure}
+
+\subsection{Stage 1: Formation}
+
+
+All components of this prototype are integrated within a single Kubernetes cluster. Therefore, KIND \cite{KIND2023} has been selected as the local Kubernetes cluster for this prototype to function. 
+
+
+The reproducibility of this technique is crucial. The scripts required to execute, download, and set up artefacts are located in the scripts folder of the Github repository cited as \citeauthor{InfrastructureForMetamycelium2023}. These scripts are designed to exclusively operate on Unix-like operating systems.
+
+After establishing the fundamental scripts for initialising the cluster, the procedure commenced with the creation of various services within the Kubernetes cluster. Helm Charts from Artefact Hub \cite{ArtifactHub2023} are utilised for enhanced maintainability and scalability of Nginx ingress and Kafka. Terraform was subsequently utilised to implement the charts on the Kubernetes cluster. It is located in the IaaC section of the repository. 
+
+We conducted an extensive search for helm charts for all artefact components and selected a mature and well respected chart from Bitnami. Using this method is favoured over developing unique directives for Nginx ingress in Kubernetes and linking services to each other through Kubernetes architectural elements such as Services or StatefulSets.
+
+The quest for charts for other components of the concrete architecture continues on Artefact Hub after the invasion. After selecting an appropriate chart for Nginx ingress, Keycloak, and Vault, the telemetry processor is established. 
+
+Initially, a FastAPI app is set up in this procedure. The programme is containerised using Docker, hosted on Github sites, and integrated into Terraform helm release resources for deployment on the local KIND cluster. The Kubernetes ingress controller is configured as Nginx and deployed to a local type cluster using Terraform. 
+
+Once the control setup is established, the ingress resources are configured to direct traffic to Kafka-rest-proxy. The Kafka-rest-proxy is included in the artefact to simplify the data access from the cluster. Kafka utilises a binary protocol instead of HTTP, whereas most current agents depend on HTTP for network connection. 
+
+
+Once the Nginx ingress and Kafka REST proxy are properly setup, Keycloak is installed and incorporated into various components of the architecture. The Vault is integrated into the cluster using HashiCorp's official helm chart \cite{HashiCorpVaultHelm2023}. The Vault UI is active, however it is facing the obstacles outlined in Section~\ref{experimentChallenges}. 
+
+Next, the major system to be implemented is Data Lichen. Data Lichen required a new frontend to be developed from the beginning, therefore embedded Javascript, a template engine for Node.js, was selected. This template engine was selected for its ability to simplify development and speed up the operations of this trial. 
+
+The goal is to create a simple user interface for Data Lichen that successfully showcases the framework's potential design and capability, rather than building a comprehensive frontend. Various teams may opt to adopt Data Lichen in diverse manners. Data Lichen must be developed from the beginning because there is no existing open-source technology that offers the necessary features.
+
+Once Data Lichen has been organised and implemented in the cluster, an Istio service mesh is established. To achieve this goal, various Kubernetes namespaces are established, and various services are categorised within the same namespace for the service mesh to manage and function. Istio's Kiali dashboard is implemented to enhance development experience and observability. 
+
+Minio's chart is installed and the dashboard is active. The last component that needed to be deployed was Open Policy Agent (OPA). There are multiple methods to incorporate OPA into an architecture. This can be accomplished via a solo Envoy proxy, a Kubernetes operator, a load balancer with Gloo Edge, or through Istio. 
+
+Istio was chosen because it has already been selected and deployed on the cluster. Automatically injecting policies into services inside a particular service mesh is a complex operation. The experiment involved extending the Envoy sidecar with an external authorizer API to implement inbound and outbound policies. 
+
+Proficiency in Envoy, Kubernetes, Istio, Rego (OPA's policy language), and GoLang is essential. OPA is incorporated into the service mesh as an independent service known as a sidecar proxy. The OPA functions as an admission controller, evaluating requests sent to the Kubernetes API server. 
+
+OPA assesses these petitions based on established policy guidelines. Approved requests are executed by the API server, whereas refused requests result in an error message sent to the user. OPA's policies manage all interactions among services and pods within a namespace. OPA assists in ensuring adherence to predetermined security and operational regulations within a Kubernetes setting. This is depicted in Figure~\ref{OPAISTIO}.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\textwidth]{images/OPA-istio-flow.png}
+  \caption{Open Policy Agent Communication Flow with Other Services}
+  \label{OPAISTIO}
+\end{figure}
+
+Once OPA was understood, Domain developed an analytics service using the Python framework FastAPI. To experiment with Metamycelium and meet the requirements outlined in Section~\ref{metMyceliumRequirements}, a domain incorporating operational and analytical systems must be established. Since this experiment is not a genuine business, it is logical to establish a simulated operational service that mimics real-world activity, such as generating large amounts of data at a high speed. 
+
+Two important data sources studied and selected for creating these domains are the Yelp Academic Dataset and the data from the U.S. Climate Resilience Toolkit's Climate Explorer. The decision is based on the extensive and detailed data provided by each source, their accessibility, and their ability to generate valuable analytical insights when utilised together.
+
+The Yelp Academic Dataset is selected for its comprehensive compilation of restaurant reviews, containing structured and semi-structured data that encompasses customer feedback, business information, and temporal patterns. Another option, the MovieLens dataset, was found less suitable because it focuses only on movie ratings, limiting the scope of potential analysis.
+
+The climatic Explorer dataset, which provides a detailed record of past and predicted climatic factors in the United States, is selected as an appropriate option for studying possible connections between weather trends and restaurant evaluations. Although options like Visual Crossing Weather Data Services are being examined, Climate Explorer's extensive global coverage and historical data are preferred.
+
+The datasets qualify as big data because of their amount, variety, and velocity. The Yelp Academic Dataset comprises millions of reviews for over a hundred thousand businesses, making it a data source with a large volume and variety. The Climate Explorer dataset, updated frequently, adds a speed component to the data structure. Collectively, they offer a chance for sophisticated analytical investigations in a data-rich setting.
+
+\subsection{Stage 2: Amalgamation}
+
+The initial phase of developing the prototype involves establishing the foundational services within the cluster. This step focuses on establishing connections and ensuring that the architecture can effectively react to external inputs. Selected situations are applied to the system to achieve this. 
+
+Scenarios are commonly used to evaluate new architectural designs because they offer a robust way to simulate real-world situations, allowing for the assessment of the architecture's performance in different scenarios. 
+
+This experiment is crucial as it simulates various behaviours, system loads, data quantities, and processing kinds to analyse the architecture's resilience, adaptability, scalability, and interoperability. 
+
+Based on the templates in Carroll (1995) and the examples in Kazman ATAM, a set of scenarios is established to evaluate the prototype's abilities. The scenarios, which include various aspects of system performance and security, are outlined in Tables \ref{s1Table} through \ref{s6Table}.
+
+\begin{table}[tbp]
+  \caption{Scenario S1: High Volume Data Ingestion Scenario}
+  \begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{5cm}|X|}
+  \hline
+  \textbf{Scenario Description:} & The system is subjected to a high volume of data, simulating peak data ingestion rates. The scenario is implemented when Domain A retrieves high volumes of data from Domain B, and processes it.  \\
+  \hline
+  \textbf{Relevant Quality Attributes:} & Performance, Scalability. \\
+  \hline
+  \textbf{Expected Outcome:} & The system can ingest, store, and process large quantities of data without significant performance degradation. \\
+  \hline
+  \textbf{Actual Outcome, Evaluation, Implications:} & To be filled out during testing. \\
+  \hline
+  \end{tabularx}
+  \label{s1Table}
+\end{table}
+
+\begin{table}[tbp]
+  \caption{Scenario S2: High Velocity Data Ingestion Scenario}
+  \begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{5cm}|X|}
+  \hline
+  \textbf{Scenario Description:} & The system is subjected to a high velocity of data, simulating peak data ingestion rates. The scenario is implemented when Domain A streams data into domain B and domain B stream processes the data.    \\
+  \hline
+  \textbf{Relevant Quality Attributes:} & Performance, Scalability. \\
+  \hline
+  \textbf{Expected Outcome:} & The system can ingest, store, and process continuous stream of data without significant performance degradation. \\
+  \hline
+  \textbf{Actual Outcome, Evaluation, Implications:} & To be filled out during testing. \\
+  \hline
+  \end{tabularx}
+\end{table}
+
+\begin{table}[tbp]
+  \caption{Scenario S3: Data Variety Scenario}
+  \begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{5cm}|X|}
+  \hline
+  \textbf{Scenario Description:} & The system is exposed to a diverse range of data types and formats. This scenario is implemented when domain B retrieves files in different format from domain A and processes it. \\
+  \hline
+  \textbf{Relevant Quality Attributes:} & Variety, Interoperability. \\
+  \hline
+  \textbf{Expected Outcome:} & The system can handle and process different data types and formats efficiently. \\
+  \hline
+  \textbf{Actual Outcome, Evaluation, Implications:} & To be filled out during testing. \\
+  \hline
+  \end{tabularx}
+\end{table}
+
+\begin{table}[tbp]
+  \caption{Scenario S4: Complex Query Scenario}
+  \begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{5cm}|X|}
+  \hline
+  \textbf{Scenario Description:} & The system processes complex queries that involve multiple large datasets. This scenario happens when an external data scientist queries both domains and tries to understand a relationship between the datasets. \\
+  \hline
+  \textbf{Relevant Quality Attributes:} & Computational Efficiency, Performance. \\
+  \hline
+  \textbf{Expected Outcome:} & The system can efficiently handle and process complex queries. \\
+  \hline
+  \textbf{Actual Outcome, Evaluation, Implications:} & To be filled out during testing. \\
+  \hline
+  \end{tabularx}
+\end{table}
+
+\begin{table}[tbp]
+  \caption{Scenario S5: Secret Management Scenario}
+  \begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{5cm}|X|}
+  \hline
+  \textbf{Scenario Description:} & This scenario underscores the system's ability to manage secrets securely and efficiently, focusing on storage, retrieval, and rotation using Hashicorp Vault in conjunction with OpenID Connect's standard flow with bearer tokens. \\
+  \hline
+  \textbf{Relevant Quality Attributes:} & Confidentiality, Integrity, Availability. \\
+  \hline
+  \textbf{Expected Outcome:} & The system securely manages secrets, ensuring timely storage, retrieval, and rotation while maintaining confidentiality and integrity. \\
+  \hline
+  \textbf{Actual Outcome, Evaluation, Implications:} & To be filled out during testing. \\
+  \hline
+  \end{tabularx}
+\end{table}
+
+\begin{table}[tbp]
+  \caption{Scenario S6: Data Security Scenario}
+  \begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{5cm}|X|}
+  \hline
+  \textbf{Scenario Description:} & The system's capability is evaluated regarding ensuring data security throughout access, processing, and transmission. OpenID Connect with bearer tokens is leveraged for authentication. \\
+  \hline
+  \textbf{Relevant Quality Attributes:} & Confidentiality, Data Integrity, Authentication. \\
+  \hline
+  \textbf{Expected Outcome:} & The system guarantees data security, with secure data access, processing, and transmission. Unauthorised access attempts are effectively detected and mitigated. \\
+  \hline
+  \textbf{Actual Outcome, Evaluation, Implications:} & To be filled out during testing. \\
+  \hline
+  \end{tabularx}
+  \label{s6Table}
+\end{table}
+
+
+\subsection{Stage 3: Scenario Testing}
+
+During this step, after defining scenarios, the system is initialised and each scenario is executed. Each specific situation is evaluated to determine how the system handles different conditions. This method entails initialising the system and methodically testing each scenario against it. 
+
+By doing this, important measurements are recorded, leading to a more thorough comprehension of how the system reacts to different stimuli. This method assesses the system's ability to withstand challenges and its efficiency, providing valuable information about its functioning and opportunities for improvement.
+
+\subsubsection{Scenario S1: High Volume Data Ingestion Scenario}
+
+Before establishing the inter-domain link, it is important to review the intra-domain flow. Each operational service in the domain handles data by initially receiving an event from the analytical service and then requesting the data. The data is kept in Minio after being processed. A message is sent to a particular topic to indicate that the data storage process has been completed. 
+
+The message is transmitted to a Kafka-rest-proxy and then to the Kafka cluster. This event contains the object's address in MinIO and other pertinent metadata. The analytics service establishes a consumer group and subscribes to a particular topic. The analytical service retrieves any new event transmitted to that topic on a background thread. 
+
+Upon receiving the event, the analytical service utilises the metadata within the event's body to extract the object's address. Once the address is known, the analytical service directly accesses MinIO to retrieve the data. The service processes the data and saves it in an embedded SQlite database. 
+
+The required data quality metadata from Section~\ref{section:dataQuality} and bitemporality metadata from Section~\ref{bitemporality} are generated. The metadata, service name, service address, and unique identifier are sent as an event to Kafka on a specified topic. Data Lichen establishes a consumer group, subscribes to a particular topic, retrieves the data, and subsequently presents the information for each domain. Data Lichen presents this information in a specially designed table as shown in Figure~\ref{dataLichenDashboard}. Utilising a distinct identification for each service guarantees that the listing and presentation of services are uniform and dependable, yielding consistent outcomes with every action. The flow is depicted in Figure~\ref{intraDomain}.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=13cm]{images/Datalichen-dashboard.png}
+  \caption{Data Lichen Dashboard in Local Development Environment} 
+  \label{dataLichenDashboard}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\textwidth]{images/intra-domain-flow.jpg}
+  \caption{Intra-domain communication in Metamycelium's prototype}
+  \label{intraDomain}
+\end{figure}
+
+Domain A requests a 5GB JSON file from domain B in this instance. Domain A possesses the meteorological data, but domain B possesses the customer ratings and business data. An event is sent from the domain to Data Lichen to obtain a list of all datasets along with metadata such as actual-time, processing-time, completeness, and correctness. 
+
+The information contains the address of the data domain to be retrieved. The address is utilised to send an event to domain B for data retrieval. This activates the internal process of domain B, leading to the production and storage of datasets in the distributed storage service. After the procedure is finished, an event is sent to the data processing completion topic, to which domain A is subscribed. Figure~\ref{kafkaTopics} provides an overview of the Kafka topics utilised in this investigation.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\textwidth]{images/kafka-topics.png}
+  \caption{Overview of kafka topics}
+  \label{kafkaTopics}
+\end{figure}
+
+The event signalling the conclusion of data processing also includes the data address. Domain A utilises this URL to retrieve the data. After retrieving the data, it is subsequently processed. The flow is illustrated in Figure~\ref{s1Flow}.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\textwidth]{images/Scenario-s1.png}
+  \caption{Scenario S-1 Flow Diagram}
+  \label{s1Flow}
+\end{figure}
+
+
+Understanding system performance and resource utilisation is crucial in this scenario. Data Ingestion Rate is a direct indicator of the system's throughput, showing how effectively the system can handle large volumes of incoming data. A high rate indicates efficient data processing capability, crucial for situations with anticipated fast data influx. Latency, divided into intake and processing components, provides understanding of system responsiveness. Minimal latency is essential for ensuring prompt data availability and processing, especially in systems where delays can cause subsequent effects. 
+
+CPU usage and memory utilisation are key metrics for assessing the system's resource efficiency. Increased CPU or memory usage could signal bottlenecks, inefficiencies, or places that could be optimised, particularly during times of high demand. The error rate provides information on the system's resilience and dependability. A low error rate, even with large amounts of data, indicates the system's ability to continuously manage and process data without any issues. 
+
+These metrics collectively evaluate the system's capacity to sustain performance and stability when faced with high data input requirements. Each measure will be described in connection to the corresponding system mechanism in the following sections.
+
+\paragraph{Data Ingestion Rate:}
+Each service is instrumented using OpenTelemetry SDKs to capture telemetry data for FastAPI requests and manual spans for specified processes. The collected data is then exported to Kafka using the KafkaRESTProxyExporter class to measure the data intake rate. 
+
+Figure~\ref{openTelemetryTopic} illustrates the open telemetry Kafka topic and a large number of events recorded in this subject. The open telemetry processor service consumes all events sent to this topic. The service gathers and maintains metrics, which are then extracted by Prometheus and subsequently sent to Grafana. The flow is depicted in Figure~\ref{openTelemetryFlow}.
+
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\textwidth]{images/kafka-open-telemetry-topic-screenshot.png}
+  \caption{Open Telemetry Topic}
+  \label{openTelemetryTopic}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\textwidth]{images/open-telemetry-flow.png}
+  \caption{Open Telemetry Flow}
+  \label{openTelemetryFlow}
+\end{figure}
+
+The JSON displayed in Figure~\ref{openTelemetryTraceSpan} depicts an example of a trace span JSON that is communicated over Kafka to the open telemetry service.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\textwidth]{images/open-telemetry-trace-example.png}
+  \caption{Open Telemetry Trace Span}
+  \label{openTelemetryTraceSpan}
+\end{figure}
+
+Before presenting the experiment results, it is crucial to define the specific meaning of 'heavy load of data' in the context of this study. In BD, there is no commonly accepted criterion for defining "high volume," particularly in decentralised, domain-driven architectures such as Metamycelium. There is no single standard benchmark that universally defines what qualifies as a heavy data load in these systems. 
+
+Academic research and business reports suggest that daily data intake can reach terabytes or more, particularly in high-velocity streams such as social media or e-commerce transactions. 
+
+Transferring many gigabytes of data in JSON format between domains is a substantial stress test due to its verbosity and demands compared to binary formats. The Yelp academic dataset is divided into 400KB chunks and transferred many times to test the prototype's capability and resilience against increased data traffic. 
+
+This configuration is suitable for practical scenarios where systems need to consistently handle continuous streams of incoming data from different sources and varying quantities, while maintaining high performance and data integrity. Metamycelium's decentralised, event-driven architecture is designed to allow data to be smoothly ingested, processed, and retrieved, regardless of the frequency of dataset transfers or accesses. This assesses the system's capacity to manage large amounts of data and its ability to perform well in a setting that replicates the rapid data flow typical of modern big data scenarios.
+
+
+All data sent during the experiment is stored in MinIO. Upon successful storage, a confirmation is always sent back. The process of streaming, storing, and validating data was repeated several times to demonstrate its reliability, especially when dealing with large amounts of data. Reliable and accurate communication in challenging situations supports the importance of consistent communication in remote systems, as shown in academic research such as Kleppmann (2017). The process can be formally represented using logical implications to determine the system's resilience.
+
+Let's denote the following:
+\begin{itemize}
+    \item \( P \) as the event where ``data is transferred from Domain A to Domain B''.
+    \item \( Q \) as the event where ``data is successfully stored in MinIO''.
+    \item \( R \) as the event where ``confirmation of successful storage is communicated back''.
+\end{itemize}
+
+From the empirical observations, it is deduced that:
+\[ P \implies Q \]
+\[ Q \implies R \]
+
+Thus, utilizing the transitive property of implications \cite{johnson2019logic}, it is inferred that:
+\[ P \implies R \]
+
+
+
+
 \section{Discussion}
 \label{sec:discussion}
 % Reflect on the findings from the evaluation, discussing their implications, limitations, and the relevance to existing and future research.
