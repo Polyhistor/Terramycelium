@@ -1028,14 +1028,363 @@ Let's denote the following:
 \end{itemize}
 
 From the empirical observations, it is deduced that:
-\[ P \implies Q \]
-\[ Q \implies R \]
+\[ P  implies  Q \]
+\[ Q  implies  R \]
 
 Thus, utilizing the transitive property of implications \cite{johnson2019logic}, it is inferred that:
-\[ P \implies R \]
+\[ P  implies  R \]
+
+Every data transmission from Domain A to Domain B ensures a certification of successful storage. The link highlights the system's effectiveness and dependability in handling extensive amounts of data, aligning with the conclusions of Lee (2020) who stressed the need of maintaining data consistency and integrity in distributed storage systems. 
+
+The graph in Figure~\ref{kafkIngestionInBytesInCustomerDomainAnalyticalService} shows that the Kafka data ingestion reached its highest point at 1,693,816,791 bytes on 2023-09-04 at 20:40:00 in the analytical service of the customer domain, demonstrating the transfer of data from the operational service to the analytical service. The bar chart illustrates the incremental rise in the service's workload.  The entire quantity of data ingested during the trial was 1.6 billion bytes, as shown in Figure~\ref{totalDataIngestedinBytesInCustomerDomainsAnalyticalService}.
 
 
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\textwidth]{images/Kafka-ingestion-in-Bytes.png}
+  \caption{Kafka Data Ingestion in Bytes in Customer Domain's Analytical Service}
+  \label{kafkIngestionInBytesInCustomerDomainAnalyticalService}
+\end{figure}
 
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\textwidth]{images/total-data-ingested-in-bytes.jpeg}
+  \caption{Total Data Ingested in Bytes in Customer Domains' Analytical Service}
+  \label{totalDataIngestedinBytesInCustomerDomainsAnalyticalService}
+\end{figure}
+
+The data ingestion rate for the weather domain's analytical service peaked at 1,693,893,416 bytes on September 5, 2023, at 18:00:00, as shown in Figure~\ref{totalDataIngestedinBytesInWeatherDomainsAnalyticalService}. This service has processed a total of 1.6 billion bytes.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\textwidth]{images/weather-domain-ingested-data-in-bytes.png}
+  \caption{Total Data Ingested in Bytes in Weather Domain's Analytical Service}
+  \label{totalDataIngestedinBytesInWeatherDomainsAnalyticalService}
+\end{figure}
+
+The system's performance during large data input is empirically evaluated by visualising metrics in Grafana using the screenshots. The monitoring system offers timestamped data points showing the amount of data consumed at different intervals. The Table~\ref{dataIngestedInCustomerDomainAnalyticalServiceTable} records the data points collected within a particular time frame in the analytical service of the customer domain.
+
+
+\begin{table}[ht]
+  \centering
+  \caption{Data Ingested in Customer Domain's Analytical Service}
+  \begin{tabular}{|c|c|}
+  \hline
+  \textbf{Timestamp} & \textbf{Data Ingested (bytes)} \\
+  \hline
+  2023-09-04 20:40:00 & 1693816791 \\
+  2023-09-04 20:45:00 & 1693816791 \\
+  2023-09-04 20:50:00 & 1693816791 \\
+  2023-09-04 20:55:00 & 1693816791 \\
+  2023-09-04 21:00:00 & 1693816791 \\
+  2023-09-04 21:05:00 & 1693816791 \\
+  2023-09-04 21:10:00 & 1693816791 \\
+  2023-09-04 21:15:00 & 1693816791 \\
+  2023-09-04 21:20:00 & 1693816791 \\
+  2023-09-04 21:25:00 & 1693816791 \\
+  2023-09-04 21:30:00 & 1693816791 \\
+  2023-09-04 21:35:00 & 1693816791 \\
+  \hline
+  \end{tabular}
+  \label{dataIngestedInCustomerDomainAnalyticalServiceTable}
+\end{table}
+
+
+In addition, the data acquired in the analytical service of the weather domain is presented in the Table \ref{dataIngestedInWeatherDomainTable}.
+
+\begin{table}[ht]
+  \centering
+  \caption{Data Ingested in Weather Domain's Analytical Service}
+  \begin{tabular}{|c|c|}
+  \hline
+  \textbf{Timestamp} & \textbf{Data Ingested (bytes)} \\
+  \hline
+  2023-09-05 18:00:00 & 1693893416 \\
+  2023-09-05 18:15:00 & 1693893416 \\
+  2023-09-05 18:30:00 & 1693895179 \\
+  2023-09-07 20:45:00 & 1694076236 \\
+  2023-09-07 21:00:00 & 1694076236 \\
+  2023-09-07 21:30:00 & 1694076236 \\
+  2023-09-08 11:45:00 & 1694130131 \\
+  2023-09-08 12:00:00 & 1694130131 \\
+  2023-09-08 12:15:00 & 1694130131 \\
+  2023-09-08 12:30:00 & 1694130131 \\
+  2023-09-08 12:45:00 & 1694130131 \\
+  2023-09-08 13:00:00 & 1694130131 \\
+  \hline
+  \end{tabular}
+  \label{dataIngestedInWeatherDomainAnalyticalServiceTable}
+\end{table}
+
+After capturing the ingestion rate in bytes, it is essential to further explore other metrics to provide a comprehensive analysis of the system's performance during high data load conditions.
+
+
+\paragraph{Ingestion Latency:}
+
+Ingestion latency measures the time between when a data record is published to Kafka and when it is processed by the system. It is calculated for each Kafka record that is ingested using a specific formula.
+
+\[ Latency = current\_time - publish\_time \] 
+
+Where:
+\begin{itemize}
+    \item \(current\_time\) denotes the time at which the record is being processed.
+    \item \(publish\_time\) represents the timestamp when the record was published to Kafka. If the Kafka record lacks a timestamp, the current time is assigned as a default, making the latency calculation a fallback measure.
+\end{itemize}
+
+The latency metric may be found in Figure~\ref{cusetomerAndWeatherDomainAnalyaticalServicesLatencies}. The figure shows that the latency in both domains' analytical services is negligible, with one spike reaching 400 seconds and the rest maintaining a constant ingestion latency of roughly 50 to 100 seconds. The weather domain experiences lower latency than customer latency, averaging 50 seconds. This is because this domain uses a less amount of data.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\textwidth]{images/customer-and-weather-domain-analytics-service-latency.png}
+  \caption{Customer and Weather Domain's Analytical Service Latencies}
+  \label{cusetomerAndWeatherDomainAnalyaticalServicesLatencies}
+\end{figure}
+
+The findings are remarkable given the intricacies and asynchronous nature of a domain-driven distributed big data system utilising Kafka. The occasional increase to 400 seconds in ingestion latency is noteworthy but falls within acceptable limits, particularly given the Kafka's internal features like indexing methods, offset management, and sticky partition behaviour.
+
+\paragraph{CPU Usage:} \label{cpuUsageInS1}   
+
+The telemetry processing service is crucial to the infrastructure and offers valuable information when monitoring CPU utilisation. It is crucial to monitor this service since it provides immediate insights into data processing efficiency. Increased CPU utilisation could indicate potential processing bottlenecks. 
+
+Furthermore, CPU utilisation metrics are calculated at certain intervals. Due to the asynchronous nature of receiving telemetry data from different services, monitoring the CPU consumption of individual services may not provide an accurate representation of the current system load. The telemetry service consistently processes data to ensure that its measurements accurately reflect the system's load. 
+
+It is important to consider this finding while assessing scalability and forecasting future infrastructure needs. CPU consumption measurements can be affected by the operating system and environment in which the services are running. The given statistics may not be exact, but they provide a reliable comparison of system resource usage.
+
+Figure~\ref{openTelemetryServiceCpuUsage} illustrates the CPU utiliation trends of the telemetry processing service, emphasising the interplay between data intake rates and resource consumption.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{images/Open-telemetry-service-CPU-usage.png}
+    \caption{Open Telemetry Service CPU Usage}
+    \label{openTelemetryServiceCpuUsage}
+\end{figure}
+
+The CPU utilisation in the Open Telemetry service metrics shows a continuous level of around 24 percent, with occasional peaks reaching 25.8 percent at certain times. The behaviour is a result of the architecture in which events are consistently transmitted to the associated services. A full table showing the CPU utilisation during a certain period can be found in Table~\ref{table:telemetry-cpu-usage} to clarify this issue. The tabulation offers insights into the variation in CPU usage at different times and under varied conditions, showing periods of stable CPU usage, periods of inactivity, and occasional spikes in utilisation.
+
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{|l|l|}
+  \hline
+  \textbf{Date and Time} & \textbf{Average CPU Usage (\%)}        \\ \hline
+  09/06 00:00           & 23\%, 24\%                             \\ \hline
+  09/06 12:00           & 0 (no processes)                       \\ \hline
+  09/07 00:00           & 0 (no processes)                       \\ \hline
+  09/07 12:00           & 0 (no processes)                       \\ \hline
+  09/08 00:00           & 24\%, 18\%                             \\ \hline
+  09/08 12:00           & 17\%                                   \\ \hline
+  09/09 00:00           & 26\%                                   \\ \hline
+  09/09 12:00           & 26\% (with a spike to 34\%)            \\ \hline
+  09/10 00:00           & 24\%                                   \\ \hline
+  09/10 12:00           & 24\%                                   \\ \hline
+  09/11 00:00           & 22\%                                   \\ \hline
+  09/11 12:00           & 22\% (with spikes to 27\% and 35.2\%)  \\ \hline
+  09/12 00:00           & 24\%                                   \\ \hline
+  09/12 12:00           & 24\%                                   \\ \hline
+  \end{tabular}
+  \caption{Telemetry Processing Service CPU Utilisation}
+  \label{table:telemetry-cpu-usage}
+\end{table}
+
+The constant and regular CPU usage indicates a reliable processing environment. Stability can indicate optimised data streaming, where the telemetry service efficiently manages incoming events without excessive resource usage or sudden computational spikes. 
+
+The Kubernetes cluster CPU use consistently stays at 43\%, with occasional spikes up to 250\% as seen in Figure~\ref{kubernetesClusterCpuUsage}. These spikes typically occur when a large amount of data is being sent across the network and into Minio.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\textwidth]{images/kubernetes-cluster-CPU-usage.png}
+  \caption{Kubernetes Cluster CPU Usage}
+  \label{kubernetesClusterCpuUsage}
+\end{figure}
+
+Similarly, as shown in Figure~\ref{kubernetesClusterReadAndWrite}, an average of 5.37GB of data was read and 12.2GB of data was written at various intervals. Furthermore, the network has received 11.6 gigabytes of data and delivered 13.9 megabytes (Figure~\ref{kubernetesClusterNetworkStatistics}).
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\textwidth]{images/Kubernetes-cluster-data-read-write.png}
+  \caption{Kubernetes Cluster Read and Write Statistics}
+  \label{kubernetesClusterReadAndWrite}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\textwidth]{images/kubernetes-cluster-network-data-received-and-sent.png}
+  \caption{Kubernetes Cluster Network Statistics}
+  \label{kubernetesClusterNetworkStatistics}
+\end{figure}
+
+After thoroughly analysing the telemetry and infrastructure data, it is clear that the asynchronous and event-driven architecture of our Big Data system significantly impacts its performance dynamics. In this asynchronous event-driven paradigm, it is crucial to acknowledge that the amount of data handled, measured in gigabytes, is less important than the system's efficiency in handling incoming data streams.
+
+The telemetry service demonstrates its resilience in data processing by maintaining a continuously moderate CPU consumption, even when faced with fluctuating data input rates. Similarly, the Kubernetes cluster occasionally experiences surges in CPU utilisation during data-intensive tasks, but overall it maintains a well-distributed workload. This is evidence of the system's proficiency in handling and allocating work among its nodes.
+
+The data statistics about read, write, and network transfers provide additional clarification on this matter. Although the amount of data being read, written, or transported in gigabytes may appear substantial, what truly matters is not the sheer number, but rather the system's efficiency in managing these processes. The average data read is 5.37GB and the average data written is 12.2GB. These figures, when compared to the network statistics shown in Figure~\ref{kubernetesClusterNetworkStatistics}, demonstrate the system's effectiveness in managing data and performing network operations without becoming overloaded.
+
+The metrics not only demonstrate the stability and efficiency of our BD infrastructure, but also offer empirical evidence that, in an event-driven asynchronous system like Metamycelium, the focus is not solely on the amount of data processed, but rather on the effectiveness and reliability with which it is managed. This observation indicates possible consequences for scalability considerations in future implementations of similar structures.
+
+
+\paragraph{Memory Utilisation:}
+
+Memory utilisation is a crucial measure when assessing system efficiency. An efficient memory management system demonstrates a system's capability to process real-time data and adapt to varying workloads. The memory usage seen in the telemetry processing service, a vital element of the infrastructure, offers precise insights into the system's ability to handle data. Examining these memory patterns provides a more distinct comprehension of the service's effectiveness in handling different data rates and identifies places where memory optimisation may be required to improve overall performance.
+
+In the field of meteorology, memory utilisation can be categorised into two primary types: operational services and analytical services. Operational services that serve static data have low memory usage because they require less processing power. On the other hand, analytical services can exhibit diverse memory patterns based on the intricacy of data analysis.
+
+The customer domain has a same pattern, wherein operational services have consistent memory use as a result of predominantly handling static client data. On the other side, the analytical services, which thoroughly examine client habits and preferences, may experience occasional surges, particularly when dealing with large datasets.
+
+The memory utilisation trends across the various services may be visualised in Figure~\ref{kubernetesClusterMemoryUsage}. The address for each service is specified in the respective service definitions in the Github repositories. It is important to note that the service running on port 8000 is the operational service in the customer domain, while the service on port 8001 is the analytical service for the customer domain. The service running on port 8005 is the operational service for the weather domain, whereas the service on port 8006 is the analytical service for the same domain. The service running on port 8008 is the application responsible for processing telemetry data.
+
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\textwidth]{images/Memory-usage-for-various-services-in-kube.png}
+  \caption{Memory Usage for Various Services in the Cluster}
+  \label{kubernetesClusterMemoryUsage}
+\end{figure}
+
+The association between CPU and memory usage is further explained in Table~\ref{table:memory-cpu-correlation}. This table illustrates the allocation of memory across several services at specific instances of CPU use. It is evident that periods of increased CPU activity align with higher memory allocation, especially in the telemetry processing service. This alignment clarifies the system's ability to scale and respond effectively during moments of high computing demand. Similarly, as the CPU utilisation decreases, there is also a decrease in the amount of memory being used, which highlights the effective management of resources during periods of less demanding processing. The ability to efficiently use memory in a way that can adapt to different needs is crucial for sustaining the performance of a system and ensuring that real-time data is managed smoothly across the entire infrastructure.
+
+\begin{table}[h!]
+  \centering
+  \scriptsize % Further reduce the font size
+  \setlength{\tabcolsep}{3pt} % Tighten the space between columns
+  \begin{tabular}{|l|l|l|l|l|l|}
+  \hline
+  \textbf{Date \& Time} & \textbf{Svc A (B)} & \textbf{Svc B (B)} & \textbf{Svc C (B)} & \textbf{Svc D (B)} & \textbf{Svc E (B)} \\ \hline
+  09/06 00:00 & H (12,750,000,000) & H (12,800,000,000) & L (4,700,000,000) & H (14,000,000,000) & H (13,500,000,000) \\ \hline
+  09/06 12:00 & L (6,350,000,000)  & L (6,400,000,000)  & L (4,650,000,000) & M (10,850,000,000) & M (10,650,000,000) \\ \hline
+  09/07 00:00 & L (6,375,000,000)  & L (6,425,000,000)  & L (4,675,000,000) & M (10,870,000,000) & M (10,670,000,000) \\ \hline
+  09/07 12:00 & L (6,360,000,000)  & L (6,410,000,000)  & L (4,680,000,000) & M (10,860,000,000) & M (10,660,000,000) \\ \hline
+  09/08 00:00 & M (9,560,000,000)  & M (9,610,000,000)  & L (4,720,000,000) & H (13,800,000,000) & H (13,300,000,000) \\ \hline
+  09/08 12:00 & M (9,580,000,000)  & M (9,630,000,000)  & L (4,750,000,000) & H (13,850,000,000) & H (13,350,000,000) \\ \hline
+  09/09 00:00 & H (12,780,000,000) & H (12,830,000,000) & L (4,770,000,000) & H (14,100,000,000) & H (13,600,000,000) \\ \hline
+  09/09 12:00 & H (12,760,000,000) & H (12,810,000,000) & L (4,760,000,000) & H (14,050,000,000) & H (13,550,000,000) \\ \hline
+  09/10 00:00 & M (9,570,000,000)  & M (9,620,000,000)  & L (4,730,000,000) & M (10,900,000,000) & M (10,700,000,000) \\ \hline
+  09/10 12:00 & M (9,590,000,000)  & M (9,640,000,000)  & L (4,740,000,000) & M (10,920,000,000) & M (10,680,000,000) \\ \hline
+  09/11 00:00 & M (9,565,000,000)  & M (9,615,000,000)  & L (4,710,000,000) & M (10,880,000,000) & M (10,670,000,000) \\ \hline
+  09/11 12:00 & H (12,770,000,000) & H (12,820,000,000) & L (4,775,000,000) & H (14,110,000,000) & H (13,610,000,000) \\ \hline
+  09/12 00:00 & M (9,585,000,000)  & M (9,635,000,000)  & L (4,745,000,000) & M (10,930,000,000) & M (10,690,000,000) \\ \hline
+  09/12 12:00 & M (9,600,000,000)  & M (9,650,000,000)  & L (4,755,000,000) & M (10,950,000,000) & M (10,700,000,000) \\ \hline
+  \end{tabular}
+  \caption{Correlated Memory and CPU Usage for Various Services. Legend: B - Bytes, H - High Usage, M - Medium Usage, L - Low Usage. Service A corresponds to localhost:8000, B to localhost:8001, C to localhost:8005, D to localhost:8006, and E to localhost:8008.}
+  \label{table:memory-cpu-correlation}
+\end{table}
+
+
+\paragraph{Error Rate:}
+
+Error rates within the FAST API services are determined through meticulous analysis of logs and monitoring of exception blocks. Every domain is assigned a specific Kafka topic exclusively for the purpose of reporting errors. However, as depicted in Figure~\ref{numberOfErrorsInTelemetryProcessingService}, only the OpenTelemetry service encountered issues. However, the Weather and Customer domains did not have any errors.
+
+The intrinsic ability of event-driven systems to recover quickly and effectively adds greatly to the low occurrence of errors. The decoupling between components in these systems guarantees that transitory errors in one service are typically contained, preventing them from spreading and causing interruptions throughout the entire system. This tendency is clearly seen in the prototype, highlighting the inherent advantages of event-driven architectures in ensuring the resilience of the system. The term "peak" refers to the highest point or maximum value of something. It represents the culmination or apex of a certain phenomenon or trend.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\textwidth]{images/number-of-errors-in-telemetry-processing-service.png}
+  \caption{Number of Errors in Telemetry Processing Service}
+  \label{numberOfErrorsInTelemetryProcessingService}
+\end{figure}
+
+With the above metrics in conjunction with the ingestion rate, a comprehensive understanding of the system's operational efficiency, resilience, and overall performance can be obtained.
+
+\subsubsection{Scenario S2: High Velocity Data Ingestion Scenario}
+
+
+Scenario S2 tests the system's capabilities under high data velocity conditions, approximating peak ingestion rates. This experiment involved Domain A (Customer Domain) streaming data into Domain B (Weather Domain), with Domain B subsequently processing the streamed data. To facilitate this, a dedicated Kafka topic, named customer-domain-stream-data, is established, earmarking it exclusively for the streaming operations between the two domains. 
+
+Concurrently, within the customer domain, a novel endpoint is created. This endpoint is responsible for streaming out the data that had been previously stored. In synchrony with this, the weather domain analytical service adopts a long-polling mechanism. By doing so, it could efficiently subscribe to and intake the continuous data stream relayed from the customer domain.
+
+A methodical analysis is conducted based on the metrics of interest:
+
+\paragraph{Volume and Size of Messages:} The system processed a remarkable sum of 771,305 messages. Collectively, these messages have a combined volume of around 1 GB, and they are all sent to the customer-domain-stream-data topic. The statistical data related to the streaming subject is illustrated in Figure~\ref{customerDomainStreamingTopicStatistics}.
+
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\textwidth]{images/customer-domain-stream-data-topic-statistics.png}
+  \caption{Customer Domain Streaming Topic Statistics}
+  \label{customerDomainStreamingTopicStatistics}
+\end{figure}
+
+\section{Memory and CPU Utilisation:} The memory usage is crucial in this high-speed data scenario. Regularly monitoring memory consumption was crucial in assessing the overall health and efficiency of the system. The memory usage in the customer domain reached a significant peak, measuring 12,852,592,640 bytes. The complexity of the chunking logic used in the streaming operation is the reason for this (Figure~\ref{memoryUtilizationInCustomerDomainInHighVelocityCase}). In contrast, the weather domain, which functions as the recipient of data, indicated a more conservative use of memory. This is believed to be a result of its more straightforward data processing logic, which does not include the additional steps of chunking (Figure~\ref{memoryUtilizationInWeatherDomainInHighVelocityCase}).
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=8cm]{images/memory-utilization-in-customer-domain-in-streaming-case.png}
+  \caption{Memory Utilization in Customer Domain in High Velocity Case}
+  \label{memoryUtilizationInCustomerDomainInHighVelocityCase}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=8cm]{images/memory-utilization-in-weather-domain-in-streaming-case.png}
+  \caption{Memory Utilization in Weather Domain in High Velocity Case}
+  \label{memoryUtilizationInWeatherDomainInHighVelocityCase}
+\end{figure}
+
+Furthermore, the CPU consumption has only grown by 5\% compared to the statistics mentioned in Section~\ref{cpuUsageInS1} for both the Kubernetes cluster and its associated services. Therefore, no further data is provided for this metric.
+
+\paragraph{Duration of Processing and Latency of Ingestion:} The latency of ingestion, defined as the time delay between receiving a data packet and processing it, remained constant during the observed timeframe. The delay continuously registers a value of 0.0000148 seconds at various time intervals throughout the monitoring period. This observation suggests that the system's data ingestion mechanism does not experience substantial delays in processing. However, a more comprehensive evaluation can be obtained by comparing its performance benchmarks with other platforms (Figure~\ref{kafkaIngestionLatencyInStreamingCase}). The system's ability to maintain consistent latency indicates its capacity to sustain performance levels without interruption, especially during periods of heavy data flow.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\textwidth]{images/kafka-ingestion-latency-sum-streaming-case.png}
+  \caption{Kafka Ingestion Latency in Streaming Case}
+  \label{kafkaIngestionLatencyInStreamingCase}
+\end{figure}
+
+Furthermore, the processing duration provides us with information on the amount of time it takes for the system to process the data that has been received. The Weather Domain consistently processes data in 1,694,491,558 nanoseconds (or approximately 1.6945 seconds) for various timestamps (Figure~\ref{processingDurationInStreamingCaseInWeatherDomain}). The consistency seen suggests a reliable data processing method that remains unaffected by any potential variables encountered during the streaming process.
+
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\textwidth]{images/processing-duration-streaming-case-in-weather-domain.png}
+  \caption{Processing Duration in Streaming Case in the Weather Domain}
+  \label{processingDurationInStreamingCaseInWeatherDomain}
+\end{figure}
+
+
+The assessment of the High Velocity Data intake Scenario (S2) demonstrated that the system consistently handled the rapid intake of data within the specified parameters, indicating its effective capability to manage such scenarios. By establishing a specialised Kafka topic and strategically integrating a new endpoint in the customer domain to enable data streaming, we are able to accurately replicate peak data input rates. The system's memory use patterns demonstrate its ability to handle large amounts of data. More precisely, the consumer domain, influenced by its chunking logic, exhibits more memory consumption in comparison to the Weather domain. However, both domains efficiently managed the processing and intake of a significant total of 771,305 messages (about 1GB in size). 
+
+
+Moreover, the continuous delay in consuming data and the time taken for processing highlight the system's resilience. Overall, the system effectively showcases its ability to handle a constant flow of fast-moving data without any noticeable decrease in performance, fulfilling the anticipated results of Scenario S2. Furthermore, the system has been continuously checked to guarantee that the assigned memory for streaming is released after the transmission is finished. No memory leak was detected during the monitoring process, and all memory was successfully released after the streaming was completed.
+
+Based on the extensive results obtained from Scenarios S1 and S2, which include both high-volume and high-velocity data ingestion processes, it is concluded that Scenario S3's emphasis on data variety is inherently resolved and confirmed, eliminating the need for a separate testing phase for Scenario S3.
+
+
+\subsubsection{Scenario S4, S5, S6}
+
+Subsequently, an evaluation is conducted for Scenarios S4, S5, and S6 as a whole. The decision to test these scenarios concurrently is based on the fact that they have common system operations and the capacity to provide a thorough system evaluation while maximising efficiency. Furthermore, the interconnected relationship between OpenID Connect and bearer token systems implies that doing a simultaneous test would provide a comprehensive understanding of the system's performance.
+
+A Python service is initialised to faithfully replicate the behaviour and workload of an external data scientist. While Jupyter Notebook was originally designed to replicate the tasks performed by data scientists, a separate Python service has emerged as the best option. Its inherent low-level characteristics allow for precise management and enhance the efficiency of capturing metrics. Similar to previous services, this Python service is equipped to provide telemetry data to a telemetry processing application via Kafka REST proxy. 
+
+Keycloak, the authentication and authorization server, plays a crucial role in this ecosystem. Upon initiation, the Python service acquires authorization by creating a client in Keycloak. The following confidential information, crucial for the functioning of the service, is securely stored in and retrieved from HashiCorp Vault. 
+
+The authentication process, enabled by OpenID Connect standards, allows the simulated data scientist to effortlessly access Data Lichen. After being registered, the data scientist can access and see datasets from many domains. They can then send network requests to retrieve the specific data they need. The flow is illustrated in Figure~\ref{dataScientistFlowWithAuthentication}.
+
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\textwidth]{images/data-scientist-data-lichen-flow-with-authentication.jpg}
+  \caption{Data Scientist Flow with Authentication}
+  \label{dataScientistFlowWithAuthentication}
+\end{figure}
+
+It is noteworthy that the Minio secret key and access key could also be stored in Vault and retrieved in each service, nevertheless this is not done due to time and resources constraints. This does not risks the integrity of this experiment. For scenario S4, S5 and S6, the metrics below are selected: 
+
+\begin{enumerate}
+  \item \textbf{Query Processing Time (QPT):} Measures the duration from when a complex query is initiated to when its results are returned. It encapsulates computational efficiency and performance.
+  \begin{equation}
+      QPT = t_{\text{query completed}} - t_{\text{query initiated}}
+  \end{equation}
+
+  \item \textbf{Secret Retrieval Latency (SRL):} Captures the time taken to retrieve secrets. It summarises the system's efficiency in secret management.
+  \begin{equation}
+      SRL = t_{\text{secret retrieved}} - t_{\text{retrieval initiated}}
+  \end{equation}
+
+  \item \textbf{Data Integrity Verification (DIV):} Assesses the integrity of data during transmission and processing, ensuring data security.
+  \begin{equation}
+      DIV = \text{Hash(Data Sent)} \stackrel{?}{=} \text{Hash(Data Received)}
+  \end{equation}
+
+\end{enumerate}
 
 \section{Discussion}
 \label{sec:discussion}
