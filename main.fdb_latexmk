@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex main"] 1709765051 "main.aux" "main.bbl" "main" 1709765053 0
+["bibtex main"] 1709885408 "main.aux" "main.bbl" "main" 1709885411 0
   "./bibfile.bib" 1709452726 252027 a3fb8af9559a5e3620f4b770d34e82cb ""
   "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/bibtex/bst/elsarticle/elsarticle-harv.bst" 1678549815 30002 8c0c5833f37bea3ec214cf315a72975d ""
-  "main.aux" 1709765053 18380 a14dedc205610cea6a81c0a60ac3d4fb "pdflatex"
+  "main.aux" 1709885411 20332 245442e973c1f13b41a8f692dfe88815 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1709765051 "/Users/pataei/Desktop/Projects/Terramycelium/main.tex" "main.pdf" "main" 1709765053 2
-  "/Users/pataei/Desktop/Projects/Terramycelium/main.tex" 1709765048 139437 d7848577f656bf42126643f7937d9eb6 ""
+["pdflatex"] 1709885408 "/Users/pataei/Desktop/Projects/Terramycelium/main.tex" "main.pdf" "main" 1709885411 0
+  "/Users/pataei/Desktop/Projects/Terramycelium/main.tex" 1709885405 154198 fbabee29a2fe02cca8ee901f63d0567c ""
   "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1678549815 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/map/fontname/texfonts.map" 1678549815 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/map/pdftex/updmap/pdftex.map" 1678549815 4609045 74543da1ab9350ba886fce0af49a2cfd ""
@@ -106,6 +106,7 @@
   "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/zref/zref-base.sty" 1678549815 20785 71a3d72ab517959a6979c27e6176bec1 ""
   "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/web2c/texmf.cnf" 1678549815 40748 4081c8bc921e56c865f975bd762e388c ""
   "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-var/web2c/pdftex/pdflatex.fmt" 1678549815 7884066 8197b5e86c7bf6d7352283907f10d5c2 ""
+  "images/CPU-utilization-data-scientist-application.png" 1709884660 72758 2969bc80dd1444586a6bc8f24710986a ""
   "images/Datalichen-dashboard.png" 1709710698 63532 47a4a362674126f65d2fe2b4957aa8f3 ""
   "images/Event-architecture.png" 1709450293 150357 4b1232d31f137eb5ac236e5b67aeff8c ""
   "images/Kafka-ingestion-in-Bytes.png" 1709711497 67146 e2a1442f7c3b450719764233afbdcc98 ""
@@ -116,6 +117,7 @@
   "images/OPA-istio-flow.png" 1709710444 48575 0142e5a3d4cbfc04dbd709dfd9e5e63a ""
   "images/Open-telemetry-service-CPU-usage.png" 1709711940 38654 29f8cade2194f804a655754866347194 ""
   "images/Scenario-s1.png" 1709710899 34612 729871f3285aa1fcca5872135c0bfe44 ""
+  "images/Secret-Retrieval-Delay-in-Seconds-In-Data-Scientist-Application.png" 1709884608 102223 8cddc9937194cd093767ccc603dbdee5 ""
   "images/customer-and-weather-domain-analytics-service-latency.png" 1709711819 45446 18cfb01a850273006196568fcd3b8c89 ""
   "images/customer-domain-stream-data-topic-statistics.png" 1709764692 100593 c4dae5d0005e88ce4b276633895faba3 ""
   "images/data-planes.png" 1708412652 95049 bdb38fc756b71a618998ef920675e65c ""
@@ -127,6 +129,7 @@
   "images/kubernetes-cluster-CPU-usage.png" 1709712007 57443 8c13919b0d65d0b48b2f399f80cb8307 ""
   "images/kubernetes-cluster-network-data-received-and-sent.png" 1709764437 42499 57053c2cb9cd1e11b97d4d3a47a6f04d ""
   "images/memory-utilization-in-customer-domain-in-streaming-case.png" 1709764767 154840 6d60da37f0aac66396b5f1ca7f6080a5 ""
+  "images/memory-utilization-in-data-scientist-application.png" 1709884732 107260 ff4c31d7e5ba854a6ca8f8cd30aed483 ""
   "images/memory-utilization-in-weather-domain-in-streaming-case.png" 1709764786 122286 0d30b593f952502c7db85323d60ca577 ""
   "images/metamyceliumConcrete.jpg" 1709710306 121692 921cc6bc0ed2564ca1f09cd54a5e3bd0 ""
   "images/metamyceliumServiceMesh.jpg" 1709538452 182543 62a6cd6e8b07fb495a656b56049747dc ""
@@ -134,12 +137,13 @@
   "images/open-telemetry-flow.png" 1709711132 35428 05bf2f864958930cc36f33415f88c88b ""
   "images/open-telemetry-trace-example.png" 1709711170 85209 5cf40aaec4524f1e894524d13f8689e3 ""
   "images/processing-duration-streaming-case-in-weather-domain.png" 1709764897 250643 e60fb878cb383c262fc43aa588bf35a3 ""
+  "images/query-processing-duration-in-data-science-application.png" 1709884782 95978 329de4a99b1ffeda57ee293a60e3efc2 ""
   "images/total-data-ingested-in-bytes.jpeg" 1709711513 48348 30460dadec5a50742329ab03b7ada8cc ""
   "images/weather-domain-ingested-data-in-bytes.png" 1709711576 74128 a28bb4e49320f617f2578bf3e7d57f45 ""
-  "main.aux" 1709765053 18380 a14dedc205610cea6a81c0a60ac3d4fb "pdflatex"
-  "main.bbl" 1709765035 13719 caca8836f564b9c7b5fd42e2c0682027 "bibtex main"
-  "main.spl" 1709765051 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.tex" 1709765048 139437 d7848577f656bf42126643f7937d9eb6 ""
+  "main.aux" 1709885411 20332 245442e973c1f13b41a8f692dfe88815 "pdflatex"
+  "main.bbl" 1709885408 13719 caca8836f564b9c7b5fd42e2c0682027 "bibtex main"
+  "main.spl" 1709885408 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.tex" 1709885405 154198 fbabee29a2fe02cca8ee901f63d0567c ""
   (generated)
   "main.aux"
   "main.log"

@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d (TeX Live 2023/Homebrew)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: elsarticle-harv.bst
+Database file #1: bibfile.bib
+Warning--to sort, need author or key in wg2015iso
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--empty pages in ataei2023towards
+Warning--empty chapter and pages in Bahrami2015
+Warning--empty pages in Nakagawa
+You've used 36 entries,
+            2990 wiz_defined-function locations,
+            836 strings with 11410 characters,
+and the built_in function-call counts, 21811 in all, are:
+= -- 1666
+> -- 782
+< -- 32
++ -- 316
+- -- 267
+* -- 2178
+:= -- 3174
+add.period$ -- 104
+call.type$ -- 36
+change.case$ -- 262
+chr.to.int$ -- 35
+cite$ -- 42
+duplicate$ -- 1721
+empty$ -- 1676
+format.name$ -- 376
+if$ -- 4159
+int.to.chr$ -- 2
+int.to.str$ -- 1
+missing$ -- 304
+newline$ -- 191
+num.names$ -- 140
+pop$ -- 696
+preamble$ -- 1
+purify$ -- 233
+quote$ -- 0
+skip$ -- 608
+stack$ -- 0
+substring$ -- 747
+swap$ -- 1108
+text.length$ -- 8
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 303
+warning$ -- 4
+while$ -- 135
+width$ -- 0
+write$ -- 504
+(There were 4 warnings)

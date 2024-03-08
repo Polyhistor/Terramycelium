@@ -171,10 +171,24 @@
 \@writefile{toc}{\contentsline {section}{\numberline {11}Memory and CPU Utilisation:}{60}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Duration of Processing and Latency of Ingestion:}{60}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {11.0.1}Scenario S4, S5, S6}{62}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Duration of Secret Retrieval:}{63}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {12}Memory Utilisation in the Data Scientist Application:}{63}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Query Processing Duration:}{63}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {13}Challenges and Duration of the Experiment}{64}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {13.0.1}Challenges in Infrastructure}{64}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {13.0.2}Integration Challenges}{65}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {13.0.3}Challenges in Managing Data}{66}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {13.0.4}Performance Challenges}{67}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {14}Summary}{67}{}\protected@file@percent }
 \bibstyle{elsarticle-harv}
 \bibdata{bibfile}
 \bibcite{wg2015iso}{{1}{2015}{{wg2}}{{}}}
 \bibcite{al2016characteristics}{{2}{2016}{{Al-Jaroodi and Mohamed}}{{}}}
+\@writefile{toc}{\contentsline {section}{\numberline {15}Discussion}{68}{}\protected@file@percent }
+\newlabel{sec:discussion}{{15}{68}}
+\@writefile{toc}{\contentsline {section}{\numberline {16}Conclusion}{68}{}\protected@file@percent }
+\newlabel{sec:conclusion}{{16}{68}}
+\@writefile{toc}{\let\numberline\tmptocnumberline}
 \bibcite{AtaeiACIS}{{3}{2020}{{Ataei and Litchfield}}{{}}}
 \bibcite{ataei2022state}{{4}{2022}{{Ataei and Litchfield}}{{}}}
 \bibcite{ataei2023towards}{{5}{2023}{{Ataei and Litchfield}}{{}}}
@@ -182,11 +196,6 @@
 \bibcite{AtaeiSecurity}{{7}{2016}{{Bashari~Rad et~al.}}{{Bashari~Rad, Akbarzadeh, Ataei and Khakbiz}}}
 \bibcite{bucchiarone2020microservices}{{8}{2020}{{Bucchiarone et~al.}}{{Bucchiarone, Dragoni, Dustdar, Lago, Mazzara, Rivera and Sadovykh}}}
 \bibcite{Chang}{{9}{2018}{{Chang and Boyd}}{{}}}
-\@writefile{toc}{\contentsline {section}{\numberline {12}Discussion}{63}{}\protected@file@percent }
-\newlabel{sec:discussion}{{12}{63}}
-\@writefile{toc}{\contentsline {section}{\numberline {13}Conclusion}{63}{}\protected@file@percent }
-\newlabel{sec:conclusion}{{13}{63}}
-\@writefile{toc}{\let\numberline\tmptocnumberline}
 \bibcite{Chen2012}{{10}{2012}{{Chen et~al.}}{{Chen, Chiang and Storey}}}
 \bibcite{Chen2016a}{{11}{2016}{{Chen et~al.}}{{Chen, Kazman and Haziyev}}}
 \bibcite{Cloutier2010}{{12}{2010}{{Cloutier et~al.}}{{Cloutier, Muller, Verma, Nilchiani, Hole and Bone}}}
@@ -214,16 +223,24 @@
 \bibcite{volk2020identifying}{{34}{2020}{{Volk et~al.}}{{Volk, Staegemann, Trifonova, Bosse and Turowski}}}
 \bibcite{wieringa2014design}{{35}{2014}{{Wieringa}}{{}}}
 \bibcite{yu2019components}{{36}{2019}{{Yu and Zhou}}{{}}}
-\@writefile{lof}{\contentsline {figure}{\numberline {25}{\ignorespaces Customer Domain Streaming Topic Statistics}}{67}{}\protected@file@percent }
-\newlabel{customerDomainStreamingTopicStatistics}{{25}{67}}
-\@writefile{lof}{\contentsline {figure}{\numberline {26}{\ignorespaces Memory Utilization in Customer Domain in High Velocity Case}}{68}{}\protected@file@percent }
-\newlabel{memoryUtilizationInCustomerDomainInHighVelocityCase}{{26}{68}}
-\@writefile{lof}{\contentsline {figure}{\numberline {27}{\ignorespaces Memory Utilization in Weather Domain in High Velocity Case}}{68}{}\protected@file@percent }
-\newlabel{memoryUtilizationInWeatherDomainInHighVelocityCase}{{27}{68}}
-\@writefile{lof}{\contentsline {figure}{\numberline {28}{\ignorespaces Kafka Ingestion Latency in Streaming Case}}{69}{}\protected@file@percent }
-\newlabel{kafkaIngestionLatencyInStreamingCase}{{28}{69}}
-\@writefile{lof}{\contentsline {figure}{\numberline {29}{\ignorespaces Processing Duration in Streaming Case in the Weather Domain}}{69}{}\protected@file@percent }
-\newlabel{processingDurationInStreamingCaseInWeatherDomain}{{29}{69}}
-\@writefile{lof}{\contentsline {figure}{\numberline {30}{\ignorespaces Data Scientist Flow with Authentication}}{70}{}\protected@file@percent }
-\newlabel{dataScientistFlowWithAuthentication}{{30}{70}}
-\gdef \@abspage@last{71}
+\@writefile{lof}{\contentsline {figure}{\numberline {25}{\ignorespaces Customer Domain Streaming Topic Statistics}}{72}{}\protected@file@percent }
+\newlabel{customerDomainStreamingTopicStatistics}{{25}{72}}
+\@writefile{lof}{\contentsline {figure}{\numberline {26}{\ignorespaces Memory Utilization in Customer Domain in High Velocity Case}}{73}{}\protected@file@percent }
+\newlabel{memoryUtilizationInCustomerDomainInHighVelocityCase}{{26}{73}}
+\@writefile{lof}{\contentsline {figure}{\numberline {27}{\ignorespaces Memory Utilization in Weather Domain in High Velocity Case}}{73}{}\protected@file@percent }
+\newlabel{memoryUtilizationInWeatherDomainInHighVelocityCase}{{27}{73}}
+\@writefile{lof}{\contentsline {figure}{\numberline {28}{\ignorespaces Kafka Ingestion Latency in Streaming Case}}{74}{}\protected@file@percent }
+\newlabel{kafkaIngestionLatencyInStreamingCase}{{28}{74}}
+\@writefile{lof}{\contentsline {figure}{\numberline {29}{\ignorespaces Processing Duration in Streaming Case in the Weather Domain}}{74}{}\protected@file@percent }
+\newlabel{processingDurationInStreamingCaseInWeatherDomain}{{29}{74}}
+\@writefile{lof}{\contentsline {figure}{\numberline {30}{\ignorespaces Data Scientist Flow with Authentication}}{75}{}\protected@file@percent }
+\newlabel{dataScientistFlowWithAuthentication}{{30}{75}}
+\@writefile{lof}{\contentsline {figure}{\numberline {31}{\ignorespaces Data Scientist Secret Retrieval Delay in Seconds }}{75}{}\protected@file@percent }
+\newlabel{dataScientistSecretRetrievalDelayInSeconds}{{31}{75}}
+\@writefile{lof}{\contentsline {figure}{\numberline {32}{\ignorespaces CPU Utilization in Data Scientist Application}}{75}{}\protected@file@percent }
+\newlabel{cpuUtilizationInDataScientistApplication}{{32}{75}}
+\@writefile{lof}{\contentsline {figure}{\numberline {33}{\ignorespaces Memory Utilization in Data Scientist Application}}{76}{}\protected@file@percent }
+\newlabel{memoryUtilizationInDataScientistApplication}{{33}{76}}
+\@writefile{lof}{\contentsline {figure}{\numberline {34}{\ignorespaces Query Processing Duration in Data Science Application}}{76}{}\protected@file@percent }
+\newlabel{queryProcessingDurationInDataScienceApplication}{{34}{76}}
+\gdef \@abspage@last{77}

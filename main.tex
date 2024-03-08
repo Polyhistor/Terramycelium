@@ -1371,20 +1371,132 @@ It is noteworthy that the Minio secret key and access key could also be stored i
 \begin{enumerate}
   \item \textbf{Query Processing Time (QPT):} Measures the duration from when a complex query is initiated to when its results are returned. It encapsulates computational efficiency and performance.
   \begin{equation}
-      QPT = t_{\text{query completed}} - t_{\text{query initiated}}
+      QPT = t_{query completed} - t_{query initiated}
   \end{equation}
 
   \item \textbf{Secret Retrieval Latency (SRL):} Captures the time taken to retrieve secrets. It summarises the system's efficiency in secret management.
   \begin{equation}
-      SRL = t_{\text{secret retrieved}} - t_{\text{retrieval initiated}}
+      SRL = t_{secret retrieved} - t_{retrieval initiated}
   \end{equation}
 
   \item \textbf{Data Integrity Verification (DIV):} Assesses the integrity of data during transmission and processing, ensuring data security.
   \begin{equation}
-      DIV = \text{Hash(Data Sent)} \stackrel{?}{=} \text{Hash(Data Received)}
+      DIV = Hash(Data Sent) \stackrel{?}{=} Hash(Data Received)
   \end{equation}
 
 \end{enumerate}
+
+After obtaining the domain data using a secure method utilising OpenID Connect and Vault on many occasions and over various days, the following conclusions arise:
+
+\paragraph{Duration of Secret Retrieval:}
+The recorded metrics consistently displayed a length of 3 seconds throughout the timestamps. This demonstrates a dependable and consistent secret management system, as depicted in Figure~\ref{dataScientistSecretRetrievalDelayInSeconds}.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\textwidth]{images/Secret-Retrieval-Delay-in-Seconds-In-Data-Scientist-Application.png}
+  \caption{Data Scientist Secret Retrieval Delay in Seconds }
+  \label{dataScientistSecretRetrievalDelayInSeconds}
+\end{figure}
+
+
+The CPU utilisation remains constant at 18.6\% during the recorded time period. The behaviour can be linked to the special resource allocation of the operating system on the Apple M2 chip, which enables a consistent usage of the central processing unit (CPU), as shown in Figure~\ref{cpuUtilizationInDataScientistApplication}. As a result, CPU consumption may change in various circumstances.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\textwidth]{images/CPU-utilization-data-scientist-application.png}
+  \caption{CPU Utilization in Data Scientist Application}
+  \label{cpuUtilizationInDataScientistApplication}
+\end{figure}
+
+\section{Memory Utilisation in the Data Scientist Application:}
+The memory utilisation remains consistently at around 12.56 GB during all observations. This suggests that the application possesses efficient memory management and does not encounter memory leaks or substantial variations. This is illustrated in Figure~\ref{memoryUtilizationInDataScientistApplication}.
+
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\textwidth]{images/memory-utilization-in-data-scientist-application.png}
+  \caption{Memory Utilization in Data Scientist Application}
+  \label{memoryUtilizationInDataScientistApplication}
+\end{figure}
+
+\paragraph{Query Processing Duration:}
+The duration of query processing consistently stayed at 10 seconds throughout the measured time period. Nevertheless, there is a decrease to 2 seconds at the conclusion of the observation period (Figure~\ref{queryProcessingDurationInDataScienceApplication}). This abrupt decline indicates potential opportunities for optimising or modifying the characteristics of the processed queries.
+
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\textwidth]{images/query-processing-duration-in-data-science-application.png}
+  \caption{Query Processing Duration in Data Science Application}
+  \label{queryProcessingDurationInDataScienceApplication}
+\end{figure}
+
+
+An essential element contributing to the system's reliable performance is its domain-driven asynchronous and event-driven architecture, which is in line with the research conducted by Braun (2021) on distributed systems. This architecture demonstrates exceptional proficiency in handling simultaneous data access and ensuring the integrity of domain models in asynchronous scenarios, concepts that are also discussed in Kleppmann's renowned book, "Designing Data-Intensive Applications" (2017). The significance of data consistency and network resilience in contemporary distributed architectures is underscored by Kleppmann (2017). The prototype's capacity to manage simultaneous updates and uphold data integrity demonstrates the effectiveness of this architectural approach in the construction of distributed systems.
+
+
+\section{Challenges and Duration of the Experiment}
+
+The experimentation phase lasts around four months and involves a methodical process to assess each situation in order to thoroughly validate the Metamycelium system according to the specified specifications. The experiment faced numerous architectural and technical obstacles, which greatly influenced the design decisions and comprehension of the system's behaviour. The issues are classified into four categories: Infrastructure, Integration, Data Management, and Performance.
+
+\subsubsection{Challenges in Infrastructure} 
+
+\begin{enumerate} 
+  \item The confluent helm charts were incompatible because they relied on an alpha version of a Kubernetes resource called PodResourceBudget. The resource was in alpha stage until V1.22, however this experiment was conducted on version 1.27. The Nginx Ingress attempted to utilise the cloud manager to establish a load balancer, which led to the ingress service's external IP being stuck in a perpetual pending state. This happened because the cluster was initiated in a local development environment, resulting in the unavailability of a cloud service to deploy a load balancer such as EKS or AKS.
+    \item A further infrastructure obstacle emerged with the Kafka pod, which had recurring failures. Due to Kafka's extensive use of file storage, such as segment files and log files, the initial allocation of 64GB for the Kafka instance was inadequate. Afterwards, the configuration was modified, increasing the cluster storage capacity to 300GB.
+    \item During the development process, Prometheus and Grafana need a host address for the purpose of intercommunication. The same applied to both the telemetry processing service and the Prometheus metrics scraper. Nevertheless, due to the fact that the prototype was created within a solitary computational setting, a significant portion of the communication relied on the main system. This presented challenges, as the loopback address or localhost in each Docker container resolved to the container's loopback interface, rather than the host's interface. In order to address this problem, a separate DNS was utilised that specifically pointed to the host.
+The enumeration is concluded.
+\end{enumerate} 
+
+\subsubsection{Integration Challenges} 
+
+\begin{enumerate}[resume] 
+  \item An important obstacle was encountered when attempting to establish a connection between the Keycloak helm chart and the Postgress DB, despite specifically configuring a login and password. The cluster necessitated repeated restarts. The final answer entailed transitioning from Minikube to KIND.
+    The user's text is simply "item". Once the entrance was established, the objective was to precisely route traffic to different services. The majority of services had their own dedicated servers, which required the proper configuration of the reverse proxy to ensure that upstream servers could reply effectively. For example, the Keycloak server experienced difficulties in identifying some host paths, as it expected a root path for serving files. Both the server and proxy required modifications to ensure proper functioning. Most services encountered similar problems because many open-source software needed to be configured in order to deliver their assets on paths other than the root.
+    The user's text is a single item. Hosting Vault UI through an ingress encountered difficulties because Vault-UI carries out several redirections on different application paths, making rewriting or pass-through methods ineffective. This problem elicited inquiries on prominent online platforms such as Stackoverflow and Vault's GitHub repository. As of February 7th, 2023, no feasible answer became apparent. The only feasible method entailed allocating a domain to vault-ui and directing traffic through a load balancer. Nevertheless, as Vault-UI primarily served as a graphical interface for interacting with Vault and not a core architectural element, the experiment's integrity remained unaffected.
+    The user's text is a single item. Despite being deployed as a helm chart, the utilisation of Prometheus for metrics and logs retrieval by Kiali made the network connection complex. Difficulties emerged as a result of intricate networking issues and the inherent service accounts of Kubernetes. Understanding the external authorizer API used by Envoy and enabling it in a Kubernetes cluster's service mesh within a specified namespace was not easy. There was a widespread confusion over the lifecycle of service mesh objects, the admission reviews, and the admission controller.
+\end{enumerate}
+
+\subsubsection{Challenges in Managing Data} 
+\begin{enumerate}
+    \item One of the main difficulties in designing the data quantum was figuring out the precise nature of the data resolution provided by the analytical service. Using FastAPI, which is inherently event-driven, it is not advisable to block the main thread by making continuous requests to an HTTP endpoint for events. A solution utilised a function that was executed conditionally to retrieve all events related to a certain topic, either at the system's initialization or through an endpoint.
+    The user's text is simply "item". Another problem connected to the creation of the local-host-based cluster came in the context of ingress. In order to route incoming traffic to the Kafka REST proxy, nginx was configured to perform target rewriting. While this method is suitable for incoming network requests, outgoing requests present challenges. For instance, when the Kafka rest proxy API provided the consumer URL, it excluded the rewriting rules, which required the use of custom code to alter the URL.
+    The user's text is simply "item". Handling the data flow for domain B, specifically the customer reviews domain, presented difficulties because of the substantial size of the Yelp academic datasets, with some reaching up to 5GB. In order to provide version control and avoid server and stream timeouts, it was necessary to divide these JSON files into smaller chunks. A bespoke Python script was created to manage the division of JSON files into smaller chunks, guaranteeing that no file surpassed 99MB.
+    \item SQLite, used in analytical services to store many types of data, presented difficulties with semi-structured data such as JSON. The lack of uniformity in JSON data formats within the customer domain required the development of separate tables to accommodate various semi-structured data sets. In order to address this issue, a bespoke function was created to dynamically generate SQLite tables.
+    The user's text is simply "item". A noticeable inefficiency arose when initially gathering metrics from different services using normal Python and Node APIs. It was quickly determined that many traces were missing important metadata, such as service name, service version, and environment, which are necessary for proper visualisation. This mistake required a repetition of the first scenario in order to provide the best possible visualisation and narrative consistency.
+    The user's text is simply a bullet point marker. An associated matter pertained to the automated removal of outdated Kafka consumers by the Kafka-rest-proxy service. As a consequence of this activity, there was a failure in the service when making further queries to Kafka. In order to alleviate this issue, a bespoke function was created to modify the consumer and restore a connection to the REST server.
+\end{enumerate}
+
+\subsubsection{Performance Challenges} 
+\begin{enumerate}
+    \item While transferring operational data from the operational service to the analytical service, storage information was sent along with the success event. This strategy presented causality concerns. Following queries, which were intended to process this data and record it in Datalichen, relied on the distributed storage data. To tackle this issue, it was necessary to take into account a centralised configuration pattern.
+    The user's text is a single item. The Apple M2 chip architecture presented an extra performance difficulty by hindering Psutil's ability to accurately represent CPU utilisation.
+\end{enumerate}
+
+Notwithstanding these challenges, the system exhibits proficiency in managing intricate settings. Nevertheless, the scarcity of time and infrastructure constrains the extent of testing. The selected situations offer a thorough comprehension of the system's capabilities, but a more exhaustive examination is possible under more advantageous circumstances. Despite its limitations, the experiment demonstrates the resilience and promise of the Metamycelium prototype.
+
+
+
+\section{Summary}
+
+The comprehensive evaluation of the Metamycelium system across several scenarios has definitively demonstrated its ability to fulfil, and in some cases, beyond the specified criteria. The experimental data lead to the following conclusions:
+
+
+\begin{enumerate} 
+  
+  \item \textbf{Volume}: The large volume data import scenario, also known as Scenario S1, showcases the system's ability to handle both asynchronous and batch processing, hence fulfilling the requirements outlined in Vol-1 and Vol-2. The system offers a flexible storage solution for extensive datasets, efficiently managing the influx of data during periods of high demand.
+    
+    \item \textbf{Velocity}: In Scenario S2, which focused on fast data ingestion, the system demonstrated its ability to handle various data transmission speeds, satisfying requirements textbfVel-1 to textbfVel-5. The system's ability to efficiently deliver streaming data to users, along with its capacity for rapid search and real-time data processing, is very commendable.
+    
+    \item \textbf{Diversity}: While Scenario S3 is not explicitly evaluated, insights from Scenarios S1 and S2 strongly indicate the system's capacity to handle a wide range of data forms, ranging from structured to unstructured data. This substantiates the assertions made by Var-1 to Var-4. The system's inherent ability to gather, standardise, and adapt its structure to changing needs is a notable advantage.
+    
+    \item \textbf{Value}: The Complex Query Scenario (Scenario S4) demonstrates the system's computing capabilities, confirming the criteria outlined in \textbf{Val-1} to \textbf{Val-4}. The system's versatility in facilitating both batch and streaming analytical processing, as well as its adaptability in managing various output formats, distinguishes it from others. This distinction is emphasised throughout the experiment, as each domain contains a unique form of semi-structured data.
+    
+    \item \textbf{Security \& Privacy}: Scenarios S5 and S6 thoroughly demonstrate the system's commitment to fulfilling SaP-1 and SaP-2 by focusing on secret management and data security, respectively. By strategically using OpenID Connect with Hashicorp Vault, the highest standard of security, data preservation, and multi-tier authentication systems are ensured.
+    
+    \item \textbf{Veracity}: The domain-specific character of Metamycelium naturally supports the fulfilment of requirements \textbf{Ver-1} and \textbf{Ver-2}, emphasising the significance of ensuring high-quality data and maintaining its origin and history.
+  
+\end{enumerate}
+
 
 \section{Discussion}
 \label{sec:discussion}
