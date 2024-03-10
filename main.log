@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Homebrew) (preloaded format=pdflatex 2023.6.22)  10 MAR 2024 20:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Homebrew) (preloaded format=pdflatex 2023.6.22)  10 MAR 2024 20:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -334,11 +334,7 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@thisruleclass=\count292
 \@lastruleclass=\count293
 \@thisrulewidth=\dimen172
-) (./main.aux
-
-LaTeX Warning: Label `sec:discussion' multiply defined.
-
-)
+) (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
@@ -393,7 +389,11 @@ Overfull \hbox (2.61108pt too wide) has occurred while \output is active
 [1
 
 
-] [2] [3] [4] [5] [6]
+]
+
+LaTeX Warning: Reference `sec:conclusion' on page 2 undefined on input line 175.
+
+[2] [3] [4] [5] [6]
 Overfull \hbox (5.99547pt too wide) in paragraph at lines 227--228
 \OT1/cmr/m/n/12 soft-ware prod-uct line en-vi-ron-ment. The au-thors of GAL-STER2011Empirically
  []
@@ -767,7 +767,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Warning: The counter will not be printed.
              The label is: resume on input line 1452.
 
-[65] [66] [67] [68] [69] (./main.bbl [70]
+[65] [66] [67] [68] [69] [70] (./main.bbl [71]
 Underfull \hbox (badness 3019) in paragraph at lines 80--84
 []\OT1/cmr/m/n/12 technology re-view in-sights in part-ner-ship with Databricks, M.,
  []
@@ -782,12 +782,12 @@ Overfull \hbox (88.1916pt too wide) in paragraph at lines 80--84
 \OT1/cmtt/m/n/12 https://databricks.com/p/whitepaper/mit-technology-review-insights-report\OT1/cmr/m/n/12 . 
  []
 
-
+[72]
 Underfull \hbox (badness 10000) in paragraph at lines 98--102
 []\OT1/cmr/m/n/12 HashiCorp, 2023.  Vault helm chart.  URL:
  []
 
-[71]
+
 Underfull \hbox (badness 10000) in paragraph at lines 132--136
 []\OT1/cmr/m/n/12 Polyhistor, 2023.  In-fras-truc-ture-formetamycelium.
  []
@@ -797,17 +797,14 @@ Overfull \hbox (1.74156pt too wide) in paragraph at lines 132--136
 \OT1/cmtt/m/n/12 https://github.com/Polyhistor/InfrastructureForMetamycelium\OT1/cmr/m/n/12 . 
  []
 
-
+[73]
 Underfull \hbox (badness 2608) in paragraph at lines 152--156
 []\OT1/cmr/m/n/12 (SIG), K.S.I.G., 2023.  kind - ku-ber-netes in docker.  URL:
  []
 
-[72]) [73] [74 <./images/customer-domain-stream-data-topic-statistics.png>] [75 <./images/memory-utilization-in-customer-domain-in-streaming-case.png> <./images/memory-utilization-in-weather-domain-in-streaming-case.png>] [76 <./images/kafka-ingestion-latency-sum-streaming-case.png> <./images/processing-duration-streaming-case-in-weather-domain.png>] [77 <./images/data-scientist-data-lichen-flow-with-authentication.jpg (PNG copy)> <./images/Secret-Retrieval-Delay-in-Seconds-In-Data-Scientist-Application.png> <./images/CPU-utilization-data-scientist-application.png>] [78 <./images/memory-utilization-in-data-scientist-application.png> <./images/query-processing-duration-in-data-science-application.png>] (./main.aux)
+) [74] [75 <./images/customer-domain-stream-data-topic-statistics.png>] [76 <./images/memory-utilization-in-customer-domain-in-streaming-case.png> <./images/memory-utilization-in-weather-domain-in-streaming-case.png>] [77 <./images/kafka-ingestion-latency-sum-streaming-case.png> <./images/processing-duration-streaming-case-in-weather-domain.png>] [78 <./images/data-scientist-data-lichen-flow-with-authentication.jpg (PNG copy)> <./images/Secret-Retrieval-Delay-in-Seconds-In-Data-Scientist-Application.png> <./images/CPU-utilization-data-scientist-application.png>] [79 <./images/memory-utilization-in-data-scientist-application.png> <./images/query-processing-duration-in-data-science-application.png>] (./main.aux)
 
 LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
@@ -819,10 +816,10 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  84i,10n,90p,1248b,331s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (79 pages, 3436007 bytes).
+Output written on main.pdf (80 pages, 3439615 bytes).
 PDF statistics:
- 402 PDF objects out of 1000 (max. 8388607)
- 227 compressed objects within 3 object streams
+ 405 PDF objects out of 1000 (max. 8388607)
+ 229 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  171 words of extra memory for PDF output out of 10000 (max. 10000000)
 
