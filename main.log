@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Homebrew) (preloaded format=pdflatex 2023.6.22)  10 MAR 2024 20:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Homebrew) (preloaded format=pdflatex 2023.6.22)  10 MAR 2024 21:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -680,15 +680,12 @@ File: images/customer-domain-stream-data-topic-statistics.png Graphic file (type
 <use images/customer-domain-stream-data-topic-statistics.png>
 Package pdftex.def Info: images/customer-domain-stream-data-topic-statistics.png  used on input line 1300.
 (pdftex.def)             Requested size: 390.0pt x 363.88347pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 <images/memory-utilization-in-customer-domain-in-streaming-case.png, id=250, 820.06375pt x 768.8725pt>
 File: images/memory-utilization-in-customer-domain-in-streaming-case.png Graphic file (type png)
 <use images/memory-utilization-in-customer-domain-in-streaming-case.png>
 Package pdftex.def Info: images/memory-utilization-in-customer-domain-in-streaming-case.png  used on input line 1309.
 (pdftex.def)             Requested size: 227.62204pt x 213.4057pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -700,53 +697,39 @@ Package pdftex.def Info: images/memory-utilization-in-weather-domain-in-streamin
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[60]
-<images/kafka-ingestion-latency-sum-streaming-case.png, id=256, 1335.99126pt x 391.4625pt>
+[60] [61 <./images/customer-domain-stream-data-topic-statistics.png>]
+<images/kafka-ingestion-latency-sum-streaming-case.png, id=260, 1335.99126pt x 391.4625pt>
 File: images/kafka-ingestion-latency-sum-streaming-case.png Graphic file (type png)
 <use images/kafka-ingestion-latency-sum-streaming-case.png>
 Package pdftex.def Info: images/kafka-ingestion-latency-sum-streaming-case.png  used on input line 1327.
 (pdftex.def)             Requested size: 390.0pt x 114.27383pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/processing-duration-streaming-case-in-weather-domain.png, id=257, 1324.95pt x 393.47pt>
+<images/processing-duration-streaming-case-in-weather-domain.png, id=261, 1324.95pt x 393.47pt>
 File: images/processing-duration-streaming-case-in-weather-domain.png Graphic file (type png)
 <use images/processing-duration-streaming-case-in-weather-domain.png>
 Package pdftex.def Info: images/processing-duration-streaming-case-in-weather-domain.png  used on input line 1337.
 (pdftex.def)             Requested size: 390.0pt x 115.81447pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[61]
-<images/data-scientist-data-lichen-flow-with-authentication.jpg, id=261, 883.3pt x 531.9875pt>
+ [62 <./images/memory-utilization-in-customer-domain-in-streaming-case.png>] [63 <./images/memory-utilization-in-weather-domain-in-streaming-case.png> <./images/kafka-ingestion-latency-sum-streaming-case.png>] [64 <./images/processing-duration-streaming-case-in-weather-domain.png>]
+<images/data-scientist-data-lichen-flow-with-authentication.jpg, id=275, 883.3pt x 531.9875pt>
 File: images/data-scientist-data-lichen-flow-with-authentication.jpg Graphic file (type jpg)
 <use images/data-scientist-data-lichen-flow-with-authentication.jpg>
 Package pdftex.def Info: images/data-scientist-data-lichen-flow-with-authentication.jpg  used on input line 1364.
 (pdftex.def)             Requested size: 390.0pt x 234.88696pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[62]
-<images/Secret-Retrieval-Delay-in-Seconds-In-Data-Scientist-Application.png, id=265, 1970.36125pt x 524.96124pt>
+ [65 <./images/data-scientist-data-lichen-flow-with-authentication.jpg (PNG copy)>]
+<images/Secret-Retrieval-Delay-in-Seconds-In-Data-Scientist-Application.png, id=279, 1970.36125pt x 524.96124pt>
 File: images/Secret-Retrieval-Delay-in-Seconds-In-Data-Scientist-Application.png Graphic file (type png)
 <use images/Secret-Retrieval-Delay-in-Seconds-In-Data-Scientist-Application.png>
 Package pdftex.def Info: images/Secret-Retrieval-Delay-in-Seconds-In-Data-Scientist-Application.png  used on input line 1396.
 (pdftex.def)             Requested size: 390.0pt x 103.90099pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/CPU-utilization-data-scientist-application.png, id=266, 1972.36874pt x 541.02126pt>
+<images/CPU-utilization-data-scientist-application.png, id=280, 1972.36874pt x 541.02126pt>
 File: images/CPU-utilization-data-scientist-application.png Graphic file (type png)
 <use images/CPU-utilization-data-scientist-application.png>
 Package pdftex.def Info: images/CPU-utilization-data-scientist-application.png  used on input line 1406.
 (pdftex.def)             Requested size: 390.0pt x 106.97229pt.
 
+
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/memory-utilization-in-data-scientist-application.png, id=267, 1985.4175pt x 547.04375pt>
+<images/memory-utilization-in-data-scientist-application.png, id=281, 1985.4175pt x 547.04375pt>
 File: images/memory-utilization-in-data-scientist-application.png Graphic file (type png)
 <use images/memory-utilization-in-data-scientist-application.png>
 Package pdftex.def Info: images/memory-utilization-in-data-scientist-application.png  used on input line 1417.
@@ -754,20 +737,22 @@ Package pdftex.def Info: images/memory-utilization-in-data-scientist-application
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/query-processing-duration-in-data-science-application.png, id=268, 1964.33875pt x 538.01pt>
+[66 <./images/Secret-Retrieval-Delay-in-Seconds-In-Data-Scientist-Application.png>]
+<images/query-processing-duration-in-data-science-application.png, id=287, 1964.33875pt x 538.01pt>
 File: images/query-processing-duration-in-data-science-application.png Graphic file (type png)
 <use images/query-processing-duration-in-data-science-application.png>
 Package pdftex.def Info: images/query-processing-duration-in-data-science-application.png  used on input line 1428.
 (pdftex.def)             Requested size: 390.0pt x 106.81198pt.
 
+
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[63] [64]
+[67 <./images/CPU-utilization-data-scientist-application.png> <./images/memory-utilization-in-data-scientist-application.png>] [68 <./images/query-processing-duration-in-data-science-application.png>]
 
 LaTeX Warning: The counter will not be printed.
              The label is: resume on input line 1452.
 
-[65] [66] [67] [68] [69] [70] (./main.bbl [71]
+[69] [70] [71] [72] [73] [74] (./main.bbl [75] [76]
 Underfull \hbox (badness 3019) in paragraph at lines 80--84
 []\OT1/cmr/m/n/12 technology re-view in-sights in part-ner-ship with Databricks, M.,
  []
@@ -782,7 +767,7 @@ Overfull \hbox (88.1916pt too wide) in paragraph at lines 80--84
 \OT1/cmtt/m/n/12 https://databricks.com/p/whitepaper/mit-technology-review-insights-report\OT1/cmr/m/n/12 . 
  []
 
-[72]
+
 Underfull \hbox (badness 10000) in paragraph at lines 98--102
 []\OT1/cmr/m/n/12 HashiCorp, 2023.  Vault helm chart.  URL:
  []
@@ -797,12 +782,12 @@ Overfull \hbox (1.74156pt too wide) in paragraph at lines 132--136
 \OT1/cmtt/m/n/12 https://github.com/Polyhistor/InfrastructureForMetamycelium\OT1/cmr/m/n/12 . 
  []
 
-[73]
+[77]
 Underfull \hbox (badness 2608) in paragraph at lines 152--156
 []\OT1/cmr/m/n/12 (SIG), K.S.I.G., 2023.  kind - ku-ber-netes in docker.  URL:
  []
 
-) [74] [75 <./images/customer-domain-stream-data-topic-statistics.png>] [76 <./images/memory-utilization-in-customer-domain-in-streaming-case.png> <./images/memory-utilization-in-weather-domain-in-streaming-case.png>] [77 <./images/kafka-ingestion-latency-sum-streaming-case.png> <./images/processing-duration-streaming-case-in-weather-domain.png>] [78 <./images/data-scientist-data-lichen-flow-with-authentication.jpg (PNG copy)> <./images/Secret-Retrieval-Delay-in-Seconds-In-Data-Scientist-Application.png> <./images/CPU-utilization-data-scientist-application.png>] [79 <./images/memory-utilization-in-data-scientist-application.png> <./images/query-processing-duration-in-data-science-application.png>] (./main.aux)
+) [78] (./main.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -816,10 +801,10 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  84i,10n,90p,1248b,331s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (80 pages, 3439615 bytes).
+Output written on main.pdf (79 pages, 3439909 bytes).
 PDF statistics:
- 405 PDF objects out of 1000 (max. 8388607)
- 229 compressed objects within 3 object streams
+ 402 PDF objects out of 1000 (max. 8388607)
+ 227 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  171 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1274,7 +1274,7 @@ Error rates within the FAST API services are determined through meticulous analy
 
 The intrinsic ability of event-driven systems to recover quickly and effectively adds greatly to the low occurrence of errors. The decoupling between components in these systems guarantees that transitory errors in one service are typically contained, preventing them from spreading and causing interruptions throughout the entire system. This tendency is clearly seen in the prototype, highlighting the inherent advantages of event-driven architectures in ensuring the resilience of the system. The term "peak" refers to the highest point or maximum value of something. It represents the culmination or apex of a certain phenomenon or trend.
 
-\begin{figure}[h!]
+\begin{figure}
   \centering
   \includegraphics[width=\textwidth]{images/number-of-errors-in-telemetry-processing-service.png}
   \caption{Number of Errors in Telemetry Processing Service}
@@ -1295,7 +1295,7 @@ A methodical analysis is conducted based on the metrics of interest:
 \paragraph{Volume and Size of Messages:} The system processed a remarkable sum of 771,305 messages. Collectively, these messages have a combined volume of around 1 GB, and they are all sent to the customer-domain-stream-data topic. The statistical data related to the streaming subject is illustrated in Figure~\ref{customerDomainStreamingTopicStatistics}.
 
 
-\begin{figure}[h]
+\begin{figure}
   \centering
   \includegraphics[width=\textwidth]{images/customer-domain-stream-data-topic-statistics.png}
   \caption{Customer Domain Streaming Topic Statistics}
@@ -1322,7 +1322,7 @@ Furthermore, the CPU consumption has only grown by 5\% compared to the statistic
 
 \paragraph{Duration of Processing and Latency of Ingestion:} The latency of ingestion, defined as the time delay between receiving a data packet and processing it, remained constant during the observed timeframe. The delay continuously registers a value of 0.0000148 seconds at various time intervals throughout the monitoring period. This observation suggests that the system's data ingestion mechanism does not experience substantial delays in processing. However, a more comprehensive evaluation can be obtained by comparing its performance benchmarks with other platforms (Figure~\ref{kafkaIngestionLatencyInStreamingCase}). The system's ability to maintain consistent latency indicates its capacity to sustain performance levels without interruption, especially during periods of heavy data flow.
 
-\begin{figure}[h]
+\begin{figure}
   \centering
   \includegraphics[width=\textwidth]{images/kafka-ingestion-latency-sum-streaming-case.png}
   \caption{Kafka Ingestion Latency in Streaming Case}
@@ -1332,7 +1332,7 @@ Furthermore, the CPU consumption has only grown by 5\% compared to the statistic
 Furthermore, the processing duration provides us with information on the amount of time it takes for the system to process the data that has been received. The Weather Domain consistently processes data in 1,694,491,558 nanoseconds (or approximately 1.6945 seconds) for various timestamps (Figure~\ref{processingDurationInStreamingCaseInWeatherDomain}). The consistency seen suggests a reliable data processing method that remains unaffected by any potential variables encountered during the streaming process.
 
 
-\begin{figure}[h]
+\begin{figure}
   \centering
   \includegraphics[width=\textwidth]{images/processing-duration-streaming-case-in-weather-domain.png}
   \caption{Processing Duration in Streaming Case in the Weather Domain}
