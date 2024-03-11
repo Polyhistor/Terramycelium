@@ -368,7 +368,7 @@
 % not capitalized unless they are the first or last word of the title.
 % Linebreaks \\ can be used within to get better formatting as desired.
 % Do not put math or special symbols in the title.
-\title{Bare Demo of IEEEtran.cls\\ for IEEE Journals}
+\title{Terramycelium: A Reference Architecture for Adaptive Big Data Systems}
 %
 %
 % author names and IEEE memberships
@@ -380,14 +380,8 @@
 % was not built to handle multiple paragraphs
 %
 
-\author{Michael~Shell,~\IEEEmembership{Member,~IEEE,}
-        John~Doe,~\IEEEmembership{Fellow,~OSA,}
-        and~Jane~Doe,~\IEEEmembership{Life~Fellow,~IEEE}% <-this % stops a space
-\thanks{M. Shell was with the Department
-of Electrical and Computer Engineering, Georgia Institute of Technology, Atlanta,
-GA, 30332 USA e-mail: (see http://www.michaelshell.org/contact.html).}% <-this % stops a space
-\thanks{J. Doe and J. Doe are with Anonymous University.}% <-this % stops a space
-\thanks{Manuscript received April 19, 2005; revised August 26, 2015.}}
+\author{Pouya~Ataei}% <-this % stops a space
+
 
 % note the % following the last \IEEEmembership and also \thanks - 
 % these prevent an unwanted space from occurring between the last author name
@@ -410,8 +404,8 @@ GA, 30332 USA e-mail: (see http://www.michaelshell.org/contact.html).}% <-this %
 
 
 % The paper headers
-\markboth{Journal of \LaTeX\ Class Files,~Vol.~14, No.~8, August~2015}%
-{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for IEEE Journals}
+% \markboth{Journal of \LaTeX\ Class Files,~Vol.~14, No.~8, August~2015}%
+% {Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for IEEE Journals}
 % The only time the second header will appear is for the odd numbered pages
 % after the title page when using the twoside option.
 % 
@@ -443,12 +437,12 @@ GA, 30332 USA e-mail: (see http://www.michaelshell.org/contact.html).}% <-this %
 % As a general rule, do not put math, special symbols or citations
 % in the abstract or keywords.
 \begin{abstract}
-The abstract goes here.
+  Big Data is a nascent term emerged to describe large amount of data that comes in different forms from various channels. In modern world, users are the ceaseless generators of structured, semi-structured, and unstructured data that if gleaned and crunched precisely, will reveal game-changing patterns. While the opportunities exist with big data, the unprecedented amount of data has brought traditional approaches to a bottleneck, and the growth of data is outpacing technological and scientific advances in data analytics. It is estimated that approximately 75\% of the big data projects have failed within the last decade according to multiple sources. Among the challenges, system development and data architecture are prominent. This paper aims to facilitate big data system development and architecture by conducting a systematic literature review on big data reference architectures. The primary goal is to highlight the state of big data reference architectures and how they can be helpful for big data system development. The secondary goal is to find all big data reference architecture, describe the challenges of creating these reference architectures, discuss the common architectural components of these reference architectures and the limitations of these reference architectures. As a result of this work, firstly major concepts about reference architectures are discussed and their applicability to big data system development is depicted. Secondly, 22 big data reference architecture is assessed from academia and practice and their commonalities, challenges, and limitations are identified. The findings gained emerges the understanding that RAs can be an effective artefact to tackle complex BD system development.
 \end{abstract}
 
 % Note that keywords are not normally used for peerreview papers.
 \begin{IEEEkeywords}
-IEEE, IEEEtran, journal, \LaTeX, paper, template.
+  Big Data, Big Data Reference Architectures, Big Data Architectures, Big Data for business, Data analytics, Data engineering, Data-intensive applications, Reference Architectures
 \end{IEEEkeywords}
 
 
@@ -1581,12 +1575,12 @@ Furthermore, the CPU consumption has only grown by 5\% compared to the statistic
 
 \paragraph{Duration of Processing and Latency of Ingestion:} The latency of ingestion, defined as the time delay between receiving a data packet and processing it, remained constant during the observed timeframe. The delay continuously registers a value of 0.0000148 seconds at various time intervals throughout the monitoring period. This observation suggests that the system's data ingestion mechanism does not experience substantial delays in processing. However, a more comprehensive evaluation can be obtained by comparing its performance benchmarks with other platforms (Figure~\ref{kafkaIngestionLatencyInStreamingCase}). The system's ability to maintain consistent latency indicates its capacity to sustain performance levels without interruption, especially during periods of heavy data flow.
 
-\begin{figure}
+\begin{figure*}
   \centering
   \includegraphics[width=\textwidth]{images/kafka-ingestion-latency-sum-streaming-case.png}
   \caption{Kafka Ingestion Latency in Streaming Case}
   \label{kafkaIngestionLatencyInStreamingCase}
-\end{figure}
+\end{figure*}
 
 Furthermore, the processing duration provides us with information on the amount of time it takes for the system to process the data that has been received. The Weather Domain consistently processes data in 1,694,491,558 nanoseconds (or approximately 1.6945 seconds) for various timestamps (Figure~\ref{processingDurationInStreamingCaseInWeatherDomain}). The consistency seen suggests a reliable data processing method that remains unaffected by any potential variables encountered during the streaming process.
 
