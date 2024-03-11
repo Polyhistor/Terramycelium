@@ -10,43 +10,43 @@ Warning--empty chapter and pages in Bahrami2015
 Warning--empty pages in Nakagawa
 You've used 36 entries,
             2990 wiz_defined-function locations,
-            836 strings with 11410 characters,
-and the built_in function-call counts, 21811 in all, are:
-= -- 1666
-> -- 782
+            838 strings with 11424 characters,
+and the built_in function-call counts, 21665 in all, are:
+= -- 1652
+> -- 774
 < -- 32
-+ -- 316
-- -- 267
-* -- 2178
-:= -- 3174
++ -- 310
+- -- 264
+* -- 2145
+:= -- 3158
 add.period$ -- 104
 call.type$ -- 36
-change.case$ -- 262
-chr.to.int$ -- 35
+change.case$ -- 260
+chr.to.int$ -- 36
 cite$ -- 42
-duplicate$ -- 1721
+duplicate$ -- 1711
 empty$ -- 1676
-format.name$ -- 376
-if$ -- 4159
-int.to.chr$ -- 2
+format.name$ -- 369
+if$ -- 4138
+int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 304
+missing$ -- 302
 newline$ -- 191
 num.names$ -- 140
-pop$ -- 696
+pop$ -- 698
 preamble$ -- 1
-purify$ -- 233
+purify$ -- 232
 quote$ -- 0
-skip$ -- 608
+skip$ -- 614
 stack$ -- 0
-substring$ -- 747
-swap$ -- 1108
+substring$ -- 739
+swap$ -- 1090
 text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 303
+type$ -- 300
 warning$ -- 4
-while$ -- 135
+while$ -- 134
 width$ -- 0
-write$ -- 504
+write$ -- 503
 (There were 4 warnings)

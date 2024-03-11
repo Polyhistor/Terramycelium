@@ -1,56 +1,4 @@
-%% bare_jrnl.tex
-%% V1.4b
-%% 2015/08/26
-%% by Michael Shell
-%% see http://www.michaelshell.org/
-%% for current contact information.
-%%
-%% This is a skeleton file demonstrating the use of IEEEtran.cls
-%% (requires IEEEtran.cls version 1.8b or later) with an IEEE
-%% journal paper.
-%%
-%% Support sites:
-%% http://www.michaelshell.org/tex/ieeetran/
-%% http://www.ctan.org/pkg/ieeetran
-%% and
-%% http://www.ieee.org/
-
-%%*************************************************************************
-%% Legal Notice:
-%% This code is offered as-is without any warranty either expressed or
-%% implied; without even the implied warranty of MERCHANTABILITY or
-%% FITNESS FOR A PARTICULAR PURPOSE! 
-%% User assumes all risk.
-%% In no event shall the IEEE or any contributor to this code be liable for
-%% any damages or losses, including, but not limited to, incidental,
-%% consequential, or any other damages, resulting from the use or misuse
-%% of any information contained here.
-%%
-%% All comments are the opinions of their respective authors and are not
-%% necessarily endorsed by the IEEE.
-%%
-%% This work is distributed under the LaTeX Project Public License (LPPL)
-%% ( http://www.latex-project.org/ ) version 1.3, and may be freely used,
-%% distributed and modified. A copy of the LPPL, version 1.3, is included
-%% in the base LaTeX documentation of all distributions of LaTeX released
-%% 2003/12/01 or later.
-%% Retain all contribution notices and credits.
-%% ** Modified files should be clearly indicated as such, including  **
-%% ** renaming them and changing author support contact information. **
-%%*************************************************************************
-
-
-% *** Authors should verify (and, if needed, correct) their LaTeX system  ***
-% *** with the testflow diagnostic prior to trusting their LaTeX platform ***
-% *** with production work. The IEEE's font choices and paper sizes can   ***
-% *** trigger bugs that do not appear when using other class files.       ***                          ***
-% The testflow support page is at:
-% http://www.michaelshell.org/tex/testflow/
-
-
-
-\documentclass[journal]{IEEEtran}
-
+\documentclass{IEEEtran}
 \usepackage{cite}
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{algorithmic}
@@ -59,414 +7,34 @@
 \usepackage{lscape}
 \usepackage{lineno,hyperref,longtable}
 \usepackage{multirow}
-\usepackage{tabularx}
-\usepackage{rotating}
-%
-% If IEEEtran.cls has not been installed into the LaTeX system files,
-% manually specify the path to it like:
-% \documentclass[journal]{../sty/IEEEtran}
 
-
-
-
-
-% Some very useful LaTeX packages include:
-% (uncomment the ones you want to load)
-
-
-% *** MISC UTILITY PACKAGES ***
-%
-%\usepackage{ifpdf}
-% Heiko Oberdiek's ifpdf.sty is very useful if you need conditional
-% compilation based on whether the output is pdf or dvi.
-% usage:
-% \ifpdf
-%   % pdf code
-% \else
-%   % dvi code
-% \fi
-% The latest version of ifpdf.sty can be obtained from:
-% http://www.ctan.org/pkg/ifpdf
-% Also, note that IEEEtran.cls V1.7 and later provides a builtin
-% \ifCLASSINFOpdf conditional that works the same way.
-% When switching from latex to pdflatex and vice-versa, the compiler may
-% have to be run twice to clear warning/error messages.
-
-
-
-
-
-
-% *** CITATION PACKAGES ***
-%
-%\usepackage{cite}
-% cite.sty was written by Donald Arseneau
-% V1.6 and later of IEEEtran pre-defines the format of the cite.sty package
-% \cite{} output to follow that of the IEEE. Loading the cite package will
-% result in citation numbers being automatically sorted and properly
-% "compressed/ranged". e.g., [1], [9], [2], [7], [5], [6] without using
-% cite.sty will become [1], [2], [5]--[7], [9] using cite.sty. cite.sty's
-% \cite will automatically add leading space, if needed. Use cite.sty's
-% noadjust option (cite.sty V3.8 and later) if you want to turn this off
-% such as if a citation ever needs to be enclosed in parenthesis.
-% cite.sty is already installed on most LaTeX systems. Be sure and use
-% version 5.0 (2009-03-20) and later if using hyperref.sty.
-% The latest version can be obtained at:
-% http://www.ctan.org/pkg/cite
-% The documentation is contained in the cite.sty file itself.
-
-
-
-
-
-
-% *** GRAPHICS RELATED PACKAGES ***
-%
-\ifCLASSINFOpdf
-  % \usepackage[pdftex]{graphicx}
-  % declare the path(s) where your graphic files are
-  % \graphicspath{{../pdf/}{../jpeg/}}
-  % and their extensions so you won't have to specify these with
-  % every instance of \includegraphics
-  % \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
-\else
-  % or other class option (dvipsone, dvipdf, if not using dvips). graphicx
-  % will default to the driver specified in the system graphics.cfg if no
-  % driver is specified.
-  % \usepackage[dvips]{graphicx}
-  % declare the path(s) where your graphic files are
-  % \graphicspath{{../eps/}}
-  % and their extensions so you won't have to specify these with
-  % every instance of \includegraphics
-  % \DeclareGraphicsExtensions{.eps}
-\fi
-% graphicx was written by David Carlisle and Sebastian Rahtz. It is
-% required if you want graphics, photos, etc. graphicx.sty is already
-% installed on most LaTeX systems. The latest version and documentation
-% can be obtained at: 
-% http://www.ctan.org/pkg/graphicx
-% Another good source of documentation is "Using Imported Graphics in
-% LaTeX2e" by Keith Reckdahl which can be found at:
-% http://www.ctan.org/pkg/epslatex
-%
-% latex, and pdflatex in dvi mode, support graphics in encapsulated
-% postscript (.eps) format. pdflatex in pdf mode supports graphics
-% in .pdf, .jpeg, .png and .mps (metapost) formats. Users should ensure
-% that all non-photo figures use a vector format (.eps, .pdf, .mps) and
-% not a bitmapped formats (.jpeg, .png). The IEEE frowns on bitmapped formats
-% which can result in "jaggedy"/blurry rendering of lines and letters as
-% well as large increases in file sizes.
-%
-% You can find documentation about the pdfTeX application at:
-% http://www.tug.org/applications/pdftex
-
-
-
-
-
-% *** MATH PACKAGES ***
-%
-%\usepackage{amsmath}
-% A popular package from the American Mathematical Society that provides
-% many useful and powerful commands for dealing with mathematics.
-%
-% Note that the amsmath package sets \interdisplaylinepenalty to 10000
-% thus preventing page breaks from occurring within multiline equations. Use:
-%\interdisplaylinepenalty=2500
-% after loading amsmath to restore such page breaks as IEEEtran.cls normally
-% does. amsmath.sty is already installed on most LaTeX systems. The latest
-% version and documentation can be obtained at:
-% http://www.ctan.org/pkg/amsmath
-
-
-
-
-
-% *** SPECIALIZED LIST PACKAGES ***
-%
-%\usepackage{algorithmic}
-% algorithmic.sty was written by Peter Williams and Rogerio Brito.
-% This package provides an algorithmic environment fo describing algorithms.
-% You can use the algorithmic environment in-text or within a figure
-% environment to provide for a floating algorithm. Do NOT use the algorithm
-% floating environment provided by algorithm.sty (by the same authors) or
-% algorithm2e.sty (by Christophe Fiorio) as the IEEE does not use dedicated
-% algorithm float types and packages that provide these will not provide
-% correct IEEE style captions. The latest version and documentation of
-% algorithmic.sty can be obtained at:
-% http://www.ctan.org/pkg/algorithms
-% Also of interest may be the (relatively newer and more customizable)
-% algorithmicx.sty package by Szasz Janos:
-% http://www.ctan.org/pkg/algorithmicx
-
-
-
-
-% *** ALIGNMENT PACKAGES ***
-%
-%\usepackage{array}
-% Frank Mittelbach's and David Carlisle's array.sty patches and improves
-% the standard LaTeX2e array and tabular environments to provide better
-% appearance and additional user controls. As the default LaTeX2e table
-% generation code is lacking to the point of almost being broken with
-% respect to the quality of the end results, all users are strongly
-% advised to use an enhanced (at the very least that provided by array.sty)
-% set of table tools. array.sty is already installed on most systems. The
-% latest version and documentation can be obtained at:
-% http://www.ctan.org/pkg/array
-
-
-% IEEEtran contains the IEEEeqnarray family of commands that can be used to
-% generate multiline equations as well as matrices, tables, etc., of high
-% quality.
-
-
-
-
-% *** SUBFIGURE PACKAGES ***
-%\ifCLASSOPTIONcompsoc
-%  \usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
-%\else
-%  \usepackage[caption=false,font=footnotesize]{subfig}
-%\fi
-% subfig.sty, written by Steven Douglas Cochran, is the modern replacement
-% for subfigure.sty, the latter of which is no longer maintained and is
-% incompatible with some LaTeX packages including fixltx2e. However,
-% subfig.sty requires and automatically loads Axel Sommerfeldt's caption.sty
-% which will override IEEEtran.cls' handling of captions and this will result
-% in non-IEEE style figure/table captions. To prevent this problem, be sure
-% and invoke subfig.sty's "caption=false" package option (available since
-% subfig.sty version 1.3, 2005/06/28) as this is will preserve IEEEtran.cls
-% handling of captions.
-% Note that the Computer Society format requires a larger sans serif font
-% than the serif footnote size font used in traditional IEEE formatting
-% and thus the need to invoke different subfig.sty package options depending
-% on whether compsoc mode has been enabled.
-%
-% The latest version and documentation of subfig.sty can be obtained at:
-% http://www.ctan.org/pkg/subfig
-
-
-
-
-% *** FLOAT PACKAGES ***
-%
-%\usepackage{fixltx2e}
-% fixltx2e, the successor to the earlier fix2col.sty, was written by
-% Frank Mittelbach and David Carlisle. This package corrects a few problems
-% in the LaTeX2e kernel, the most notable of which is that in current
-% LaTeX2e releases, the ordering of single and double column floats is not
-% guaranteed to be preserved. Thus, an unpatched LaTeX2e can allow a
-% single column figure to be placed prior to an earlier double column
-% figure.
-% Be aware that LaTeX2e kernels dated 2015 and later have fixltx2e.sty's
-% corrections already built into the system in which case a warning will
-% be issued if an attempt is made to load fixltx2e.sty as it is no longer
-% needed.
-% The latest version and documentation can be found at:
-% http://www.ctan.org/pkg/fixltx2e
-
-
-%\usepackage{stfloats}
-% stfloats.sty was written by Sigitas Tolusis. This package gives LaTeX2e
-% the ability to do double column floats at the bottom of the page as well
-% as the top. (e.g., "\begin{figure*}[!b]" is not normally possible in
-% LaTeX2e). It also provides a command:
-%\fnbelowfloat
-% to enable the placement of footnotes below bottom floats (the standard
-% LaTeX2e kernel puts them above bottom floats). This is an invasive package
-% which rewrites many portions of the LaTeX2e float routines. It may not work
-% with other packages that modify the LaTeX2e float routines. The latest
-% version and documentation can be obtained at:
-% http://www.ctan.org/pkg/stfloats
-% Do not use the stfloats baselinefloat ability as the IEEE does not allow
-% \baselineskip to stretch. Authors submitting work to the IEEE should note
-% that the IEEE rarely uses double column equations and that authors should try
-% to avoid such use. Do not be tempted to use the cuted.sty or midfloat.sty
-% packages (also by Sigitas Tolusis) as the IEEE does not format its papers in
-% such ways.
-% Do not attempt to use stfloats with fixltx2e as they are incompatible.
-% Instead, use Morten Hogholm'a dblfloatfix which combines the features
-% of both fixltx2e and stfloats:
-%
-% \usepackage{dblfloatfix}
-% The latest version can be found at:
-% http://www.ctan.org/pkg/dblfloatfix
-
-
-
-
-%\ifCLASSOPTIONcaptionsoff
-%  \usepackage[nomarkers]{endfloat}
-% \let\MYoriglatexcaption\caption
-% \renewcommand{\caption}[2][\relax]{\MYoriglatexcaption[#2]{#2}}
-%\fi
-% endfloat.sty was written by James Darrell McCauley, Jeff Goldberg and 
-% Axel Sommerfeldt. This package may be useful when used in conjunction with 
-% IEEEtran.cls'  captionsoff option. Some IEEE journals/societies require that
-% submissions have lists of figures/tables at the end of the paper and that
-% figures/tables without any captions are placed on a page by themselves at
-% the end of the document. If needed, the draftcls IEEEtran class option or
-% \CLASSINPUTbaselinestretch interface can be used to increase the line
-% spacing as well. Be sure and use the nomarkers option of endfloat to
-% prevent endfloat from "marking" where the figures would have been placed
-% in the text. The two hack lines of code above are a slight modification of
-% that suggested by in the endfloat docs (section 8.4.1) to ensure that
-% the full captions always appear in the list of figures/tables - even if
-% the user used the short optional argument of \caption[]{}.
-% IEEE papers do not typically make use of \caption[]'s optional argument,
-% so this should not be an issue. A similar trick can be used to disable
-% captions of packages such as subfig.sty that lack options to turn off
-% the subcaptions:
-% For subfig.sty:
-% \let\MYorigsubfloat\subfloat
-% \renewcommand{\subfloat}[2][\relax]{\MYorigsubfloat[]{#2}}
-% However, the above trick will not work if both optional arguments of
-% the \subfloat command are used. Furthermore, there needs to be a
-% description of each subfigure *somewhere* and endfloat does not add
-% subfigure captions to its list of figures. Thus, the best approach is to
-% avoid the use of subfigure captions (many IEEE journals avoid them anyway)
-% and instead reference/explain all the subfigures within the main caption.
-% The latest version of endfloat.sty and its documentation can obtained at:
-% http://www.ctan.org/pkg/endfloat
-%
-% The IEEEtran \ifCLASSOPTIONcaptionsoff conditional can also be used
-% later in the document, say, to conditionally put the References on a 
-% page by themselves.
-
-
-
-
-% *** PDF, URL AND HYPERLINK PACKAGES ***
-%
-%\usepackage{url}
-% url.sty was written by Donald Arseneau. It provides better support for
-% handling and breaking URLs. url.sty is already installed on most LaTeX
-% systems. The latest version and documentation can be obtained at:
-% http://www.ctan.org/pkg/url
-% Basically, \url{my_url_here}.
-
-
-
-
-% *** Do not adjust lengths that control margins, column widths, etc. ***
-% *** Do not use packages that alter fonts (such as pslatex).         ***
-% There should be no need to do such things with IEEEtran.cls V1.6 and later.
-% (Unless specifically asked to do so by the journal or conference you plan
-% to submit to, of course. )
-
-
-% correct bad hyphenation here
-\hyphenation{op-tical net-works semi-conduc-tor}
-
-
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \begin{document}
-%
-% paper title
-% Titles are generally capitalized except for words such as a, an, and, as,
-% at, but, by, for, in, nor, of, on, or, the, to and up, which are usually
-% not capitalized unless they are the first or last word of the title.
-% Linebreaks \\ can be used within to get better formatting as desired.
-% Do not put math or special symbols in the title.
-\title{Bare Demo of IEEEtran.cls\\ for IEEE Journals}
-%
-%
-% author names and IEEE memberships
-% note positions of commas and nonbreaking spaces ( ~ ) LaTeX will not break
-% a structure at a ~ so this keeps an author's name from being broken across
-% two lines.
-% use \thanks{} to gain access to the first footnote area
-% a separate \thanks must be used for each paragraph as LaTeX2e's \thanks
-% was not built to handle multiple paragraphs
-%
+\history{Date of publication xxxx 00, 0000, date of current version xxxx 00, 0000.}
+\doi{10.1109/ACCESS.2017.DOI}
 
-\author{Michael~Shell,~\IEEEmembership{Member,~IEEE,}
-        John~Doe,~\IEEEmembership{Fellow,~OSA,}
-        and~Jane~Doe,~\IEEEmembership{Life~Fellow,~IEEE}% <-this % stops a space
-\thanks{M. Shell was with the Department
-of Electrical and Computer Engineering, Georgia Institute of Technology, Atlanta,
-GA, 30332 USA e-mail: (see http://www.michaelshell.org/contact.html).}% <-this % stops a space
-\thanks{J. Doe and J. Doe are with Anonymous University.}% <-this % stops a space
-\thanks{Manuscript received April 19, 2005; revised August 26, 2015.}}
+\title{The state of big data reference architectures: a
+systematic literature review}
 
-% note the % following the last \IEEEmembership and also \thanks - 
-% these prevent an unwanted space from occurring between the last author name
-% and the end of the author line. i.e., if you had this:
-% 
-% \author{....lastname \thanks{...} \thanks{...} }
-%                     ^------------^------------^----Do not want these spaces!
-%
-% a space would be appended to the last name and could cause every name on that
-% line to be shifted left slightly. This is one of those "LaTeX things". For
-% instance, "\textbf{A} \textbf{B}" will typeset as "A B" not "AB". To get
-% "AB" then you have to do: "\textbf{A}\textbf{B}"
-% \thanks is no different in this regard, so shield the last } of each \thanks
-% that ends a line with a % and do not let a space in before the next \thanks.
-% Spaces after \IEEEmembership other than the last one are OK (and needed) as
-% you are supposed to have spaces between the names. For what it is worth,
-% this is a minor point as most people would not even notice if the said evil
-% space somehow managed to creep in.
+\author{\uppercase{Pouya Ataei}\authorrefmark{1},
+\uppercase{Alan Litchfield} \authorrefmark{2}.}
 
+\address[1]{School of Engineering, Computer and Mathematical Sciences, Auckland University of Technology, Auckland, New Zealand (e-mail: pouya.ataei@aut.ac.nz)}
 
+\address[2]{Service and Cloud Computing Research Lab, Auckland University of Technology, Auckland, New Zealand (e-mail: alan.litchfield@aut.ac.nz)}
 
-% The paper headers
-\markboth{Journal of \LaTeX\ Class Files,~Vol.~14, No.~8, August~2015}%
-{Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for IEEE Journals}
-% The only time the second header will appear is for the odd numbered pages
-% after the title page when using the twoside option.
-% 
-% *** Note that you probably will NOT want to include the author's ***
-% *** name in the headers of peer review papers.                   ***
-% You can use \ifCLASSOPTIONpeerreview for conditional compilation here if
-% you desire.
-
-
-
-
-% If you want to put a publisher's ID mark on the page you can do it like
-% this:
-%\IEEEpubid{0000--0000/00\$00.00~\copyright~2015 IEEE}
-% Remember, if you use this you must call \IEEEpubidadjcol in the second
-% column for its text to clear the IEEEpubid mark.
-
-
-
-% use for special paper notices
-%\IEEEspecialpapernotice{(Invited Paper)}
-
-
-
-
-% make the title area
-\maketitle
-
-% As a general rule, do not put math, special symbols or citations
-% in the abstract or keywords.
 \begin{abstract}
-The abstract goes here.
+    Big Data is a nascent term emerged to describe large amount of data that comes in different forms from various channels. In modern world, users are the ceaseless generators of structured, semi-structured, and unstructured data that if gleaned and crunched precisely, will reveal game-changing patterns. While the opportunities exist with big data, the unprecedented amount of data has brought traditional approaches to a bottleneck, and the growth of data is outpacing technological and scientific advances in data analytics. It is estimated that approximately 75\% of the big data projects have failed within the last decade according to multiple sources. Among the challenges, system development and data architecture are prominent. This paper aims to facilitate big data system development and architecture by conducting a systematic literature review on big data reference architectures. The primary goal is to highlight the state of big data reference architectures and how they can be helpful for big data system development. The secondary goal is to find all big data reference architecture, describe the challenges of creating these reference architectures, discuss the common architectural components of these reference architectures and the limitations of these reference architectures. As a result of this work, firstly major concepts about reference architectures are discussed and their applicability to big data system development is depicted. Secondly, 22 big data reference architecture is assessed from academia and practice and their commonalities, challenges, and limitations are identified. The findings gained emerges the understanding that RAs can be an effective artefact to tackle complex BD system development.
 \end{abstract}
 
-% Note that keywords are not normally used for peerreview papers.
-\begin{IEEEkeywords}
-IEEE, IEEEtran, journal, \LaTeX, paper, template.
-\end{IEEEkeywords}
+\begin{keywords}
+    Big Data, Big Data Reference Architectures, Big Data Architectures, Big Data for business, Data analytics, Data engineering, Data-intensive applications, Reference Architectures
+\end{keywords}
 
+\titlepgskip=-15pt
 
-
-
-
-
-% For peer review papers, you can put extra information on the cover
-% page as needed:
-% \ifCLASSOPTIONpeerreview
-% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
-% \fi
-%
-% For peerreview papers, this IEEEtran command inserts a page break and
-% creates the second title. It will be ignored for other modes.
-\IEEEpeerreviewmaketitle
-
-
+\maketitle
 
 
 \section{Introduction}
@@ -488,7 +56,7 @@ The paper is structured as follows: Section~\ref{sec:background} provides an ove
 
 This section offers fundamental definitions necessary for understanding the intricacies of the research. This chapter seeks to establish the conceptual framework required for comprehending the terminology utilised in the thesis. 
 
-\subsection{Definition of Big Data} Various academic definitions have been reviewed to define BD in this research. According to Kaisler et al. (2013), Big Data (BD) refers to data that exceeds the capacity of current technologies to store, manage, and process effectively. The authors Srivastava (2018) define big data as the use of extensive data sets for managing the gathering or reporting of data that aids multiple recipients in decision-making. The phrase "Big Data" (BD) is defined by \cite{Sagiroglu2013} as referring to extensive data sets characterised by their huge size, diverse and intricate structure, and the challenges associated with storing, analysing, and visualising them for subsequent processes or outcomes. In this research, Big Data (BD) is defined as the process of identifying patterns from large datasets to achieve progress, management, and predictive analysis in specialised fields. 
+\subsection{Definition of Big Data} Various academic definitions have been reviewed to define BD in this research. According to Kaisler et al. (2013), Big Data (BD) refers to data that exceeds the capacity of current technologies to store, manage, and process effectively. The authors Srivastava (2018) define big data as the use of extensive data sets for managing the gathering or reporting of data that aids multiple recipients in decision-making. The phrase "Big Data" (BD) is defined by \citet{Sagiroglu2013} as referring to extensive data sets characterised by their huge size, diverse and intricate structure, and the challenges associated with storing, analysing, and visualising them for subsequent processes or outcomes. In this research, Big Data (BD) is defined as the process of identifying patterns from large datasets to achieve progress, management, and predictive analysis in specialised fields. 
 
 \subsection{Significance of Big Data}\label{sec:The Value of Big Data} 
 
@@ -510,7 +78,7 @@ RAs define the characteristics of a system and influence its development. RAs st
 
 Microservices architecture is a modern approach in software engineering that organises applications as a set of independent services that are loosely connected \cite{bucchiarone2020microservices}. This method, derived from the wider idea of Service Oriented Architectures (SOA), concentrates on creating small, self-sufficient modules that work together to create a complete application. 
 
-According to \cite{newman2021building}, microservices improve scalability, enable continuous deployment, and promote a more agile development environment. They allow teams to design, deploy, and scale components of a system separately, enhancing system resilience and enabling quick adaptability to changing requirements. Decentralised and distributed architectures are essential in today's computer environment, featuring systems that are spread out among several nodes, typically in various geographic regions. 
+According to \citeauthor{newman2021building}, microservices improve scalability, enable continuous deployment, and promote a more agile development environment. They allow teams to design, deploy, and scale components of a system separately, enhancing system resilience and enabling quick adaptability to changing requirements. Decentralised and distributed architectures are essential in today's computer environment, featuring systems that are spread out among several nodes, typically in various geographic regions. 
 
 
 The architectural style, as emphasised by Richards (2015), addresses the drawbacks of conventional monolithic architectures by providing improved scalability, fault tolerance, and flexibility. Distributed systems involve the distribution of data and processing among several nodes that collaborate to execute tasks, as explained by Coulouris (2005). Decentralisation in this context is the absence of a central controlling node, choosing a more democratic and robust network structure instead. The integration of microservices in these systems signifies an advancement in software engineering. 
@@ -531,11 +99,11 @@ This approach enhances scalability and adaptability by including overarching iss
 
 \section{Research Methodology}
 
-Various methods exist for the structured creation of RAs. \cite{Cloutier2010} present a sophisticated strategy for creating RAs by gathering current architectural trends and innovations. citeauthorbayer1999pulse present a technique named PuLSE DSSA for generating RAs in product line development. The concept of a pattern-based Runtime Adaptation for service-based systems is introduced by Stricker et al. (2010), who emphasise the usage of patterns as primary entities. The authors Nakagawa et al. present a four-step method for creating and advancing RAs. 
+Various methods exist for the structured creation of RAs. \citeauthor{Cloutier2010} present a sophisticated strategy for creating RAs by gathering current architectural trends and innovations. citeauthorbayer1999pulse present a technique named PuLSE DSSA for generating RAs in product line development. The concept of a pattern-based Runtime Adaptation for service-based systems is introduced by Stricker et al. (2010), who emphasise the usage of patterns as primary entities. The authors Nakagawa et al. present a four-step method for creating and advancing RAs. 
 
-Guided by ISO/IEC 26550 \cite{wg2015iso} and \cite{Derras} provide a four-phase method for creating practical risk assessment in the domain engineering and software product line environment. The authors of GALSTER2011Empirically suggest a 6-step process based on two main concepts: empirical foundation and empirical validity. Considering all these factors, an empirically-based research technique is the most suitable approach for this study. This process for RA development is preferred over others and aligns with the objectives of this study.
+Guided by ISO/IEC 26550 \citeauthor{wg2015iso} and \citeauthor{Derras} provide a four-phase method for creating practical risk assessment in the domain engineering and software product line environment. The authors of GALSTER2011Empirically suggest a 6-step process based on two main concepts: empirical foundation and empirical validity. Considering all these factors, an empirically-based research technique is the most suitable approach for this study. This process for RA development is preferred over others and aligns with the objectives of this study.
 
-However, additional approaches must be incorporated into the methodology to achieve the appropriate level of rigour and relevance. Specific instructions for gathering empirical data in step 3 are absent. We were unsure how to proceed with data collection, synthesis, and modelling. \cite{Nakagawa} presented research guidelines and introduced the RAModel concept. A more systematic and robust evaluation technique is needed as the methodology lacks details on how to assess the RA. To solve this issue, a case-mechanism experiment and expert opinion were used to assess the artefact.
+However, additional approaches must be incorporated into the methodology to achieve the appropriate level of rigour and relevance. Specific instructions for gathering empirical data in step 3 are absent. We were unsure how to proceed with data collection, synthesis, and modelling. \citeauthor{Nakagawa} presented research guidelines and introduced the RAModel concept. A more systematic and robust evaluation technique is needed as the methodology lacks details on how to assess the RA. To solve this issue, a case-mechanism experiment and expert opinion were used to assess the artefact.
 
 
 \subsection{Step 1: Determination of RA Type}
@@ -555,7 +123,7 @@ This study chooses a research-driven strategy based on these ideas. The RA was c
 
 \subsection{Step 3: Empirical Data Collection} \label{theSLR}
 
-Due to limitations in the study technique, we have enhanced this phase by increasing the systematicity and transparency of data gathering and synthesis using academic approaches like SLR. For this purpose we have adopted the findings from a SLR on current state of BD RAs presented by \cite{ataei2022state}.
+Due to limitations in the study technique, we have enhanced this phase by increasing the systematicity and transparency of data gathering and synthesis using academic approaches like SLR. For this purpose we have adopted the findings from a SLR on current state of BD RAs presented by \citeauthor{ataei2022state}.
 
 \subsection{Step4: Construction of the RA}
 The construction phase of the RA was guided by the findings and elements identified in the earlier stages of the research. Based on the ISO/IEC/IEEE 42010 standard, the construction process involved selectively integrating its components.
@@ -569,7 +137,7 @@ Using Archimate's various viewpoints offered a comprehensive perspective on the 
 
 Integrating variability into RAs is crucial to ensure its application within organizational-specific legislation and regional policies. Variability management is essential in Business Process Management (BPM) and Software Product Line Engineering (SPLE) to customise business processes and software artefacts according to specific contextual requirements.
 
-Accurate identification and clear communication of variability are essential to encourage stakeholder discussion, maintain decision traceability, and aid the decision-making process \cite{czarnecki2012cool}. Data collected in previous analytical steps informs variability decision points. \cite{galster2011empirically} outline three approaches to include variability into RAs: annotating the RA, constructing variability views, and forming variability models.
+Accurate identification and clear communication of variability are essential to encourage stakeholder discussion, maintain decision traceability, and aid the decision-making process \cite{czarnecki2012cool}. Data collected in previous analytical steps informs variability decision points. \citeauthor{galster2011empirically} outline three approaches to include variability into RAs: annotating the RA, constructing variability views, and forming variability models.
 
 Current literature lacks in-depth information on the criteria for choosing a method to facilitate variability. This study utilises Archimate annotations to incorporate variability into the RA, following the method proposed by Rurua (2019). The technique involves two stages: first, developing a customised layer to encompass fundamental variability principles, and second, annotating the RA. The aim is not to list every possible variability point, but to highlight the main architectural variabilities associated to the system for architects to consider in order to improve the design and make it easier to implement the RA.
 
@@ -579,7 +147,7 @@ Evaluating the RA is essential to ensure it achieves its developmental goals, es
 
 Common evaluation techniques for concrete architecture, like SAAM, ALMA, PASA, and ATAM, are not suitable for abstract architectural representations (RAs) because they heavily depend on stakeholder participation and scenario-based assessment. This requires a tailored method for evaluating RA.
 
-This work utilises a revised evaluation method based on techniques tailored for RAs by Angelov et al. (2008) and the expanded SAAM methodology by Graaf et al. (2005). The approach includes developing a prototype of the RA inside for a case-mechanism experiment  and expert opinion as presented by \cite{wieringa2014design}.
+This work utilises a revised evaluation method based on techniques tailored for RAs by Angelov et al. (2008) and the expanded SAAM methodology by Graaf et al. (2005). The approach includes developing a prototype of the RA inside for a case-mechanism experiment  and expert opinion as presented by \citeauthor{wieringa2014design}.
 
 \section{Why Reference Architectures}
 \label{sec:why_reference_architectures}
@@ -596,9 +164,9 @@ The term "empirically grounded" means that the risk assessment (RA) should be ba
 \section{Software and System Requirements}
 \label{sec:software_and_system_requirements}
 
-According to \cite{wieringa2014design}\cite{wieringa2014design}, the requirement specification phase is an essential step in developing a new IS or artefact. This phase involves identifying the requirements that the artefact must satisfy to meet the needs of stakeholders and achieve the desired outcomes.
+According to \citeauthor{wieringa2014design}\cite{wieringa2014design}, the requirement specification phase is an essential step in developing a new IS or artefact. This phase involves identifying the requirements that the artefact must satisfy to meet the needs of stakeholders and achieve the desired outcomes.
 
-\cite{wieringa2014design}'s methodology distinguishes between functional requirements, which describe what the artefact should do, and non-functional requirements, which describe how the artefact should do it. Functional requirements are typically expressed as use cases, which describe the specific interactions between users and the system. Non-functional requirements may include performance requirements, security requirements, and usability requirements.
+\citeauthor{wieringa2014design}'s methodology distinguishes between functional requirements, which describe what the artefact should do, and non-functional requirements, which describe how the artefact should do it. Functional requirements are typically expressed as use cases, which describe the specific interactions between users and the system. Non-functional requirements may include performance requirements, security requirements, and usability requirements.
 
 The requirement specification designed for this study is made up of the following phases: 
 
@@ -611,13 +179,13 @@ The requirement specification designed for this study is made up of the followin
 
 \subsection{Determining the type of the requirements:}
 
-Defining and classifying software and system requirements is a common subject of debate. \cite{sommerville2011software}\cite{sommerville2011software} classify requirements as three levels of abstraction; user requirements, system requirements, and design specifications. These abstractions are then mapped against user acceptance testing, integration testing, and unit testing. Nevertheless, in this study, a more general framework provided by \cite{laplante2017requirements} is adopted. The adopted approach provides three types of requirements: functional, non-functional, and domain requirements. The objective of this step is to define the high-level requirements of BD systems, therefore the main focus is on non-functional and domain requirements. 
+Defining and classifying software and system requirements is a common subject of debate. \citeauthor{sommerville2011software}\cite{sommerville2011software} classify requirements as three levels of abstraction; user requirements, system requirements, and design specifications. These abstractions are then mapped against user acceptance testing, integration testing, and unit testing. Nevertheless, in this study, a more general framework provided by \citeauthor{laplante2017requirements} is adopted. The adopted approach provides three types of requirements: functional, non-functional, and domain requirements. The objective of this step is to define the high-level requirements of BD systems, therefore the main focus is on non-functional and domain requirements. 
 
 \subsection{Determining the relevant requirements:}
 
-In an extensive effort, the NIST Big Data Public Working Group embarked on a large-scale study to extract requirements from a variety of application domains such as Healthcare, Life Sciences, Commercial, Energy, Government, and Defense \cite{Chang}. The result of this study is the formation of general requirements under seven categories. In addition, \cite{volk2020identifying} categorize nine use cases of BD projects sourced from published literature using a hierarchical clustering algorithm. 
+In an extensive effort, the NIST Big Data Public Working Group embarked on a large-scale study to extract requirements from a variety of application domains such as Healthcare, Life Sciences, Commercial, Energy, Government, and Defense \cite{Chang}. The result of this study is the formation of general requirements under seven categories. In addition, \citeauthor{volk2020identifying} categorize nine use cases of BD projects sourced from published literature using a hierarchical clustering algorithm. 
 
-\cite{AtaeiSecurity}\cite{AtaeiSecurity} focus on security and privacy requirements for BD systems, \cite{yu2019components} present modern components of BD systems, using goal-oriented approaches, \cite{eridaputra2014modeling} created a generic model for BD requirements, and  \cite{al2016characteristics} investigate general requirements to support BD software development. 
+\citeauthor{AtaeiSecurity}\cite{AtaeiSecurity} focus on security and privacy requirements for BD systems, \citeauthor{yu2019components} present modern components of BD systems, using goal-oriented approaches, \citeauthor{eridaputra2014modeling} created a generic model for BD requirements, and  \citeauthor{al2016characteristics} investigate general requirements to support BD software development. 
 
 By analyzing the result of the first SLRs, the studies discussed above and by evaluating the design and requirement engineering required for BD RAs, a set of high-level requirements based on BD characteristics is established. 
 
@@ -628,30 +196,78 @@ After clarifying the type of requirements and the relevant requirements, current
 \subsection{Determining the appropriate strategy for presenting the requirements:} A systematic strategy for presenting software and system requirements that includes informal model verification techniques is recognised due to its established use in both business and academics (Kassab, 2014). The method for illustrating functional requirements adheres to the principles stated in the ISO/IEC/IEEE standard 29148. The requirements representation is structured based on system modes, detailing the primary components of the system followed by the requirements. This technique is based on the requirement specification published for the NASA Wide-field InfraRed Explorer (WIRE) system and the Software Engineering Body of Knowledge (SEBoK). The requirements are outlined in Table~\ref{table:systemRequirements}.
 
 
+\begin{longtable}{|m{1.4cm}|m{12cm}|}
+  \caption{Terramycelium software and system requirements}
+  \label{table:systemRequirements}\\
+  \hline
 
-\begin{table*}[!htbp]
-  \renewcommand{\arraystretch}{1.3}
-  \caption{Terramycelium Software and System Requirements}
-  \label{table:systemRequirements}
-  \centering
-  \begin{tabular}{|l|p{12cm}|}
-  \hline
-  \textbf{Category} & \textbf{Requirement} \\
-  \hline
-  \textbf{Volume} & System needs to support asynchronous, streaming, and batch processing to collect data from centralized, distributed, and other sources. System needs to provide scalable storage for massive data sets. \\
-  \hline
-  \textbf{Velocity} & System needs to support slow, bursty, and high throughput data transmission between data sources. System needs to stream data to data consumers in a timely manner. System needs to be able to ingest multiple, continuous, time-varying data streams. System shall support fast search from streaming and processed data with high accuracy and relevancy. System should be able to process data in a real-time or near real-time manner. \\
-  \hline
-  \textbf{Variety} & System needs to support data in various formats ranging from structured to semi-structured and unstructured data. System needs to support aggregation, standardization, and normalization of data from disparate sources. System shall support adaptation mechanisms for schema evolution. System can provide mechanisms to automatically include new data sources. \\
-  \hline
-  \textbf{Value} & System needs to be able to handle compute-intensive analytical processing and machine learning techniques. System needs to support two types of analytical processing: batch and streaming. System needs to support different output file formats for different purposes. System needs to support streaming results to the consumers. \\
-  \hline
-  \textbf{Security \& Privacy} & System needs to protect and retain the privacy and security of sensitive data. System needs to have access control, and multi-level, policy-driven authentication on protected data and processing nodes. \\
-  \hline
-  \textbf{Veracity} & System needs to support data quality curation including classification, pre-processing, format reduction, and transformation. System needs to support data provenance including data life cycle management and long-term preservation. \\
-  \hline
-  \end{tabular}
-  \end{table*}
+          Volume &
+  
+          \textbf{Vol-1)}\label{vol-1} System needs to support asynchronous, streaming, and batch processing to collect data from centralised, distributed, and other sources
+          
+          \textbf{Vol-2)} System needs to provide scalable storage for massive data sets 
+          \\
+          \hline
+          Velocity & 
+          
+          \textbf{Vel-1)} System needs to support slow, bursty, and high throughput data transmission between data sources
+          
+          \textbf{Vel-2)} System needs to stream data to data consumers in a timely manner
+          
+          \textbf{Vel-3)} System needs to be able to ingest multiple, continuous, time-varying data streams 
+          
+          \textbf{Vel-4)} System shall support fast search from streaming and processed data with high accuracy and relevancy 
+          
+          \textbf{Vel-5)} System should be able to process data in a real-time or near real-time manner 
+          \\ 
+  
+          \hline
+  
+          Variety & 
+  
+          \textbf{Var-1)} System needs to support data in various formats ranging from structured to semi-structured and unstructured data 
+          
+          \textbf{Var-2)} System needs to support aggregation, standardization, and normalization of data from disparate sources
+          
+          \textbf{Var-3)} System shall support adaptations mechanisms for schema evolution
+          
+          \textbf{Var-4)} System can provide mechanisms to automatically include new data sources 
+          \\
+  
+          \hline
+  
+          Value & 
+          
+          \textbf{Val-1)} System needs to able to handle compute-intensive analytical processing and machine learning techniques 
+          
+          \textbf{Val-2)} System needs to support two types of analytical processing: batch and streaming
+          
+          \textbf{Val-3)} System needs to support different output file formats for different purposes 
+          
+          \textbf{Val-4)} System needs to support streaming results to the consumers 
+          \\
+  
+          \hline
+  
+          Security \& Privacy & 
+          
+          \textbf{SaP-1)} System needs to protect and retain the privacy and security of sensitive data 
+          
+          \textbf{SaP-2)} System needs to have access control, and multi-level, policy-driven authentication on protected data and processing nodes. 
+          \\
+  
+          \hline
+          
+          Veracity &
+          
+          \textbf{Ver-1)} System needs to support data quality curation including classification, pre-processing, format, reduction, and  transformation 
+          
+          \textbf{Ver-2)} System needs to support data provenance including data life cycle management and long-term preservation.
+          \\
+          \hline
+  
+  \end{longtable}
+
 
 \section{Theory}
 \label{sec:theory}
@@ -677,8 +293,7 @@ These two distinct data planes are often managed inside separate organisational 
 As a consequence, there are now two separate technology systems in place, requiring significant resources to connect them. Two distinct topologies and delicate integration designs have emerged due to this gap, facilitated by ETLs (Figure \ref{fig:dataPlanes}). Data extraction from operational databases is often accomplished through a batch ETL process. These ETL processes typically lack a clearly defined agreement with the operational database and solely consume its data. This emphasises the vulnerability of this system, as modifications made to operational databases can impact analytical applications downstream. As time passes, the complexity of ETL jobs grows, making them harder to maintain and leading to a decline in data quality. 
 
 \begin{figure}[h]
-  \centering
-  \includegraphics[width=\linewidth]{images/data-planes.png}
+  \includegraphics[width=\textwidth]{images/data-planes.png}
   \caption{The great divide of data}
   \label{fig:dataPlanes}
 \end{figure}
@@ -772,12 +387,12 @@ Event brokers are services created and provided to enable event communication vi
 
 The components collaborate to establish a distributed, fault-tolerant, and scalable data system capable of managing both batch and stream processing, as seen in Figure \ref{fig:eventDrivenArchitecture}. 
 
-\begin{figure*}[h]
+\begin{figure}[h]
   \centering
-  \includegraphics[width=\linewidth]{images/Event-architecture.png}
+  \includegraphics[width=\textwidth]{images/Event-architecture.png}
   \caption{Metamycelium Event-driven Architecture}
   \label{fig:eventDrivenArchitecture}
-\end{figure*}
+\end{figure}
 
 
 \subsection{Architectural characteristics}
@@ -835,21 +450,19 @@ The BD RA does not depict the architecture of any particular BD system. It funct
 To ensure thoroughness, we have assumed a basic BD business process, as all software is created to fulfil a specific business requirement. Metamycelium consists of 15 primary components and 5 variable components, as seen in Figure \ref{fig:Metamycelium}. The lowercase "a" in the top left corner of the diagram represents the auxiliary view, while the letter "m" represents the master view. When the same entity is utilised in various models, the auxiliary view is employed. This indicates that the entity already exists and is being reused. 
 
 
-\begin{sidewaysfigure*}
-  \centering
-  \includegraphics[width=\linewidth]{images/Metamycelium.jpg}
+\begin{sidewaysfigure}
+  \includegraphics[width=23cm]{images/Metamycelium.jpg}
   \caption{Metamycelium}
   \label{fig:Metamycelium}
-\end{sidewaysfigure*}
+\end{sidewaysfigure}
 
 While this business layer could vary in different contexts, Metamycelium should be able to have the elasticity required to account for various business models. To ease understanding of the RA, we sub-diagrammed the product domain in Figure \ref{fig:MetamyceliumServiceMesh}.
 
-\begin{figure*}
-  \centering
-  \includegraphics[width=\linewidth]{images/metamyceliumServiceMesh.jpg}
+\begin{sidewaysfigure}
+  \includegraphics[width=23cm]{images/metamyceliumServiceMesh.jpg}
   \caption{Service Mesh}
   \label{fig:MetamyceliumServiceMesh}
-\end{figure*}
+\end{sidewaysfigure}
 
 These components are;
 
@@ -975,11 +588,11 @@ These components are;
     
     The IAM component guarantees meticulous access control and privilege management, enabling the creation of precise access policies. The system enables strong authentication using standard protocols such as OAuth and SAML, simplifying user access through Single Sign-On (SSO). It supports audits by recording access occurrences, strengthening compliance, security oversight, and incident management. The Figure~\ref{diagram:IAM} provides a detailed representation of how the component functions and how it interacts with other aspects of the system.
 
-    \begin{figure*}[h]
-        \includegraphics[width=\linewidth]{images/Metamycelium-identity-and-access-control.jpg}
+    \begin{figure}[h]
+        \includegraphics[width=\textwidth]{images/Metamycelium-identity-and-access-control.jpg}
         \caption{Identity and Access Control Management System}
         \label{diagram:IAM}
-    \end{figure*}
+    \end{figure}
 
     \textit{Addresses requirements: SaP-1, and SaP-2.} 
     
@@ -1005,7 +618,7 @@ The validation of treatment is crucial in its research, development, and impleme
 
 Clearly outlining and justifying the treatment needs establishes a straightforward avenue for validation. This implies that the treatment may be verified by showing that it fulfils certain predetermined criteria. A key challenge in treatment validation is the absence of real-world implementation to assess the treatment's impact on stakeholder objectives. This challenge emphasises the need for thorough, diverse, and well-thought-out assessment methods, as discussed more in the next sections of this chapter. 
 
-The initial phase of assessing this thesis is a single-case mechanism experiment based on the parameters outlined by \cite{wieringa2014design}. Although his works reference a single experiment, this study considers a few situations. A multi-case experiment is required because the artefact is complex, which improves the thoroughness and significance of the evaluation process, leading to a more detailed and nuanced comprehension of the artifact's capabilities and possibilities. 
+The initial phase of assessing this thesis is a single-case mechanism experiment based on the parameters outlined by \citeauthor{wieringa2014design}. Although his works reference a single experiment, this study considers a few situations. A multi-case experiment is required because the artefact is complex, which improves the thoroughness and significance of the evaluation process, leading to a more detailed and nuanced comprehension of the artifact's capabilities and possibilities. 
 
 The research design for this case mechanism experiment is described in Section~\ref{caseMechanismResearchDesignAndValidation}. This part includes the current prototyping of the artefact and the following presentation of outcomes.
 
@@ -1019,12 +632,12 @@ Implementing the essential components and functionalities stated in the RA, Meta
 
 Figure~\ref{metamyceliumPrototype} shows a concrete structure created with Metamycelium.
 
-\begin{figure*}[h!]
+\begin{figure}[h!]
     \centering
-    \includegraphics[width=\linewidth]{images/metamyceliumConcrete.jpg}
+    \includegraphics[width=12cm]{images/metamyceliumConcrete.jpg}
     \caption{Metamycelium Prototype}
     \label{metamyceliumPrototype}
-\end{figure*}
+\end{figure}
 
 \subsection{Stage 1: Formation}
 
@@ -1032,7 +645,7 @@ Figure~\ref{metamyceliumPrototype} shows a concrete structure created with Metam
 All components of this prototype are integrated within a single Kubernetes cluster. Therefore, KIND \cite{KIND2023} has been selected as the local Kubernetes cluster for this prototype to function. 
 
 
-The reproducibility of this technique is crucial. The scripts required to execute, download, and set up artefacts are located in the scripts folder of the Github repository cited as \cite{InfrastructureForMetamycelium2023}. These scripts are designed to exclusively operate on Unix-like operating systems.
+The reproducibility of this technique is crucial. The scripts required to execute, download, and set up artefacts are located in the scripts folder of the Github repository cited as \citeauthor{InfrastructureForMetamycelium2023}. These scripts are designed to exclusively operate on Unix-like operating systems.
 
 After establishing the fundamental scripts for initialising the cluster, the procedure commenced with the creation of various services within the Kubernetes cluster. Helm Charts from Artefact Hub \cite{ArtifactHub2023} are utilised for enhanced maintainability and scalability of Nginx ingress and Kafka. Terraform was subsequently utilised to implement the charts on the Kubernetes cluster. It is located in the IaaC section of the repository. 
 
@@ -1666,7 +1279,7 @@ The CPU utilisation remains constant at 18.6\% during the recorded time period. 
   \label{cpuUtilizationInDataScientistApplication}
 \end{figure}
 
-\subsection{Memory Utilisation in the Data Scientist Application:}
+\section{Memory Utilisation in the Data Scientist Application:}
 The memory utilisation remains consistently at around 12.56 GB during all observations. This suggests that the application possesses efficient memory management and does not encounter memory leaks or substantial variations. This is illustrated in Figure~\ref{memoryUtilizationInDataScientistApplication}.
 
 
@@ -1692,7 +1305,7 @@ The duration of query processing consistently stayed at 10 seconds throughout th
 An essential element contributing to the system's reliable performance is its domain-driven asynchronous and event-driven architecture, which is in line with the research conducted by Braun (2021) on distributed systems. This architecture demonstrates exceptional proficiency in handling simultaneous data access and ensuring the integrity of domain models in asynchronous scenarios, concepts that are also discussed in Kleppmann's renowned book, "Designing Data-Intensive Applications" (2017). The significance of data consistency and network resilience in contemporary distributed architectures is underscored by Kleppmann (2017). The prototype's capacity to manage simultaneous updates and uphold data integrity demonstrates the effectiveness of this architectural approach in the construction of distributed systems.
 
 
-\subsection{Challenges and Duration of the Experiment}
+\section{Challenges and Duration of the Experiment}
 
 The experimentation phase lasts around four months and involves a methodical process to assess each situation in order to thoroughly validate the Metamycelium system according to the specified specifications. The experiment faced numerous architectural and technical obstacles, which greatly influenced the design decisions and comprehension of the system's behaviour. The issues are classified into four categories: Infrastructure, Integration, Data Management, and Performance.
 
@@ -1755,7 +1368,7 @@ The comprehensive evaluation of the Metamycelium system across several scenarios
   
 \end{enumerate}
 
-\subsection{Threats to Validity}
+\section{Threats to Validity}
 
 This section discusses potential threats to the validity of our study on the development and evaluation of Terramycelium, taking into account the identified challenges and limitations.
 
@@ -1821,106 +1434,7 @@ In conclusion, Terramycelium contributes to BD system architecture discussions, 
 \bibliographystyle{elsarticle-harv}
 \bibliography{bibfile}
 
-
-
-\appendices
-\section{Proof of the First Zonklar Equation}
-Appendix one text goes here.
-
-% you can choose not to have a title for an appendix
-% if you want by leaving the argument blank
-\section{}
-Appendix two text goes here.
-
-
-% use section* for acknowledgment
-\section*{Acknowledgment}
-
-
-The authors would like to thank...
-
-
-% Can use something like this to put references on a page
-% by themselves when using endfloat and the captionsoff option.
-\ifCLASSOPTIONcaptionsoff
-  \newpage
-\fi
-
-
-
-% trigger a \newpage just before the given reference
-% number - used to balance the columns on the last page
-% adjust value as needed - may need to be readjusted if
-% the document is modified later
-%\IEEEtriggeratref{8}
-% The "triggered" command can be changed if desired:
-%\IEEEtriggercmd{\enlargethispage{-5in}}
-
-% references section
-
-% can use a bibliography generated by BibTeX as a .bbl file
-% BibTeX documentation can be easily obtained at:
-% http://mirror.ctan.org/biblio/bibtex/contrib/doc/
-% The IEEEtran BibTeX style support page is at:
-% http://www.michaelshell.org/tex/ieeetran/bibtex/
-%\bibliographystyle{IEEEtran}
-% argument is your BibTeX string definitions and bibliography database(s)
-%\bibliography{IEEEabrv,../bib/paper}
-%
-% <OR> manually copy in the resultant .bbl file
-% set second argument of \begin to the number of references
-% (used to reserve space for the reference number labels box)
-\begin{thebibliography}{1}
-
-\bibitem{IEEEhowto:kopka}
-H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
-  0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
-
-\end{thebibliography}
-
-% biography section
-% 
-% If you have an EPS/PDF photo (graphicx package needed) extra braces are
-% needed around the contents of the optional argument to biography to prevent
-% the LaTeX parser from getting confused when it sees the complicated
-% \includegraphics command within an optional argument. (You could create
-% your own custom macro containing the \includegraphics command to make things
-% simpler here.)
-%\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{mshell}}]{Michael Shell}
-% or if you just want to reserve a space for a photo:
-
-\begin{IEEEbiography}{Michael Shell}
-Biography text here.
-\end{IEEEbiography}
-
-% if you will not have a photo at all:
-\begin{IEEEbiographynophoto}{John Doe}
-Biography text here.
-\end{IEEEbiographynophoto}
-
-% insert where needed to balance the two columns on the last page with
-% biographies
-%\newpage
-
-\begin{IEEEbiographynophoto}{Jane Doe}
-Biography text here.
-\end{IEEEbiographynophoto}
-
-% You can push biographies down or up by placing
-% a \vfill before or after them. The appropriate
-% use of \vfill depends on what kind of text is
-% on the last page and whether or not the columns
-% are being equalized.
-
-%\vfill
-
-% Can be used to pull up biographies so that the bottom of the last one
-% is flush with the other column.
-%\enlargethispage{-5in}
-
-
-
-% that's all folks
 \end{document}
-
-
+\endinput
+%%
+%% End of file `elsarticle-template-num.tex'.

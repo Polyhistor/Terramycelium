@@ -80,6 +80,11 @@
 \bibinfo{author}{technology review insights in partnership~with Databricks, M.}, \bibinfo{year}{2021}.
 \newblock \bibinfo{title}{Building a high-performance data organization}.
 \newblock \URLprefix \url{https://databricks.com/p/whitepaper/mit-technology-review-insights-report}.
+%Type = Book
+\bibitem[{Dehghani(2022)}]{DataMesh}
+\bibinfo{author}{Dehghani, Z.}, \bibinfo{year}{2022}.
+\newblock \bibinfo{title}{Data Mesh: Delivering Data-Driven Value at Scale}.
+\newblock \bibinfo{publisher}{O'Reilly Media}.
 %Type = Inproceedings
 \bibitem[{Derras et~al.(2018)Derras, Deruelle, Douin, Levy, Losavio, Pollet and Reiner}]{Derras}
 \bibinfo{author}{Derras, M.}, \bibinfo{author}{Deruelle, L.}, \bibinfo{author}{Douin, J.M.}, \bibinfo{author}{Levy, N.}, \bibinfo{author}{Losavio, F.}, \bibinfo{author}{Pollet, Y.}, \bibinfo{author}{Reiner, V.}, \bibinfo{year}{2018}.
@@ -133,13 +138,8 @@
 \newblock \bibinfo{title}{Infrastructureformetamycelium}.
 \newblock \bibinfo{howpublished}{\url{https://github.com/Polyhistor/InfrastructureForMetamycelium}}.
 %Type = Article
-\bibitem[{Rad and Ataei(2017a)}]{AtaeiBigDataEnvirons}
-\bibinfo{author}{Rad, B.B.}, \bibinfo{author}{Ataei, P.}, \bibinfo{year}{2017}a.
-\newblock \bibinfo{title}{The big data ecosystem and its environs}.
-\newblock \bibinfo{journal}{International Journal of Computer Science and Network Security (IJCSNS)} \bibinfo{volume}{17}, \bibinfo{pages}{38}.
-%Type = Article
-\bibitem[{Rad and Ataei(2017b)}]{rad2017big}
-\bibinfo{author}{Rad, B.B.}, \bibinfo{author}{Ataei, P.}, \bibinfo{year}{2017}b.
+\bibitem[{Rad and Ataei(2017)}]{rad2017big}
+\bibinfo{author}{Rad, B.B.}, \bibinfo{author}{Ataei, P.}, \bibinfo{year}{2017}.
 \newblock \bibinfo{title}{The big data ecosystem and its environs}.
 \newblock \bibinfo{journal}{International Journal of Computer Science and Network Security (IJCSNS)} \bibinfo{volume}{17}, \bibinfo{pages}{38}.
 %Type = Inproceedings
