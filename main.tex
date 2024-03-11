@@ -846,7 +846,7 @@ While this business layer could vary in different contexts, Metamycelium should 
 
 \begin{figure*}
   \centering
-  \includegraphics[width=\linewidth]{images/metamyceliumServiceMesh.jpg}
+  \includegraphics[width=\textwidth]{images/metamyceliumServiceMesh.jpg}
   \caption{Service Mesh}
   \label{fig:MetamyceliumServiceMesh}
 \end{figure*}
@@ -1019,7 +1019,7 @@ Implementing the essential components and functionalities stated in the RA, Meta
 
 Figure~\ref{metamyceliumPrototype} shows a concrete structure created with Metamycelium.
 
-\begin{figure*}[h!]
+\begin{figure*}[h]
     \centering
     \includegraphics[width=\linewidth]{images/metamyceliumConcrete.jpg}
     \caption{Metamycelium Prototype}
@@ -1061,12 +1061,12 @@ Proficiency in Envoy, Kubernetes, Istio, Rego (OPA's policy language), and GoLan
 
 OPA assesses these petitions based on established policy guidelines. Approved requests are executed by the API server, whereas refused requests result in an error message sent to the user. OPA's policies manage all interactions among services and pods within a namespace. OPA assists in ensuring adherence to predetermined security and operational regulations within a Kubernetes setting. This is depicted in Figure~\ref{OPAISTIO}.
 
-\begin{figure}[h!]
+\begin{figure*}[h]
   \centering
-  \includegraphics[width=\textwidth]{images/OPA-istio-flow.png}
+  \includegraphics[width=\linewidth]{images/OPA-istio-flow.png}
   \caption{Open Policy Agent Communication Flow with Other Services}
   \label{OPAISTIO}
-\end{figure}
+\end{figure*}
 
 Once OPA was understood, Domain developed an analytics service using the Python framework FastAPI. To experiment with Metamycelium and meet the requirements outlined in Section~\ref{metMyceliumRequirements}, a domain incorporating operational and analytical systems must be established. Since this experiment is not a genuine business, it is logical to establish a simulated operational service that mimics real-world activity, such as generating large amounts of data at a high speed. 
 
@@ -1088,7 +1088,7 @@ This experiment is crucial as it simulates various behaviours, system loads, dat
 
 Based on the templates in Carroll (1995) and the examples in Kazman ATAM, a set of scenarios is established to evaluate the prototype's abilities. The scenarios, which include various aspects of system performance and security, are outlined in Tables \ref{s1Table} through \ref{s6Table}.
 
-\begin{table}[tbp]
+\begin{table*}[tbp]
   \caption{Scenario S1: High Volume Data Ingestion Scenario}
   \begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{5cm}|X|}
   \hline
@@ -1102,9 +1102,9 @@ Based on the templates in Carroll (1995) and the examples in Kazman ATAM, a set 
   \hline
   \end{tabularx}
   \label{s1Table}
-\end{table}
+\end{table*}
 
-\begin{table}[tbp]
+\begin{table*}[tbp]
   \caption{Scenario S2: High Velocity Data Ingestion Scenario}
   \begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{5cm}|X|}
   \hline
@@ -1117,9 +1117,9 @@ Based on the templates in Carroll (1995) and the examples in Kazman ATAM, a set 
   \textbf{Actual Outcome, Evaluation, Implications:} & To be filled out during testing. \\
   \hline
   \end{tabularx}
-\end{table}
+\end{table*}
 
-\begin{table}[tbp]
+\begin{table*}[tbp]
   \caption{Scenario S3: Data Variety Scenario}
   \begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{5cm}|X|}
   \hline
@@ -1132,9 +1132,9 @@ Based on the templates in Carroll (1995) and the examples in Kazman ATAM, a set 
   \textbf{Actual Outcome, Evaluation, Implications:} & To be filled out during testing. \\
   \hline
   \end{tabularx}
-\end{table}
+\end{table*}
 
-\begin{table}[tbp]
+\begin{table*}[tbp]
   \caption{Scenario S4: Complex Query Scenario}
   \begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{5cm}|X|}
   \hline
@@ -1147,9 +1147,9 @@ Based on the templates in Carroll (1995) and the examples in Kazman ATAM, a set 
   \textbf{Actual Outcome, Evaluation, Implications:} & To be filled out during testing. \\
   \hline
   \end{tabularx}
-\end{table}
+\end{table*}
 
-\begin{table}[tbp]
+\begin{table*}[tbp]
   \caption{Scenario S5: Secret Management Scenario}
   \begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{5cm}|X|}
   \hline
@@ -1162,9 +1162,9 @@ Based on the templates in Carroll (1995) and the examples in Kazman ATAM, a set 
   \textbf{Actual Outcome, Evaluation, Implications:} & To be filled out during testing. \\
   \hline
   \end{tabularx}
-\end{table}
+\end{table*}
 
-\begin{table}[tbp]
+\begin{table*}[tbp]
   \caption{Scenario S6: Data Security Scenario}
   \begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{5cm}|X|}
   \hline
@@ -1178,7 +1178,7 @@ Based on the templates in Carroll (1995) and the examples in Kazman ATAM, a set 
   \hline
   \end{tabularx}
   \label{s6Table}
-\end{table}
+\end{table*}
 
 
 \subsection{Stage 3: Scenario Testing}
@@ -1197,39 +1197,39 @@ Upon receiving the event, the analytical service utilises the metadata within th
 
 The required data quality metadata from Section~\ref{section:dataQuality} and bitemporality metadata from Section~\ref{bitemporality} are generated. The metadata, service name, service address, and unique identifier are sent as an event to Kafka on a specified topic. Data Lichen establishes a consumer group, subscribes to a particular topic, retrieves the data, and subsequently presents the information for each domain. Data Lichen presents this information in a specially designed table as shown in Figure~\ref{dataLichenDashboard}. Utilising a distinct identification for each service guarantees that the listing and presentation of services are uniform and dependable, yielding consistent outcomes with every action. The flow is depicted in Figure~\ref{intraDomain}.
 
-\begin{figure}[h!]
+\begin{figure*}[h]
   \centering
-  \includegraphics[width=13cm]{images/Datalichen-dashboard.png}
+  \includegraphics[width=\textwidth]{images/Datalichen-dashboard.png}
   \caption{Data Lichen Dashboard in Local Development Environment} 
   \label{dataLichenDashboard}
-\end{figure}
+\end{figure*}
 
-\begin{figure}[h!]
+\begin{figure*}[h]
   \centering
   \includegraphics[width=\textwidth]{images/intra-domain-flow.jpg}
   \caption{Intra-domain communication in Metamycelium's prototype}
   \label{intraDomain}
-\end{figure}
+\end{figure*}
 
 Domain A requests a 5GB JSON file from domain B in this instance. Domain A possesses the meteorological data, but domain B possesses the customer ratings and business data. An event is sent from the domain to Data Lichen to obtain a list of all datasets along with metadata such as actual-time, processing-time, completeness, and correctness. 
 
 The information contains the address of the data domain to be retrieved. The address is utilised to send an event to domain B for data retrieval. This activates the internal process of domain B, leading to the production and storage of datasets in the distributed storage service. After the procedure is finished, an event is sent to the data processing completion topic, to which domain A is subscribed. Figure~\ref{kafkaTopics} provides an overview of the Kafka topics utilised in this investigation.
 
-\begin{figure}[h!]
+\begin{figure*}[h]
   \centering
   \includegraphics[width=\textwidth]{images/kafka-topics.png}
   \caption{Overview of kafka topics}
   \label{kafkaTopics}
-\end{figure}
+\end{figure*}
 
 The event signalling the conclusion of data processing also includes the data address. Domain A utilises this URL to retrieve the data. After retrieving the data, it is subsequently processed. The flow is illustrated in Figure~\ref{s1Flow}.
 
-\begin{figure}[h!]
+\begin{figure*}[h]
   \centering
   \includegraphics[width=\textwidth]{images/Scenario-s1.png}
   \caption{Scenario S-1 Flow Diagram}
   \label{s1Flow}
-\end{figure}
+\end{figure*}
 
 
 Understanding system performance and resource utilisation is crucial in this scenario. Data Ingestion Rate is a direct indicator of the system's throughput, showing how effectively the system can handle large volumes of incoming data. A high rate indicates efficient data processing capability, crucial for situations with anticipated fast data influx. Latency, divided into intake and processing components, provides understanding of system responsiveness. Minimal latency is essential for ensuring prompt data availability and processing, especially in systems where delays can cause subsequent effects. 
@@ -1244,25 +1244,25 @@ Each service is instrumented using OpenTelemetry SDKs to capture telemetry data 
 Figure~\ref{openTelemetryTopic} illustrates the open telemetry Kafka topic and a large number of events recorded in this subject. The open telemetry processor service consumes all events sent to this topic. The service gathers and maintains metrics, which are then extracted by Prometheus and subsequently sent to Grafana. The flow is depicted in Figure~\ref{openTelemetryFlow}.
 
 
-\begin{figure}[h!]
+\begin{figure*}[h]
   \centering
   \includegraphics[width=\textwidth]{images/kafka-open-telemetry-topic-screenshot.png}
   \caption{Open Telemetry Topic}
   \label{openTelemetryTopic}
-\end{figure}
+\end{figure*}
 
-\begin{figure}[h!]
+\begin{figure*}[h]
   \centering
   \includegraphics[width=\textwidth]{images/open-telemetry-flow.png}
   \caption{Open Telemetry Flow}
   \label{openTelemetryFlow}
-\end{figure}
+\end{figure*}
 
 The JSON displayed in Figure~\ref{openTelemetryTraceSpan} depicts an example of a trace span JSON that is communicated over Kafka to the open telemetry service.
 
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=\textwidth]{images/open-telemetry-trace-example.png}
+  \includegraphics[width=\columnwidth]{images/open-telemetry-trace-example.png}
   \caption{Open Telemetry Trace Span}
   \label{openTelemetryTraceSpan}
 \end{figure}
@@ -1297,28 +1297,28 @@ Every data transmission from Domain A to Domain B ensures a certification of suc
 The graph in Figure~\ref{kafkIngestionInBytesInCustomerDomainAnalyticalService} shows that the Kafka data ingestion reached its highest point at 1,693,816,791 bytes on 2023-09-04 at 20:40:00 in the analytical service of the customer domain, demonstrating the transfer of data from the operational service to the analytical service. The bar chart illustrates the incremental rise in the service's workload.  The entire quantity of data ingested during the trial was 1.6 billion bytes, as shown in Figure~\ref{totalDataIngestedinBytesInCustomerDomainsAnalyticalService}.
 
 
-\begin{figure}[h!]
+\begin{figure*}[h]
   \centering
-  \includegraphics[width=\textwidth]{images/Kafka-ingestion-in-Bytes.png}
+  \includegraphics[width=\linewidth]{images/Kafka-ingestion-in-Bytes.png}
   \caption{Kafka Data Ingestion in Bytes in Customer Domain's Analytical Service}
   \label{kafkIngestionInBytesInCustomerDomainAnalyticalService}
-\end{figure}
+  \end{figure*}
 
-\begin{figure}[h!]
+\begin{figure}[h]
   \centering
-  \includegraphics[width=\textwidth]{images/total-data-ingested-in-bytes.jpeg}
+  \includegraphics[width=\columnwidth]{images/total-data-ingested-in-bytes.jpeg}
   \caption{Total Data Ingested in Bytes in Customer Domains' Analytical Service}
   \label{totalDataIngestedinBytesInCustomerDomainsAnalyticalService}
 \end{figure}
 
 The data ingestion rate for the weather domain's analytical service peaked at 1,693,893,416 bytes on September 5, 2023, at 18:00:00, as shown in Figure~\ref{totalDataIngestedinBytesInWeatherDomainsAnalyticalService}. This service has processed a total of 1.6 billion bytes.
 
-\begin{figure}[h!]
+\begin{figure*}[h]
   \centering
   \includegraphics[width=\textwidth]{images/weather-domain-ingested-data-in-bytes.png}
   \caption{Total Data Ingested in Bytes in Weather Domain's Analytical Service}
   \label{totalDataIngestedinBytesInWeatherDomainsAnalyticalService}
-\end{figure}
+\end{figure*}
 
 The system's performance during large data input is empirically evaluated by visualising metrics in Grafana using the screenshots. The monitoring system offers timestamped data points showing the amount of data consumed at different intervals. The Table~\ref{dataIngestedInCustomerDomainAnalyticalServiceTable} records the data points collected within a particular time frame in the analytical service of the customer domain.
 
@@ -1391,12 +1391,12 @@ Where:
 
 The latency metric may be found in Figure~\ref{cusetomerAndWeatherDomainAnalyaticalServicesLatencies}. The figure shows that the latency in both domains' analytical services is negligible, with one spike reaching 400 seconds and the rest maintaining a constant ingestion latency of roughly 50 to 100 seconds. The weather domain experiences lower latency than customer latency, averaging 50 seconds. This is because this domain uses a less amount of data.
 
-\begin{figure}[h!]
+\begin{figure*}[h]
   \centering
   \includegraphics[width=\textwidth]{images/customer-and-weather-domain-analytics-service-latency.png}
   \caption{Customer and Weather Domain's Analytical Service Latencies}
   \label{cusetomerAndWeatherDomainAnalyaticalServicesLatencies}
-\end{figure}
+\end{figure*}
 
 The findings are remarkable given the intricacies and asynchronous nature of a domain-driven distributed big data system utilising Kafka. The occasional increase to 400 seconds in ingestion latency is noteworthy but falls within acceptable limits, particularly given the Kafka's internal features like indexing methods, offset management, and sticky partition behaviour.
 
@@ -1410,7 +1410,7 @@ It is important to consider this finding while assessing scalability and forecas
 
 Figure~\ref{openTelemetryServiceCpuUsage} illustrates the CPU utiliation trends of the telemetry processing service, emphasising the interplay between data intake rates and resource consumption.
 
-\begin{figure}[h!]
+\begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{images/Open-telemetry-service-CPU-usage.png}
     \caption{Open Telemetry Service CPU Usage}
@@ -1447,25 +1447,26 @@ The constant and regular CPU usage indicates a reliable processing environment. 
 
 The Kubernetes cluster CPU use consistently stays at 43\%, with occasional spikes up to 250\% as seen in Figure~\ref{kubernetesClusterCpuUsage}. These spikes typically occur when a large amount of data is being sent across the network and into Minio.
 
-\begin{figure}[h!]
+\begin{figure}[h]
   \centering
-  \includegraphics[width=\textwidth]{images/kubernetes-cluster-CPU-usage.png}
+  \includegraphics[width=\columnwidth]{images/kubernetes-cluster-CPU-usage.png}
   \caption{Kubernetes Cluster CPU Usage}
   \label{kubernetesClusterCpuUsage}
 \end{figure}
 
 Similarly, as shown in Figure~\ref{kubernetesClusterReadAndWrite}, an average of 5.37GB of data was read and 12.2GB of data was written at various intervals. Furthermore, the network has received 11.6 gigabytes of data and delivered 13.9 megabytes (Figure~\ref{kubernetesClusterNetworkStatistics}).
 
-\begin{figure}[h!]
+\begin{figure}
   \centering
-  \includegraphics[width=\textwidth]{images/Kubernetes-cluster-data-read-write.png}
+  \includegraphics[width=\columnwidth]{images/Kubernetes-cluster-data-read-write.png}
   \caption{Kubernetes Cluster Read and Write Statistics}
   \label{kubernetesClusterReadAndWrite}
 \end{figure}
 
-\begin{figure}[h!]
+
+\begin{figure}
   \centering
-  \includegraphics[width=\textwidth]{images/kubernetes-cluster-network-data-received-and-sent.png}
+  \includegraphics[width=\columnwidth]{images/kubernetes-cluster-network-data-received-and-sent.png}
   \caption{Kubernetes Cluster Network Statistics}
   \label{kubernetesClusterNetworkStatistics}
 \end{figure}
@@ -1490,16 +1491,16 @@ The customer domain has a same pattern, wherein operational services have consis
 The memory utilisation trends across the various services may be visualised in Figure~\ref{kubernetesClusterMemoryUsage}. The address for each service is specified in the respective service definitions in the Github repositories. It is important to note that the service running on port 8000 is the operational service in the customer domain, while the service on port 8001 is the analytical service for the customer domain. The service running on port 8005 is the operational service for the weather domain, whereas the service on port 8006 is the analytical service for the same domain. The service running on port 8008 is the application responsible for processing telemetry data.
 
 
-\begin{figure}[h!]
+\begin{figure}
   \centering
-  \includegraphics[width=\textwidth]{images/Memory-usage-for-various-services-in-kube.png}
+  \includegraphics[width=\columnwidth]{images/Memory-usage-for-various-services-in-kube.png}
   \caption{Memory Usage for Various Services in the Cluster}
   \label{kubernetesClusterMemoryUsage}
 \end{figure}
 
 The association between CPU and memory usage is further explained in Table~\ref{table:memory-cpu-correlation}. This table illustrates the allocation of memory across several services at specific instances of CPU use. It is evident that periods of increased CPU activity align with higher memory allocation, especially in the telemetry processing service. This alignment clarifies the system's ability to scale and respond effectively during moments of high computing demand. Similarly, as the CPU utilisation decreases, there is also a decrease in the amount of memory being used, which highlights the effective management of resources during periods of less demanding processing. The ability to efficiently use memory in a way that can adapt to different needs is crucial for sustaining the performance of a system and ensuring that real-time data is managed smoothly across the entire infrastructure.
 
-\begin{table}[h!]
+\begin{table*}
   \centering
   \scriptsize % Further reduce the font size
   \setlength{\tabcolsep}{3pt} % Tighten the space between columns
@@ -1523,7 +1524,7 @@ The association between CPU and memory usage is further explained in Table~\ref{
   \end{tabular}
   \caption{Correlated Memory and CPU Usage for Various Services. Legend: B - Bytes, H - High Usage, M - Medium Usage, L - Low Usage. Service A corresponds to localhost:8000, B to localhost:8001, C to localhost:8005, D to localhost:8006, and E to localhost:8008.}
   \label{table:memory-cpu-correlation}
-\end{table}
+\end{table*}
 
 
 \paragraph{Error Rate:}
@@ -1534,7 +1535,7 @@ The intrinsic ability of event-driven systems to recover quickly and effectively
 
 \begin{figure}
   \centering
-  \includegraphics[width=\textwidth]{images/number-of-errors-in-telemetry-processing-service.png}
+  \includegraphics[width=\columnwidth]{images/number-of-errors-in-telemetry-processing-service.png}
   \caption{Number of Errors in Telemetry Processing Service}
   \label{numberOfErrorsInTelemetryProcessingService}
 \end{figure}
@@ -1555,7 +1556,7 @@ A methodical analysis is conducted based on the metrics of interest:
 
 \begin{figure}
   \centering
-  \includegraphics[width=\textwidth]{images/customer-domain-stream-data-topic-statistics.png}
+  \includegraphics[width=\columnwidth]{images/customer-domain-stream-data-topic-statistics.png}
   \caption{Customer Domain Streaming Topic Statistics}
   \label{customerDomainStreamingTopicStatistics}
 \end{figure}
@@ -1590,12 +1591,12 @@ Furthermore, the CPU consumption has only grown by 5\% compared to the statistic
 Furthermore, the processing duration provides us with information on the amount of time it takes for the system to process the data that has been received. The Weather Domain consistently processes data in 1,694,491,558 nanoseconds (or approximately 1.6945 seconds) for various timestamps (Figure~\ref{processingDurationInStreamingCaseInWeatherDomain}). The consistency seen suggests a reliable data processing method that remains unaffected by any potential variables encountered during the streaming process.
 
 
-\begin{figure}
+\begin{figure*}
   \centering
   \includegraphics[width=\textwidth]{images/processing-duration-streaming-case-in-weather-domain.png}
   \caption{Processing Duration in Streaming Case in the Weather Domain}
   \label{processingDurationInStreamingCaseInWeatherDomain}
-\end{figure}
+\end{figure*}
 
 
 The assessment of the High Velocity Data intake Scenario (S2) demonstrated that the system consistently handled the rapid intake of data within the specified parameters, indicating its effective capability to manage such scenarios. By establishing a specialised Kafka topic and strategically integrating a new endpoint in the customer domain to enable data streaming, we are able to accurately replicate peak data input rates. The system's memory use patterns demonstrate its ability to handle large amounts of data. More precisely, the consumer domain, influenced by its chunking logic, exhibits more memory consumption in comparison to the Weather domain. However, both domains efficiently managed the processing and intake of a significant total of 771,305 messages (about 1GB in size). 
@@ -1617,12 +1618,12 @@ Keycloak, the authentication and authorization server, plays a crucial role in t
 The authentication process, enabled by OpenID Connect standards, allows the simulated data scientist to effortlessly access Data Lichen. After being registered, the data scientist can access and see datasets from many domains. They can then send network requests to retrieve the specific data they need. The flow is illustrated in Figure~\ref{dataScientistFlowWithAuthentication}.
 
 
-\begin{figure}[h]
+\begin{figure*}[h]
   \centering
   \includegraphics[width=\textwidth]{images/data-scientist-data-lichen-flow-with-authentication.jpg}
   \caption{Data Scientist Flow with Authentication}
   \label{dataScientistFlowWithAuthentication}
-\end{figure}
+\end{figure*}
 
 It is noteworthy that the Minio secret key and access key could also be stored in Vault and retrieved in each service, nevertheless this is not done due to time and resources constraints. This does not risks the integrity of this experiment. For scenario S4, S5 and S6, the metrics below are selected: 
 
@@ -1649,44 +1650,44 @@ After obtaining the domain data using a secure method utilising OpenID Connect a
 \paragraph{Duration of Secret Retrieval:}
 The recorded metrics consistently displayed a length of 3 seconds throughout the timestamps. This demonstrates a dependable and consistent secret management system, as depicted in Figure~\ref{dataScientistSecretRetrievalDelayInSeconds}.
 
-\begin{figure}[h]
+\begin{figure*}[h]
   \centering
   \includegraphics[width=\textwidth]{images/Secret-Retrieval-Delay-in-Seconds-In-Data-Scientist-Application.png}
   \caption{Data Scientist Secret Retrieval Delay in Seconds }
   \label{dataScientistSecretRetrievalDelayInSeconds}
-\end{figure}
+\end{figure*}
 
 
 The CPU utilisation remains constant at 18.6\% during the recorded time period. The behaviour can be linked to the special resource allocation of the operating system on the Apple M2 chip, which enables a consistent usage of the central processing unit (CPU), as shown in Figure~\ref{cpuUtilizationInDataScientistApplication}. As a result, CPU consumption may change in various circumstances.
 
-\begin{figure}[h]
+\begin{figure*}[h]
   \centering
   \includegraphics[width=\textwidth]{images/CPU-utilization-data-scientist-application.png}
   \caption{CPU Utilization in Data Scientist Application}
   \label{cpuUtilizationInDataScientistApplication}
-\end{figure}
+\end{figure*}
 
 \subsection{Memory Utilisation in the Data Scientist Application:}
 The memory utilisation remains consistently at around 12.56 GB during all observations. This suggests that the application possesses efficient memory management and does not encounter memory leaks or substantial variations. This is illustrated in Figure~\ref{memoryUtilizationInDataScientistApplication}.
 
 
-\begin{figure}[h]
+\begin{figure*}[h]
   \centering
   \includegraphics[width=\textwidth]{images/memory-utilization-in-data-scientist-application.png}
   \caption{Memory Utilization in Data Scientist Application}
   \label{memoryUtilizationInDataScientistApplication}
-\end{figure}
+\end{figure*}
 
 \paragraph{Query Processing Duration:}
 The duration of query processing consistently stayed at 10 seconds throughout the measured time period. Nevertheless, there is a decrease to 2 seconds at the conclusion of the observation period (Figure~\ref{queryProcessingDurationInDataScienceApplication}). This abrupt decline indicates potential opportunities for optimising or modifying the characteristics of the processed queries.
 
 
-\begin{figure}[h]
+\begin{figure*}[h]
   \centering
   \includegraphics[width=\textwidth]{images/query-processing-duration-in-data-science-application.png}
   \caption{Query Processing Duration in Data Science Application}
   \label{queryProcessingDurationInDataScienceApplication}
-\end{figure}
+\end{figure*}
 
 
 An essential element contributing to the system's reliable performance is its domain-driven asynchronous and event-driven architecture, which is in line with the research conducted by Braun (2021) on distributed systems. This architecture demonstrates exceptional proficiency in handling simultaneous data access and ensuring the integrity of domain models in asynchronous scenarios, concepts that are also discussed in Kleppmann's renowned book, "Designing Data-Intensive Applications" (2017). The significance of data consistency and network resilience in contemporary distributed architectures is underscored by Kleppmann (2017). The prototype's capacity to manage simultaneous updates and uphold data integrity demonstrates the effectiveness of this architectural approach in the construction of distributed systems.
