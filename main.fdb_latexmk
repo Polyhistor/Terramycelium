@@ -1,17 +1,19 @@
 # Fdb version 4
-["bibtex main"] 1710195323 "main.aux" "main.bbl" "main" 1710195376 0
+["bibtex main"] 1710231792 "main.aux" "main.bbl" "main" 1710231798 0
   "./bibfile.bib" 1710137184 253229 231f5277351454d9b6f993af6335ca18 ""
-  "./ieeetran.bst" 1710195318 57747 3d527d22adcaa16ca0abd0879d6fab1f ""
-  "main.aux" 1710195376 25454 f1436d961e052393a6ac02bef763167e "pdflatex"
+  "./ieeetran.bst" 1710195440 57747 3d527d22adcaa16ca0abd0879d6fab1f ""
+  "main.aux" 1710231797 28210 b6fbb8372ca7aca88b9493cfcc19b20c "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1710195374 "/Users/pataei/Desktop/Projects/Terramycelium/main.tex" "main.pdf" "main" 1710195376 0
-  "/Users/pataei/Desktop/Projects/Terramycelium/main.tex" 1710195374 174372 ba2f89535da7917f67382cee4bdd43a7 ""
+["pdflatex"] 1710231795 "/Users/pataei/Desktop/Projects/Terramycelium/main.tex" "main.pdf" "main" 1710231798 2
+  "/Users/pataei/Desktop/Projects/Terramycelium/main.tex" 1710231792 195645 1710a8482bd85c61545ac214c78c201d ""
   "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/enc/dvips/base/8r.enc" 1678549815 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/map/fontname/texfonts.map" 1678549815 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/map/pdftex/updmap/pdftex.map" 1678549815 4609045 74543da1ab9350ba886fce0af49a2cfd ""
+  "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm" 1678549815 960 379cc0019370a9e0208a0a3f949f847a ""
+  "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm" 1678549815 1292 bd42be2f344128bff6d35d98474adfe3 ""
   "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1678549815 2172 fd0c924230362ff848a33632ed45dc23 ""
   "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm" 1678549815 4524 6bce29db5bc272ba5f332261583fee9c ""
   "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/tfm/adobe/times/ptmbi7t.tfm" 1678549815 2228 e564491c42a4540b5ebb710a75ff306c ""
@@ -43,10 +45,12 @@
   "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1678549815 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1678549815 32716 08e384dc442464e7285e891af9f45947 ""
   "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1678549815 31764 459c573c03a4949a528c2cc7f557e217 ""
+  "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb" 1678549815 45758 19968a0990191524e34e1994d4a31cb6 ""
   "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb" 1678549815 44729 811d6c62865936705a31c797a1d5dada ""
   "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb" 1678549815 44656 0cbca70e0534538582128f6b54593cca ""
   "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb" 1678549815 46026 6dab18b61c907687b520c72847215a68 ""
   "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb" 1678549815 45458 a3faba884469519614ca56ba5f6b1de1 ""
+  "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/vf/adobe/courier/pcrr7t.vf" 1678549815 1344 6ff472164bf9de0fb2e864b28ac156d9 ""
   "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf" 1678549815 1372 788387fea833ef5963f4c5bffe33eb89 ""
   "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/vf/adobe/times/ptmbi7t.vf" 1678549815 1384 6ac0f8b839230f5d9389287365b243c0 ""
   "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/vf/adobe/times/ptmr7t.vf" 1678549815 1380 0ea3a3370054be6da6acd929ec569f06 ""
@@ -106,6 +110,7 @@
   "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty" 1678549815 5766 13a9e8766c47f30327caf893ece86ac8 ""
   "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/lineno/lineno.sty" 1678549815 152262 eb3bf7a579d4a34a0ed4f6b445bafbd8 ""
   "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/multirow/multirow.sty" 1678549815 6149 2398eec4faa1ee24ff761581e580ecf1 ""
+  "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/psnfss/ot1pcr.fd" 1678549815 985 1ed784d7bfe47179f3550d2303b073f8 ""
   "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/psnfss/ot1ptm.fd" 1678549815 961 15056f4a61917ceed3a44e4ac11fcc52 ""
   "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/refcount/refcount.sty" 1678549815 9878 9e94e8fa600d95f9c7731bb21dfb67a4 ""
   "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1678549815 9714 ba3194bd52c8499b3f1e3eb91d409670 ""
@@ -126,6 +131,7 @@
   "images/Metamycelium.jpg" 1709538423 145676 1ffa56fa198bb792050245cda233e93c ""
   "images/OPA-istio-flow.png" 1709710444 48575 0142e5a3d4cbfc04dbd709dfd9e5e63a ""
   "images/Open-telemetry-service-CPU-usage.png" 1709711940 38654 29f8cade2194f804a655754866347194 ""
+  "images/Quantitative-Summary-For-Codes.png" 0 -1 0 ""
   "images/Scenario-s1.png" 1709710899 34612 729871f3285aa1fcca5872135c0bfe44 ""
   "images/Secret-Retrieval-Delay-in-Seconds-In-Data-Scientist-Application.png" 1709884608 102223 8cddc9937194cd093767ccc603dbdee5 ""
   "images/customer-and-weather-domain-analytics-service-latency.png" 1709711819 45446 18cfb01a850273006196568fcd3b8c89 ""
@@ -150,10 +156,10 @@
   "images/query-processing-duration-in-data-science-application.png" 1709884782 95978 329de4a99b1ffeda57ee293a60e3efc2 ""
   "images/total-data-ingested-in-bytes.jpeg" 1709711513 48348 30460dadec5a50742329ab03b7ada8cc ""
   "images/weather-domain-ingested-data-in-bytes.png" 1709711576 74128 a28bb4e49320f617f2578bf3e7d57f45 ""
-  "main.aux" 1710195376 25454 f1436d961e052393a6ac02bef763167e "pdflatex"
-  "main.bbl" 1710195323 8394 6bdb31fcad04e7d0ee2b41ebc955c9a9 "bibtex main"
-  "main.out" 1710195376 10737 505caff7436ecc0cc045a6469a43359e "pdflatex"
-  "main.tex" 1710195374 174372 ba2f89535da7917f67382cee4bdd43a7 ""
+  "main.aux" 1710231797 28210 b6fbb8372ca7aca88b9493cfcc19b20c "pdflatex"
+  "main.bbl" 1710231792 8394 6bdb31fcad04e7d0ee2b41ebc955c9a9 "bibtex main"
+  "main.out" 1710231797 12506 d14805745d3016ac56b3e072a3a9e881 "pdflatex"
+  "main.tex" 1710231792 195645 1710a8482bd85c61545ac214c78c201d ""
   (generated)
   "main.aux"
   "main.log"

@@ -992,7 +992,7 @@ These components are;
 
 The variable components in Metamycelium can be altered, adapted, or excluded according to the architect's discretion and the specific characteristics of the situation. This RA aims to enhance data architects' decision-making process by introducing established patterns and best practices from several perspectives, rather than restricting their innovation. Alternative choices for each variable module are not detailed due to the dynamic nature of the industry, and architects strive to create systems that tackle new issue areas. 
 
-\section{Evaluation}
+\section{Evaluation 1: Case Mechanism Experiment}
 \label{sec:discussion}
 
 The validation of treatment is crucial in its research, development, and implementation phase. Validating a treatment involves determining its possible impact on stakeholder objectives when applied to the specific problem at hand. 
@@ -1004,7 +1004,7 @@ The initial phase of assessing this thesis is a single-case mechanism experiment
 The research design for this case mechanism experiment is described in Section~\ref{caseMechanismResearchDesignAndValidation}. This part includes the current prototyping of the artefact and the following presentation of outcomes.
 
 
-\section{Prototyping an Architecture}
+\subsection{Prototyping an Architecture}
 
 
 Prototyping is the creation of a working model that physically represents the structure, demonstrating the design principles and ideas. This is frequently referred to as the "concrete architecture." This technique enables researchers to validate and develop the design to assess its practicality, performance, and alignment with research objectives.
@@ -1778,6 +1778,396 @@ Construct validity is a cornerstone of our research methodology, particularly in
     \item Lastly, we assess the adaptability and scalability of Terramycelium in response to evolving data needs and varying workloads. This evaluation demonstrates the RA's flexibility and robustness, underlining its long-term relevance and thereby enhancing construct validity in dynamic BD environments.
 \end{enumerate}
 
+
+\section{Evaluation 2: Expert Opinion}
+
+In the preceding chapter, a prototype of Metamycelium is fabricated and exposed to several simulations. Expert review is utilised as the second evaluation approach for the artefact in this chapter. In order to acquire expert opinions, the research technique adheres to the standards set forth by Kallio (2016) in their systematic study. The research technique is explained in Section~\ref{expertOpinionResearchMethodology}.
+
+The examination of expert perspectives starts by analysing emergent themes in "Thematic Analysis" \ref{expertOpinion_thematicAnalysis}, a comparative "Matrix of Responses" \ref{expertOpinion_matrixResponses}, and a "Quantitative Summary" \ref{expertOpinion_quantitativeSummary} of the compiled data. The concept of reflective synthesis is discussed in the article "Synthesis and Reflection" \ref{expertOpinion_synthesisReflection}, which includes expert evaluations of the architectural strategy in "Feedback and Reflections on Architectural Approach" \ref{expertOpinion_feedbackArchitecturalApproach}. The book "Insights on Data Handling and Architectural Intent" \ref{expertOpinion_dataHandlingIntent} delves into in-depth analysis of data strategy, while "Nuances of Data Ownership, Privacy, and Governance" \ref{expertOpinion_dataOwnership} examines the intricate legal aspects associated with these matters. The chapter progresses to the section titled "Relevance and Future Implications" \ref{expertOpinion_futureImplications}, where it analyses and evaluates the shortcomings in the "Limitations of the Current Reference Architecture" \ref{expertOpinion_limitations}. It concludes with a discussion on "Technological Considerations and Expert Insights" \ref{expertOpinion_technologicalConsiderations}, which sets the stage for the references section.
+
+\section{Thematic Analysis} \label{expertOpinion_thematicAnalysis}
+
+This section systematically identifies and analyses prominent topics seen in expert comments. This examination not only emphasises reoccurring concepts but also places the range of viewpoints that shape the artifact's structure into its proper context.
+
+
+\subsection{Applicability \& Industrial Relevance:}
+
+The domain-driven and distributed nature of the Metamycelium architecture elicits various viewpoints regarding its compatibility with existing industry practices and anticipated future developments. Although this architectural approach incorporates promising and advanced approaches, it is clear that they are not uniformly embraced in all industries.
+
+i2 suggested that the utilisation of Metamycelium could be impacted by team configurations and the scale of the organisation. In addition, there was evidence suggesting that different locations may have a higher level of proficiency in specific data practices, with only a small proportion adopting sophisticated approaches such as microservices or streaming.
+
+\,
+
+\setlength{\fboxsep}{0.4em}
+\noindent\fbox{%
+\parbox{\columnwidth}{%
+\textit{"In certain areas, the sense is of being slightly ahead of times with only a few diving into micro services."} - i2
+}%
+}
+
+\,
+
+i1 highlighted the architecture's ability to handle eventing, data streaming, and batch processing. However, there were remarks made regarding possible discrepancies between current industry trends and specific aspects of the architecture.
+
+
+\,
+
+\setlength{\fboxsep}{0.3em}
+\noindent\fbox{%
+\parbox{\columnwidth}{%
+\textit{"Industry trends might not align perfectly, but this is definitely industry relevant."} - i1
+}%
+}
+
+\,
+
+The i3 stated that the architecture's domain-driven nature was very remarkable. As industries move towards greater granularity and distribution of data ownership, they face obstacles. In addition, i3 expressed concerns about the intricate structure of this technique, indicating that its complexity could provide difficulties in its implementation.
+
+
+\,
+
+\setlength{\fboxsep}{0.4em}
+\noindent\fbox{%
+\parbox{\columnwidth}{%
+\textit{"The architecture's complexity might challenge some organisations, even larger ones, during adoption."} - i3
+}%
+}
+
+\,
+
+
+Considering the opinions of specialists, it is clear that Metamycelium provides promising opportunities for many sophisticated data operations. Nevertheless, the originality and intricacy of the subject could be both advantageous and challenging. It may appeal to organisations seeking new solutions, but it could also be perceived as intimidating by those accustomed to more conventional approaches or those who are not yet ready for such a significant change in their data practices.
+
+Overall, the domain-driven distributed design of the Metamycelium architecture shows great potential. However, its deviation from conventional approaches may be seen as a possible obstacle to wider acceptance. The difficulty lies in synchronising its sophisticated characteristics with the existing level of preparedness and environment in the industry.
+
+\subsection{Strengths \& Distinctive Features:}
+
+The Metamycelium architecture received praise for its unique characteristics and apparent advantages, especially in terms of incorporating domain-driven design and data engineering.
+
+i1 emphasised the value of using a domain-driven strategy in conjunction with data engineering. Recognising the historical separation between software engineering and data engineering in terms of their objectives and key performance indicators (KPIs), they highlighted the importance of closing this gap.
+
+
+\,
+
+\setlength{\fboxsep}{0.4em}
+\noindent\fbox{%
+\parbox{\columnwidth}{%
+\textit{"Most of the time you were talking, you were putting software engineering and data engineering together. It sounds really good in theory... If you manage to solve that, that could be a good strength to have... teams working together, you don't have a person in the middle so you can move much faster."} - i1
+}%
+}
+
+\,
+
+
+This integration was also recognised as a novel approach by i1, who added:
+
+\,
+
+
+
+\setlength{\fboxsep}{0.4em}
+\noindent\fbox{%
+\parbox{\columnwidth}{%
+\textit{"I like that. That will be quite distinctive, because I'm yet to see that in action."} - i1
+}%
+}
+
+\,
+
+
+The architecture's adaptable characteristics and all-encompassing ecosystem also garnered favourable recognition. The i3 platform is highly acclaimed for its capacity to handle a wide range of tasks, including batch eventing and ACLs. It is also recognised for the importance of maintaining immutable logs, which ensure a reliable and authoritative source of information.
+
+\,
+
+\setlength{\fboxsep}{0.4em}
+\noindent\fbox{%
+\parbox{\columnwidth}{%
+\textit{"It considers everything from batch eventing, ACLs. Immutable log is very important these days because it helps identify the single source of truth."} - i3
+}%
+}
+
+\,
+
+
+Moreover, the architecture's component parts' ability to replenish themselves was considered essential.
+
+\,
+
+\setlength{\fboxsep}{0.4em}
+\noindent\fbox{%
+\parbox{\columnwidth}{%
+\textit{"As a platform as a service, the fact that you can self provision components as you need to, that's very important."} - i3
+}%
+}
+
+\,
+
+The modular architecture was emphasised by i2, which also emphasised the benefits of having distinct boundaries between various components, including data governance, domain-driven design, and data ingestion.
+
+
+\,
+
+\setlength{\fboxsep}{0.4em}
+\noindent\fbox{%
+\parbox{\columnwidth}{%
+\textit{"I love this modular approach... I love the fact that it also calls out domain driven design and a clear separation of data governance."} - i2
+}%
+}
+
+\,
+
+Aside from discussing how it differs from other methods and recognising its distinct position, i1 also explored how it combines various data views, such as data mesh and event-driven features.
+
+\,
+
+\setlength{\fboxsep}{0.4em}
+\noindent\fbox{%
+\parbox{\columnwidth}{%
+\textit{"I think bits and pieces come from a different view. Like you have a data mesh here, event-driven there... The approach of open policy agent looks promising."} - i1
+}%
+}
+
+\,
+
+In wrapping up, the overall sentiment suggests that while certain components of Metamycelium might find parallels in the industry, its holistic approach and integration of domain-driven design with data engineering make it a unique offering. The challenge, however, remains in ensuring this distinctiveness translates into practical advantages in the evolving landscape of data operations.
+
+\subsection{Challenges \& Potential Barriers:}
+
+A number of specialists offered their perspectives on possible difficulties and obstacles for the Metamycelium framework. The worries revolve around many difficulties like the availability of skillsets, the inherent challenges of data governance, and concerns related to scalability.
+
+I have found a significant issue involving the necessary competence to effectively utilise the architecture, particularly at the local level.
+
+
+\,
+
+\setlength{\fboxsep}{0.4em}
+\noindent\fbox{%
+\parbox{\columnwidth}{%
+\textit{"Skill set, that would be the first one from the local environment. Because again, there would be very few data engineers who would be willing to go there. Centralizing is great, but it is usually very hard to do well, so like all those governance platform libraries..."} - i1
+}%
+}
+
+\,
+
+The expert talked about potential political influences and the challenges of large-scale enterprise governance.
+
+\,
+
+\setlength{\fboxsep}{0.4em}
+\noindent\fbox{%
+\parbox{\columnwidth}{%
+\textit{"But I'd be talking big and why big enterprises. There's always politics in it. And lots of advice."} - i1
+}%
+}
+
+\,
+
+Additionally, i1 emphasised how crucial governance flexibility is, particularly when considering software engineering.
+
+\,
+
+\setlength{\fboxsep}{0.4em}
+\noindent\fbox{%
+\parbox{\columnwidth}{%
+\textit{"From a software engineering background... if your governance is what you do every day. In Software, it is a bit more flexible; you have different KPIs and that might be a bit of friction."} - i1
+}%
+}
+
+\,
+
+I1 specifically brought up the difficulties that could develop as a result of changing ownership patterns and dependencies.
+
+\,
+
+\setlength{\fboxsep}{0.4em}
+\noindent\fbox{%
+\parbox{\columnwidth}{%
+\textit{"So one of the challenges I can see happening at some point as it evolves, is the ownership might become a bit more complicated... Now I have dependencies on A and B, I'm not aware of."} - i1
+}%
+}
+
+\,
+
+i2 elaborated on concerns related to the scale of data and domain specificity.
+
+
+\,
+
+\setlength{\fboxsep}{0.4em}
+\noindent\fbox{%
+\parbox{\columnwidth}{%
+\textit{"Some companies have very large data sets and so moving to a domain-driven is kind of wall sometimes if they have slightly monolithic systems... This data is just so big, so hard to play with."} - i2
+}%
+}
+
+\,
+
+He also pointed out challenges related to the clear ownership of data domains.
+
+\,
+
+\setlength{\fboxsep}{0.4em}
+\noindent\fbox{%
+\parbox{\columnwidth}{%
+\textit{"Yeah, where they already have this centralised kind of data warehouse and they don't know who owns what... and which domain should own, it because it is not clear."} - i2
+}%
+}
+
+\,
+
+A potential problem regarding the handling of unstructured data was also flagged.
+
+\,
+
+\setlength{\fboxsep}{0.4em}
+\noindent\fbox{%
+\parbox{\columnwidth}{%
+\textit{"I'm not sure how it works with things like unstructured data... But when you really get into really, really unstructured stuff, like emails or something like that, data governance just becomes crazy."} - i2
+}%
+}
+
+\,
+
+The challenge that could emerge from the architecture's cross-functionality was brought to light by i3.
+
+\,
+
+\setlength{\fboxsep}{0.4em}
+\noindent\fbox{%
+\parbox{\columnwidth}{%
+\textit{"This typically won't be owned by one team, because this is an ecosystem. You'll have database administrators, developers, infrastructure people, product people, service catalog people... I think the cross functionality of it all is what's difficult."} - i3
+}%
+}
+
+\,
+
+Additional obstacles that smaller organisations might encounter when attempting to implement the architecture were also highlighted by i3.
+
+\,
+
+\setlength{\fboxsep}{0.4em}
+\noindent\fbox{%
+\parbox{\columnwidth}{%
+\textit{"I think for small organisations, this is going to be quite possibly very difficult for them to implement. What's gonna happen is they'll just choose some cheaper version of this when you have not enough people to deliver this sort of stuff."} - i3
+}%
+}
+
+\,
+
+To summarise, although Metamycelium has certain advantages, it nevertheless faces certain difficulties. The barriers encompass a range of challenges, including the details of implementation, complexities that involve several functions, governance issues, domain-specific challenges, and the availability of necessary skillsets. To tackle these problems, it is necessary to combine strategic and technological initiatives in order to guarantee that the architecture can be widely applied and is effective.
+
+\section{Matrix of Responses} \label{expertOpinion_matrixResponses}
+
+The experts' perspectives on the Metamycelium architecture's applicability, strengths, and challenges are succinctly outlined in the table reftab:responses, which aggregates their responses.
+
+\begin{table}[h]
+  \centering
+  \caption{Mapping of expert responses against themes.}
+  \begin{tabularx}{\textwidth}{llXX}
+  \toprule
+  Expert & Applicability & Strengths & Challenges \\
+  \midrule
+  i1 & Mixed & Emphasises importance of flexibility in governance & Concerned about the skillset required, complexities of evolving ownership patterns, and large-scale enterprise politics \\
+  i2 & Positive & Cites large data handling and domain specificity & Mentions challenges of clear data domain ownership and difficulties with unstructured data \\
+  i3 & Positive & Stresses on the cross-functional nature and the ecosystem approach of the architecture & Highlights potential difficulties for smaller organisations and cross-functional challenges \\
+  \bottomrule
+  \end{tabularx}
+  \label{tab:responses}
+\end{table}
+
+\section{Quantitative Summary} \label{expertOpinion_quantitativeSummary}
+
+
+The coding data clearly indicates that opinions and debates differed across several areas of the Metamycelium architecture. The numerical overview of these codings is presented in Table~\ref{tab:coding_summary}.
+
+
+\begin{table}
+  \centering
+  \caption{Summary of coding references.}
+  \begin{tabular}{p{0.6\textwidth}p{0.15\textwidth}p{0.15\textwidth}}
+  \toprule
+  Theme & Number of Coding References & Number of Items Coded \\
+  \midrule
+  Applicability and Industrial Relevance & 9 & 3 \\
+  Alignment with Industry Trends and Future Projection & 6 & 3 \\
+  Applicability to Industry & 3 & 3 \\
+  Challenges and Potential Barriers & 9 & 3 \\
+  Adoption Challenges for Organisations & 6 & 3 \\
+  Scenarios Where The Architecture Is Not Best Fit & 3 & 2 \\
+  Other Opinions & 3 & 2 \\
+  Strength and Distinctive Features & 9 & 3 \\
+  Differentiating Components of the Architecture & 3 & 3 \\
+  Strengths of the Architecture & 6 & 3 \\
+  \bottomrule
+  \end{tabular}
+  \label{tab:coding_summary}
+\end{table}
+
+
+The themes "Applicability and Industrial Relevance", "Challenges and Potential Barriers", and "Strength and Distinctive Features" had the most coding references, with 9 references apiece, indicating their importance in the expert debates.
+
+Within the section titled "Applicability and Industrial Relevance," the primary focus was on the "Alignment with Industry Trends and Future Projection," which was referenced six times.
+
+The theme "Challenges and Potential Barriers" received equal attention in both "Adoption Challenges for Organisations" and situations where the architecture may not be the most suitable choice.
+
+"Other Opinions," which presented supplementary perspectives and thoughts, was a less-discussed topic due to its inclusion of only 3 references. The data is depicted in Figure~\ref{fig:quantitativeSummaryForExpertOpinion}.
+
+
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\textwidth]{images/Quantitative-Summary-For-Codes.png}
+  \caption{Quantitative Summary For Expert Opinion}
+  \label{fig:quantitativeSummaryForExpertOpinion}
+\end{figure}
+
+
+Furthermore, after each interview, a survey containing questions related to each area, as specified in Section~\ref{expertOpinionSurvey}, is created and meant to be distributed to three experts. The survey formulates questions using a Likert scale that spans from 'Strongly Disagree' to 'Strongly Agree'. The experts' responses, which demonstrate a range of opinions, are converted into numerical numbers for a concise depiction in the table. The mappings are as follows:
+
+\begin{itemize}
+  \item Strongly Agree: 2
+  \item Agree: 1
+  \item Neither Agree or Disagree: 0
+  \item Disagree: -1
+  \item Strongly Disagree: -2
+\end{itemize}
+
+These results are depicted in Table~\ref{tab:expertOpinionSurveyResults}.
+
+\begin{table}[h]
+  \centering
+  \caption{Expert Opinions on the Metamycelium Architecture}
+  \begin{tabularx}{\textwidth}{l|X|X|X|X|X|X|X|X|X|X}
+  \toprule
+  \textbf{Interviewee} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} & \textbf{9} & \textbf{10} \\
+  \midrule
+  I1 & 1 & 1 & 0 & 1 & 2 & 1 & 0 & 2 & 1 & 1 \\
+  I3 & -1 & 1 & 0 & -1 & -1 & 2 & 2 & 2 & 1 & 1 \\
+  I2 & 2 & 2 & 2 & 2 & 2 & 1 & -1 & 1 & 2 & 2 \\
+  \bottomrule
+  \end{tabularx}
+  \label{tab:expertOpinionSurveyResults}
+\end{table}
+
+
+\section{Synthesis and Reflection} \label{expertOpinion_synthesisReflection}
+
+
+Experts have praised the efficiency, scalability, and effectiveness of the proposed architectural approach for handling complex operations. The architecture's ability to align with primary assumptions, handle varied scales of data, and deliver effective results in practical applications is a testament to its practical potency. However, there are areas of concern or potential limitations, such as the nascent stage of the architecture and the potential for evolution.
+
+Challenges like intricate data dependencies, ownership issues, and the fluid nature of data ecosystems are highlighted. Solutions like incorporating immutability and bi-temporality are discussed to address these issues. The balance between analytical and operational intents and their influence on interfacing with business processes is also explored.
+
+Data ownership, privacy, and governance are also discussed, with techniques like streaming between domains ensuring up-to-date data flow. The importance of customized data governance approaches and evolving governance requirements is crucial for Metamycelium's successful implementation and adoption.
+
+Future implications of the current reference architecture include its inherent complexity, which requires specialized skills and understanding that may not be readily accessible, particularly in organizations with limited resources or expertise. Aligning technology with human and organizational dynamics is crucial for Metamycelium's successful implementation and adoption.
+
+Not all organizations operate on a microservices architecture or adopt a fully domain-driven approach, as many still rely on legacy systems built with Java, PHP, and Fortran, which may not seamlessly integrate with or support the advanced paradigms proposed by Metamycelium. The complexity of Metamycelium's architecture is further intensified by the sheer number of components within its architecture, each adding to the complexity of implementation.
+
+The implementation of Metamycelium's comprehensive suite of components, such as IAM and secret management, presents substantial cost and time implications for organisations. To fully deploy all aspects of Metamycelium, an organization would need to invest significantly in resources and manpower, and integrate a variety of open-source technologies, which may not always have compatible interfaces. This not only extends the time and financial investment required but also necessitates a strategic approach to select and harmonize these technologies effectively within the existing organizational infrastructure.
+
+\subsection{Final Notes}
+
+The Metamycelium RA is a data management architecture that combines domain-driven design with event-driven communication, enhancing its applicability in data management challenges. It incorporates features like Data Lichen, bitemporality, and immutability, demonstrating an adaptive approach to the evolving landscape of data processing. The architecture has received positive feedback from experts, including professionals from leading data and eventing solutions companies. However, the Metamycelium faces challenges, including its complexity, which requires significant investment in skill development and training, which may be a barrier for organizations lacking resources or unwilling to undergo transformation. The lack of open-source support for components like Data Lichen adds to this challenge. The architecture's technical merits are acknowledged for its robustness and innovation, but it also requires a deep understanding of organizational culture, team dynamics, and change management strategies. The forthcoming chapter will analyze and synthesize the research findings, contextualizing them within the broader academic and practical landscape of big data systems.
 
 
 \section{Discussion}
