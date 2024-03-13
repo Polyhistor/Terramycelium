@@ -20,12 +20,6 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{AtaeiACIS}
-P.~Ataei and A.~Litchfield, ``Big data reference architectures: A systematic literature review,'' in \emph{2020 31st Australasian Conference on Information Systems (ACIS)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2020, pp. 1--11.
-
-\bibitem{DataMesh}
-Z.~Dehghani, \emph{Data Mesh: Delivering Data-Driven Value at Scale}.\hskip 1em plus 0.5em minus 0.4em\relax O'Reilly Media, 2022.
-
 \bibitem{ataei2023towards}
 P.~Ataei and A.~Litchfield, ``Towards a domain-driven distributed reference architecture for big data systems,'' in \emph{AMCIS 2023}, 2023.
 
