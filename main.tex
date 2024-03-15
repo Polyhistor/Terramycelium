@@ -480,7 +480,7 @@ Without a well-established big data strategy, companies may struggle to navigate
 
 To this end, this study presents TerraMycelium, a RA designed specifically for BD systems based on the principles of complex adaptive systems, domain-driven design, distributed systems and event-driven systems. TerraMycelium seeks to surpass the constraints of current RAs by utilising domain-driven and distributed approaches derived from contemporary software engineering \cite{ataei2023application}. This method aims to improve the ability of BD systems to scale, be maintained, and evolve, surpassing the constraints of traditional monolithic data architectures.
 
-The paper is structured as follows: Section~\ref{sec:background} provides an overview of the foundational concepts and technologies pertinent to BD reference architecture, aiming to forge a conceptual framework that is required for this paper. An overview of the existing research on the topic is presented in Section~\ref{sec:related_work}. The significance of reference architectures in the context of big data is explored in Section~\ref{sec:why_reference_architectures}. Section~\ref{sec:software_and_system_requirements} details the software and system requirements necessary for implementing the proposed architecture. Section~\ref{sec:theory} delves into the theoretical foundation underpinning the challenges in contemporary big data systems. The design and development of the TerraMycelium artefact are described in Section~\ref{sec:artefact}. Section~\ref{sec:discussion} examines the evaluation findings, their implications, limitations, and relevance to existing and future research. In Section~\ref{sec:discussion} the findings of the study are critically analysed and future direction is depicted. Finally, Section~\ref{sec:conclusion} summarises the main contributions of the study, its practical implications, and suggests directions for future research.
+The paper is structured as follows: Section~\ref{sec:background} provides an overview of the foundational concepts and technologies pertinent to BD reference architecture, aiming to forge a conceptual framework that is required for this paper. An overview of the existing research on the topic is presented in Section~\ref{sec:related_work}. The significance of reference architectures in the context of big data is explored in Section~\ref{sec:why_reference_architectures}. Section~\ref{sec:software_and_system_requirements} details the software and system requirements necessary for implementing the proposed architecture. Section~\ref{sec:theory} delves into the theoretical foundation underpinning the challenges in contemporary big data systems. The design and development of the TerraMycelium artefact are described in Section~\ref{sec:artifact}. Section~\ref{sec:discussion} examines the evaluation findings, their implications, limitations, and relevance to existing and future research. In Section~\ref{sec:discussion} the findings of the study are critically analysed and future direction is depicted. Finally, Section~\ref{sec:conclusion} summarises the main contributions of the study, its practical implications, and suggests directions for future research.
 
 \section{Background} \label{sec:background} 
 
@@ -823,8 +823,7 @@ The Metamycelium design emphasises the advantages of microservices, focusing on 
   \end{tabular}
 \end{table}
 
-\section{Artifact}
-\label{sec:artifact}
+\section{Artifact} \label{sec:artifact}
 
 After exploring several kernel and design theories, a solid theoretical foundation is established for creating and developing the artefact. Metamycelium is generated using Archimate and mostly showcases the RA within the technological layer. The architect has the responsibility to determine the flow and application that should be present in each node when showcasing these services in the technology layer. To ensure thoroughness, a basic business process is assumed as every software is created to fulfil a business requirement. Metamycelium should possess the flexibility needed to accommodate alternative business models, notwithstanding potential variations in the business layer across different settings.
 
@@ -2175,7 +2174,7 @@ The implementation of Metamycelium's comprehensive suite of components, such as 
 The Metamycelium RA is a data management architecture that combines domain-driven design with event-driven communication, enhancing its applicability in data management challenges. It incorporates features like Data Lichen, bitemporality, and immutability, demonstrating an adaptive approach to the evolving landscape of data processing. The architecture has received positive feedback from experts, including professionals from leading data and eventing solutions companies. However, the Metamycelium faces challenges, including its complexity, which requires significant investment in skill development and training, which may be a barrier for organizations lacking resources or unwilling to undergo transformation. The lack of open-source support for components like Data Lichen adds to this challenge. The architecture's technical merits are acknowledged for its robustness and innovation, but it also requires a deep understanding of organizational culture, team dynamics, and change management strategies. The forthcoming chapter will analyze and synthesize the research findings, contextualizing them within the broader academic and practical landscape of big data systems.
 
 
-\section{Discussion}
+\section{Discussion} \label{sec:discussion}
 
 This study's exploration of the Terramycelium RA unveils a novel approach to managing the intricacies of BD systems. Utilizing a complex adaptive system model, Terramycelium advances a distributed, domain-driven architecture, aiming to enhance scalability, maintainability, and adaptability beyond what traditional monolithic architectures offer. This initiative is commendable for its effort to reconcile the inherent volatility and diversity of BD with the principles of modern software engineering. However, the real-world applicability and scalability of such an architecture across varying domains and data scales remain to be rigorously tested.
 
@@ -2189,7 +2188,7 @@ Future research directions proposed for integrating Terramycelium with emerging 
 
 
 
-\section{Conclusion}
+\section{Conclusion} \label{sec:conclusion}
 
 This study introduced Terramycelium, a RA for BD systems, utilizing a distributed, domain-driven approach. Evaluation through prototyping suggests that Terramycelium may improve scalability, maintainability, and adaptability, offering an alternative to traditional architectures.
 
