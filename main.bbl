@@ -53,11 +53,32 @@ R.~Cloutier, G.~Muller, D.~Verma, R.~Nilchiani, E.~Hole, and M.~Bone, ``The conc
 \bibitem{ataei2023application}
 P.~Ataei and D.~Staegemann, ``Application of microservices patterns to big data systems,'' \emph{Journal of Big Data}, vol.~10, no.~1, pp. 1--49, 2023.
 
+\bibitem{Kaisler2013}
+S.~Kaisler, F.~Armour, J.~A. Espinosa, and W.~Money, ``Big data: Issues and challenges moving forward,'' in \emph{2013 46th Hawaii International Conference on System Sciences}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2013, Conference Proceedings, pp. 995--1004.
+
+\bibitem{Srivastava2016}
+K.~Srivastava and N.~Shekokar, ``A polyglot persistence approach for e-commerce business model,'' in \emph{2016 International Conference on Information Science (ICIS)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2016, Conference Proceedings, pp. 7--11.
+
 \bibitem{Sagiroglu2013}
 S.~Sagiroglu and D.~Sinanc, ``Big data: A review,'' in \emph{2013 International Conference on Collaboration Technologies and Systems (CTS)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2013, Conference Proceedings, pp. 42--47.
 
 \bibitem{Chen2012}
 H.~Chen, R.~H. Chiang, and V.~C. Storey, ``Business intelligence and analytics: From big data to big impact,'' \emph{MIS quarterly}, vol.~36, no.~4, p. 1165, 2012.
+
+\bibitem{AtaeiHype}
+B.~B. Rada, P.~Ataeib, Y.~Khakbizc, and N.~Akbarzadehd, ``The hype of emerging technologies: Big data as a service,'' \emph{Int. J. Control Theory Appl}, 2017.
+
+\bibitem{Amatriain2013}
+X.~Amatriain, ``Beyond data: from user information to business value through personalized recommendations and consumer science.''\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2013, Conference Proceedings, pp. 2201--2208.
+
+\bibitem{wang2020response}
+C.~J. Wang, C.~Y. Ng, and R.~H. Brook, ``Response to covid-19 in taiwan: big data analytics, new technology, and proactive testing,'' \emph{Jama}, vol. 323, no.~14, pp. 1341--1342, 2020.
+
+\bibitem{Marr2016}
+B.~Marr, \emph{Big data in practice: how 45 successful companies used big data analytics to deliver extraordinary results}.\hskip 1em plus 0.5em minus 0.4em\relax John Wiley and Sons, 2016.
+
+\bibitem{rad2017big}
+B.~B. Rad and P.~Ataei, ``The big data ecosystem and its environs,'' \emph{International Journal of Computer Science and Network Security (IJCSNS)}, vol.~17, no.~3, p.~38, 2017.
 
 \bibitem{bucchiarone2020microservices}
 A.~Bucchiarone, N.~Dragoni, S.~Dustdar, P.~Lago, M.~Mazzara, V.~Rivera, and A.~Sadovykh, ``Microservices,'' \emph{Science and Engineering. Springer}, 2020.
@@ -109,9 +130,6 @@ J.~Al-Jaroodi and N.~Mohamed, ``Characteristics and requirements of big data ana
 
 \bibitem{Bahrami2015}
 M.~Bahrami and M.~Singhal, \emph{The role of cloud computing architecture in big data}.\hskip 1em plus 0.5em minus 0.4em\relax Springer, 2015, pp. 275--295.
-
-\bibitem{rad2017big}
-B.~B. Rad and P.~Ataei, ``The big data ecosystem and its environs,'' \emph{International Journal of Computer Science and Network Security (IJCSNS)}, vol.~17, no.~3, p.~38, 2017.
 
 \bibitem{Chen2016a}
 H.-M. Chen, R.~Kazman, and S.~Haziyev, ``Agile big data analytics development: An architecture-centric approach,'' in \emph{2016 49th Hawaii International Conference on System Sciences (HICSS)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2016, Conference Proceedings, pp. 5378--5387.
