@@ -51,7 +51,7 @@
 
 \documentclass[journal]{IEEEtran}
 
-\usepackage{cite}
+
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{algorithmic}
 \usepackage{graphicx}
@@ -61,6 +61,8 @@
 \usepackage{multirow}
 \usepackage{tabularx}
 \usepackage{rotating}
+\usepackage[numbers]{natbib}
+
 %
 % If IEEEtran.cls has not been installed into the LaTeX system files,
 % manually specify the path to it like:
@@ -437,8 +439,10 @@
 % As a general rule, do not put math, special symbols or citations
 % in the abstract or keywords.
 \begin{abstract}
-  Big Data is a nascent term that emerged to describe a large amount of data that comes in different forms from various channels. In the modern world, users are the ceaseless generators of structured, semi-structured, and unstructured data that, if gleaned and crunched precisely, will reveal game-changing patterns. While opportunities exist with big data, the unprecedented amount of data has brought traditional approaches to a bottleneck, and the growth of data is outpacing technological and scientific advances in data analytics. It is estimated that approximately 75\% of the big data projects have failed within the last decade, according to multiple sources. Among the challenges, system development and data architecture are prominent. This paper aims to facilitate big data system development and architecture by conducting a systematic literature review on big data reference architectures. The primary goal is to highlight the state of big data reference architectures and how they can be helpful for big data system development. The secondary goal is to find all big data reference architectures, describe the challenges of creating these reference architectures, discuss the common architectural components of these reference architectures, and discuss the limitations of these reference architectures. As a result of this work, major concepts about reference architectures are discussed, and their applicability to big data system development is depicted. Secondly, 22 big data reference architectures are assessed from academia and practise, and their commonalities, challenges, and limitations are identified. The findings shed light on the understanding that RAs can be an effective artefact to tackle complex BD system development.
+  Big Data is a nascent term that emerged to describe a large amount of data that comes in different forms from various channels. In the modern world, users are the ceaseless generators of structured, semi-structured, and unstructured data that, if gleaned and crunched precisely, will reveal game-changing patterns. While opportunities exist with big data, the unprecedented amount of data has brought traditional approaches to a bottleneck, and the growth of data is outpacing technological and scientific advances in data analytics. It is estimated that approximately 75\% of the big data projects have failed within the last decade, according to multiple sources. Among the challenges, system development and data architecture are prominent. This paper aims to address these challenges by introducing a novel big data reference architecture. This reference architecture is developed absorbing the principles of complex adaptive systems, domain-driven design, distributed systems and event-driven systems. The refence architecture is developed following the guidelines of creating empirically grounded reference architectures and is evaluated using two distinct methods: case-mechanism experiment and expert opinion. The results of the case-mechanism experiment demonstrates the artifact's capabality in meeting the requirements of big data systems, while being highly maintainble and scalable. Moreover, the feedback collected from the experts presents that Terramycelium offers advantages for organisations committed to big data, yet its alignment with organisational cultures or structures varies.
 \end{abstract}
+
+
 
 % Note that keywords are not normally used for peerreview papers.
 \begin{IEEEkeywords}
@@ -563,7 +567,7 @@ Using Archimate's various viewpoints offered a comprehensive perspective on the 
 
 Integrating variability into RAs is crucial to ensure its application within organizational-specific legislation and regional policies. Variability management is essential in Business Process Management (BPM) and Software Product Line Engineering (SPLE) to customise business processes and software artefacts according to specific contextual requirements.
 
-Accurate identification and clear communication of variability are essential to encourage stakeholder discussion, maintain decision traceability, and aid the decision-making process \cite{czarnecki2012cool}. Data collected in previous analytical steps informs variability decision points. \cite{galster2011empirically} outline three approaches to include variability into RAs: annotating the RA, constructing variability views, and forming variability models.
+Accurate identification and clear communication of variability are essential to encourage stakeholder discussion, maintain decision traceability, and aid the decision-making process \cite{czarnecki2012cool}. Data collected in previous analytical steps informs variability decision points. \cite{GALSTER2011Empirically} outline three approaches to include variability into RAs: annotating the RA, constructing variability views, and forming variability models.
 
 Current literature lacks in-depth information on the criteria for choosing a method to facilitate variability. This study utilises Archimate annotations to incorporate variability into the RA, following the method proposed by Rurua (2019). The technique involves two stages: first, developing a customised layer to encompass fundamental variability principles, and second, annotating the RA. The aim is not to list every possible variability point, but to highlight the main architectural variabilities associated to the system for architects to consider in order to improve the design and make it easier to implement the RA.
 
