@@ -719,6 +719,8 @@ INPUT /opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/tfm/adobe/t
 INPUT /opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/vf/adobe/times/ptmr7t.vf
 INPUT /opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/vf/adobe/times/ptmri7t.vf
 INPUT /opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
+INPUT /opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf
+INPUT /opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
 INPUT /opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/tfm/adobe/times/ptmrc7t.tfm
 INPUT /opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT /opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
@@ -751,8 +753,6 @@ INPUT ./images/data-planes.png
 INPUT /opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/vf/adobe/times/ptmr7t.vf
 INPUT /opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/vf/adobe/times/ptmrc7t.vf
 INPUT /opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
-INPUT /opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf
-INPUT /opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
 INPUT /opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf
 INPUT /opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
 INPUT /opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
@@ -890,13 +890,13 @@ INPUT ./images/memory-utilization-in-weather-domain-in-streaming-case.png
 INPUT images/memory-utilization-in-weather-domain-in-streaming-case.png
 INPUT ./images/memory-utilization-in-weather-domain-in-streaming-case.png
 INPUT ./images/memory-utilization-in-weather-domain-in-streaming-case.png
+INPUT /opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf
+INPUT /opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
 INPUT ./images/kafka-ingestion-latency-sum-streaming-case.png
 INPUT ./images/kafka-ingestion-latency-sum-streaming-case.png
 INPUT images/kafka-ingestion-latency-sum-streaming-case.png
 INPUT ./images/kafka-ingestion-latency-sum-streaming-case.png
 INPUT ./images/kafka-ingestion-latency-sum-streaming-case.png
-INPUT /opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf
-INPUT /opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
 INPUT ./images/processing-duration-streaming-case-in-weather-domain.png
 INPUT ./images/processing-duration-streaming-case-in-weather-domain.png
 INPUT images/processing-duration-streaming-case-in-weather-domain.png

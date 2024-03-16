@@ -164,6 +164,23 @@ K.~Czarnecki, P.~Gr{\"u}nbacher, R.~Rabiser, K.~Schmid, and A.~Wasowski, ``Cool 
 \bibitem{rurua2019representing}
 N.~Rurua, R.~Eshuis, and M.~Razavian, ``Representing variability in enterprise architecture,'' \emph{Business \& Information Systems Engineering}, vol.~61, no.~2, pp. 215--227, 2019.
 
+\bibitem{Galster2011}
+M.~Galster and P.~Avgeriou, ``Empirically-grounded reference architectures: a proposal,'' in \emph{Proceedings of the joint ACM SIGSOFT conference--QoSA and ACM SIGSOFT symposium--ISARCS on Quality of software architectures--QoSA and architecting critical systems--ISARCS}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2011, Conference Proceedings, pp. 153--158.
+
+\bibitem{kazman1994saam}
+R.~Kazman, L.~Bass, G.~Abowd, and M.~Webb, ``Saam: A method for analyzing the properties of software architectures,'' in \emph{Proceedings of 16th International Conference on Software Engineering}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 1994, pp. 81--90.
+
+\bibitem{Williams2002}
+L.~G. Williams and C.~U. Smith, ``Pasasm: a method for the performance assessment of software architectures,'' in \emph{Proceedings of the 3rd international workshop on Software and performance}, 2002, Conference Proceedings, pp. 179--189.
+
+\bibitem{KazmanATAM}
+R.~Kazman, M.~Klein, M.~Barbacci, T.~Longstaff, H.~Lipson, and J.~Carriere, ``The architecture tradeoff analysis method,'' in \emph{Proceedings. Fourth IEEE International Conference on Engineering of Complex Computer Systems (Cat. No. 98EX193)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 1998, Conference Proceedings, pp. 68--78.
+
+\bibitem{Iso18384-1}
+\BIBentryALTinterwordspacing
+I.~ISO, ``Information technology — reference architecture for service oriented architecture (soa ra) — part 1: Terminology and concepts for soa,'' \emph{International Organization for Standardization}, p.~51, 2016. [Online]. Available: \url{https://www.iso.org/standard/63104.html}
+\BIBentrySTDinterwordspacing
+
 \bibitem{sommerville2011software}
 I.~Sommerville, \emph{Software Engineering, 9/E}.\hskip 1em plus 0.5em minus 0.4em\relax Pearson Education India, 2011.
 
