@@ -80,11 +80,45 @@ B.~Marr, \emph{Big data in practice: how 45 successful companies used big data a
 \bibitem{rad2017big}
 B.~B. Rad and P.~Ataei, ``The big data ecosystem and its environs,'' \emph{International Journal of Computer Science and Network Security (IJCSNS)}, vol.~17, no.~3, p.~38, 2017.
 
+\bibitem{OATH}
+\BIBentryALTinterwordspacing
+OATH, ``Oath reference architecture, release 2.0 initiative for open authentication,'' \emph{OATH}, 2007. [Online]. Available: \url{https://openauthentication.org/wp-content/uploads/2015/09/ReferenceArchitectureVersion2.pdf}
+\BIBentrySTDinterwordspacing
+
+\bibitem{ANSI}
+A.~ANSI, ``X3/sparc study group on dbms, interim report,'' \emph{SIGMOD FDT Bull}, vol.~7, no.~2, 1975.
+
 \bibitem{bucchiarone2020microservices}
 A.~Bucchiarone, N.~Dragoni, S.~Dustdar, P.~Lago, M.~Mazzara, V.~Rivera, and A.~Sadovykh, ``Microservices,'' \emph{Science and Engineering. Springer}, 2020.
 
 \bibitem{newman2021building}
 S.~Newman, \emph{Building microservices}.\hskip 1em plus 0.5em minus 0.4em\relax " O'Reilly Media, Inc.", 2021.
+
+\bibitem{richardson2018microservices}
+C.~Richardson, \emph{Microservices patterns: with examples in Java}.\hskip 1em plus 0.5em minus 0.4em\relax Simon and Schuster, 2018.
+
+\bibitem{Coulouris2005}
+G.~Coulouris, J.~Dollimore, and T.~Kindberg, \emph{Distributed Systems: Concepts and Design}, 4th~ed.\hskip 1em plus 0.5em minus 0.4em\relax Addison-Wesley, 2005.
+
+\bibitem{kiran2015lambda}
+M.~Kiran, P.~Murphy, I.~Monga, J.~Dugan, and S.~S. Baveja, ``Lambda architecture for cost-effective batch and speed big data processing,'' in \emph{2015 IEEE International Conference on Big Data (Big Data)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2015, pp. 2785--2792.
+
+\bibitem{kreps2014}
+\BIBentryALTinterwordspacing
+J.~Kreps, ``Questioning the lambda architecture,'' Blog post, 2014. [Online]. Available: \url{https://www.oreilly.com/radar/questioning-the-lambda-architecture/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{klein2016reference}
+J.~Klein, R.~Buglak, D.~Blockow, T.~Wuttke, and B.~Cooper, ``A reference architecture for big data systems in the national security domain,'' in \emph{2016 IEEE/ACM 2nd International Workshop on Big Data Software Engineering (BIGDSE)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2016, pp. 51--57.
+
+\bibitem{quintero2019ibm}
+D.~Quintero, F.~N. Lee \emph{et~al.}, \emph{IBM reference architecture for high performance data and AI in healthcare and life sciences}.\hskip 1em plus 0.5em minus 0.4em\relax IBM Redbooks, 2019.
+
+\bibitem{viana2014proposal}
+P.~Viana and L.~Sato, ``A proposal for a reference architecture for long-term archiving, preservation, and retrieval of big data,'' in \emph{2014 IEEE 13th International Conference on Trust, Security and Privacy in Computing and Communications}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2014, pp. 622--629.
+
+\bibitem{paakkonen2015reference}
+P.~P{\"a}{\"a}kk{\"o}nen and D.~Pakkala, ``Reference architecture and classification of technologies, products and services for big data systems,'' \emph{Big data research}, vol.~2, no.~4, pp. 166--186, 2015.
 
 \bibitem{wg2015iso}
 ``{ISO/IEC} 26550: 2015-software and systems engineering--reference model for product line engineering and management,'' 2015.
