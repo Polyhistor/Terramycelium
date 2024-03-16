@@ -205,11 +205,28 @@ H.~Eridaputra, B.~Hendradjaya, and W.~D. Sunindyo, ``Modeling the requirements f
 \bibitem{al2016characteristics}
 J.~Al-Jaroodi and N.~Mohamed, ``Characteristics and requirements of big data analytics applications,'' in \emph{2016 IEEE 2nd International Conference on Collaboration and Internet Computing (CIC)}, 2016, pp. 426--432.
 
+\bibitem{Rada2017}
+B.~B. Rada, P.~Ataeib, Y.~Khakbizc, and N.~Akbarzadehd, ``The hype of emerging technologies: Big data as a service,'' \emph{Int. J. Control Theory Appl}, vol.~9, no.~43, pp. 1--18, 2017.
+
 \bibitem{Bahrami2015}
 M.~Bahrami and M.~Singhal, \emph{The role of cloud computing architecture in big data}.\hskip 1em plus 0.5em minus 0.4em\relax Springer, 2015, pp. 275--295.
 
-\bibitem{Chen2016a}
-H.-M. Chen, R.~Kazman, and S.~Haziyev, ``Agile big data analytics development: An architecture-centric approach,'' in \emph{2016 49th Hawaii International Conference on System Sciences (HICSS)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2016, Conference Proceedings, pp. 5378--5387.
+\bibitem{chang2015nist}
+W.~L. Chang, N.~Grady \emph{et~al.}, ``Nist big data interoperability framework: volume 1, big data definitions,'' National Institute of Standards and Technology, Gaithersburg, MD, USA, Tech. Rep., 2015.
+
+\bibitem{kassab2014state}
+M.~Kassab, C.~Neill, and P.~Laplante, ``State of practice in requirements engineering: contemporary data,'' \emph{Innovations in Systems and Software Engineering}, vol.~10, no.~4, pp. 235--241, 2014.
+
+\bibitem{ISO29148}
+\BIBentryALTinterwordspacing
+ISO/IEC, ``Iso/iec 29148:2018. systems and software engineering --- life cycle processes --- requirements engineering,'' 2018. [Online]. Available: \url{https://www.iso.org/standard/72089.html}
+\BIBentrySTDinterwordspacing
+
+\bibitem{NASA}
+NASA, ``Reference architecture for space data systems,'' 2008.
+
+\bibitem{abran2004software}
+A.~Abran, J.~W. Moore, P.~Bourque, R.~Dupuis, and L.~Tripp, ``Software engineering body of knowledge,'' \emph{IEEE Computer Society, Angela Burgess}, p.~25, 2004.
 
 \bibitem{laigner2021data}
 R.~Laigner, Y.~Zhou, M.~A.~V. Salles, Y.~Liu, and M.~Kalinowski, ``Data management in microservices: State of the practice, challenges, and research directions,'' \emph{arXiv preprint arXiv:2103.00170}, 2021.
