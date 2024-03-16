@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Homebrew) (preloaded format=pdflatex 2023.6.22)  16 MAR 2024 21:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Homebrew) (preloaded format=pdflatex 2023.6.22)  16 MAR 2024 21:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -474,7 +474,11 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 652.
  (/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [6]
+)
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[6]
 <images/data-planes.png, id=451, 907.13907pt x 383.18156pt>
 File: images/data-planes.png Graphic file (type png)
 <use images/data-planes.png>
