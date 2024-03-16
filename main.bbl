@@ -147,8 +147,22 @@ R.~J. Wieringa, \emph{Design science methodology for information systems and sof
 \bibitem{nakagawa2012ramodel}
 E.~Y. Nakagawa, F.~Oquendo, and M.~Becker, ``Ramodel: A reference model for reference architectures,'' in \emph{2012 Joint Working IEEE/IFIP Conference on Software Architecture and European Conference on Software Architecture}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2012, pp. 297--301.
 
+\bibitem{angelov2009classification}
+S.~Angelov, P.~Grefen, and D.~Greefhorst, ``A classification of software reference architectures: Analyzing their success and effectiveness,'' in \emph{2009 Joint Working IEEE/IFIP Conference on Software Architecture \& European Conference on Software Architecture}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2009, pp. 141--150.
+
+\bibitem{angelov2012framework}
+------, ``A framework for analysis and design of software reference architectures,'' \emph{Information and Software Technology}, vol.~54, no.~4, pp. 417--431, 2012.
+
+\bibitem{ISO42010}
+\BIBentryALTinterwordspacing
+I.~International Organization~for Standardization~(ISO/IEC), ``Iso/iec/ieee 42010:2011,'' 2017. [Online]. Available: \url{https://www.iso.org/standard/50508.html}
+\BIBentrySTDinterwordspacing
+
 \bibitem{czarnecki2012cool}
 K.~Czarnecki, P.~Gr{\"u}nbacher, R.~Rabiser, K.~Schmid, and A.~Wasowski, ``Cool features and tough decisions: a comparison of variability modeling approaches,'' in \emph{Proceedings of the sixth international workshop on variability modeling of software-intensive systems}, 2012, pp. 173--182.
+
+\bibitem{rurua2019representing}
+N.~Rurua, R.~Eshuis, and M.~Razavian, ``Representing variability in enterprise architecture,'' \emph{Business \& Information Systems Engineering}, vol.~61, no.~2, pp. 215--227, 2019.
 
 \bibitem{sommerville2011software}
 I.~Sommerville, \emph{Software Engineering, 9/E}.\hskip 1em plus 0.5em minus 0.4em\relax Pearson Education India, 2011.

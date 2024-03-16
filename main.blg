@@ -14,45 +14,45 @@ Database file #1: bibfile.bib
 Warning--empty booktitle in Amatriain2013
 
 Done.
-You've used 59 entries,
+You've used 63 entries,
             4087 wiz_defined-function locations,
-            1148 strings with 17874 characters,
-and the built_in function-call counts, 36942 in all, are:
-= -- 2864
-> -- 851
-< -- 225
-+ -- 459
-- -- 164
-* -- 1641
-:= -- 5668
-add.period$ -- 130
-call.type$ -- 59
-change.case$ -- 50
-chr.to.int$ -- 540
-cite$ -- 60
-duplicate$ -- 2764
-empty$ -- 3344
-format.name$ -- 197
-if$ -- 8646
+            1169 strings with 18617 characters,
+and the built_in function-call counts, 40102 in all, are:
+= -- 3127
+> -- 918
+< -- 256
++ -- 497
+- -- 174
+* -- 1791
+:= -- 6136
+add.period$ -- 139
+call.type$ -- 63
+change.case$ -- 54
+chr.to.int$ -- 612
+cite$ -- 64
+duplicate$ -- 2985
+empty$ -- 3591
+format.name$ -- 210
+if$ -- 9386
 int.to.chr$ -- 0
-int.to.str$ -- 59
-missing$ -- 513
-newline$ -- 216
-num.names$ -- 58
-pop$ -- 1323
+int.to.str$ -- 63
+missing$ -- 550
+newline$ -- 230
+num.names$ -- 62
+pop$ -- 1407
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 2898
+skip$ -- 3142
 stack$ -- 0
-substring$ -- 1327
-swap$ -- 2007
-text.length$ -- 45
+substring$ -- 1499
+swap$ -- 2195
+text.length$ -- 52
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 59
+type$ -- 63
 warning$ -- 1
-while$ -- 149
-width$ -- 61
-write$ -- 556
+while$ -- 165
+width$ -- 65
+write$ -- 597
 (There was 1 warning)
