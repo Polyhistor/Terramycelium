@@ -120,23 +120,35 @@ P.~Viana and L.~Sato, ``A proposal for a reference architecture for long-term ar
 \bibitem{paakkonen2015reference}
 P.~P{\"a}{\"a}kk{\"o}nen and D.~Pakkala, ``Reference architecture and classification of technologies, products and services for big data systems,'' \emph{Big data research}, vol.~2, no.~4, pp. 166--186, 2015.
 
+\bibitem{bayer1999pulse}
+J.~Bayer, O.~Flege, P.~Knauber, R.~Laqua, D.~Muthig, K.~Schmid, T.~Widen, and J.-M. DeBaud, ``Pulse: A methodology to develop software product lines,'' in \emph{Proceedings of the 1999 symposium on Software reusability}, 1999, pp. 122--131.
+
+\bibitem{stricker2010creating}
+V.~Stricker, K.~Lauenroth, P.~Corte, F.~Gittler, S.~De~Panfilis, and K.~Pohl, ``Creating a reference architecture for service-based systems--a pattern-based approach,'' in \emph{Towards the Future Internet}.\hskip 1em plus 0.5em minus 0.4em\relax IOS Press, 2010, pp. 149--160.
+
+\bibitem{nakagawa2009towards}
+E.~Y. Nakagawa, R.~M. Martins, K.~R. Felizardo, and J.~C. Maldonado, ``Towards a process to design aspect-oriented reference architectures,'' in \emph{XXXV Latin American Informatics Conference (CLEI) 2009}, 2009.
+
 \bibitem{wg2015iso}
 ``{ISO/IEC} 26550: 2015-software and systems engineering--reference model for product line engineering and management,'' 2015.
 
 \bibitem{Derras}
 M.~Derras, L.~Deruelle, J.~M. Douin, N.~Levy, F.~Losavio, Y.~Pollet, and V.~Reiner, ``Reference architecture design: a practical approach,'' in \emph{13th International Conference on Software Technologies (ICSOFT)}.\hskip 1em plus 0.5em minus 0.4em\relax SciTePress-Science and Technology Publications, 2018, pp. 633--640.
 
-\bibitem{Nakagawa}
-E.~Y. Nakagawa, R.~M. Martins, K.~R. Felizardo, and J.~C. Maldonado, ``Towards a process to design aspect-oriented reference architectures,'' in \emph{XXXV Latin American Informatics Conference (CLEI) 2009}, 2009, Conference Proceedings.
-
-\bibitem{czarnecki2012cool}
-K.~Czarnecki, P.~Gr{\"u}nbacher, R.~Rabiser, K.~Schmid, and A.~Wasowski, ``Cool features and tough decisions: a comparison of variability modeling approaches,'' in \emph{Proceedings of the sixth international workshop on variability modeling of software-intensive systems}, 2012, pp. 173--182.
-
 \bibitem{GALSTER2011Empirically}
 M.~Galster and P.~Avgeriou, ``Empirically-grounded reference architectures: a proposal,'' \emph{Joint ACM}, 2011.
 
+\bibitem{Nakagawa}
+E.~Y. Nakagawa, R.~M. Martins, K.~R. Felizardo, and J.~C. Maldonado, ``Towards a process to design aspect-oriented reference architectures,'' in \emph{XXXV Latin American Informatics Conference (CLEI) 2009}, 2009, Conference Proceedings.
+
 \bibitem{wieringa2014design}
 R.~J. Wieringa, \emph{Design science methodology for information systems and software engineering}.\hskip 1em plus 0.5em minus 0.4em\relax Springer, 2014.
+
+\bibitem{nakagawa2012ramodel}
+E.~Y. Nakagawa, F.~Oquendo, and M.~Becker, ``Ramodel: A reference model for reference architectures,'' in \emph{2012 Joint Working IEEE/IFIP Conference on Software Architecture and European Conference on Software Architecture}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2012, pp. 297--301.
+
+\bibitem{czarnecki2012cool}
+K.~Czarnecki, P.~Gr{\"u}nbacher, R.~Rabiser, K.~Schmid, and A.~Wasowski, ``Cool features and tough decisions: a comparison of variability modeling approaches,'' in \emph{Proceedings of the sixth international workshop on variability modeling of software-intensive systems}, 2012, pp. 173--182.
 
 \bibitem{sommerville2011software}
 I.~Sommerville, \emph{Software Engineering, 9/E}.\hskip 1em plus 0.5em minus 0.4em\relax Pearson Education India, 2011.
