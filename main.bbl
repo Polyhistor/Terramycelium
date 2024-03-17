@@ -251,6 +251,9 @@ C.~Richardson, \emph{Microservices Patterns: With examples in Java}.\hskip 1em p
 \bibitem{Bode2023}
 A.~Bode and Others, ``The evolution of data architectures: From monoliths to meshes and fabrics,'' \emph{Journal of Data Engineering Innovation}, vol.~1, no.~1, pp. 100--115, 2023.
 
+\bibitem{kimball2013data}
+R.~Kimball and M.~Ross, \emph{The Data Warehouse Toolkit: The Definitive Guide to Dimensional Modeling}.\hskip 1em plus 0.5em minus 0.4em\relax Wiley, 2013.
+
 \bibitem{laigner2021data}
 R.~Laigner, Y.~Zhou, M.~A.~V. Salles, Y.~Liu, and M.~Kalinowski, ``Data management in microservices: State of the practice, challenges, and research directions,'' \emph{arXiv preprint arXiv:2103.00170}, 2021.
 

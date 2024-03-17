@@ -15,45 +15,45 @@ Warning--I didn't find a database entry for "ALMA"
 Warning--empty booktitle in Amatriain2013
 
 Done.
-You've used 80 entries,
+You've used 81 entries,
             4087 wiz_defined-function locations,
-            1263 strings with 21781 characters,
-and the built_in function-call counts, 50964 in all, are:
-= -- 3989
-> -- 1199
+            1267 strings with 21903 characters,
+and the built_in function-call counts, 51344 in all, are:
+= -- 4014
+> -- 1208
 < -- 317
-+ -- 644
-- -- 231
-* -- 2277
-:= -- 7838
-add.period$ -- 175
-call.type$ -- 80
++ -- 648
+- -- 233
+* -- 2290
+:= -- 7899
+add.period$ -- 177
+call.type$ -- 81
 change.case$ -- 69
 chr.to.int$ -- 741
-cite$ -- 81
-duplicate$ -- 3801
-empty$ -- 4519
-format.name$ -- 278
-if$ -- 11921
+cite$ -- 82
+duplicate$ -- 3831
+empty$ -- 4567
+format.name$ -- 281
+if$ -- 12012
 int.to.chr$ -- 0
-int.to.str$ -- 80
-missing$ -- 713
-newline$ -- 287
-num.names$ -- 79
-pop$ -- 1809
+int.to.str$ -- 81
+missing$ -- 719
+newline$ -- 290
+num.names$ -- 80
+pop$ -- 1829
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 3995
+skip$ -- 4028
 stack$ -- 0
 substring$ -- 1825
-swap$ -- 2806
+swap$ -- 2822
 text.length$ -- 70
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 80
+type$ -- 81
 warning$ -- 1
-while$ -- 209
-width$ -- 82
-write$ -- 760
+while$ -- 210
+width$ -- 83
+write$ -- 767
 (There were 2 warnings)
