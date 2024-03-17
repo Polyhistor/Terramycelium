@@ -254,14 +254,28 @@ A.~Bode and Others, ``The evolution of data architectures: From monoliths to mes
 \bibitem{kimball2013data}
 R.~Kimball and M.~Ross, \emph{The Data Warehouse Toolkit: The Definitive Guide to Dimensional Modeling}.\hskip 1em plus 0.5em minus 0.4em\relax Wiley, 2013.
 
-\bibitem{laigner2021data}
-R.~Laigner, Y.~Zhou, M.~A.~V. Salles, Y.~Liu, and M.~Kalinowski, ``Data management in microservices: State of the practice, challenges, and research directions,'' \emph{arXiv preprint arXiv:2103.00170}, 2021.
+\bibitem{popovivc2018impact}
+A.~Popovi{\v{c}}, R.~Hackney, R.~Tassabehji, and M.~Castelli, ``The impact of big data analytics on firms’ high value business performance,'' \emph{Information Systems Frontiers}, vol.~20, pp. 209--222, 2018.
+
+\bibitem{merson2020modeling}
+P.~Merson and J.~Yoder, ``Modeling microservices with ddd,'' in \emph{2020 IEEE International Conference on Software Architecture Companion (ICSA-C)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2020, pp. 7--8.
+
+\bibitem{evans2004domain}
+E.~Evans and E.~J. Evans, \emph{Domain-driven design: tackling complexity in the heart of software}.\hskip 1em plus 0.5em minus 0.4em\relax Addison-Wesley Professional, 2004.
 
 \bibitem{teamtopologiesSkelton}
 M.~Skelton and M.~Pais, \emph{Team Topologies: Organizing Business and Technology Teams for Fast Flow}.\hskip 1em plus 0.5em minus 0.4em\relax IT Revolution, 2019.
 
 \bibitem{sudhakar2012model}
 G.~P. Sudhakar, ``A model of critical success factors for software projects,'' \emph{Journal of Enterprise Information Management}, 2012.
+
+\bibitem{khrononov2021learning}
+\BIBentryALTinterwordspacing
+S.~Khrononov, \emph{Learning Domain-Driven Design: Aligning Your Architecture with the Business using Context Maps, Strategic Design, and Agile Techniques}.\hskip 1em plus 0.5em minus 0.4em\relax Birmingham, UK: Packt Publishing, 2021. [Online]. Available: \url{https://www.amazon.com/Learning-Domain-Driven-Design-Aligning-Architecture/dp/1098100131}
+\BIBentrySTDinterwordspacing
+
+\bibitem{reynolds1987flocks}
+C.~W. Reynolds, ``Flocks, herds and schools: A distributed behavioral model,'' in \emph{Proceedings of the 14th annual conference on Computer graphics and interactive techniques}, 1987, pp. 25--34.
 
 \bibitem{montesi2016circuit}
 F.~Montesi and J.~Weber, ``Circuit breakers, discovery, and api gateways in microservices,'' \emph{arXiv preprint arXiv:1609.05830}, 2016.
