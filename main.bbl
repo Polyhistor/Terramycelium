@@ -228,6 +228,29 @@ NASA, ``Reference architecture for space data systems,'' 2008.
 \bibitem{abran2004software}
 A.~Abran, J.~W. Moore, P.~Bourque, R.~Dupuis, and L.~Tripp, ``Software engineering body of knowledge,'' \emph{IEEE Computer Society, Angela Burgess}, p.~25, 2004.
 
+\bibitem{inflectionPoint}
+V.~Yadav, F.~Oury, N.~Suda, Z.~Liu, X.~Gao, C.~Confavreux, K.~Klemenhagen, K.~Tanaka, J.~Gingrich, X.~Guo, L.~Tecott, J.~Mann, R.~Hen, T.~Horváth, and G.~Karsenty, ``A serotonin-dependent mechanism explains the leptin regulation of bone mass, appetite, and energy expenditure,'' \emph{Cell}, vol. 138, pp. 976--989, 2009.
+
+\bibitem{Rose}
+J.~Rose, H.~Göbel, S.~Cronholm, J.~Holgersson, E.~Söderström, and C.~Hallqvist, ``Theory-based design principles for digital service innovation,'' \emph{E-Service Journal}, vol.~11, p.~1, 2019.
+
+\bibitem{DataMesh}
+Z.~Dehghani, \emph{Data Mesh: Delivering Data-Driven Value at Scale}.\hskip 1em plus 0.5em minus 0.4em\relax O'Reilly Media, 2022.
+
+\bibitem{richards2020fundamentals}
+M.~Richards and N.~Ford, \emph{Fundamentals of software architecture: an engineering approach}.\hskip 1em plus 0.5em minus 0.4em\relax O'Reilly Media, 2020.
+
+\bibitem{MicroServicesPatterns}
+\BIBentryALTinterwordspacing
+C.~Richardson, \emph{Microservices Patterns: With examples in Java}.\hskip 1em plus 0.5em minus 0.4em\relax Manning; 1st edition, 2018. [Online]. Available: \url{https://www.amazon.com/Microservices-Patterns-examples-Chris-Richardson/dp/1617294543/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=1648261674&sr=8-1}
+\BIBentrySTDinterwordspacing
+
+\bibitem{GartnerDataFabric2023}
+{Gartner}, ``Essential guide to data fabric,'' \url{https://www.gartner.com/en/publications/essential-guide-to-data-fabric}, 2023, accessed: 2023-03-15.
+
+\bibitem{Bode2023}
+A.~Bode and Others, ``The evolution of data architectures: From monoliths to meshes and fabrics,'' \emph{Journal of Data Engineering Innovation}, vol.~1, no.~1, pp. 100--115, 2023.
+
 \bibitem{laigner2021data}
 R.~Laigner, Y.~Zhou, M.~A.~V. Salles, Y.~Liu, and M.~Kalinowski, ``Data management in microservices: State of the practice, challenges, and research directions,'' \emph{arXiv preprint arXiv:2103.00170}, 2021.
 

@@ -644,7 +644,7 @@ After defining the types of requirements and identifying relevant requirements, 
 A systematic strategy for presenting software and system requirements that includes informal model verification techniques is recognised due to its established use in both business and academics \cite{kassab2014state}. The method for illustrating functional requirements adheres to the principles stated in the ISO/IEC/IEEE standard 29148 \cite{ISO29148}. The requirements representation is structured based on system modes, detailing the primary components of the system followed by the requirements. This technique is based on the requirement specification published for the NASA Wide-field InfraRed Explorer (WIRE) system \cite{NASA} and the Software Engineering Body of Knowledge (SEBoK) \cite{abran2004software}. The requirements are outlined in Table~\ref{table:systemRequirements}.
 
 
-\begin{table*}[h]
+\begin{table*}[ht]
   \renewcommand{\arraystretch}{1.3}
   \caption{Terramycelium Software and System Requirements}
   \label{table:systemRequirements}
@@ -661,19 +661,19 @@ A systematic strategy for presenting software and system requirements that inclu
   \hline
   Velocity & Vel-2 & System needs to stream data to data consumers in a timely manner. \\
   \hline
-  Velocity & Vel-4 & System needs to be able to ingest multiple, continuous, time-varying data streams. \\
+  Velocity & Vel-3 & System needs to be able to ingest multiple, continuous, time-varying data streams. \\
   \hline
-  Velocity & Vel-5 & System shall support fast search from streaming and processed data with high accuracy and relevancy. \\
+  Velocity & Vel-4 & System shall support fast search from streaming and processed data with high accuracy and relevancy. \\
   \hline
-  Velocity & Vel-6 & System should be able to process data in a real-time or near real-time manner. \\
+  Velocity & Vel-5 & System should be able to process data in a real-time or near real-time manner. \\
   \hline
   Variety & Var-1 & System needs to support data in various formats ranging from structured to semi-structured and unstructured data. \\
   \hline
-  Variety & Var-3 & System needs to support aggregation, standardization, and normalization of data from disparate sources. \\
+  Variety & Var-2 & System needs to support aggregation, standardization, and normalization of data from disparate sources. \\
   \hline
-  Variety & Var-4 & System shall support adaptation mechanisms for schema evolution. \\
+  Variety & Var-3 & System shall support adaptation mechanisms for schema evolution. \\
   \hline
-  Variety & Var-5 & System can provide mechanisms to automatically include new data sources. \\
+  Variety & Var-4 & System can provide mechanisms to automatically include new data sources. \\
   \hline
   Value & Val-1 & System needs to be able to handle compute-intensive analytical processing and machine learning techniques. \\
   \hline
@@ -700,15 +700,27 @@ A systematic strategy for presenting software and system requirements that inclu
 \section{Theory}
 \label{sec:theory}
 
-An inflection point in mathematics is a critical point where the curvature of a curve changes direction, indicating a shift from one behaviour to another. This significant moment is characterised by the breaking down of the previous structure and the appearance of a new shape. Currently, there are concrete indicators and factors that suggest a significant change is imminent. The 2023 New Vantage Partners research indicates that investments in data are increasing and staying robust, despite possible economic challenges. However, the survey indicates that only 23.9\% of organisations describe themselves as data-driven. Prior to delving into these design theories, it is crucial to establish a precise communication mechanism for architectural structures. This study utilises the architecture definition defined in ISO/IEC 42010, which defines architecture as the underlying concepts or properties of a system within its context, manifested in its elements, relationships, and design and evolution principles.
+An inflection point in mathematics is a critical point where the curvature of a curve changes direction, indicating a shift from one behaviour to another \cite{inflectionPoint}. This significant moment is characterised by the breaking down of the previous structure and the emergence of a new one. Currently, there are concrete indicators and factors that suggest a significant change is imminent. The 2023 New Vantage Partners research indicates that investments in data are increasing and staying robust, despite possible economic challenges \cite{newvantagepartners2023}. However, the survey indicates that only 23.9\% of organisations describe themselves as data-driven. 
+
+This chapter is aimed at delineating theories that underpin the artifact. These theories are referred to as \emph{design theories} in design science research \cite{Rose}. These theories form the basis of understanding the underlying pircinples that govern the design of Terramycelium.
+
+
+This study utilises the architecture definition defined in ISO/IEC 42010 \cite{ISO42010}, which defines architecture as the underlying concepts or properties of a system within its context, manifested in its elements, relationships, and design and evolution principles.
+
 
 \subsection{The monolith}
 
-The techniques and methods of data engineering have experienced rapid growth, similar to the Cambrian explosion, yet the fundamental assumptions guiding data designs have not been significantly questioned.
+The techniques and methods of data engineering have experienced rapid growth, similar to the Cambrian explosion, yet the fundamental assumptions guiding data designs have not been significantly questioned \cite{DataMesh}. As per Richards \cite{richards2020fundamentals}, architectures can be classified into two main categories: monolithic, deployed as a single entity, and distributed, consisting of individually deployed sub-components. Currently, the majority of data architectures fall under the first type \cite{ataei2022state}. 
 
-As per Richards (2020), architectures can be classified into two main categories: monolithic, deployed as a single entity, and distributed, consisting of individually deployed sub-components. Currently, the majority of data architectures fall under the first type. 
+Beginning with a monolith may be a straightforward and effective method for constructing a data-intensive system, but it becomes inadequate as the system grows. Although this notion is being questioned in the software engineering field with the emergence of microservices patterns \cite{MicroServicesPatterns}, data engineering continues to be influenced by monolithic designs. Enabler technologies like data warehouses and data lakes support these concepts. Furthermore, numerous groups and publications embrace the concept of a "single source of truth" \cite{ataei2022state}.
 
-Beginning with a monolith may be a straightforward and effective method for constructing a data-intensive system, but it becomes inadequate as the system grows. Although this notion is being questioned in the software engineering field, data engineering continues to be influenced by monolithic designs. Enabler technologies like data warehouses and data lakes support these concepts. Furthermore, numerous groups and publications embrace the concept of a "single source of truth."
+In contrast, modern data architecture paradigms like Data Mesh \cite{DataMesh} and Data Fabric \cite{GartnerDataFabric2023} and the works of Ataei et al. \cite{ataei2023towards} have gained traction as alternatives to monolithic designs. Data Mesh advocates for a decentralized approach to data management, where data ownership and governance are distributed across different domains or teams within an organization. This shift towards federated governance addresses some of the challenges associated with monolithic architectures, such as scalability, agility, and data silos \cite{Bode2023}.
+
+Data Fabric, on the other hand, emphasizes the seamless integration of data from various sources and formats, providing a unified view of data across an organization. By leveraging technologies like distributed computing, data virtualization, and metadata management, Data Fabric enables organizations to access and analyze data in real-time, regardless of its location or format. This approach enhances data agility, accessibility, and reliability, supporting the concept of a "single source of truth" \cite{Bode2023}.
+
+As organizations navigate the complexities of modern data ecosystems, the transition from monolithic designs to more agile and scalable architectures becomes imperative. These approaches offer a more flexible and decentralized model for managing data, aligning with the evolving needs of data engineering in today's dynamic and data-intensive environments.
+
+Reflecting on this transition, Terramycelium has taken a lesson from the shift towards more agile and scalable data architectures. Embracing a domain-driven distributed architecture, Terramycelium incorporates the concepts of complex adaptive systems and event-driven systems, signifying a move away from traditional, rigid structures towards a more adaptable and responsive data architecture model. This evolution marks a significant step forward in how data ecosystems are designed and managed, ensuring that Terramycelium remains at the forefront of data engineering innovation.
 
 \subsection{The data chasm}
 
