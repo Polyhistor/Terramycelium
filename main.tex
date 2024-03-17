@@ -800,9 +800,9 @@ The domain can retrieve data from other domains using a discovery mechanism, pro
 
 This aims to eliminate vertical dependency and enable teams to have local autonomy while being equipped with the appropriate amount of discovery and APIs. This architecture emphasises the concept of coequal nodes working together to accomplish the system's overarching objective, rather than relying on a centralised database managed by individuals lacking domain expertise. This idea is influenced by DDD as described by Evans \cite{evans2004domain}, Data Mesh by Dehghani \cite{DataMesh}, and microservices architecture by Newman \cite{newman2021building}.
 
-\subsubsection{Event driven services}
+\subsection{Event driven services}
 
-Metamycelium's decentralised and distributed structure poses difficulties in service communication as the network expands. At first, basic point-to-point communication via REST API calls is adequate, but it becomes inefficient as the system grows. Synchronous interactions can result in a 'distribution tax,' where one service's blocked state, generally caused by costly procedures, leads to delays in dependent services \cite{montesi2016circuit}.
+Terramycelium's decentralised and distributed structure poses difficulties in service communication as the network expands. At first, basic point-to-point communication via REST API calls is adequate, but it becomes inefficient as the system grows. Synchronous interactions can result in a 'distribution tax,' where one service's blocked state, generally caused by costly procedures, leads to delays in dependent services \cite{montesi2016circuit}.
 
 Distributed systems' extensive network requirements can lead to complications such as tail latency, context switching, and gridlocks. This strong interconnection contradicts the distributed system's objectives of independence and robustness.
 
