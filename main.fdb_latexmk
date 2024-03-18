@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex main"] 1710664893 "main.aux" "main.bbl" "main" 1710664905 0
-  "./bibfile.bib" 1710660970 255226 ad79c607ff5cfb838e7ace48283c0fdb ""
+["bibtex main"] 1710721887 "main.aux" "main.bbl" "main" 1710722502 0
+  "./bibfile.bib" 1710721770 255705 cca5377c0dcb1fd980f01a64a4247cab ""
   "./ieeetran.bst" 1710195440 57747 3d527d22adcaa16ca0abd0879d6fab1f ""
-  "main.aux" 1710664905 33033 2db95a137c1f6dfe6267d435c9ed0732 "pdflatex"
+  "main.aux" 1710722502 33165 3ed19c56ab8c2a4bab465c8d07991324 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1710664902 "/Users/pataei/Desktop/Projects/Terramycelium/main.tex" "main.pdf" "main" 1710664905 0
-  "/Users/pataei/Desktop/Projects/Terramycelium/main.tex" 1710664902 202873 7d8c5bdb7c038331e688dcd79b296f13 ""
+["pdflatex"] 1710722499 "/Users/pataei/Desktop/Projects/Terramycelium/main.tex" "main.pdf" "main" 1710722502 0
+  "/Users/pataei/Desktop/Projects/Terramycelium/main.tex" 1710722499 202859 9fc78f080bebf22ec8d78a859019590c ""
   "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/enc/dvips/base/8r.enc" 1678549815 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/map/fontname/texfonts.map" 1678549815 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/map/pdftex/updmap/pdftex.map" 1678549815 4609045 74543da1ab9350ba886fce0af49a2cfd ""
@@ -125,6 +125,8 @@
   "images/Memory-usage-for-various-services-in-kube.png" 1709764549 869489 700d49bea1af56233361d3088c1e154f ""
   "images/Metamycelium-identity-and-access-control.jpg" 1709539357 180131 199d197bb3f837749e42c652f8dda40d ""
   "images/Metamycelium.jpg" 1709538423 145676 1ffa56fa198bb792050245cda233e93c ""
+  "images/MetamyceliumConcrete.jpg" 1709710306 121692 921cc6bc0ed2564ca1f09cd54a5e3bd0 ""
+  "images/MetamyceliumServiceMesh.jpg" 1709538452 182543 62a6cd6e8b07fb495a656b56049747dc ""
   "images/OPA-istio-flow.png" 1709710444 48575 0142e5a3d4cbfc04dbd709dfd9e5e63a ""
   "images/Open-telemetry-service-CPU-usage.png" 1709711940 38654 29f8cade2194f804a655754866347194 ""
   "images/Quantitative-Summary-For-Codes.png" 1710317708 49901 51be4269182ccaf406c33c13ee4195d1 ""
@@ -143,8 +145,6 @@
   "images/memory-utilization-in-customer-domain-in-streaming-case.png" 1709764767 154840 6d60da37f0aac66396b5f1ca7f6080a5 ""
   "images/memory-utilization-in-data-scientist-application.png" 1709884732 107260 ff4c31d7e5ba854a6ca8f8cd30aed483 ""
   "images/memory-utilization-in-weather-domain-in-streaming-case.png" 1709764786 122286 0d30b593f952502c7db85323d60ca577 ""
-  "images/metamyceliumConcrete.jpg" 1709710306 121692 921cc6bc0ed2564ca1f09cd54a5e3bd0 ""
-  "images/metamyceliumServiceMesh.jpg" 1709538452 182543 62a6cd6e8b07fb495a656b56049747dc ""
   "images/number-of-errors-in-telemetry-processing-service.png" 1709764641 111152 2993e003b7087a44f7f1fe05f24b4587 ""
   "images/open-telemetry-flow.png" 1709711132 35428 05bf2f864958930cc36f33415f88c88b ""
   "images/open-telemetry-trace-example.png" 1709711170 85209 5cf40aaec4524f1e894524d13f8689e3 ""
@@ -152,10 +152,10 @@
   "images/query-processing-duration-in-data-science-application.png" 1709884782 95978 329de4a99b1ffeda57ee293a60e3efc2 ""
   "images/total-data-ingested-in-bytes.jpeg" 1709711513 48348 30460dadec5a50742329ab03b7ada8cc ""
   "images/weather-domain-ingested-data-in-bytes.png" 1709711576 74128 a28bb4e49320f617f2578bf3e7d57f45 ""
-  "main.aux" 1710664905 33033 2db95a137c1f6dfe6267d435c9ed0732 "pdflatex"
-  "main.bbl" 1710664893 20823 3ea07ddefbd2b39b71d18cef00fca92b "bibtex main"
-  "main.out" 1710664905 12326 a1e34f4e27514045bce15da9c8d590d3 "pdflatex"
-  "main.tex" 1710664902 202873 7d8c5bdb7c038331e688dcd79b296f13 ""
+  "main.aux" 1710722502 33165 3ed19c56ab8c2a4bab465c8d07991324 "pdflatex"
+  "main.bbl" 1710721887 21107 0eee1b23453d0a005a1fa87d6e693f1c "bibtex main"
+  "main.out" 1710722502 12326 a1e34f4e27514045bce15da9c8d590d3 "pdflatex"
+  "main.tex" 1710722499 202859 9fc78f080bebf22ec8d78a859019590c ""
   (generated)
   "main.aux"
   "main.log"

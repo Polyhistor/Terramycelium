@@ -771,7 +771,7 @@ Data engineering challenges are typically complex and wide-ranging, rather than 
 
 \subsection{Complex adaptive systems}
 
-Metamycelium architectures have characteristics similar to those of complex adaptive systems (Holland, 1992). The artefact created for this study is inspired by the concept that powerful groups might form based on basic rules that control individual agents. Reynolds \cite{reynolds1987flocks} examined a coordinated group of starling birds during the autumn season. The study revealed that each starling bird adheres to three basic rules: alignment, separation, and cohesion. The rules can be mathematically articulated as follows:
+Terramycelium architectures have characteristics similar to those of complex adaptive systems (Holland, 1992). The artefact created for this study is inspired by the concept that powerful groups might form based on basic rules that control individual agents. Reynolds \cite{reynolds1987flocks} examined a coordinated group of starling birds during the autumn season. The study revealed that each starling bird adheres to three basic rules: alignment, separation, and cohesion. The rules can be mathematically articulated as follows:
 
 Alignment:
 $$
@@ -806,13 +806,13 @@ Terramycelium's decentralised and distributed structure poses difficulties in se
 
 Distributed systems' extensive network requirements can lead to complications such as tail latency, context switching, and gridlocks. This strong interconnection contradicts the distributed system's objectives of independence and robustness.
 
-Metamycelium uses asynchronous event-driven communication to address these concerns. This approach allows services to publish and respond to events, so separating their interactions. Within the "publish and forget" paradigm, services broadcast events to designated topics and proceed without waiting for immediate reactions. Restaurant personnel respond to environmental signals rather than direct directives to enhance operational efficiency.
+Terramycelium uses asynchronous event-driven communication to address these concerns. This approach allows services to publish and respond to events, so separating their interactions. Within the `publish and forget' paradigm, services broadcast events to designated topics and proceed without waiting for immediate reactions.
 
-Event-driven architectures usually provide eventual consistency, which may not be ideal for some real-time stream processing situations that need immediate consistency. However, it is generally safe to assume that most data engineering tasks can effectively function within an event-driven framework.
+Event-driven architectures usually provide eventual consistency, which may not be ideal for some real-time stream processing situations. However, it is generally safe to assume that most data engineering tasks can effectively function within an event-driven framework.
 
-As per Richards (2020), event-driven architectures consist of two primary topologies: 1) broker topology and 2) mediator topology. The concept of streaming platforms is further explained in the writings of Stopford (2018). Metamycelium, as a BD architecture designed for processing analytical data, eliminates several issues associated with accomplishing ACID transactions. Metamycelium utilises the architectural principles of distributed asynchronous event-driven systems with a mixed topology. Metamycelium is incorporating aspects from the broker topology, mediator topology, and several notions from streaming platforms. Metamycelium's CAP theorem prioritises partition tolerance and availability as key assurances. 
+As per Ford et al. \cite{Ford2021SoftwareArchitecture}, event-driven architectures consist of two primary topologies: 1) broker topology and 2) mediator topology. The concept of streaming platforms is further explained in the writings of Stopford \cite{stopford2018designing}. Terramycelium, as a BD architecture designed for processing analytical data, eliminates several issues associated with accomplishing ACID transactions. Terramycelium utilises the architectural principles of distributed asynchronous event-driven systems with a mixed topology. Terramycelium is incorporating aspects from the broker topology, mediator topology, and several notions from streaming platforms. Terramycelium's CAP theorem prioritises partition tolerance and availability as key assurances. 
 
-The hybrid topology consists of five main architectural components: the event, the event consumer, the event producer, the event backbone, and the eventing interface. Events are triggered by the event producer and sent to the relevant topic. The event is processed by the event broker and stored in a queue-like indexed data structure for later retrieval. Interested event consumers will listen to the topic of interest using the eventing interface. The event backbone is an internally distributed system composed of numerous event brokers. 
+Terramycelium's hybrid topology consists of five main architectural components: the event, the event consumer, the event producer, the event backbone, and the eventing interface. Events are triggered by the event producer and sent to the relevant topic. The event is processed by the event broker and stored in a queue-like indexed data structure for later retrieval. Interested event consumers will listen to the topic of interest using the eventing interface. The event backbone is an internally distributed system composed of numerous event brokers. 
 
 Event brokers are services created and provided to enable event communication via Metamycelia. The brokers are synchronised with a decentralised service coordinator. Brokers also enable the replication of subjects. Additionally, the event backbone includes a specialised event archive to ensure fault tolerance and recoverability. The purpose of this archive is to retain all events processed by the brokers for potential restoration in case of a failure. 
 
@@ -824,30 +824,30 @@ The components collaborate to establish a distributed, fault-tolerant, and scala
 \begin{figure*}[h]
   \centering
   \includegraphics[width=\linewidth]{images/Event-architecture.png}
-  \caption{Metamycelium Event-driven Architecture}
+  \caption{Terramycelium Event-driven Architecture}
   \label{fig:eventDrivenArchitecture}
 \end{figure*}
 
 
 \subsection{Architectural characteristics}
 
-The Metamycelium architecture is distinguished by its emphasis on maintainability, scalability, fault tolerance, elasticity, and deployability. It is in line with contemporary engineering methodologies like automated deployment and continuous integration. The architecture focuses on utilising microservices, which are autonomous components that can be deployed and maintained separately.
+The Terramycelium architecture is distinguished by its emphasis on maintainability, scalability, fault tolerance, elasticity, and deployability. It is in line with contemporary engineering methodologies like automated deployment and continuous integration. The architecture focuses on utilising microservices, which are autonomous components that can be deployed and maintained separately.
 
 This architecture excels in maintainability. Event-driven microservices architecture enables modular development and independent scaling, facilitating the maintenance and updating of individual components without impacting the entire system. The design also enables automated deployment processes, which help streamline upgrades and minimise manual interaction.
 
 Scalability and elasticity are significant aspects as well. The architecture allows for horizontal scalability, enabling the addition or removal of services according to demand. This adaptability guarantees that the system can efficiently manage different workloads.
 
-The architecture also demonstrates strong fault tolerance. Interservice communication can affect fault tolerance, however a redundant and scalable design of Metamycelium, combined with service discovery techniques, helps alleviate this problem. Microservices' standalone and single-purpose design typically results in a high level of fault tolerance.
+The architecture also demonstrates strong fault tolerance. Interservice communication can affect fault tolerance, however a redundant and scalable design of Terramycelium, combined with service discovery techniques, helps alleviate this problem. Microservices' standalone and single-purpose design typically results in a high level of fault tolerance.
 
 Metamycelia's minimal deployment components and decoupled design highlight deployability. The design facilitates evolutionary transformation to correspond with contemporary business practices that demand agility and adaptability. Modular and autonomous units provide quicker updates and iterations, ensuring alignment with the ever-changing business needs.
 
-The architecture might be rated lower in terms of cost and simplicity. The decentralised structure of Metamycelium and the possibility of higher communication overhead can create challenges in cost management and optimisation. Implementing strategies like intelligent data caching and replication can help overcome performance issues related to network calls, but managing costs is still a continuous concern.
+The architecture might be rated lower in terms of cost and simplicity. The decentralised structure of Terramycelium and the possibility of higher communication overhead can create challenges in cost management and optimisation. Implementing strategies like intelligent data caching and replication can help overcome performance issues related to network calls, but managing costs is still a continuous concern.
 
-The Metamycelium design emphasises the advantages of microservices, focusing on maintainability, scalability, fault tolerance, elasticity, and deployability. The text recognises the difficulties that come with distributed architectures and provides methods to reduce their impact. Architects need to comprehend the principles of architecture in order to skillfully traverse and capitalise on its advantages. An overview of architectural characteristics is portrayed in Table~\ref{tab:architecture-characteristics}
+The Terramycelium design emphasises the advantages of microservices, focusing on maintainability, scalability, fault tolerance, elasticity, and deployability. The text recognises the difficulties that come with distributed architectures and provides methods to reduce their impact. Architects need to comprehend the principles of architecture in order to skillfully traverse and capitalise on its advantages. An overview of architectural characteristics is portrayed in Table~\ref{tab:architecture-characteristics}
 
 \begin{table}[t]
   \centering
-  \caption{Metamycelium Architecture Characteristics}
+  \caption{Terramycelium Architecture Characteristics}
   \label{tab:architecture-characteristics}
   \begin{tabular}{|l|c|}
     \hline
@@ -876,33 +876,33 @@ The Metamycelium design emphasises the advantages of microservices, focusing on 
 
 \section{Artifact} \label{sec:artifact}
 
-After exploring several kernel and design theories, a solid theoretical foundation is established for creating and developing the artefact. Metamycelium is generated using Archimate and mostly showcases the RA within the technological layer. The architect has the responsibility to determine the flow and application that should be present in each node when showcasing these services in the technology layer. To ensure thoroughness, a basic business process is assumed as every software is created to fulfil a business requirement. Metamycelium should possess the flexibility needed to accommodate alternative business models, notwithstanding potential variations in the business layer across different settings.
+After exploring several kernel and design theories, a solid theoretical foundation is established for creating and developing the artefact. Terramycelium is generated using Archimate and mostly showcases the RA within the technological layer. The architect has the responsibility to determine the flow and application that should be present in each node when showcasing these services in the technology layer. To ensure thoroughness, a basic business process is assumed as every software is created to fulfil a business requirement. Terramycelium should possess the flexibility needed to accommodate alternative business models, notwithstanding potential variations in the business layer across different settings.
 
-The BD RA does not depict the architecture of any particular BD system. It functions as a versatile tool for describing, discussing, and constructing system-specific designs based on standardised principles. Metamycelium enables in-depth and insightful talks about the needs, frameworks, and functions of BD systems. The system stays vendor-neutral, providing flexibility in choosing products or services, and avoids imposing strict solutions that restrict innovation. 
+The BD RA does not depict the architecture of any particular BD system. It functions as a versatile tool for describing, discussing, and constructing system-specific designs based on standardised principles. Terramycelium enables in-depth and insightful talks about the needs, frameworks, and functions of BD systems. The system stays vendor-neutral, providing flexibility in choosing products or services, and avoids imposing strict solutions that restrict innovation. 
 
-To ensure thoroughness, we have assumed a basic BD business process, as all software is created to fulfil a specific business requirement. Metamycelium consists of 15 primary components and 5 variable components, as seen in Figure \ref{fig:Metamycelium}. The lowercase "a" in the top left corner of the diagram represents the auxiliary view, while the letter "m" represents the master view. When the same entity is utilised in various models, the auxiliary view is employed. This indicates that the entity already exists and is being reused. 
+To ensure thoroughness, we have assumed a basic BD business process, as all software is created to fulfil a specific business requirement. Terramycelium consists of 15 primary components and 5 variable components, as seen in Figure \ref{fig:Terramycelium}. The lowercase "a" in the top left corner of the diagram represents the auxiliary view, while the letter "m" represents the master view. When the same entity is utilised in various models, the auxiliary view is employed. This indicates that the entity already exists and is being reused. 
 
 
 \begin{sidewaysfigure*}
   \centering
   \includegraphics[width=\linewidth]{images/Metamycelium.jpg}
-  \caption{Metamycelium}
-  \label{fig:Metamycelium}
+  \caption{Terramycelium}
+  \label{fig:Terramycelium}
 \end{sidewaysfigure*}
 
-While this business layer could vary in different contexts, Metamycelium should be able to have the elasticity required to account for various business models. To ease understanding of the RA, we sub-diagrammed the product domain in Figure \ref{fig:MetamyceliumServiceMesh}.
+While this business layer could vary in different contexts, Terramycelium should be able to have the elasticity required to account for various business models. To ease understanding of the RA, we sub-diagrammed the product domain in Figure \ref{fig:TerramyceliumServiceMesh}.
 
 \begin{figure*}
   \centering
-  \includegraphics[width=\textwidth]{images/metamyceliumServiceMesh.jpg}
+  \includegraphics[width=\textwidth]{images/MetamyceliumServiceMesh.jpg}
   \caption{Service Mesh}
-  \label{fig:MetamyceliumServiceMesh}
+  \label{fig:TerramyceliumServiceMesh}
 \end{figure*}
 
 These components are;
 
 \begin{enumerate}
-    \item \textbf{Ingress Gateway:} The ingress gateway is pivotal in Metamycelium, acting as the main entry point for external requests. It exposes necessary ports and endpoints, intelligently load-balancing traffic to the appropriate processing controllers, thereby enhancing the system's scalability and performance.
+    \item \textbf{Ingress Gateway:} The ingress gateway is pivotal in Terramycelium, acting as the main entry point for external requests. It exposes necessary ports and endpoints, intelligently load-balancing traffic to the appropriate processing controllers, thereby enhancing the system's scalability and performance.
 
     Security is significantly bolstered by the ingress gateway, preventing direct service access by centralizing entry and enabling the enforcement of security policies such as SSL termination and authentication. This approach secures communication with external entities and streamlines SSL processing, offloading this task from downstream services.
     
@@ -942,14 +942,14 @@ These components are;
     
     \textit{Addresses requirements: Val-1, Ver-1.} 
 
-    \item \textbf{Event Backbone:} The event backbone is the central component of the Metamycelium, enabling communication between nodes. The distribution and clustering should be implemented to handle the system's scalability. Communication is orchestrated by coordinated activities, like to a dance ensemble. Every service monitors and responds to the event backbone, performing required actions. 
+    \item \textbf{Event Backbone:} The event backbone is the central component of the Terramycelium, enabling communication between nodes. The distribution and clustering should be implemented to handle the system's scalability. Communication is orchestrated by coordinated activities, like to a dance ensemble. Every service monitors and responds to the event backbone, performing required actions. 
     
     This guarantees an uninterrupted exchange of data between services, ensuring that all systems are in the appropriate condition. The event backbone can combine many event streams, store events in a cache, archive events, and perform other operations, as long as it does not become overly intelligent or function as an Enterprise Service Bus (ESB) in Service-Oriented Architecture (SOA) systems. An architect should see the event backbone as a collection of interconnected nodes that address different subjects of interest. The event backbone can be monitored over time to analyse access patterns and adjusted to optimise communication efficiency.
 
     \textit{Addresses requirements: Vel-1, Vel-2, Vel-3, Vel-4, Vel-5, Val-1, Val-2, Ver-1, Ver-2, and Ver-3.} 
     
 
-    \item \textbf{Egress Gateway:} The inclusion of an egress gateway in Metamycelium offers numerous advantages, especially for external data consumers. In this architecture, data consumers first interact with the discovery component, known as Data Lichen, which serves as a central hub for accessing available data domains. Once connected to Data Lichen, data consumers can navigate to the relevant data domain to retrieve the desired data.
+    \item \textbf{Egress Gateway:} The inclusion of an egress gateway in Terramycelium offers numerous advantages, especially for external data consumers. In this architecture, data consumers first interact with the discovery component, known as Data Lichen, which serves as a central hub for accessing available data domains. Once connected to Data Lichen, data consumers can navigate to the relevant data domain to retrieve the desired data.
 
     Furthermore, all external data consumers in the system go through a centralised secret management and centralised authentication and authorisation component. This centralised approach brings several benefits to the architecture. Firstly, it ensures a consistent and secure management of secrets, such as API keys, access tokens, or credentials, which are essential for data access and security. This centralised secret management enhances the overall system's security posture by reducing the chances of vulnerabilities or misconfigurations in secret handling.
 
@@ -957,7 +957,7 @@ These components are;
 
     Thirdly, the centralised components simplify the maintenance and scalability of the system. With a single point for managing secrets, authentication, and authorisation, it becomes easier to update, monitor, and audit these components. Additionally, this architectural pattern allows for easier scaling and expansion as new data domains or data sources can be seamlessly integrated into the system with consistent authentication and authorisation mechanisms.
 
-    Overall, the inclusion of an egress gateway in Metamycelium offers a robust and efficient approach for external data consumers. It ensures standardised data access, enhances security, simplifies maintenance, and enables scalability, making it a highly favourable and beneficial architectural design. 
+    Overall, the inclusion of an egress gateway in Terramycelium offers a robust and efficient approach for external data consumers. It ensures standardised data access, enhances security, simplifies maintenance, and enables scalability, making it a highly favourable and beneficial architectural design. 
     
     \textit{Addresses requirements: Vel-2, Vel-4, Val-3, Val-4, SaP-1, and SaP-2.} 
     
@@ -975,7 +975,7 @@ These components are;
 
     \textit{Addresses requirements: Vol-1, Vel-3, Vel-4, Vel-5, Var-1, Var-2, Var-3, Val-1, Val-2, Val-3, Val-4, Sap-1, SaP-2} 
   
-    \item  \textbf{Federated Governance Service:} Metamycelium's distributed architecture comprises multiple independent services with distinct lifecycles, developed and deployed by autonomous teams. To ensure coherence and prevent interface conflicts without centralizing control, a global federated governance is essential. This governance model standardizes services, enhancing their interoperability and facilitating team collaboration. It also mitigates risks, such as non-compliance with GDPR, by establishing a unified framework of global policies, metadata standards, API standards, and security protocols. This framework not only supports organizational practices but also aligns with external regulations, safeguarding against potential fines and security threats. The federated governance service, comprising components like global policies, metadata standards, and security regulations, plays a pivotal role in maintaining the architecture's integrity and adaptability, indirectly impacting all requirements. This component can indirectly affect all requirements.
+    \item  \textbf{Federated Governance Service:} Terramycelium's distributed architecture comprises multiple independent services with distinct lifecycles, developed and deployed by autonomous teams. To ensure coherence and prevent interface conflicts without centralizing control, a global federated governance is essential. This governance model standardizes services, enhancing their interoperability and facilitating team collaboration. It also mitigates risks, such as non-compliance with GDPR, by establishing a unified framework of global policies, metadata standards, API standards, and security protocols. This framework not only supports organizational practices but also aligns with external regulations, safeguarding against potential fines and security threats. The federated governance service, comprising components like global policies, metadata standards, and security regulations, plays a pivotal role in maintaining the architecture's integrity and adaptability, indirectly impacting all requirements. This component can indirectly affect all requirements.
 
     \textit{Addresses requirements: All.}     
 
@@ -984,21 +984,21 @@ These components are;
     \textit{Addresses requirements: Vel-4, Var-1, Var-3, and Var-4.} 
     
     
-    \item \textbf{Telemetry Processor:}  The decentralised architecture of Metamycelium poses challenges for debugging, fault identification, and maintenance as it requires tracking transactions across several services. Consolidating the handling of telemetry data in Metamycelium provides architectural advantages by streamlining data processing, offering a cohesive perspective of logs, metrics, and traces, facilitating thorough analysis and correlation, and guaranteeing optimal resource distribution. Centralising the service guarantees uniform monitoring and governance processes throughout the architecture, encouraging compliance with best practices.
+    \item \textbf{Telemetry Processor:}  The decentralised architecture of Terramycelium poses challenges for debugging, fault identification, and maintenance as it requires tracking transactions across several services. Consolidating the handling of telemetry data in Terramycelium provides architectural advantages by streamlining data processing, offering a cohesive perspective of logs, metrics, and traces, facilitating thorough analysis and correlation, and guaranteeing optimal resource distribution. Centralising the service guarantees uniform monitoring and governance processes throughout the architecture, encouraging compliance with best practices.
 
     The centralised service can act as a data source for different users, like the Data Lichen, which uses processed telemetry data to create important insights. This service may process data that can be used by customised systems and dashboards, offering adaptability and scalability to fulfil particular business needs. This promotes a data-driven environment, enabling individuals to get valuable information and insights from the analysed telemetry data. The flexibility and ease of access to the telemetry data increase the benefits of the centralised service in the larger BD framework.
 
     \textit{Addresses requirements: Vol-1, Vel-1, Val-1, and Ver-1.} 
 
 
-    \item \textbf{Event Archive:} As the quantity of services expands, the subjects in the event backbone rise, leading to a surge in the number of events. If such circumstances occur, there is a possibility of failure leading to a timeout and subsequent loss of a sequence of events. This can lead to the system being in an incorrect state, causing a harmful chain reaction that affects all services. Metamycelium often addresses these issues by utilising an event archive. The event archive is in charge of recording occurrences for future retrieval in case of failure. 
+    \item \textbf{Event Archive:} As the quantity of services expands, the subjects in the event backbone rise, leading to a surge in the number of events. If such circumstances occur, there is a possibility of failure leading to a timeout and subsequent loss of a sequence of events. This can lead to the system being in an incorrect state, causing a harmful chain reaction that affects all services. Terramycelium often addresses these issues by utilising an event archive. The event archive is in charge of recording occurrences for future retrieval in case of failure. 
     
-    During a blackout in a specific area, if the event backbone is down, it can restore itself and return the system to its correct state by retrieving events from the event archive. The event interface manages circuit breaking to prevent services from sending additional requests to the backbone while it is not functioning. The determination of the duration till expiration and the selection of events to be stored are made according to the specific circumstances in which Metamycelium is utilised.
+    During a blackout in a specific area, if the event backbone is down, it can restore itself and return the system to its correct state by retrieving events from the event archive. The event interface manages circuit breaking to prevent services from sending additional requests to the backbone while it is not functioning. The determination of the duration till expiration and the selection of events to be stored are made according to the specific circumstances in which Terramycelium is utilised.
 
 
     \textit{Addresses requirements: Vol-1, Vel-1, Val-1, and Ver-1.} 
 
-    \item \textbf{Distributed Storage Service:} Metamycelium supports decentralised and distributed systems but does not require each product domain to have its unique data store. To avoid duplication, conflicting data storage methods, reduced interoperability across services, and absence of consistent data storage techniques. The distributed storage service is intended to store vast amounts of data in its original format until it is ready to be retrieved for analysis and other uses. 
+    \item \textbf{Distributed Storage Service:} Terramycelium supports decentralised and distributed systems but does not require each product domain to have its unique data store. To avoid duplication, conflicting data storage methods, reduced interoperability across services, and absence of consistent data storage techniques. The distributed storage service is intended to store vast amounts of data in its original format until it is ready to be retrieved for analysis and other uses. 
     
     Data can be stored in the distributed storage service with the appropriate domain ownership before being accessed and used by different services. Data of various structures, such as structured, semi-structured, unstructured, and pseudo-structured, can be stored in a distributed storage service before being processed in batches or streams. However, not all data should be sent straight to this service; the data flow depends on the specific context in which the system operates.
     
@@ -1019,7 +1019,7 @@ These components are;
 
     The IAM component places significant emphasis on authentication and authorization as core design concepts. The system offers strong methods to verify the identities of users, components, and services in the structure, guaranteeing that only approved entities can get the resources and carry out particular tasks. These measures aid in preventing unauthorised access, reducing security risks, and protecting sensitive data.
     
-    Another architectural value of the IAM component is its emphasis on centralised user and access management. It acts as a centralised authority for overseeing user identities, responsibilities, and permissions throughout Metamycelium. Centralization optimises access control management, speeds user onboarding and offboarding, and maintains uniform security policy enforcement system-wide.
+    Another architectural value of the IAM component is its emphasis on centralised user and access management. It acts as a centralised authority for overseeing user identities, responsibilities, and permissions throughout Terramycelium. Centralization optimises access control management, speeds user onboarding and offboarding, and maintains uniform security policy enforcement system-wide.
     
     The IAM component guarantees meticulous access control and privilege management, enabling the creation of precise access policies. The system enables strong authentication using standard protocols such as OAuth and SAML, simplifying user access through Single Sign-On (SSO). It supports audits by recording access occurrences, strengthening compliance, security oversight, and incident management. The Figure~\ref{diagram:IAM} provides a detailed representation of how the component functions and how it interacts with other aspects of the system.
 
@@ -1038,13 +1038,13 @@ These components are;
     
     The secret management system also facilitates the secure distribution and retrieval of secrets to authorised components or services. It offers safe APIs or client libraries that allow secrets to be retrieved securely during runtime. This value ensures that confidential information is only available to authorised entities who need it, preventing unauthorised disclosure of secrets.
     
-    The secret management system also encourages integration with other components and services in Metamycelium. The system offers APIs and integration points that enable smooth integration of secrets into different data domains. This integration value enables authorised components to securely and conveniently access secrets, ensuring operational efficiency and minimising obstacles in development and deployment procedures.
+    The secret management system also encourages integration with other components and services in Terramycelium. The system offers APIs and integration points that enable smooth integration of secrets into different data domains. This integration value enables authorised components to securely and conveniently access secrets, ensuring operational efficiency and minimising obstacles in development and deployment procedures.
     
     \textit{Addresses requirements: SaP-1, and SaP-2.} 
 
 \end{enumerate}
 
-The variable components in Metamycelium can be altered, adapted, or excluded according to the architect's discretion and the specific characteristics of the situation. This RA aims to enhance data architects' decision-making process by introducing established patterns and best practices from several perspectives, rather than restricting their innovation. Alternative choices for each variable module are not detailed due to the dynamic nature of the industry, and architects strive to create systems that tackle new issue areas. 
+The variable components in Terramycelium can be altered, adapted, or excluded according to the architect's discretion and the specific characteristics of the situation. This RA aims to enhance data architects' decision-making process by introducing established patterns and best practices from several perspectives, rather than restricting their innovation. Alternative choices for each variable module are not detailed due to the dynamic nature of the industry, and architects strive to create systems that tackle new issue areas. 
 
 \section{Evaluation 1: Case Mechanism Experiment}
 \label{sec:discussion}
@@ -1063,15 +1063,15 @@ The research design for this case mechanism experiment is described in Section~\
 
 Prototyping is the creation of a working model that physically represents the structure, demonstrating the design principles and ideas. This is frequently referred to as the "concrete architecture." This technique enables researchers to validate and develop the design to assess its practicality, performance, and alignment with research objectives.
 
-Implementing the essential components and functionalities stated in the RA, Metamycelium, is part of prototyping the architecture. The selected technologies, supported by academic justification and in line with the research goals, serve as the basis for developing the prototype. The architecture's ability to manage large-scale data processing and meet various needs can be evaluated by systematically implementing its architectural components. 
+Implementing the essential components and functionalities stated in the RA, Terramycelium, is part of prototyping the architecture. The selected technologies, supported by academic justification and in line with the research goals, serve as the basis for developing the prototype. The architecture's ability to manage large-scale data processing and meet various needs can be evaluated by systematically implementing its architectural components. 
 
-Figure~\ref{metamyceliumPrototype} shows a concrete structure created with Metamycelium.
+Figure~\ref{TerramyceliumPrototype} shows a concrete structure created with Terramycelium.
 
 \begin{figure*}[h]
     \centering
-    \includegraphics[width=\linewidth]{images/metamyceliumConcrete.jpg}
-    \caption{Metamycelium Prototype}
-    \label{metamyceliumPrototype}
+    \includegraphics[width=\linewidth]{images/MetamyceliumConcrete.jpg}
+    \caption{Terramycelium Prototype}
+    \label{TerramyceliumPrototype}
 \end{figure*}
 
 \subsection{Stage 1: Formation}
@@ -1080,7 +1080,7 @@ Figure~\ref{metamyceliumPrototype} shows a concrete structure created with Metam
 All components of this prototype are integrated within a single Kubernetes cluster. Therefore, KIND \cite{KIND2023} has been selected as the local Kubernetes cluster for this prototype to function. 
 
 
-The reproducibility of this technique is crucial. The scripts required to execute, download, and set up artefacts are located in the scripts folder of the Github repository cited as \cite{InfrastructureForMetamycelium2023}. These scripts are designed to exclusively operate on Unix-like operating systems.
+The reproducibility of this technique is crucial. The scripts required to execute, download, and set up artefacts are located in the scripts folder of the Github repository cited as \cite{InfrastructureForTerramycelium2023}. These scripts are designed to exclusively operate on Unix-like operating systems.
 
 After establishing the fundamental scripts for initialising the cluster, the procedure commenced with the creation of various services within the Kubernetes cluster. Helm Charts from Artefact Hub \cite{ArtifactHub2023} are utilised for enhanced maintainability and scalability of Nginx ingress and Kafka. Terraform was subsequently utilised to implement the charts on the Kubernetes cluster. It is located in the IaaC section of the repository. 
 
@@ -1116,7 +1116,7 @@ OPA assesses these petitions based on established policy guidelines. Approved re
   \label{OPAISTIO}
 \end{figure*}
 
-Once OPA was understood, Domain developed an analytics service using the Python framework FastAPI. To experiment with Metamycelium and meet the requirements outlined in Section~\ref{metMyceliumRequirements}, a domain incorporating operational and analytical systems must be established. Since this experiment is not a genuine business, it is logical to establish a simulated operational service that mimics real-world activity, such as generating large amounts of data at a high speed. 
+Once OPA was understood, Domain developed an analytics service using the Python framework FastAPI. To experiment with Terramycelium and meet the requirements outlined in Section~\ref{metMyceliumRequirements}, a domain incorporating operational and analytical systems must be established. Since this experiment is not a genuine business, it is logical to establish a simulated operational service that mimics real-world activity, such as generating large amounts of data at a high speed. 
 
 Two important data sources studied and selected for creating these domains are the Yelp Academic Dataset and the data from the U.S. Climate Resilience Toolkit's Climate Explorer. The decision is based on the extensive and detailed data provided by each source, their accessibility, and their ability to generate valuable analytical insights when utilised together.
 
@@ -1255,7 +1255,7 @@ The required data quality metadata from Section~\ref{section:dataQuality} and bi
 \begin{figure*}[h]
   \centering
   \includegraphics[width=\textwidth]{images/intra-domain-flow.jpg}
-  \caption{Intra-domain communication in Metamycelium's prototype}
+  \caption{Intra-domain communication in Terramycelium's prototype}
   \label{intraDomain}
 \end{figure*}
 
@@ -1315,13 +1315,13 @@ The JSON displayed in Figure~\ref{openTelemetryTraceSpan} depicts an example of 
   \label{openTelemetryTraceSpan}
 \end{figure}
 
-Before presenting the experiment results, it is crucial to define the specific meaning of 'heavy load of data' in the context of this study. In BD, there is no commonly accepted criterion for defining "high volume," particularly in decentralised, domain-driven architectures such as Metamycelium. There is no single standard benchmark that universally defines what qualifies as a heavy data load in these systems. 
+Before presenting the experiment results, it is crucial to define the specific meaning of 'heavy load of data' in the context of this study. In BD, there is no commonly accepted criterion for defining "high volume," particularly in decentralised, domain-driven architectures such as Terramycelium. There is no single standard benchmark that universally defines what qualifies as a heavy data load in these systems. 
 
 Academic research and business reports suggest that daily data intake can reach terabytes or more, particularly in high-velocity streams such as social media or e-commerce transactions. 
 
 Transferring many gigabytes of data in JSON format between domains is a substantial stress test due to its verbosity and demands compared to binary formats. The Yelp academic dataset is divided into 400KB chunks and transferred many times to test the prototype's capability and resilience against increased data traffic. 
 
-This configuration is suitable for practical scenarios where systems need to consistently handle continuous streams of incoming data from different sources and varying quantities, while maintaining high performance and data integrity. Metamycelium's decentralised, event-driven architecture is designed to allow data to be smoothly ingested, processed, and retrieved, regardless of the frequency of dataset transfers or accesses. This assesses the system's capacity to manage large amounts of data and its ability to perform well in a setting that replicates the rapid data flow typical of modern BD scenarios.
+This configuration is suitable for practical scenarios where systems need to consistently handle continuous streams of incoming data from different sources and varying quantities, while maintaining high performance and data integrity. Terramycelium's decentralised, event-driven architecture is designed to allow data to be smoothly ingested, processed, and retrieved, regardless of the frequency of dataset transfers or accesses. This assesses the system's capacity to manage large amounts of data and its ability to perform well in a setting that replicates the rapid data flow typical of modern BD scenarios.
 
 
 All data sent during the experiment is stored in MinIO. Upon successful storage, a confirmation is always sent back. The process of streaming, storing, and validating data was repeated several times to demonstrate its reliability, especially when dealing with large amounts of data. Reliable and accurate communication in challenging situations supports the importance of consistent communication in remote systems, as shown in academic research such as Kleppmann (2017). The process can be formally represented using logical implications to determine the system's resilience.
@@ -1525,7 +1525,7 @@ The telemetry service demonstrates its resilience in data processing by maintain
 
 The data statistics about read, write, and network transfers provide additional clarification on this matter. Although the amount of data being read, written, or transported in gigabytes may appear substantial, what truly matters is not the sheer number, but rather the system's efficiency in managing these processes. The average data read is 5.37GB and the average data written is 12.2GB. These figures, when compared to the network statistics shown in Figure~\ref{kubernetesClusterNetworkStatistics}, demonstrate the system's effectiveness in managing data and performing network operations without becoming overloaded.
 
-The metrics not only demonstrate the stability and efficiency of our BD infrastructure, but also offer empirical evidence that, in an event-driven asynchronous system like Metamycelium, the focus is not solely on the amount of data processed, but rather on the effectiveness and reliability with which it is managed. This observation indicates possible consequences for scalability considerations in future implementations of similar structures.
+The metrics not only demonstrate the stability and efficiency of our BD infrastructure, but also offer empirical evidence that, in an event-driven asynchronous system like Terramycelium, the focus is not solely on the amount of data processed, but rather on the effectiveness and reliability with which it is managed. This observation indicates possible consequences for scalability considerations in future implementations of similar structures.
 
 
 \paragraph{Memory Utilisation:}
@@ -1743,7 +1743,7 @@ An essential element contributing to the system's reliable performance is its do
 
 \subsection{Challenges and Duration of the Experiment}
 
-The experimentation phase lasts around four months and involves a methodical process to assess each situation in order to thoroughly validate the Metamycelium system according to the specified specifications. The experiment faced numerous architectural and technical obstacles, which greatly influenced the design decisions and comprehension of the system's behaviour. The issues are classified into four categories: Infrastructure, Integration, Data Management, and Performance.
+The experimentation phase lasts around four months and involves a methodical process to assess each situation in order to thoroughly validate the Terramycelium system according to the specified specifications. The experiment faced numerous architectural and technical obstacles, which greatly influenced the design decisions and comprehension of the system's behaviour. The issues are classified into four categories: Infrastructure, Integration, Data Management, and Performance.
 
 \subsubsection{Challenges in Infrastructure} 
 
@@ -1779,13 +1779,13 @@ The enumeration is concluded.
     The user's text is a single item. The Apple M2 chip architecture presented an extra performance difficulty by hindering Psutil's ability to accurately represent CPU utilisation.
 \end{enumerate}
 
-Notwithstanding these challenges, the system exhibits proficiency in managing intricate settings. Nevertheless, the scarcity of time and infrastructure constrains the extent of testing. The selected situations offer a thorough comprehension of the system's capabilities, but a more exhaustive examination is possible under more advantageous circumstances. Despite its limitations, the experiment demonstrates the resilience and promise of the Metamycelium prototype.
+Notwithstanding these challenges, the system exhibits proficiency in managing intricate settings. Nevertheless, the scarcity of time and infrastructure constrains the extent of testing. The selected situations offer a thorough comprehension of the system's capabilities, but a more exhaustive examination is possible under more advantageous circumstances. Despite its limitations, the experiment demonstrates the resilience and promise of the Terramycelium prototype.
 
 
 
 \subsection{Final Notes on Experiment}
 
-The comprehensive evaluation of the Metamycelium system across several scenarios has definitively demonstrated its ability to fulfil, and in some cases, beyond the specified criteria. The experimental data lead to the following conclusions:
+The comprehensive evaluation of the Terramycelium system across several scenarios has definitively demonstrated its ability to fulfil, and in some cases, beyond the specified criteria. The experimental data lead to the following conclusions:
 
 
 \begin{enumerate} 
@@ -1800,7 +1800,7 @@ The comprehensive evaluation of the Metamycelium system across several scenarios
     
     \item \textbf{Security \& Privacy}: Scenarios S5 and S6 thoroughly demonstrate the system's commitment to fulfilling SaP-1 and SaP-2 by focusing on secret management and data security, respectively. By strategically using OpenID Connect with Hashicorp Vault, the highest standard of security, data preservation, and multi-tier authentication systems are ensured.
     
-    \item \textbf{Veracity}: The domain-specific character of Metamycelium naturally supports the fulfilment of requirements \textbf{Ver-1} and \textbf{Ver-2}, emphasising the significance of ensuring high-quality data and maintaining its origin and history.
+    \item \textbf{Veracity}: The domain-specific character of Terramycelium naturally supports the fulfilment of requirements \textbf{Ver-1} and \textbf{Ver-2}, emphasising the significance of ensuring high-quality data and maintaining its origin and history.
   
 \end{enumerate}
 
@@ -1824,7 +1824,7 @@ Addressing these threats to validity involves further research, particularly exp
 Construct validity is a cornerstone of our research methodology, particularly in ensuring that Terramycelium accurately reflects and addresses the multifaceted nature of BD systems. To this end, we have undertaken several critical steps:
 
 \begin{enumerate}
-    \item We meticulously align the operational definitions of key BD characteristics -- including velocity, veracity, volume, variety, value, security, and privacy -- with the constructs integrated into the Metamycelium RA. This alignment is essential to mitigate ambiguity and uphold the RA's construct validity \cite{rad2017big}.
+    \item We meticulously align the operational definitions of key BD characteristics -- including velocity, veracity, volume, variety, value, security, and privacy -- with the constructs integrated into the Terramycelium RA. This alignment is essential to mitigate ambiguity and uphold the RA's construct validity \cite{rad2017big}.
     
     
     \item Validation of the RA against established best practices and industry standards is undertaken rigorously. Such an alignment is crucial for ensuring that the RA adheres to widely recognized norms and practices, a key aspect of construct validity.
@@ -1835,7 +1835,7 @@ Construct validity is a cornerstone of our research methodology, particularly in
 
 \section{Evaluation 2: Expert Opinion}
 
-In the preceding chapter, a prototype of Metamycelium is fabricated and exposed to several simulations. Expert review is utilised as the second evaluation approach for the artefact in this chapter. In order to acquire expert opinions, the research technique adheres to the standards set forth by Kallio (2016) in their systematic study. The research technique is explained in Section~\ref{expertOpinionResearchMethodology}.
+In the preceding chapter, a prototype of Terramycelium is fabricated and exposed to several simulations. Expert review is utilised as the second evaluation approach for the artefact in this chapter. In order to acquire expert opinions, the research technique adheres to the standards set forth by Kallio (2016) in their systematic study. The research technique is explained in Section~\ref{expertOpinionResearchMethodology}.
 
 The examination of expert perspectives starts by analysing emergent themes in "Thematic Analysis" \ref{expertOpinion_thematicAnalysis}, a comparative "Matrix of Responses" \ref{expertOpinion_matrixResponses}, and a "Quantitative Summary" \ref{expertOpinion_quantitativeSummary} of the compiled data. The concept of reflective synthesis is discussed in the article "Synthesis and Reflection" \ref{expertOpinion_synthesisReflection}, which includes expert evaluations of the architectural strategy in "Feedback and Reflections on Architectural Approach" \ref{expertOpinion_feedbackArchitecturalApproach}. The book "Insights on Data Handling and Architectural Intent" \ref{expertOpinion_dataHandlingIntent} delves into in-depth analysis of data strategy, while "Nuances of Data Ownership, Privacy, and Governance" \ref{expertOpinion_dataOwnership} examines the intricate legal aspects associated with these matters. The chapter progresses to the section titled "Relevance and Future Implications" \ref{expertOpinion_futureImplications}, where it analyses and evaluates the shortcomings in the "Limitations of the Current Reference Architecture" \ref{expertOpinion_limitations}. It concludes with a discussion on "Technological Considerations and Expert Insights" \ref{expertOpinion_technologicalConsiderations}, which sets the stage for the references section.
 
@@ -1846,9 +1846,9 @@ This section systematically identifies and analyses prominent topics seen in exp
 
 \subsection{Applicability \& Industrial Relevance:}
 
-The domain-driven and distributed nature of the Metamycelium architecture elicits various viewpoints regarding its compatibility with existing industry practices and anticipated future developments. Although this architectural approach incorporates promising and advanced approaches, it is clear that they are not uniformly embraced in all industries.
+The domain-driven and distributed nature of the Terramycelium architecture elicits various viewpoints regarding its compatibility with existing industry practices and anticipated future developments. Although this architectural approach incorporates promising and advanced approaches, it is clear that they are not uniformly embraced in all industries.
 
-i2 suggested that the utilisation of Metamycelium could be impacted by team configurations and the scale of the organisation. In addition, there was evidence suggesting that different locations may have a higher level of proficiency in specific data practices, with only a small proportion adopting sophisticated approaches such as microservices or streaming.
+i2 suggested that the utilisation of Terramycelium could be impacted by team configurations and the scale of the organisation. In addition, there was evidence suggesting that different locations may have a higher level of proficiency in specific data practices, with only a small proportion adopting sophisticated approaches such as microservices or streaming.
 
 \,
 
@@ -1890,13 +1890,13 @@ The i3 stated that the architecture's domain-driven nature was very remarkable. 
 \,
 
 
-Considering the opinions of specialists, it is clear that Metamycelium provides promising opportunities for many sophisticated data operations. Nevertheless, the originality and intricacy of the subject could be both advantageous and challenging. It may appeal to organisations seeking new solutions, but it could also be perceived as intimidating by those accustomed to more conventional approaches or those who are not yet ready for such a significant change in their data practices.
+Considering the opinions of specialists, it is clear that Terramycelium provides promising opportunities for many sophisticated data operations. Nevertheless, the originality and intricacy of the subject could be both advantageous and challenging. It may appeal to organisations seeking new solutions, but it could also be perceived as intimidating by those accustomed to more conventional approaches or those who are not yet ready for such a significant change in their data practices.
 
-Overall, the domain-driven distributed design of the Metamycelium architecture shows great potential. However, its deviation from conventional approaches may be seen as a possible obstacle to wider acceptance. The difficulty lies in synchronising its sophisticated characteristics with the existing level of preparedness and environment in the industry.
+Overall, the domain-driven distributed design of the Terramycelium architecture shows great potential. However, its deviation from conventional approaches may be seen as a possible obstacle to wider acceptance. The difficulty lies in synchronising its sophisticated characteristics with the existing level of preparedness and environment in the industry.
 
 \subsection{Strengths \& Distinctive Features:}
 
-The Metamycelium architecture received praise for its unique characteristics and apparent advantages, especially in terms of incorporating domain-driven design and data engineering.
+The Terramycelium architecture received praise for its unique characteristics and apparent advantages, especially in terms of incorporating domain-driven design and data engineering.
 
 i1 emphasised the value of using a domain-driven strategy in conjunction with data engineering. Recognising the historical separation between software engineering and data engineering in terms of their objectives and key performance indicators (KPIs), they highlighted the importance of closing this gap.
 
@@ -1983,11 +1983,11 @@ Aside from discussing how it differs from other methods and recognising its dist
 
 \,
 
-In wrapping up, the overall sentiment suggests that while certain components of Metamycelium might find parallels in the industry, its holistic approach and integration of domain-driven design with data engineering make it a unique offering. The challenge, however, remains in ensuring this distinctiveness translates into practical advantages in the evolving landscape of data operations.
+In wrapping up, the overall sentiment suggests that while certain components of Terramycelium might find parallels in the industry, its holistic approach and integration of domain-driven design with data engineering make it a unique offering. The challenge, however, remains in ensuring this distinctiveness translates into practical advantages in the evolving landscape of data operations.
 
 \subsection{Challenges \& Potential Barriers:}
 
-A number of specialists offered their perspectives on possible difficulties and obstacles for the Metamycelium framework. The worries revolve around many difficulties like the availability of skillsets, the inherent challenges of data governance, and concerns related to scalability.
+A number of specialists offered their perspectives on possible difficulties and obstacles for the Terramycelium framework. The worries revolve around many difficulties like the availability of skillsets, the inherent challenges of data governance, and concerns related to scalability.
 
 I have found a significant issue involving the necessary competence to effectively utilise the architecture, particularly at the local level.
 
@@ -2108,11 +2108,11 @@ Additional obstacles that smaller organisations might encounter when attempting 
 
 \,
 
-To summarise, although Metamycelium has certain advantages, it nevertheless faces certain difficulties. The barriers encompass a range of challenges, including the details of implementation, complexities that involve several functions, governance issues, domain-specific challenges, and the availability of necessary skillsets. To tackle these problems, it is necessary to combine strategic and technological initiatives in order to guarantee that the architecture can be widely applied and is effective.
+To summarise, although Terramycelium has certain advantages, it nevertheless faces certain difficulties. The barriers encompass a range of challenges, including the details of implementation, complexities that involve several functions, governance issues, domain-specific challenges, and the availability of necessary skillsets. To tackle these problems, it is necessary to combine strategic and technological initiatives in order to guarantee that the architecture can be widely applied and is effective.
 
 \section{Matrix of Responses} \label{expertOpinion_matrixResponses}
 
-The experts' perspectives on the Metamycelium architecture's applicability, strengths, and challenges are succinctly outlined in the table reftab:responses, which aggregates their responses.
+The experts' perspectives on the Terramycelium architecture's applicability, strengths, and challenges are succinctly outlined in the table reftab:responses, which aggregates their responses.
 
 \begin{table}[h]
   \centering
@@ -2133,7 +2133,7 @@ The experts' perspectives on the Metamycelium architecture's applicability, stre
 \section{Quantitative Summary} \label{expertOpinion_quantitativeSummary}
 
 
-The coding data clearly indicates that opinions and debates differed across several areas of the Metamycelium architecture. The numerical overview of these codings is presented in Table~\ref{tab:coding_summary}.
+The coding data clearly indicates that opinions and debates differed across several areas of the Terramycelium architecture. The numerical overview of these codings is presented in Table~\ref{tab:coding_summary}.
 
 
 \begin{table}
@@ -2191,7 +2191,7 @@ These results are depicted in Table~\ref{tab:expertOpinionSurveyResults}.
 
 \begin{table}[h]
   \centering
-  \caption{Expert Opinions on the Metamycelium Architecture}
+  \caption{Expert Opinions on the Terramycelium Architecture}
   \begin{tabularx}{\columnwidth}{l|X|X|X|X|X|X|X|X|X|X}
   \hline
   \textbf{Interviewee} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} & \textbf{9} & \textbf{10} \\
@@ -2212,17 +2212,17 @@ Experts have praised the efficiency, scalability, and effectiveness of the propo
 
 Challenges like intricate data dependencies, ownership issues, and the fluid nature of data ecosystems are highlighted. Solutions like incorporating immutability and bi-temporality are discussed to address these issues. The balance between analytical and operational intents and their influence on interfacing with business processes is also explored.
 
-Data ownership, privacy, and governance are also discussed, with techniques like streaming between domains ensuring up-to-date data flow. The importance of customized data governance approaches and evolving governance requirements is crucial for Metamycelium's successful implementation and adoption.
+Data ownership, privacy, and governance are also discussed, with techniques like streaming between domains ensuring up-to-date data flow. The importance of customized data governance approaches and evolving governance requirements is crucial for Terramycelium's successful implementation and adoption.
 
-Future implications of the current reference architecture include its inherent complexity, which requires specialized skills and understanding that may not be readily accessible, particularly in organizations with limited resources or expertise. Aligning technology with human and organizational dynamics is crucial for Metamycelium's successful implementation and adoption.
+Future implications of the current reference architecture include its inherent complexity, which requires specialized skills and understanding that may not be readily accessible, particularly in organizations with limited resources or expertise. Aligning technology with human and organizational dynamics is crucial for Terramycelium's successful implementation and adoption.
 
-Not all organizations operate on a microservices architecture or adopt a fully domain-driven approach, as many still rely on legacy systems built with Java, PHP, and Fortran, which may not seamlessly integrate with or support the advanced paradigms proposed by Metamycelium. The complexity of Metamycelium's architecture is further intensified by the sheer number of components within its architecture, each adding to the complexity of implementation.
+Not all organizations operate on a microservices architecture or adopt a fully domain-driven approach, as many still rely on legacy systems built with Java, PHP, and Fortran, which may not seamlessly integrate with or support the advanced paradigms proposed by Terramycelium. The complexity of Terramycelium's architecture is further intensified by the sheer number of components within its architecture, each adding to the complexity of implementation.
 
-The implementation of Metamycelium's comprehensive suite of components, such as IAM and secret management, presents substantial cost and time implications for organisations. To fully deploy all aspects of Metamycelium, an organization would need to invest significantly in resources and manpower, and integrate a variety of open-source technologies, which may not always have compatible interfaces. This not only extends the time and financial investment required but also necessitates a strategic approach to select and harmonize these technologies effectively within the existing organizational infrastructure.
+The implementation of Terramycelium's comprehensive suite of components, such as IAM and secret management, presents substantial cost and time implications for organisations. To fully deploy all aspects of Terramycelium, an organization would need to invest significantly in resources and manpower, and integrate a variety of open-source technologies, which may not always have compatible interfaces. This not only extends the time and financial investment required but also necessitates a strategic approach to select and harmonize these technologies effectively within the existing organizational infrastructure.
 
 \subsection{Final Notes} \label{sec:discussion}
 
-The Metamycelium RA is a data management architecture that combines domain-driven design with event-driven communication, enhancing its applicability in data management challenges. It incorporates features like Data Lichen, bitemporality, and immutability, demonstrating an adaptive approach to the evolving landscape of data processing. The architecture has received positive feedback from experts, including professionals from leading data and eventing solutions companies. However, the Metamycelium faces challenges, including its complexity, which requires significant investment in skill development and training, which may be a barrier for organizations lacking resources or unwilling to undergo transformation. The lack of open-source support for components like Data Lichen adds to this challenge. The architecture's technical merits are acknowledged for its robustness and innovation, but it also requires a deep understanding of organizational culture, team dynamics, and change management strategies. The forthcoming chapter will analyze and synthesize the research findings, contextualizing them within the broader academic and practical landscape of BD systems.
+The Terramycelium RA is a data management architecture that combines domain-driven design with event-driven communication, enhancing its applicability in data management challenges. It incorporates features like Data Lichen, bitemporality, and immutability, demonstrating an adaptive approach to the evolving landscape of data processing. The architecture has received positive feedback from experts, including professionals from leading data and eventing solutions companies. However, the Terramycelium faces challenges, including its complexity, which requires significant investment in skill development and training, which may be a barrier for organizations lacking resources or unwilling to undergo transformation. The lack of open-source support for components like Data Lichen adds to this challenge. The architecture's technical merits are acknowledged for its robustness and innovation, but it also requires a deep understanding of organizational culture, team dynamics, and change management strategies. The forthcoming chapter will analyze and synthesize the research findings, contextualizing them within the broader academic and practical landscape of BD systems.
 
 
 \section{Discussion} \label{sec:discussion}

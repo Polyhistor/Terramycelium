@@ -280,13 +280,16 @@ C.~W. Reynolds, ``Flocks, herds and schools: A distributed behavioral model,'' i
 \bibitem{montesi2016circuit}
 F.~Montesi and J.~Weber, ``Circuit breakers, discovery, and api gateways in microservices,'' \emph{arXiv preprint arXiv:1609.05830}, 2016.
 
+\bibitem{Ford2021SoftwareArchitecture}
+N.~Ford, M.~Richards, P.~Sadalage, and Z.~Dehghani, \emph{\BIBforeignlanguage{English}{Software Architecture: The Hard Parts: Modern Trade-Off Analyses for Distributed Architectures}}, 1st~ed.\hskip 1em plus 0.5em minus 0.4em\relax O'Reilly Media, 11 2021.
+
+\bibitem{stopford2018designing}
+B.~Stopford, \emph{Designing Event-Driven Systems}.\hskip 1em plus 0.5em minus 0.4em\relax O'Reilly Media, Inc., 2018.
+
 \bibitem{KIND2023}
 \BIBentryALTinterwordspacing
 K.~S. I.~G. (SIG), ``kind - kubernetes in docker,'' 2023. [Online]. Available: \url{https://kind.sigs.k8s.io/}
 \BIBentrySTDinterwordspacing
-
-\bibitem{InfrastructureForMetamycelium2023}
-Polyhistor, ``Infrastructureformetamycelium,'' \url{https://github.com/Polyhistor/InfrastructureForMetamycelium}, 2023.
 
 \bibitem{ArtifactHub2023}
 \BIBentryALTinterwordspacing
