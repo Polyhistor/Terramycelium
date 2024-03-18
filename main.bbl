@@ -286,6 +286,9 @@ N.~Ford, M.~Richards, P.~Sadalage, and Z.~Dehghani, \emph{\BIBforeignlanguage{En
 \bibitem{stopford2018designing}
 B.~Stopford, \emph{Designing Event-Driven Systems}.\hskip 1em plus 0.5em minus 0.4em\relax O'Reilly Media, Inc., 2018.
 
+\bibitem{MStodaytomorrow}
+N.~Dragoni, S.~Giallorenzo, A.~Lafuente, M.~Mazzara, F.~Montesi, R.~Mustafin, and L.~Safina, ``Microservices: yesterday, today, and tomorrow,'' 2016.
+
 \bibitem{KIND2023}
 \BIBentryALTinterwordspacing
 K.~S. I.~G. (SIG), ``kind - kubernetes in docker,'' 2023. [Online]. Available: \url{https://kind.sigs.k8s.io/}

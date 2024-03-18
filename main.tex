@@ -812,18 +812,15 @@ Event-driven architectures usually provide eventual consistency, which may not b
 
 As per Ford et al. \cite{Ford2021SoftwareArchitecture}, event-driven architectures consist of two primary topologies: 1) broker topology and 2) mediator topology. The concept of streaming platforms is further explained in the writings of Stopford \cite{stopford2018designing}. Terramycelium, as a BD architecture designed for processing analytical data, eliminates several issues associated with accomplishing ACID transactions. Terramycelium utilises the architectural principles of distributed asynchronous event-driven systems with a mixed topology. Terramycelium is incorporating aspects from the broker topology, mediator topology, and several notions from streaming platforms. Terramycelium's CAP theorem prioritises partition tolerance and availability as key assurances. 
 
-Terramycelium's hybrid topology consists of five main architectural components: the event, the event consumer, the event producer, the event backbone, and the eventing interface. Events are triggered by the event producer and sent to the relevant topic. The event is processed by the event broker and stored in a queue-like indexed data structure for later retrieval. Interested event consumers will listen to the topic of interest using the eventing interface. The event backbone is an internally distributed system composed of numerous event brokers. 
+Terramycelium's hybrid topology consists of five main architectural components: the event, the event consumer, the event producer, the event backbone, and the eventing interface. Events are triggered by the event producer and sent to the relevant topic through the eventing interface. The event is processed by the event broker and stored in a queue-like indexed data structure for later retrieval inside the event backbone. Interested event consumers will listen to the topic of interest using the eventing interface. The event backbone is an internally distributed system composed of numerous event brokers. 
 
-Event brokers are services created and provided to enable event communication via Metamycelia. The brokers are synchronised with a decentralised service coordinator. Brokers also enable the replication of subjects. Additionally, the event backbone includes a specialised event archive to ensure fault tolerance and recoverability. The purpose of this archive is to retain all events processed by the brokers for potential restoration in case of a failure. 
+Event brokers are services created and provided to enable event communication via Terramycelium. The brokers are synchronised with a decentralised service coordinator. Brokers also enable the replication of topics. Additionally, the event backbone includes a specialised event archive to ensure fault tolerance and recoverability. The purpose of this archive is to retain all events processed by the brokers for potential restoration in case of a failure. 
 
-
-
-
-The components collaborate to establish a distributed, fault-tolerant, and scalable data system capable of managing both batch and stream processing, as seen in Figure \ref{fig:eventDrivenArchitecture}. 
+These components collaborate to establish a distributed, fault-tolerant, and scalable data system capable of managing both batch and stream processing, as seen in Figure \ref{fig:eventDrivenArchitecture}. 
 
 \begin{figure*}[h]
   \centering
-  \includegraphics[width=\linewidth]{images/Event-architecture.png}
+  \includegraphics[width=13cm]{images/Event-architecture.png}
   \caption{Terramycelium Event-driven Architecture}
   \label{fig:eventDrivenArchitecture}
 \end{figure*}
@@ -831,17 +828,16 @@ The components collaborate to establish a distributed, fault-tolerant, and scala
 
 \subsection{Architectural characteristics}
 
-The Terramycelium architecture is distinguished by its emphasis on maintainability, scalability, fault tolerance, elasticity, and deployability. It is in line with contemporary engineering methodologies like automated deployment and continuous integration. The architecture focuses on utilising microservices, which are autonomous components that can be deployed and maintained separately.
+After discussing the main design theories that underpin Terramycelium, in this section, the overal architectural characteristics of this artifac it discussed. The Terramycelium architecture is distinguished by its emphasis on maintainability, scalability, fault tolerance, elasticity, and deployability. It is in line with contemporary engineering methodologies like automated deployment and continuous integration \cite{Ford2021SoftwareArchitecture}. The architecture focuses on utilising microservices, which are autonomous components that can be deployed and maintained separately.
 
-This architecture excels in maintainability. Event-driven microservices architecture enables modular development and independent scaling, facilitating the maintenance and updating of individual components without impacting the entire system. The design also enables automated deployment processes, which help streamline upgrades and minimise manual interaction.
+
+This architecture emphasizes on improved maintainability in comparison to current data architectures. Event-driven microservices architecture enables modular development and independent scaling, facilitating the maintenance and updating of individual components without impacting the entire system. The design also enables automated deployment processes, which help streamline upgrades and minimise manual interaction.
 
 Scalability and elasticity are significant aspects as well. The architecture allows for horizontal scalability, enabling the addition or removal of services according to demand. This adaptability guarantees that the system can efficiently manage different workloads.
 
-The architecture also demonstrates strong fault tolerance. Interservice communication can affect fault tolerance, however a redundant and scalable design of Terramycelium, combined with service discovery techniques, helps alleviate this problem. Microservices' standalone and single-purpose design typically results in a high level of fault tolerance.
+The architecture also demonstrates strong fault tolerance. Interservice communication can affect fault tolerance, however a redundant and scalable design of Terramycelium, combined with service discovery techniques, helps alleviate this problem. Microservices' standalone and single-purpose design typically results in a high level of fault tolerance \cite{MStodaytomorrow}.
 
-Metamycelia's minimal deployment components and decoupled design highlight deployability. The design facilitates evolutionary transformation to correspond with contemporary business practices that demand agility and adaptability. Modular and autonomous units provide quicker updates and iterations, ensuring alignment with the ever-changing business needs.
-
-The architecture might be rated lower in terms of cost and simplicity. The decentralised structure of Terramycelium and the possibility of higher communication overhead can create challenges in cost management and optimisation. Implementing strategies like intelligent data caching and replication can help overcome performance issues related to network calls, but managing costs is still a continuous concern.
+On the other hand, the architecture might be rated lower in terms of cost and simplicity. The decentralised structure of Terramycelium and the possibility of higher communication overhead can create challenges in cost management and optimisation. Implementing strategies like intelligent data caching and replication can help overcome performance issues related to network calls, but managing costs is still a continuous concern.
 
 The Terramycelium design emphasises the advantages of microservices, focusing on maintainability, scalability, fault tolerance, elasticity, and deployability. The text recognises the difficulties that come with distributed architectures and provides methods to reduce their impact. Architects need to comprehend the principles of architecture in order to skillfully traverse and capitalise on its advantages. An overview of architectural characteristics is portrayed in Table~\ref{tab:architecture-characteristics}
 
