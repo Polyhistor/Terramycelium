@@ -9,7 +9,6 @@ Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: bibfile.bib
 Warning--I didn't find a database entry for "ALMA"
-Warning--I didn't find a database entry for "InfrastructureForTerramycelium2023"
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
@@ -17,45 +16,45 @@ Warning--empty booktitle in Amatriain2013
 Warning--empty journal in MStodaytomorrow
 
 Done.
-You've used 87 entries,
+You've used 91 entries,
             4087 wiz_defined-function locations,
-            1299 strings with 23033 characters,
-and the built_in function-call counts, 55012 in all, are:
-= -- 4276
-> -- 1296
+            1317 strings with 23542 characters,
+and the built_in function-call counts, 56415 in all, are:
+= -- 4387
+> -- 1309
 < -- 341
-+ -- 692
-- -- 249
-* -- 2458
-:= -- 8439
-add.period$ -- 190
-call.type$ -- 87
-change.case$ -- 72
++ -- 699
+- -- 252
+* -- 2501
+:= -- 8689
+add.period$ -- 198
+call.type$ -- 91
+change.case$ -- 78
 chr.to.int$ -- 801
-cite$ -- 89
-duplicate$ -- 4099
-empty$ -- 4936
-format.name$ -- 301
-if$ -- 12886
+cite$ -- 93
+duplicate$ -- 4224
+empty$ -- 5081
+format.name$ -- 304
+if$ -- 13200
 int.to.chr$ -- 0
-int.to.str$ -- 87
-missing$ -- 766
-newline$ -- 310
-num.names$ -- 86
-pop$ -- 1963
+int.to.str$ -- 91
+missing$ -- 795
+newline$ -- 324
+num.names$ -- 89
+pop$ -- 2048
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 4313
+skip$ -- 4427
 stack$ -- 0
-substring$ -- 1958
-swap$ -- 3011
+substring$ -- 1966
+swap$ -- 3077
 text.length$ -- 74
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 87
+type$ -- 91
 warning$ -- 2
-while$ -- 229
-width$ -- 89
-write$ -- 817
-(There were 4 warnings)
+while$ -- 232
+width$ -- 93
+write$ -- 850
+(There were 3 warnings)

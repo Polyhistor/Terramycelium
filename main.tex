@@ -872,16 +872,16 @@ The Terramycelium design emphasises the advantages of microservices, focusing on
 
 \section{Artifact} \label{sec:artifact}
 
-After exploring several kernel and design theories, a solid theoretical foundation is established for creating and developing the artefact. Terramycelium is generated using Archimate and mostly showcases the RA within the technological layer. The architect has the responsibility to determine the flow and application that should be present in each node when showcasing these services in the technology layer. To ensure thoroughness, a basic business process is assumed as every software is created to fulfil a business requirement. Terramycelium should possess the flexibility needed to accommodate alternative business models, notwithstanding potential variations in the business layer across different settings.
+After exploring the underpinning design theories, a solid theoretical foundation is established for creating and developing the artefact. Terramycelium is generated using Archimate and mostly showcases the RA within the technological layer. The architect has the responsibility to determine the flow and application that should be present in each node when showcasing these services in the technology layer. To ensure thoroughness, a basic business process is assumed as every software is created to fulfil a business requirement. Terramycelium should possess the flexibility needed to accommodate alternative business models, notwithstanding potential variations in the business layer across different settings.
 
-The BD RA does not depict the architecture of any particular BD system. It functions as a versatile tool for describing, discussing, and constructing system-specific designs based on standardised principles. Terramycelium enables in-depth and insightful talks about the needs, frameworks, and functions of BD systems. The system stays vendor-neutral, providing flexibility in choosing products or services, and avoids imposing strict solutions that restrict innovation. 
+This BD RA does not depict the architecture of any particular BD system. It functions as a versatile tool for describing, discussing, and constructing system-specific designs based on standardised principles. Terramycelium enables in-depth and insightful talks about the needs, frameworks, and functions of BD systems. The system stays vendor-neutral, providing flexibility in choosing products or services, and avoids imposing strict solutions that restrict innovation. 
 
 To ensure thoroughness, we have assumed a basic BD business process, as all software is created to fulfil a specific business requirement. Terramycelium consists of 15 primary components and 5 variable components, as seen in Figure \ref{fig:Terramycelium}. The lowercase "a" in the top left corner of the diagram represents the auxiliary view, while the letter "m" represents the master view. When the same entity is utilised in various models, the auxiliary view is employed. This indicates that the entity already exists and is being reused. 
 
 
 \begin{sidewaysfigure*}
   \centering
-  \includegraphics[width=\linewidth]{images/Metamycelium.jpg}
+  \includegraphics[width=\textwidth]{images/Metamycelium.jpg}
   \caption{Terramycelium}
   \label{fig:Terramycelium}
 \end{sidewaysfigure*}
@@ -1045,13 +1045,11 @@ The variable components in Terramycelium can be altered, adapted, or excluded ac
 \section{Evaluation 1: Case Mechanism Experiment}
 \label{sec:discussion}
 
-The validation of treatment is crucial in its research, development, and implementation phase. Validating a treatment involves determining its possible impact on stakeholder objectives when applied to the specific problem at hand. 
+The validation of treatment is crucial in its research, development, and implementation phase \cite{wieringa2014design}. Validating a treatment involves determining its possible impact on stakeholder objectives when applied to the specific problem at hand. 
 
-Clearly outlining and justifying the treatment needs establishes a straightforward avenue for validation. This implies that the treatment may be verified by showing that it fulfils certain predetermined criteria. A key challenge in treatment validation is the absence of real-world implementation to assess the treatment's impact on stakeholder objectives. This challenge emphasises the need for thorough, diverse, and well-thought-out assessment methods, as discussed more in the next sections of this chapter. 
+Clearly outlining and justifying the treatment needs establishes a straightforward avenue for validation. This implies that the treatment may be verified by showing that it fulfils certain predetermined criteria. A key challenge in treatment validation is the absence of real-world implementation to assess the treatment's impact on stakeholder objectives. This challenge emphasises the need for thorough, diverse, and well-thought-out assessment methods, as discussed more in the next sections. 
 
-The initial phase of assessing this thesis is a single-case mechanism experiment based on the parameters outlined by \cite{wieringa2014design}. Although his works reference a single experiment, this study considers a few situations. A multi-case experiment is required because the artefact is complex, which improves the thoroughness and significance of the evaluation process, leading to a more detailed and nuanced comprehension of the artifact's capabilities and possibilities. 
-
-The research design for this case mechanism experiment is described in Section~\ref{caseMechanismResearchDesignAndValidation}. This part includes the current prototyping of the artefact and the following presentation of outcomes.
+The initial phase of evaluating Terramycelium is a single-case mechanism experiment based on the parameters outlined by Wirienga \cite{wieringa2014design}. Although Wirienga's works reference a single experiment, this study considers a few experiments. A multi-case experiment is required because the artefact is complex, which improves the thoroughness and significance of the evaluation process, leading to a more detailed and nuanced comprehension of the artifact's capabilities and possibilities. 
 
 
 \subsection{Prototyping an Architecture}
@@ -1059,9 +1057,9 @@ The research design for this case mechanism experiment is described in Section~\
 
 Prototyping is the creation of a working model that physically represents the structure, demonstrating the design principles and ideas. This is frequently referred to as the "concrete architecture." This technique enables researchers to validate and develop the design to assess its practicality, performance, and alignment with research objectives.
 
-Implementing the essential components and functionalities stated in the RA, Terramycelium, is part of prototyping the architecture. The selected technologies, supported by academic justification and in line with the research goals, serve as the basis for developing the prototype. The architecture's ability to manage large-scale data processing and meet various needs can be evaluated by systematically implementing its architectural components. 
+Implementing the essential components and functionalities stated in the RA, Terramycelium, is part of prototyping the architecture. The selected technologies, supported by academic justification and in line with the research goals, serve as the basis for developing the prototype. The architecture's ability to manage large-scale data processing and meet various needs can be evaluated by systematically implementing its architectural components. Figure~\ref{TerramyceliumPrototype} shows a concrete structure created with Terramycelium.
 
-Figure~\ref{TerramyceliumPrototype} shows a concrete structure created with Terramycelium.
+
 
 \begin{figure*}[h]
     \centering
@@ -1076,9 +1074,11 @@ Figure~\ref{TerramyceliumPrototype} shows a concrete structure created with Terr
 All components of this prototype are integrated within a single Kubernetes cluster. Therefore, KIND \cite{KIND2023} has been selected as the local Kubernetes cluster for this prototype to function. 
 
 
-The reproducibility of this technique is crucial. The scripts required to execute, download, and set up artefacts are located in the scripts folder of the Github repository cited as \cite{InfrastructureForTerramycelium2023}. These scripts are designed to exclusively operate on Unix-like operating systems.
+The reproducibility of this technique is crucial. The scripts required to execute, download, and set up artefacts are located in the scripts folder of the Github repository cited as \cite{terramyceliumInfrastructure}. These scripts are designed to exclusively operate on Unix-like operating systems.
+
 
 After establishing the fundamental scripts for initialising the cluster, the procedure commenced with the creation of various services within the Kubernetes cluster. Helm Charts from Artefact Hub \cite{ArtifactHub2023} are utilised for enhanced maintainability and scalability of Nginx ingress and Kafka. Terraform was subsequently utilised to implement the charts on the Kubernetes cluster. It is located in the IaaC section of the repository. 
+
 
 We conducted an extensive search for helm charts for all artefact components and selected a mature and well respected chart from Bitnami. Using this method is favoured over developing unique directives for Nginx ingress in Kubernetes and linking services to each other through Kubernetes architectural elements such as Services or StatefulSets.
 
@@ -1089,9 +1089,10 @@ Initially, a FastAPI app is set up in this procedure. The programme is container
 Once the control setup is established, the ingress resources are configured to direct traffic to Kafka-rest-proxy. The Kafka-rest-proxy is included in the artefact to simplify the data access from the cluster. Kafka utilises a binary protocol instead of HTTP, whereas most current agents depend on HTTP for network connection. 
 
 
-Once the Nginx ingress and Kafka REST proxy are properly setup, Keycloak is installed and incorporated into various components of the architecture. The Vault is integrated into the cluster using HashiCorp's official helm chart \cite{HashiCorpVaultHelm2023}. The Vault UI is active, however it is facing the obstacles outlined in Section~\ref{experimentChallenges}. 
+Once the Nginx ingress and Kafka REST proxy are properly setup, Keycloak is installed and incorporated into various components of the architecture. The Vault is integrated into the cluster using HashiCorp's official helm chart \cite{HashiCorpVaultHelm2023}. 
 
-Next, the major system to be implemented is Data Lichen. Data Lichen required a new frontend to be developed from the beginning, therefore embedded Javascript, a template engine for Node.js, was selected. This template engine was selected for its ability to simplify development and speed up the operations of this trial. 
+
+Next, the major system to be implemented is Data Lichen. Data Lichen required a new frontend to be developed from the beginning, a template engine for Node.js called EJS, was selected. This template engine was selected for its ability to simplify development and speed up the operations of this trial. 
 
 The goal is to create a simple user interface for Data Lichen that successfully showcases the framework's potential design and capability, rather than building a comprehensive frontend. Various teams may opt to adopt Data Lichen in diverse manners. Data Lichen must be developed from the beginning because there is no existing open-source technology that offers the necessary features.
 
@@ -1101,7 +1102,7 @@ Minio's chart is installed and the dashboard is active. The last component that 
 
 Istio was chosen because it has already been selected and deployed on the cluster. Automatically injecting policies into services inside a particular service mesh is a complex operation. The experiment involved extending the Envoy sidecar with an external authorizer API to implement inbound and outbound policies. 
 
-Proficiency in Envoy, Kubernetes, Istio, Rego (OPA's policy language), and GoLang is essential. OPA is incorporated into the service mesh as an independent service known as a sidecar proxy. The OPA functions as an admission controller, evaluating requests sent to the Kubernetes API server. 
+Proficiency in Envoy, Kubernetes, Istio, Rego (OPA's policy language), and GoLang was essential. OPA is incorporated into the service mesh as an independent service known as a sidecar proxy. The OPA functions as an admission controller, evaluating requests sent to the Kubernetes API server. 
 
 OPA assesses these petitions based on established policy guidelines. Approved requests are executed by the API server, whereas refused requests result in an error message sent to the user. OPA's policies manage all interactions among services and pods within a namespace. OPA assists in ensuring adherence to predetermined security and operational regulations within a Kubernetes setting. This is depicted in Figure~\ref{OPAISTIO}.
 
@@ -1112,13 +1113,13 @@ OPA assesses these petitions based on established policy guidelines. Approved re
   \label{OPAISTIO}
 \end{figure*}
 
-Once OPA was understood, Domain developed an analytics service using the Python framework FastAPI. To experiment with Terramycelium and meet the requirements outlined in Section~\ref{metMyceliumRequirements}, a domain incorporating operational and analytical systems must be established. Since this experiment is not a genuine business, it is logical to establish a simulated operational service that mimics real-world activity, such as generating large amounts of data at a high speed. 
+Once OPA was understood, the analytics service of the domain was created using the Python framework FastAPI. To meet the requirements of Terramycelium a domain incorporating operational and analytical systems must be established. Since this experiment is not a genuine business, it is logical to establish a simulated operational service that mimics real-world activity, such as generating large amounts of data at a high speed. 
 
-Two important data sources studied and selected for creating these domains are the Yelp Academic Dataset and the data from the U.S. Climate Resilience Toolkit's Climate Explorer. The decision is based on the extensive and detailed data provided by each source, their accessibility, and their ability to generate valuable analytical insights when utilised together.
+Two important data sources studied and selected for creating these domains are the Yelp Academic Dataset \cite{YelpDataset} and the data from the U.S. Climate Resilience Toolkit's Climate Explorer \cite{ClimateExplorer}. The decision is based on the extensive and detailed data provided by each source, their accessibility, and their ability to generate valuable analytical insights when utilised together.
 
-The Yelp Academic Dataset is selected for its comprehensive compilation of restaurant reviews, containing structured and semi-structured data that encompasses customer feedback, business information, and temporal patterns. Another option, the MovieLens dataset, was found less suitable because it focuses only on movie ratings, limiting the scope of potential analysis.
+The Yelp Academic Dataset is selected for its comprehensive compilation of restaurant reviews, containing structured and semi-structured data that encompasses customer feedback, business information, and temporal patterns. Another option, the MovieLens dataset \cite{MovieLens20MDataset}, was found less suitable because it focuses only on movie ratings, limiting the scope of potential analysis.
 
-The climatic Explorer dataset, which provides a detailed record of past and predicted climatic factors in the United States, is selected as an appropriate option for studying possible connections between weather trends and restaurant evaluations. Although options like Visual Crossing Weather Data Services are being examined, Climate Explorer's extensive global coverage and historical data are preferred.
+The climatic Explorer dataset, which provides a detailed record of past and predicted climatic factors in the United States, is selected as an appropriate option for studying possible connections between weather trends and restaurant evaluations. Although options like Visual Crossing Weather Data Services have been examined, Climate Explorer's extensive global coverage and historical data are preferred.
 
 The datasets qualify as BD because of their amount, variety, and velocity. The Yelp Academic Dataset comprises millions of reviews for over a hundred thousand businesses, making it a data source with a large volume and variety. The Climate Explorer dataset, updated frequently, adds a speed component to the data structure. Collectively, they offer a chance for sophisticated analytical investigations in a data-rich setting.
 

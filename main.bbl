@@ -294,6 +294,11 @@ N.~Dragoni, S.~Giallorenzo, A.~Lafuente, M.~Mazzara, F.~Montesi, R.~Mustafin, an
 K.~S. I.~G. (SIG), ``kind - kubernetes in docker,'' 2023. [Online]. Available: \url{https://kind.sigs.k8s.io/}
 \BIBentrySTDinterwordspacing
 
+\bibitem{terramyceliumInfrastructure}
+\BIBentryALTinterwordspacing
+``Github repository for terramycelium infrastructure,'' 2024. [Online]. Available: \url{https://anonymous.4open.science/r/InfrastructureForMetamycelium-8F00/}
+\BIBentrySTDinterwordspacing
+
 \bibitem{ArtifactHub2023}
 \BIBentryALTinterwordspacing
 A.~H. Team, ``Artifact hub,'' 2023. [Online]. Available: \url{https://artifacthub.io/}
@@ -303,6 +308,15 @@ A.~H. Team, ``Artifact hub,'' 2023. [Online]. Available: \url{https://artifacthu
 \BIBentryALTinterwordspacing
 HashiCorp, ``Vault helm chart,'' 2023. [Online]. Available: \url{https://artifacthub.io/packages/helm/hashicorp/vault}
 \BIBentrySTDinterwordspacing
+
+\bibitem{YelpDataset}
+Yelp, ``Yelp dataset,'' 2023, available from Yelp: \url{https://www.yelp.com/dataset}.
+
+\bibitem{ClimateExplorer}
+N.~Collaborative, ``U.s. climate resilience toolkit: Climate explorer,'' 2023, available from: \url{https://crt-climate-explorer.nemac.org/}.
+
+\bibitem{MovieLens20MDataset}
+{GroupLens}, ``Movielens 20m dataset,'' \url{https://www.kaggle.com/datasets/grouplens/movielens-20m-dataset}, 2024.
 
 \bibitem{johnson2019logic}
 M.~Johnson, \emph{Principles of Logic in Computer Science}.\hskip 1em plus 0.5em minus 0.4em\relax TechPress, 2019.

@@ -880,6 +880,8 @@ INPUT ./images/customer-domain-stream-data-topic-statistics.png
 INPUT images/customer-domain-stream-data-topic-statistics.png
 INPUT ./images/customer-domain-stream-data-topic-statistics.png
 INPUT ./images/customer-domain-stream-data-topic-statistics.png
+INPUT /opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf
+INPUT /opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
 INPUT ./images/memory-utilization-in-customer-domain-in-streaming-case.png
 INPUT ./images/memory-utilization-in-customer-domain-in-streaming-case.png
 INPUT images/memory-utilization-in-customer-domain-in-streaming-case.png
@@ -900,8 +902,6 @@ INPUT ./images/processing-duration-streaming-case-in-weather-domain.png
 INPUT images/processing-duration-streaming-case-in-weather-domain.png
 INPUT ./images/processing-duration-streaming-case-in-weather-domain.png
 INPUT ./images/processing-duration-streaming-case-in-weather-domain.png
-INPUT /opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf
-INPUT /opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
 INPUT ./images/data-scientist-data-lichen-flow-with-authentication.jpg
 INPUT ./images/data-scientist-data-lichen-flow-with-authentication.jpg
 INPUT images/data-scientist-data-lichen-flow-with-authentication.jpg
