@@ -16,45 +16,45 @@ Warning--empty booktitle in Amatriain2013
 Warning--empty journal in MStodaytomorrow
 
 Done.
-You've used 91 entries,
+You've used 95 entries,
             4087 wiz_defined-function locations,
-            1317 strings with 23542 characters,
-and the built_in function-call counts, 56415 in all, are:
-= -- 4387
-> -- 1309
-< -- 341
-+ -- 699
-- -- 252
-* -- 2501
-:= -- 8689
-add.period$ -- 198
-call.type$ -- 91
-change.case$ -- 78
-chr.to.int$ -- 801
-cite$ -- 93
-duplicate$ -- 4224
-empty$ -- 5081
-format.name$ -- 304
-if$ -- 13200
+            1335 strings with 24042 characters,
+and the built_in function-call counts, 58503 in all, are:
+= -- 4552
+> -- 1342
+< -- 352
++ -- 717
+- -- 258
+* -- 2584
+:= -- 9022
+add.period$ -- 206
+call.type$ -- 95
+change.case$ -- 80
+chr.to.int$ -- 822
+cite$ -- 97
+duplicate$ -- 4387
+empty$ -- 5294
+format.name$ -- 312
+if$ -- 13699
 int.to.chr$ -- 0
-int.to.str$ -- 91
-missing$ -- 795
-newline$ -- 324
-num.names$ -- 89
-pop$ -- 2048
+int.to.str$ -- 95
+missing$ -- 823
+newline$ -- 336
+num.names$ -- 93
+pop$ -- 2119
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 4427
+skip$ -- 4605
 stack$ -- 0
-substring$ -- 1966
-swap$ -- 3077
-text.length$ -- 74
+substring$ -- 2021
+swap$ -- 3188
+text.length$ -- 78
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 91
+type$ -- 95
 warning$ -- 2
-while$ -- 232
-width$ -- 93
-write$ -- 850
+while$ -- 240
+width$ -- 97
+write$ -- 884
 (There were 3 warnings)

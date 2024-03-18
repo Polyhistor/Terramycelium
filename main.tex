@@ -1131,11 +1131,12 @@ Scenarios are commonly used to evaluate new architectural designs because they o
 
 This experiment is crucial as it simulates various behaviours, system loads, data quantities, and processing kinds to analyse the architecture's resilience, adaptability, scalability, and interoperability. 
 
-Based on the templates in Carroll (1995) and the examples in Kazman ATAM, a set of scenarios is established to evaluate the prototype's abilities. The scenarios, which include various aspects of system performance and security, are outlined in Tables \ref{s1Table} through \ref{s6Table}.
+Based on the templates in Carroll's work \cite{Carroll1995} and the examples in Kazman's ATAM \cite{KazmanATAM}, a set of scenarios is established to evaluate the prototype's abilities. The scenarios, which include various aspects of system performance and security, are outlined in Tables \ref{s1Table} through \ref{s6Table}.
 
-\begin{table*}[tbp]
+\begin{table}[tbp]
+   \renewcommand{\arraystretch}{1.5} % Adjust v
   \caption{Scenario S1: High Volume Data Ingestion Scenario}
-  \begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{5cm}|X|}
+  \begin{tabularx}{\columnwidth}{|>{\raggedright\arraybackslash}p{5cm}|X|}
   \hline
   \textbf{Scenario Description:} & The system is subjected to a high volume of data, simulating peak data ingestion rates. The scenario is implemented when Domain A retrieves high volumes of data from Domain B, and processes it.  \\
   \hline
@@ -1143,15 +1144,14 @@ Based on the templates in Carroll (1995) and the examples in Kazman ATAM, a set 
   \hline
   \textbf{Expected Outcome:} & The system can ingest, store, and process large quantities of data without significant performance degradation. \\
   \hline
-  \textbf{Actual Outcome, Evaluation, Implications:} & To be filled out during testing. \\
-  \hline
   \end{tabularx}
   \label{s1Table}
-\end{table*}
+\end{table}
 
-\begin{table*}[tbp]
+\begin{table}[tbp]
+   \renewcommand{\arraystretch}{1.5} % Adjust v
   \caption{Scenario S2: High Velocity Data Ingestion Scenario}
-  \begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{5cm}|X|}
+  \begin{tabularx}{\columnwidth}{|>{\raggedright\arraybackslash}p{5cm}|X|}
   \hline
   \textbf{Scenario Description:} & The system is subjected to a high velocity of data, simulating peak data ingestion rates. The scenario is implemented when Domain A streams data into domain B and domain B stream processes the data.    \\
   \hline
@@ -1159,14 +1159,13 @@ Based on the templates in Carroll (1995) and the examples in Kazman ATAM, a set 
   \hline
   \textbf{Expected Outcome:} & The system can ingest, store, and process continuous stream of data without significant performance degradation. \\
   \hline
-  \textbf{Actual Outcome, Evaluation, Implications:} & To be filled out during testing. \\
-  \hline
   \end{tabularx}
-\end{table*}
+\end{table}
 
-\begin{table*}[tbp]
+\begin{table}[tbp]
+   \renewcommand{\arraystretch}{1.5} % Adjust v
   \caption{Scenario S3: Data Variety Scenario}
-  \begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{5cm}|X|}
+  \begin{tabularx}{\columnwidth}{|>{\raggedright\arraybackslash}p{5cm}|X|}
   \hline
   \textbf{Scenario Description:} & The system is exposed to a diverse range of data types and formats. This scenario is implemented when domain B retrieves files in different format from domain A and processes it. \\
   \hline
@@ -1174,14 +1173,13 @@ Based on the templates in Carroll (1995) and the examples in Kazman ATAM, a set 
   \hline
   \textbf{Expected Outcome:} & The system can handle and process different data types and formats efficiently. \\
   \hline
-  \textbf{Actual Outcome, Evaluation, Implications:} & To be filled out during testing. \\
-  \hline
   \end{tabularx}
-\end{table*}
+\end{table}
 
-\begin{table*}[tbp]
+\begin{table}[tbp]
+   \renewcommand{\arraystretch}{1.5} % Adjust v
   \caption{Scenario S4: Complex Query Scenario}
-  \begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{5cm}|X|}
+  \begin{tabularx}{\columnwidth}{|>{\raggedright\arraybackslash}p{5cm}|X|}
   \hline
   \textbf{Scenario Description:} & The system processes complex queries that involve multiple large datasets. This scenario happens when an external data scientist queries both domains and tries to understand a relationship between the datasets. \\
   \hline
@@ -1189,14 +1187,13 @@ Based on the templates in Carroll (1995) and the examples in Kazman ATAM, a set 
   \hline
   \textbf{Expected Outcome:} & The system can efficiently handle and process complex queries. \\
   \hline
-  \textbf{Actual Outcome, Evaluation, Implications:} & To be filled out during testing. \\
-  \hline
   \end{tabularx}
-\end{table*}
+\end{table}
 
-\begin{table*}[tbp]
+\begin{table}[tbp]
+   \renewcommand{\arraystretch}{1.5} % Adjust v
   \caption{Scenario S5: Secret Management Scenario}
-  \begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{5cm}|X|}
+  \begin{tabularx}{\columnwidth}{|>{\raggedright\arraybackslash}p{5cm}|X|}
   \hline
   \textbf{Scenario Description:} & This scenario underscores the system's ability to manage secrets securely and efficiently, focusing on storage, retrieval, and rotation using Hashicorp Vault in conjunction with OpenID Connect's standard flow with bearer tokens. \\
   \hline
@@ -1204,14 +1201,13 @@ Based on the templates in Carroll (1995) and the examples in Kazman ATAM, a set 
   \hline
   \textbf{Expected Outcome:} & The system securely manages secrets, ensuring timely storage, retrieval, and rotation while maintaining confidentiality and integrity. \\
   \hline
-  \textbf{Actual Outcome, Evaluation, Implications:} & To be filled out during testing. \\
-  \hline
   \end{tabularx}
-\end{table*}
+\end{table}
 
-\begin{table*}[tbp]
+\begin{table}[tbp]
+   \renewcommand{\arraystretch}{1.5} % Adjust v
   \caption{Scenario S6: Data Security Scenario}
-  \begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{5cm}|X|}
+  \begin{tabularx}{\columnwidth}{|>{\raggedright\arraybackslash}p{5cm}|X|}
   \hline
   \textbf{Scenario Description:} & The system's capability is evaluated regarding ensuring data security throughout access, processing, and transmission. OpenID Connect with bearer tokens is leveraged for authentication. \\
   \hline
@@ -1219,11 +1215,9 @@ Based on the templates in Carroll (1995) and the examples in Kazman ATAM, a set 
   \hline
   \textbf{Expected Outcome:} & The system guarantees data security, with secure data access, processing, and transmission. Unauthorised access attempts are effectively detected and mitigated. \\
   \hline
-  \textbf{Actual Outcome, Evaluation, Implications:} & To be filled out during testing. \\
-  \hline
   \end{tabularx}
   \label{s6Table}
-\end{table*}
+\end{table}
 
 
 \subsection{Stage 3: Scenario Testing}
@@ -1240,7 +1234,7 @@ The message is transmitted to a Kafka-rest-proxy and then to the Kafka cluster. 
 
 Upon receiving the event, the analytical service utilises the metadata within the event's body to extract the object's address. Once the address is known, the analytical service directly accesses MinIO to retrieve the data. The service processes the data and saves it in an embedded SQlite database. 
 
-The required data quality metadata from Section~\ref{section:dataQuality} and bitemporality metadata from Section~\ref{bitemporality} are generated. The metadata, service name, service address, and unique identifier are sent as an event to Kafka on a specified topic. Data Lichen establishes a consumer group, subscribes to a particular topic, retrieves the data, and subsequently presents the information for each domain. Data Lichen presents this information in a specially designed table as shown in Figure~\ref{dataLichenDashboard}. Utilising a distinct identification for each service guarantees that the listing and presentation of services are uniform and dependable, yielding consistent outcomes with every action. The flow is depicted in Figure~\ref{intraDomain}.
+At this stage, the required data quality metadata and bitemporality metadata are generated. The metadata, service name, service address, and unique identifier are sent as an event to Kafka on a specified topic. Data Lichen establishes a consumer group, subscribes to a particular topic, retrieves the data, and subsequently presents the information for each domain. Data Lichen presents this information in a specially designed table as shown in Figure~\ref{dataLichenDashboard}. Utilising a distinct identification for each service guarantees that the listing and presentation of services are uniform and dependable, yielding consistent outcomes with every action. The flow is depicted in Figure~\ref{intraDomain}.
 
 \begin{figure*}[h]
   \centering
@@ -1283,7 +1277,7 @@ CPU usage and memory utilisation are key metrics for assessing the system's reso
 
 These metrics collectively evaluate the system's capacity to sustain performance and stability when faced with high data input requirements. Each measure will be described in connection to the corresponding system mechanism in the following sections.
 
-\paragraph{Data Ingestion Rate:}
+\paragraph{Data Ingestion Rate}
 Each service is instrumented using OpenTelemetry SDKs to capture telemetry data for FastAPI requests and manual spans for specified processes. The collected data is then exported to Kafka using the KafkaRESTProxyExporter class to measure the data intake rate. 
 
 Figure~\ref{openTelemetryTopic} illustrates the open telemetry Kafka topic and a large number of events recorded in this subject. The open telemetry processor service consumes all events sent to this topic. The service gathers and maintains metrics, which are then extracted by Prometheus and subsequently sent to Grafana. The flow is depicted in Figure~\ref{openTelemetryFlow}.
@@ -1312,16 +1306,16 @@ The JSON displayed in Figure~\ref{openTelemetryTraceSpan} depicts an example of 
   \label{openTelemetryTraceSpan}
 \end{figure}
 
-Before presenting the experiment results, it is crucial to define the specific meaning of 'heavy load of data' in the context of this study. In BD, there is no commonly accepted criterion for defining "high volume," particularly in decentralised, domain-driven architectures such as Terramycelium. There is no single standard benchmark that universally defines what qualifies as a heavy data load in these systems. 
+Before presenting the experiment results, it is crucial to define the specific meaning of `heavy load of data' in the context of this study. In BD, there is no commonly accepted criterion for defining 'high volume', particularly in decentralised, domain-driven architectures such as Terramycelium. There is no single standard benchmark that universally defines what qualifies as a heavy data load in these systems. 
 
-Academic research and business reports suggest that daily data intake can reach terabytes or more, particularly in high-velocity streams such as social media or e-commerce transactions. 
+Academic research and business reports suggest that daily data intake can reach terabytes or more, particularly in high-velocity streams such as social media or e-commerce transactions \cite{AtaeiBigDataEnvirons}. 
 
 Transferring many gigabytes of data in JSON format between domains is a substantial stress test due to its verbosity and demands compared to binary formats. The Yelp academic dataset is divided into 400KB chunks and transferred many times to test the prototype's capability and resilience against increased data traffic. 
 
 This configuration is suitable for practical scenarios where systems need to consistently handle continuous streams of incoming data from different sources and varying quantities, while maintaining high performance and data integrity. Terramycelium's decentralised, event-driven architecture is designed to allow data to be smoothly ingested, processed, and retrieved, regardless of the frequency of dataset transfers or accesses. This assesses the system's capacity to manage large amounts of data and its ability to perform well in a setting that replicates the rapid data flow typical of modern BD scenarios.
 
 
-All data sent during the experiment is stored in MinIO. Upon successful storage, a confirmation is always sent back. The process of streaming, storing, and validating data was repeated several times to demonstrate its reliability, especially when dealing with large amounts of data. Reliable and accurate communication in challenging situations supports the importance of consistent communication in remote systems, as shown in academic research such as Kleppmann (2017). The process can be formally represented using logical implications to determine the system's resilience.
+All data sent during the experiment is stored in MinIO. Upon successful storage, a confirmation is always sent back. The process of streaming, storing, and validating data was repeated several times to demonstrate its reliability, especially when dealing with large amounts of data. Reliable and accurate communication in challenging situations supports the importance of consistent communication in remote systems, as shown in the works of Kleppmann \cite{Kleppmann2017}. The process can be formally represented using logical implications to determine the system's resilience.
 
 Let's denote the following:
 \begin{itemize}
@@ -1331,13 +1325,13 @@ Let's denote the following:
 \end{itemize}
 
 From the empirical observations, it is deduced that:
-\[ P  implies  Q \]
-\[ Q  implies  R \]
+\[ P \quad \text{implies} \quad Q \]
+\[ Q \quad \text{implies} \quad R \]
 
 Thus, utilizing the transitive property of implications \cite{johnson2019logic}, it is inferred that:
-\[ P  implies  R \]
+\[ P  \quad \text{implies} \quad R \]
 
-Every data transmission from Domain A to Domain B ensures a certification of successful storage. The link highlights the system's effectiveness and dependability in handling extensive amounts of data, aligning with the conclusions of Lee (2020) who stressed the need of maintaining data consistency and integrity in distributed storage systems. 
+Every data transmission from Domain A to Domain B ensures a certification of successful storage. The link highlights the system's effectiveness and dependability in handling extensive amounts of data, aligning with the conclusions of Lee \cite{lee2020bigdata} who stressed the need of maintaining data consistency and integrity in distributed storage systems. 
 
 The graph in Figure~\ref{kafkIngestionInBytesInCustomerDomainAnalyticalService} shows that the Kafka data ingestion reached its highest point at 1,693,816,791 bytes on 2023-09-04 at 20:40:00 in the analytical service of the customer domain, demonstrating the transfer of data from the operational service to the analytical service. The bar chart illustrates the incremental rise in the service's workload.  The entire quantity of data ingested during the trial was 1.6 billion bytes, as shown in Figure~\ref{totalDataIngestedinBytesInCustomerDomainsAnalyticalService}.
 
@@ -1529,11 +1523,11 @@ The metrics not only demonstrate the stability and efficiency of our BD infrastr
 
 Memory utilisation is a crucial measure when assessing system efficiency. An efficient memory management system demonstrates a system's capability to process real-time data and adapt to varying workloads. The memory usage seen in the telemetry processing service, a vital element of the infrastructure, offers precise insights into the system's ability to handle data. Examining these memory patterns provides a more distinct comprehension of the service's effectiveness in handling different data rates and identifies places where memory optimisation may be required to improve overall performance.
 
-In the field of meteorology, memory utilisation can be categorised into two primary types: operational services and analytical services. Operational services that serve static data have low memory usage because they require less processing power. On the other hand, analytical services can exhibit diverse memory patterns based on the intricacy of data analysis.
+In the weather domain, memory utilisation can be categorised into two primary types: operational services and analytical services. Operational services that serve static data have low memory usage because they require less processing power. On the other hand, analytical services can exhibit diverse memory patterns based on the intricacy of data analysis.
 
 The customer domain has a same pattern, wherein operational services have consistent memory use as a result of predominantly handling static client data. On the other side, the analytical services, which thoroughly examine client habits and preferences, may experience occasional surges, particularly when dealing with large datasets.
 
-The memory utilisation trends across the various services may be visualised in Figure~\ref{kubernetesClusterMemoryUsage}. The address for each service is specified in the respective service definitions in the Github repositories. It is important to note that the service running on port 8000 is the operational service in the customer domain, while the service on port 8001 is the analytical service for the customer domain. The service running on port 8005 is the operational service for the weather domain, whereas the service on port 8006 is the analytical service for the same domain. The service running on port 8008 is the application responsible for processing telemetry data.
+The memory utilisation trends across the various services is visualised in Figure~\ref{kubernetesClusterMemoryUsage}. The address for each service is specified in the respective service definitions in the Github repositories. It is important to note that the service running on port 8000 is the operational service in the customer domain, while the service on port 8001 is the analytical service for the customer domain. The service running on port 8005 is the operational service for the weather domain, whereas the service on port 8006 is the analytical service for the same domain. The service running on port 8008 is the application responsible for processing telemetry data.
 
 
 \begin{figure}

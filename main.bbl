@@ -318,7 +318,19 @@ N.~Collaborative, ``U.s. climate resilience toolkit: Climate explorer,'' 2023, a
 \bibitem{MovieLens20MDataset}
 {GroupLens}, ``Movielens 20m dataset,'' \url{https://www.kaggle.com/datasets/grouplens/movielens-20m-dataset}, 2024.
 
+\bibitem{Carroll1995}
+J.~M. Carroll, \emph{Scenario-Based Design: Envisioning Work and Technology in System Development}.\hskip 1em plus 0.5em minus 0.4em\relax Wiley, 1995.
+
+\bibitem{AtaeiBigDataEnvirons}
+B.~B. Rad and P.~Ataei, ``The big data ecosystem and its environs,'' \emph{International Journal of Computer Science and Network Security (IJCSNS)}, vol.~17, no.~3, p.~38, 2017.
+
+\bibitem{Kleppmann2017}
+M.~Kleppmann, \emph{Designing data-intensive applications: The big ideas behind reliable, scalable, and maintainable systems}.\hskip 1em plus 0.5em minus 0.4em\relax " O'Reilly Media, Inc.", 2017.
+
 \bibitem{johnson2019logic}
 M.~Johnson, \emph{Principles of Logic in Computer Science}.\hskip 1em plus 0.5em minus 0.4em\relax TechPress, 2019.
+
+\bibitem{lee2020bigdata}
+K.~Lee and L.~Wang, ``Ensuring data consistency in big data systems,'' in \emph{Proceedings of the 2020 International Conference on Big Data}, 2020, pp. 456--467.
 
 \end{thebibliography}

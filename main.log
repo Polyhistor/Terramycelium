@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Homebrew) (preloaded format=pdflatex 2023.6.22)  18 MAR 2024 20:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Homebrew) (preloaded format=pdflatex 2023.6.22)  18 MAR 2024 21:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -551,226 +551,388 @@ Package pdftex.def Info: images/OPA-istio-flow.png  used on input line 1111.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[17] [18 <./images/MetamyceliumConcrete.jpg>] [19]
+[17]
+Underfull \hbox (badness 6032) in paragraph at lines 1147--1147
+\OT1/ptm/m/n/8 to a high vol-ume of
+ []
 
-LaTeX Warning: Reference `section:dataQuality' on page 20 undefined on input line 1243.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1147--1147
+\OT1/ptm/m/n/8 data, sim-u-lat-ing peak
+ []
 
 
-LaTeX Warning: Reference `bitemporality' on page 20 undefined on input line 1243.
+Underfull \hbox (badness 7168) in paragraph at lines 1147--1147
+\OT1/ptm/m/n/8 high vol-umes of data
+ []
 
-<images/Datalichen-dashboard.png, id=632, 1077.02374pt x 291.0875pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 1147--1147
+\OT1/ptm/m/n/8 from Do-main B, and
+ []
+
+
+Underfull \hbox (badness 1694) in paragraph at lines 1147--1147
+[]|\OT1/ptm/m/n/8 The sys-tem can in-gest,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1147--1147
+\OT1/ptm/m/n/8 sig-nif-i-cant per-for-mance
+ []
+
+
+Underfull \hbox (badness 4441) in paragraph at lines 1162--1162
+\OT1/ptm/m/n/8 to a high ve-loc-ity of
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1162--1162
+\OT1/ptm/m/n/8 data, sim-u-lat-ing peak
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1162--1162
+\OT1/ptm/m/n/8 data into do-main B
+ []
+
+
+Underfull \hbox (badness 5771) in paragraph at lines 1162--1162
+\OT1/ptm/m/n/8 and do-main B stream
+ []
+
+
+Underfull \hbox (badness 1694) in paragraph at lines 1162--1162
+[]|\OT1/ptm/m/n/8 The sys-tem can in-gest,
+ []
+
+
+Underfull \hbox (badness 1472) in paragraph at lines 1162--1162
+\OT1/ptm/m/n/8 store, and pro-cess con-
+ []
+
+
+Underfull \hbox (badness 3049) in paragraph at lines 1162--1162
+\OT1/ptm/m/n/8 tin-u-ous stream of data
+ []
+
+
+Underfull \hbox (badness 1577) in paragraph at lines 1176--1176
+[]|\OT1/ptm/m/n/8 The sys-tem can han-dle
+ []
+
+
+Underfull \hbox (badness 2221) in paragraph at lines 1176--1176
+\OT1/ptm/m/n/8 types and for-mats ef-fi-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1190--1190
+[]|\OT1/ptm/m/n/8 The sys-tem pro-cesses
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1190--1190
+\OT1/ptm/m/n/8 com-plex queries that
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1190--1190
+\OT1/ptm/m/n/8 in-volve mul-ti-ple large
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1190--1190
+\OT1/ptm/m/n/8 datasets. This sce-nario
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1190--1190
+\OT1/ptm/m/n/8 data sci-en-tist queries
+ []
+
+
+Underfull \hbox (badness 3815) in paragraph at lines 1204--1204
+\OT1/ptm/m/n/8 the sys-tem's abil-ity to
+ []
+
+
+Underfull \hbox (badness 1648) in paragraph at lines 1204--1204
+\OT1/ptm/m/n/8 and ef-fi-ciently, fo-cus-ing
+ []
+
+
+Underfull \hbox (badness 2142) in paragraph at lines 1204--1204
+[]|\OT1/ptm/m/n/8 Confidentiality, In-tegrity,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1204--1204
+[]|\OT1/ptm/m/n/8 The sys-tem se-curely
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1204--1204
+\OT1/ptm/m/n/8 man-ages se-crets,
+ []
+
+
+Underfull \hbox (badness 1430) in paragraph at lines 1204--1204
+\OT1/ptm/m/n/8 en-sur-ing timely stor-age,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1204--1204
+\OT1/ptm/m/n/8 re-trieval, and ro-ta-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1204--1204
+\OT1/ptm/m/n/8 while main-tain-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1204--1204
+\OT1/ptm/m/n/8 con-fi-den-tial-ity and
+ []
+
+
+Underfull \hbox (badness 7362) in paragraph at lines 1218--1218
+\OT1/ptm/m/n/8 out ac-cess, pro-cess-ing,
+ []
+
+
+Underfull \hbox (badness 7362) in paragraph at lines 1218--1218
+[]|\OT1/ptm/m/n/8 The sys-tem guar-an-tees
+ []
+
+
+Underfull \hbox (badness 2435) in paragraph at lines 1218--1218
+\OT1/ptm/m/n/8 data ac-cess, pro-cess-ing,
+ []
+
+
+Underfull \hbox (badness 4967) in paragraph at lines 1218--1218
+\OT1/ptm/m/n/8 are ef-fec-tively de-tected
+ []
+
+[18 <./images/MetamyceliumConcrete.jpg>] [19 <./images/OPA-istio-flow.png (PNG copy)>]
+<images/Datalichen-dashboard.png, id=635, 1077.02374pt x 291.0875pt>
 File: images/Datalichen-dashboard.png Graphic file (type png)
 <use images/Datalichen-dashboard.png>
-Package pdftex.def Info: images/Datalichen-dashboard.png  used on input line 1247.
+Package pdftex.def Info: images/Datalichen-dashboard.png  used on input line 1241.
 (pdftex.def)             Requested size: 516.0pt x 139.45834pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/intra-domain-flow.jpg, id=633, 1591.9475pt x 664.4825pt>
+<images/intra-domain-flow.jpg, id=636, 1591.9475pt x 664.4825pt>
 File: images/intra-domain-flow.jpg Graphic file (type jpg)
 <use images/intra-domain-flow.jpg>
-Package pdftex.def Info: images/intra-domain-flow.jpg  used on input line 1254.
+Package pdftex.def Info: images/intra-domain-flow.jpg  used on input line 1248.
 (pdftex.def)             Requested size: 516.0pt x 215.37631pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/kafka-topics.png, id=635, 2543.5025pt x 726.715pt>
+<images/kafka-topics.png, id=638, 2543.5025pt x 726.715pt>
 File: images/kafka-topics.png Graphic file (type png)
 <use images/kafka-topics.png>
-Package pdftex.def Info: images/kafka-topics.png  used on input line 1265.
+Package pdftex.def Info: images/kafka-topics.png  used on input line 1259.
 (pdftex.def)             Requested size: 516.0pt x 147.42511pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/Scenario-s1.png, id=637, 1116.17pt x 395.4775pt>
+<images/Scenario-s1.png, id=640, 1116.17pt x 395.4775pt>
 File: images/Scenario-s1.png Graphic file (type png)
 <use images/Scenario-s1.png>
-Package pdftex.def Info: images/Scenario-s1.png  used on input line 1274.
+Package pdftex.def Info: images/Scenario-s1.png  used on input line 1268.
 (pdftex.def)             Requested size: 516.0pt x 182.83305pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[20 <./images/OPA-istio-flow.png (PNG copy)>]
-<images/kafka-open-telemetry-topic-screenshot.png, id=648, 2144.01pt x 359.3425pt>
+<images/kafka-open-telemetry-topic-screenshot.png, id=643, 2144.01pt x 359.3425pt>
 File: images/kafka-open-telemetry-topic-screenshot.png Graphic file (type png)
 <use images/kafka-open-telemetry-topic-screenshot.png>
-Package pdftex.def Info: images/kafka-open-telemetry-topic-screenshot.png  used on input line 1294.
+Package pdftex.def Info: images/kafka-open-telemetry-topic-screenshot.png  used on input line 1288.
 (pdftex.def)             Requested size: 516.0pt x 86.47972pt.
-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/open-telemetry-flow.png, id=649, 1426.32875pt x 377.41pt>
+<images/open-telemetry-flow.png, id=644, 1426.32875pt x 377.41pt>
 File: images/open-telemetry-flow.png Graphic file (type png)
 <use images/open-telemetry-flow.png>
-Package pdftex.def Info: images/open-telemetry-flow.png  used on input line 1301.
+Package pdftex.def Info: images/open-telemetry-flow.png  used on input line 1295.
 (pdftex.def)             Requested size: 516.0pt x 136.5355pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/open-telemetry-trace-example.png, id=651, 700.6175pt x 577.15625pt>
+<images/open-telemetry-trace-example.png, id=646, 700.6175pt x 577.15625pt>
 File: images/open-telemetry-trace-example.png Graphic file (type png)
 <use images/open-telemetry-trace-example.png>
-Package pdftex.def Info: images/open-telemetry-trace-example.png  used on input line 1310.
+Package pdftex.def Info: images/open-telemetry-trace-example.png  used on input line 1304.
 (pdftex.def)             Requested size: 252.0pt x 207.59114pt.
+[20]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[21 <./images/Datalichen-dashboard.png> <./images/intra-domain-flow.jpg (PNG copy)>] [22 <./images/kafka-topics.png> <./images/Scenario-s1.png (PNG copy)> <./images/kafka-open-telemetry-topic-screenshot.png>]
-<images/Kafka-ingestion-in-Bytes.png, id=672, 1734.48pt x 558.085pt>
+[21 <./images/Datalichen-dashboard.png> <./images/intra-domain-flow.jpg (PNG copy)>]
+<images/Kafka-ingestion-in-Bytes.png, id=673, 1734.48pt x 558.085pt>
 File: images/Kafka-ingestion-in-Bytes.png Graphic file (type png)
 <use images/Kafka-ingestion-in-Bytes.png>
-Package pdftex.def Info: images/Kafka-ingestion-in-Bytes.png  used on input line 1347.
+Package pdftex.def Info: images/Kafka-ingestion-in-Bytes.png  used on input line 1341.
 (pdftex.def)             Requested size: 516.0pt x 166.03021pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/total-data-ingested-in-bytes.jpeg, id=673, 1731.46875pt x 610.28pt>
+<images/total-data-ingested-in-bytes.jpeg, id=674, 1731.46875pt x 610.28pt>
 File: images/total-data-ingested-in-bytes.jpeg Graphic file (type jpg)
 <use images/total-data-ingested-in-bytes.jpeg>
-Package pdftex.def Info: images/total-data-ingested-in-bytes.jpeg  used on input line 1354.
+Package pdftex.def Info: images/total-data-ingested-in-bytes.jpeg  used on input line 1348.
 (pdftex.def)             Requested size: 252.0pt x 88.81891pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/weather-domain-ingested-data-in-bytes.png, id=675, 1670.24pt x 551.05875pt>
+<images/weather-domain-ingested-data-in-bytes.png, id=676, 1670.24pt x 551.05875pt>
 File: images/weather-domain-ingested-data-in-bytes.png Graphic file (type png)
 <use images/weather-domain-ingested-data-in-bytes.png>
-Package pdftex.def Info: images/weather-domain-ingested-data-in-bytes.png  used on input line 1363.
+Package pdftex.def Info: images/weather-domain-ingested-data-in-bytes.png  used on input line 1357.
 (pdftex.def)             Requested size: 516.0pt x 170.24625pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+[22 <./images/kafka-topics.png> <./images/Scenario-s1.png (PNG copy)> <./images/kafka-open-telemetry-topic-screenshot.png>]
 
-LaTeX Warning: Reference `dataIngestedInWeatherDomainTable' on page 23 undefined on input line 1396.
+LaTeX Warning: Reference `dataIngestedInWeatherDomainTable' on page 23 undefined on input line 1390.
 
-[23 <./images/open-telemetry-flow.png (PNG copy)> <./images/open-telemetry-trace-example.png>]
-<images/customer-and-weather-domain-analytics-service-latency.png, id=689, 1725.44624pt x 502.87875pt>
+<images/customer-and-weather-domain-analytics-service-latency.png, id=690, 1725.44624pt x 502.87875pt>
 File: images/customer-and-weather-domain-analytics-service-latency.png Graphic file (type png)
 <use images/customer-and-weather-domain-analytics-service-latency.png>
-Package pdftex.def Info: images/customer-and-weather-domain-analytics-service-latency.png  used on input line 1441.
+Package pdftex.def Info: images/customer-and-weather-domain-analytics-service-latency.png  used on input line 1435.
 (pdftex.def)             Requested size: 516.0pt x 150.38136pt.
-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/Open-telemetry-service-CPU-usage.png, id=691, 1280.785pt x 370.38374pt>
+[23 <./images/open-telemetry-flow.png (PNG copy)> <./images/open-telemetry-trace-example.png>]
+<images/Open-telemetry-service-CPU-usage.png, id=701, 1280.785pt x 370.38374pt>
 File: images/Open-telemetry-service-CPU-usage.png Graphic file (type png)
 <use images/Open-telemetry-service-CPU-usage.png>
-Package pdftex.def Info: images/Open-telemetry-service-CPU-usage.png  used on input line 1460.
+Package pdftex.def Info: images/Open-telemetry-service-CPU-usage.png  used on input line 1454.
 (pdftex.def)             Requested size: 516.0pt x 149.21901pt.
 
-Overfull \hbox (264.0pt too wide) in paragraph at lines 1460--1461
+Overfull \hbox (264.0pt too wide) in paragraph at lines 1454--1455
  [][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[24 <./images/Kafka-ingestion-in-Bytes.png> <./images/total-data-ingested-in-bytes.jpeg>]
 <images/kubernetes-cluster-CPU-usage.png, id=704, 706.64pt x 372.39125pt>
 File: images/kubernetes-cluster-CPU-usage.png Graphic file (type png)
 <use images/kubernetes-cluster-CPU-usage.png>
-Package pdftex.def Info: images/kubernetes-cluster-CPU-usage.png  used on input line 1497.
+Package pdftex.def Info: images/kubernetes-cluster-CPU-usage.png  used on input line 1491.
 (pdftex.def)             Requested size: 252.0pt x 132.79929pt.
-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 <images/Kubernetes-cluster-data-read-write.png, id=707, 695.59875pt x 370.38374pt>
 File: images/Kubernetes-cluster-data-read-write.png Graphic file (type png)
 <use images/Kubernetes-cluster-data-read-write.png>
-Package pdftex.def Info: images/Kubernetes-cluster-data-read-write.png  used on input line 1506.
+Package pdftex.def Info: images/Kubernetes-cluster-data-read-write.png  used on input line 1500.
 (pdftex.def)             Requested size: 252.0pt x 134.18013pt.
 <images/kubernetes-cluster-network-data-received-and-sent.png, id=708, 696.6025pt x 372.39125pt>
 File: images/kubernetes-cluster-network-data-received-and-sent.png Graphic file (type png)
 <use images/kubernetes-cluster-network-data-received-and-sent.png>
-Package pdftex.def Info: images/kubernetes-cluster-network-data-received-and-sent.png  used on input line 1514.
+Package pdftex.def Info: images/kubernetes-cluster-network-data-received-and-sent.png  used on input line 1508.
 (pdftex.def)             Requested size: 252.0pt x 134.7142pt.
-[25 <./images/weather-domain-ingested-data-in-bytes.png> <./images/customer-and-weather-domain-analytics-service-latency.png> <./images/Open-telemetry-service-CPU-usage.png> <./images/kubernetes-cluster-CPU-usage.png>]
-<images/Memory-usage-for-various-services-in-kube.png, id=723, 1141.26375pt x 387.4475pt>
+[24 <./images/Kafka-ingestion-in-Bytes.png> <./images/total-data-ingested-in-bytes.jpeg>] [25 <./images/weather-domain-ingested-data-in-bytes.png> <./images/customer-and-weather-domain-analytics-service-latency.png> <./images/Open-telemetry-service-CPU-usage.png> <./images/kubernetes-cluster-CPU-usage.png>]
+<images/Memory-usage-for-various-services-in-kube.png, id=732, 1141.26375pt x 387.4475pt>
 File: images/Memory-usage-for-various-services-in-kube.png Graphic file (type png)
 <use images/Memory-usage-for-various-services-in-kube.png>
-Package pdftex.def Info: images/Memory-usage-for-various-services-in-kube.png  used on input line 1541.
+Package pdftex.def Info: images/Memory-usage-for-various-services-in-kube.png  used on input line 1535.
 (pdftex.def)             Requested size: 252.0pt x 85.55205pt.
- [26 <./images/Kubernetes-cluster-data-read-write.png> <./images/kubernetes-cluster-network-data-received-and-sent.png> <./images/Memory-usage-for-various-services-in-kube.png>]
-<images/number-of-errors-in-telemetry-processing-service.png, id=737, 1123.19624pt x 382.42876pt>
+<images/number-of-errors-in-telemetry-processing-service.png, id=735, 1123.19624pt x 382.42876pt>
 File: images/number-of-errors-in-telemetry-processing-service.png Graphic file (type png)
 <use images/number-of-errors-in-telemetry-processing-service.png>
-Package pdftex.def Info: images/number-of-errors-in-telemetry-processing-service.png  used on input line 1583.
+Package pdftex.def Info: images/number-of-errors-in-telemetry-processing-service.png  used on input line 1577.
 (pdftex.def)             Requested size: 252.0pt x 85.79767pt.
-<images/customer-domain-stream-data-topic-statistics.png, id=739, 869.2475pt x 811.03pt>
+ [26 <./images/Kubernetes-cluster-data-read-write.png> <./images/kubernetes-cluster-network-data-received-and-sent.png> <./images/Memory-usage-for-various-services-in-kube.png>]
+<images/customer-domain-stream-data-topic-statistics.png, id=749, 869.2475pt x 811.03pt>
 File: images/customer-domain-stream-data-topic-statistics.png Graphic file (type png)
 <use images/customer-domain-stream-data-topic-statistics.png>
-Package pdftex.def Info: images/customer-domain-stream-data-topic-statistics.png  used on input line 1604.
+Package pdftex.def Info: images/customer-domain-stream-data-topic-statistics.png  used on input line 1598.
 (pdftex.def)             Requested size: 252.0pt x 235.11842pt.
- [27 <./images/number-of-errors-in-telemetry-processing-service.png> <./images/customer-domain-stream-data-topic-statistics.png>]
-<images/memory-utilization-in-customer-domain-in-streaming-case.png, id=751, 820.06375pt x 768.8725pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+<images/memory-utilization-in-customer-domain-in-streaming-case.png, id=752, 820.06375pt x 768.8725pt>
 File: images/memory-utilization-in-customer-domain-in-streaming-case.png Graphic file (type png)
 <use images/memory-utilization-in-customer-domain-in-streaming-case.png>
-Package pdftex.def Info: images/memory-utilization-in-customer-domain-in-streaming-case.png  used on input line 1613.
+Package pdftex.def Info: images/memory-utilization-in-customer-domain-in-streaming-case.png  used on input line 1607.
 (pdftex.def)             Requested size: 227.62204pt x 213.4057pt.
-<images/memory-utilization-in-weather-domain-in-streaming-case.png, id=752, 810.02625pt x 757.83125pt>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<images/memory-utilization-in-weather-domain-in-streaming-case.png, id=753, 810.02625pt x 757.83125pt>
 File: images/memory-utilization-in-weather-domain-in-streaming-case.png Graphic file (type png)
 <use images/memory-utilization-in-weather-domain-in-streaming-case.png>
-Package pdftex.def Info: images/memory-utilization-in-weather-domain-in-streaming-case.png  used on input line 1620.
+Package pdftex.def Info: images/memory-utilization-in-weather-domain-in-streaming-case.png  used on input line 1614.
 (pdftex.def)             Requested size: 227.62204pt x 212.9545pt.
-<images/kafka-ingestion-latency-sum-streaming-case.png, id=755, 1335.99126pt x 391.4625pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[27 <./images/number-of-errors-in-telemetry-processing-service.png> <./images/customer-domain-stream-data-topic-statistics.png>]
+<images/kafka-ingestion-latency-sum-streaming-case.png, id=767, 1335.99126pt x 391.4625pt>
 File: images/kafka-ingestion-latency-sum-streaming-case.png Graphic file (type png)
 <use images/kafka-ingestion-latency-sum-streaming-case.png>
-Package pdftex.def Info: images/kafka-ingestion-latency-sum-streaming-case.png  used on input line 1631.
+Package pdftex.def Info: images/kafka-ingestion-latency-sum-streaming-case.png  used on input line 1625.
 (pdftex.def)             Requested size: 516.0pt x 151.19437pt.
-<images/processing-duration-streaming-case-in-weather-domain.png, id=757, 1324.95pt x 393.47pt>
+<images/processing-duration-streaming-case-in-weather-domain.png, id=769, 1324.95pt x 393.47pt>
 File: images/processing-duration-streaming-case-in-weather-domain.png Graphic file (type png)
 <use images/processing-duration-streaming-case-in-weather-domain.png>
-Package pdftex.def Info: images/processing-duration-streaming-case-in-weather-domain.png  used on input line 1641.
+Package pdftex.def Info: images/processing-duration-streaming-case-in-weather-domain.png  used on input line 1635.
 (pdftex.def)             Requested size: 516.0pt x 153.23653pt.
  [28 <./images/memory-utilization-in-customer-domain-in-streaming-case.png> <./images/memory-utilization-in-weather-domain-in-streaming-case.png>]
-<images/data-scientist-data-lichen-flow-with-authentication.jpg, id=770, 883.3pt x 531.9875pt>
+<images/data-scientist-data-lichen-flow-with-authentication.jpg, id=779, 883.3pt x 531.9875pt>
 File: images/data-scientist-data-lichen-flow-with-authentication.jpg Graphic file (type jpg)
 <use images/data-scientist-data-lichen-flow-with-authentication.jpg>
-Package pdftex.def Info: images/data-scientist-data-lichen-flow-with-authentication.jpg  used on input line 1668.
+Package pdftex.def Info: images/data-scientist-data-lichen-flow-with-authentication.jpg  used on input line 1662.
 (pdftex.def)             Requested size: 516.0pt x 310.78526pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-Underfull \vbox (badness 2875) has occurred while \output is active []
-
-<images/Secret-Retrieval-Delay-in-Seconds-In-Data-Scientist-Application.png, id=772, 1970.36125pt x 524.96124pt>
+<images/Secret-Retrieval-Delay-in-Seconds-In-Data-Scientist-Application.png, id=781, 1970.36125pt x 524.96124pt>
 File: images/Secret-Retrieval-Delay-in-Seconds-In-Data-Scientist-Application.png Graphic file (type png)
 <use images/Secret-Retrieval-Delay-in-Seconds-In-Data-Scientist-Application.png>
-Package pdftex.def Info: images/Secret-Retrieval-Delay-in-Seconds-In-Data-Scientist-Application.png  used on input line 1700.
+Package pdftex.def Info: images/Secret-Retrieval-Delay-in-Seconds-In-Data-Scientist-Application.png  used on input line 1694.
 (pdftex.def)             Requested size: 516.0pt x 137.47997pt.
-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/CPU-utilization-data-scientist-application.png, id=774, 1972.36874pt x 541.02126pt>
+<images/CPU-utilization-data-scientist-application.png, id=783, 1972.36874pt x 541.02126pt>
 File: images/CPU-utilization-data-scientist-application.png Graphic file (type png)
 <use images/CPU-utilization-data-scientist-application.png>
-Package pdftex.def Info: images/CPU-utilization-data-scientist-application.png  used on input line 1710.
+Package pdftex.def Info: images/CPU-utilization-data-scientist-application.png  used on input line 1704.
 (pdftex.def)             Requested size: 516.0pt x 141.53726pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[29 <./images/kafka-ingestion-latency-sum-streaming-case.png> <./images/processing-duration-streaming-case-in-weather-domain.png>]
-<images/memory-utilization-in-data-scientist-application.png, id=793, 1985.4175pt x 547.04375pt>
+<images/memory-utilization-in-data-scientist-application.png, id=785, 1985.4175pt x 547.04375pt>
 File: images/memory-utilization-in-data-scientist-application.png Graphic file (type png)
 <use images/memory-utilization-in-data-scientist-application.png>
-Package pdftex.def Info: images/memory-utilization-in-data-scientist-application.png  used on input line 1721.
+Package pdftex.def Info: images/memory-utilization-in-data-scientist-application.png  used on input line 1715.
 (pdftex.def)             Requested size: 516.0pt x 142.16959pt.
-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/query-processing-duration-in-data-science-application.png, id=795, 1964.33875pt x 538.01pt>
+<images/query-processing-duration-in-data-science-application.png, id=787, 1964.33875pt x 538.01pt>
 File: images/query-processing-duration-in-data-science-application.png Graphic file (type png)
 <use images/query-processing-duration-in-data-science-application.png>
-Package pdftex.def Info: images/query-processing-duration-in-data-science-application.png  used on input line 1732.
+Package pdftex.def Info: images/query-processing-duration-in-data-science-application.png  used on input line 1726.
 (pdftex.def)             Requested size: 516.0pt x 141.32414pt.
+[29 <./images/kafka-ingestion-latency-sum-streaming-case.png> <./images/processing-duration-streaming-case-in-weather-domain.png>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -780,240 +942,246 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [30 <./images/data-scientist-data-lichen-flow-with-authentication.jpg (PNG copy)> <./images/Secret-Retrieval-Delay-in-Seconds-In-Data-Scientist-Application.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [31 <./images/CPU-utilization-data-scientist-application.png> <./images/memory-utilization-in-data-scientist-application.png> <./images/query-processing-duration-in-data-science-application.png>]
-Underfull \hbox (badness 3354) in paragraph at lines 1750--1752
+
+Underfull \hbox (badness 3354) in paragraph at lines 1744--1746
 []\OT1/ptm/m/n/10 During the de-vel-op-ment pro-cess, Prometheus and
  []
 
-[32]
-Underfull \hbox (badness 7064) in paragraph at lines 1800--1801
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [31 <./images/CPU-utilization-data-scientist-application.png> <./images/memory-utilization-in-data-scientist-application.png> <./images/query-processing-duration-in-data-science-application.png>] [32]
+Underfull \hbox (badness 7064) in paragraph at lines 1794--1795
 []\OT1/ptm/b/n/10 Veracity\OT1/ptm/m/n/10 : The domain-specific char-ac-ter of Ter-
  []
 
+
+LaTeX Warning: Reference `expertOpinionResearchMethodology' on page 33 undefined on input line 1829.
+
 [33]
 
-LaTeX Warning: Reference `expertOpinionResearchMethodology' on page 34 undefined on input line 1835.
+LaTeX Warning: Reference `expertOpinion_feedbackArchitecturalApproach' on page 34 undefined on input line 1831.
 
 
-LaTeX Warning: Reference `expertOpinion_feedbackArchitecturalApproach' on page 34 undefined on input line 1837.
+LaTeX Warning: Reference `expertOpinion_dataHandlingIntent' on page 34 undefined on input line 1831.
 
 
-LaTeX Warning: Reference `expertOpinion_dataHandlingIntent' on page 34 undefined on input line 1837.
+LaTeX Warning: Reference `expertOpinion_dataOwnership' on page 34 undefined on input line 1831.
 
 
-LaTeX Warning: Reference `expertOpinion_dataOwnership' on page 34 undefined on input line 1837.
+LaTeX Warning: Reference `expertOpinion_futureImplications' on page 34 undefined on input line 1831.
 
 
-LaTeX Warning: Reference `expertOpinion_futureImplications' on page 34 undefined on input line 1837.
+LaTeX Warning: Reference `expertOpinion_limitations' on page 34 undefined on input line 1831.
 
 
-LaTeX Warning: Reference `expertOpinion_limitations' on page 34 undefined on input line 1837.
+LaTeX Warning: Reference `expertOpinion_technologicalConsiderations' on page 34 undefined on input line 1831.
 
 
-LaTeX Warning: Reference `expertOpinion_technologicalConsiderations' on page 34 undefined on input line 1837.
-
-
-Overfull \hbox (6.80005pt too wide) in paragraph at lines 1853--1858
+Overfull \hbox (6.80005pt too wide) in paragraph at lines 1847--1852
 [] 
  []
 
 
-Overfull \hbox (6.80005pt too wide) in paragraph at lines 1867--1872
+Overfull \hbox (6.80005pt too wide) in paragraph at lines 1861--1866
 [] 
  []
 
 
-Overfull \hbox (6.80005pt too wide) in paragraph at lines 1881--1886
+Overfull \hbox (6.80005pt too wide) in paragraph at lines 1875--1880
 [] 
  []
 
 
-Overfull \hbox (6.80005pt too wide) in paragraph at lines 1904--1909
+Overfull \hbox (6.80005pt too wide) in paragraph at lines 1898--1903
 [] 
  []
 
 
-Overfull \hbox (6.80005pt too wide) in paragraph at lines 1920--1925
+Overfull \hbox (6.80005pt too wide) in paragraph at lines 1914--1919
 [] 
  []
 
 
-Underfull \hbox (badness 7613) in paragraph at lines 1929--1930
+Underfull \hbox (badness 7613) in paragraph at lines 1923--1924
 []\OT1/ptm/m/n/10 The ar-chi-tec-ture's adapt-able char-ac-ter-is-tics and all-
  []
 
+
+Overfull \hbox (6.80005pt too wide) in paragraph at lines 1928--1933
+[] 
+ []
+
 [34]
-Overfull \hbox (6.80005pt too wide) in paragraph at lines 1934--1939
+Overfull \hbox (6.80005pt too wide) in paragraph at lines 1942--1947
 [] 
  []
 
 
-Overfull \hbox (6.80005pt too wide) in paragraph at lines 1948--1953
-[] 
- []
-
-
-Underfull \hbox (badness 1478) in paragraph at lines 1956--1957
+Underfull \hbox (badness 1478) in paragraph at lines 1950--1951
 \OT1/ptm/m/n/10 var-i-ous com-po-nents, in-clud-ing data gov-er-nance, domain-
  []
 
 
-Overfull \hbox (6.80005pt too wide) in paragraph at lines 1962--1967
+Overfull \hbox (6.80005pt too wide) in paragraph at lines 1956--1961
 [] 
  []
 
 
-Overfull \hbox (6.80005pt too wide) in paragraph at lines 1975--1980
+Overfull \hbox (6.80005pt too wide) in paragraph at lines 1969--1974
 [] 
  []
 
 
-Overfull \hbox (6.80005pt too wide) in paragraph at lines 1995--2000
+Overfull \hbox (6.80005pt too wide) in paragraph at lines 1989--1994
 [] 
  []
 
 
-Overfull \hbox (6.80005pt too wide) in paragraph at lines 2008--2013
+Overfull \hbox (6.80005pt too wide) in paragraph at lines 2002--2007
 [] 
  []
 
 
-Overfull \hbox (6.80005pt too wide) in paragraph at lines 2021--2026
+Overfull \hbox (6.80005pt too wide) in paragraph at lines 2015--2020
 [] 
  []
 
 
-Overfull \hbox (6.80005pt too wide) in paragraph at lines 2034--2039
+Overfull \hbox (6.80005pt too wide) in paragraph at lines 2028--2033
 [] 
  []
 
 
-Overfull \hbox (6.80005pt too wide) in paragraph at lines 2048--2053
+Overfull \hbox (6.80005pt too wide) in paragraph at lines 2042--2047
 [] 
  []
 
 
-Overfull \hbox (6.80005pt too wide) in paragraph at lines 2061--2066
+Overfull \hbox (6.80005pt too wide) in paragraph at lines 2055--2060
 [] 
  []
 
 
-Overfull \hbox (6.80005pt too wide) in paragraph at lines 2074--2079
+Overfull \hbox (6.80005pt too wide) in paragraph at lines 2068--2073
 [] 
  []
 
 
-Overfull \hbox (6.80005pt too wide) in paragraph at lines 2087--2092
+Overfull \hbox (6.80005pt too wide) in paragraph at lines 2081--2086
 [] 
  []
 
 
-Overfull \hbox (6.80005pt too wide) in paragraph at lines 2100--2105
+Overfull \hbox (6.80005pt too wide) in paragraph at lines 2094--2099
 [] 
  []
 
 [35]
-Underfull \hbox (badness 10000) in paragraph at lines 2121--2121
+Underfull \hbox (badness 10000) in paragraph at lines 2115--2115
 []|\OT1/ptm/m/n/8 Emphasises
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2121--2121
+Underfull \hbox (badness 10000) in paragraph at lines 2115--2115
 \OT1/ptm/m/n/8 im-por-tance of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2121--2121
+Underfull \hbox (badness 10000) in paragraph at lines 2115--2115
 \OT1/ptm/m/n/8 flex-i-bil-ity in
  []
 
 
-Underfull \hbox (badness 3417) in paragraph at lines 2121--2122
+Underfull \hbox (badness 3417) in paragraph at lines 2115--2116
 []|\OT1/ptm/m/n/8 Concerned about the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2121--2122
+Underfull \hbox (badness 10000) in paragraph at lines 2115--2116
 \OT1/ptm/m/n/8 skillset re-quired,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2121--2122
+Underfull \hbox (badness 10000) in paragraph at lines 2115--2116
 \OT1/ptm/m/n/8 com-plex-i-ties of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2121--2122
+Underfull \hbox (badness 10000) in paragraph at lines 2115--2116
 \OT1/ptm/m/n/8 evolv-ing own-er-ship
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2121--2122
+Underfull \hbox (badness 10000) in paragraph at lines 2115--2116
 \OT1/ptm/m/n/8 pat-terns, and large-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2122--2122
+Underfull \hbox (badness 10000) in paragraph at lines 2116--2116
 []|\OT1/ptm/m/n/8 Cites large data
  []
 
 
-Underfull \hbox (badness 1939) in paragraph at lines 2122--2122
+Underfull \hbox (badness 1939) in paragraph at lines 2116--2116
 \OT1/ptm/m/n/8 han-dling and do-main
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2123--2123
+Underfull \hbox (badness 10000) in paragraph at lines 2117--2117
 \OT1/ptm/m/n/8 functional na-ture
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2123--2123
+Underfull \hbox (badness 10000) in paragraph at lines 2117--2117
 \OT1/ptm/m/n/8 and the ecosys-tem
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2123--2123
+Underfull \hbox (badness 10000) in paragraph at lines 2117--2117
 \OT1/ptm/m/n/8 ap-proach of the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2123--2124
+Underfull \hbox (badness 10000) in paragraph at lines 2117--2118
 []|\OT1/ptm/m/n/8 Highlights po-ten-tial
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2123--2124
+Underfull \hbox (badness 10000) in paragraph at lines 2117--2118
 \OT1/ptm/m/n/8 or-gan-i-sa-tions and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2123--2124
+Underfull \hbox (badness 10000) in paragraph at lines 2117--2118
 \OT1/ptm/m/n/8 cross-functional
  []
 
 
-Overfull \hbox (248.39685pt too wide) in paragraph at lines 2139--2156
+Overfull \hbox (248.39685pt too wide) in paragraph at lines 2133--2150
  [][] 
  []
 
 
-Underfull \hbox (badness 2707) in paragraph at lines 2159--2160
+Underfull \hbox (badness 2707) in paragraph at lines 2153--2154
 []\OT1/ptm/m/n/10 The themes "Ap-pli-ca-bil-ity and In-dus-trial Rel-e-vance",
  []
 
-<images/Quantitative-Summary-For-Codes.png, id=851, 1397.22pt x 540.0175pt>
+<images/Quantitative-Summary-For-Codes.png, id=860, 1397.22pt x 540.0175pt>
 File: images/Quantitative-Summary-For-Codes.png Graphic file (type png)
 <use images/Quantitative-Summary-For-Codes.png>
-Package pdftex.def Info: images/Quantitative-Summary-For-Codes.png  used on input line 2171.
+Package pdftex.def Info: images/Quantitative-Summary-For-Codes.png  used on input line 2165.
 (pdftex.def)             Requested size: 516.0pt x 199.43254pt.
 
-Overfull \hbox (264.0pt too wide) in paragraph at lines 2171--2172
+Overfull \hbox (264.0pt too wide) in paragraph at lines 2165--2166
  [][] 
  []
 
 
-LaTeX Warning: Reference `expertOpinionSurvey' on page 36 undefined on input line 2177.
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Reference `expertOpinionSurvey' on page 36 undefined on input line 2171.
 
 [36 <./images/Quantitative-Summary-For-Codes.png>] [37] (./main.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 44--46
@@ -1093,7 +1261,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 316--317
 \OT1/ptm/m/n/10 toolkit: Cli-mate ex-plorer,'' 2023, avail-able from:
  []
 
-[40]
+
 Underfull \hbox (badness 3302) in paragraph at lines 319--320
 []\OT1/ptm/m/n/10 GroupLens, ``Movie-lens 20m dataset,'' []$https : / / www .
  []
@@ -1103,7 +1271,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 319--320
 \OT1/ptm/m/n/10 kaggle . com / datasets / grouplens / movielens-[]20m-[]dataset$[],
  []
 
-)
+[40])
 
 Package natbib Warning: There were undefined citations.
 
@@ -1120,18 +1288,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: A1E34F4E27514045BCE15DA9C8D590D3;12326.
  ) 
 Here is how much of TeX's memory you used:
- 12684 strings out of 476025
- 214479 string characters out of 5779036
+ 12698 strings out of 476025
+ 214791 string characters out of 5779036
  1881388 words of memory out of 5000000
- 32630 multiletter control sequences out of 15000+600000
+ 32640 multiletter control sequences out of 15000+600000
  552576 words of font info for 106 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 75i,10n,76p,1659b,901s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,10n,76p,1659b,917s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (41 pages, 3436304 bytes).
+Output written on main.pdf (41 pages, 3437563 bytes).
 PDF statistics:
- 1041 PDF objects out of 1200 (max. 8388607)
- 903 compressed objects within 10 object streams
- 296 named destinations out of 1000 (max. 500000)
+ 1050 PDF objects out of 1200 (max. 8388607)
+ 912 compressed objects within 10 object streams
+ 300 named destinations out of 1000 (max. 500000)
  664 words of extra memory for PDF output out of 10000 (max. 10000000)
 
