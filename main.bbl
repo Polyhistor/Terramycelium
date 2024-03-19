@@ -333,4 +333,18 @@ M.~Johnson, \emph{Principles of Logic in Computer Science}.\hskip 1em plus 0.5em
 \bibitem{lee2020bigdata}
 K.~Lee and L.~Wang, ``Ensuring data consistency in big data systems,'' in \emph{Proceedings of the 2020 International Conference on Big Data}, 2020, pp. 456--467.
 
+\bibitem{terramyceliumHelmChartsAndApplications}
+\BIBentryALTinterwordspacing
+``Github repository for terramycelium helm charts and applications,'' 2024. [Online]. Available: \url{https://anonymous.4open.science/r/helmChartsAndApplicationsForMetamycelium-D440/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{creswell2007qualitative}
+J.~W. Creswell, W.~E. Hanson, V.~L. Clark~Plano, and A.~Morales, ``Qualitative research designs: Selection and implementation,'' \emph{The counseling psychologist}, vol.~35, no.~2, pp. 236--264, 2007.
+
+\bibitem{kallio2016systematic}
+H.~Kallio, A.-M. Pietil{\"a}, M.~Johnson, and M.~Kangasniemi, ``Systematic methodological review: developing a framework for a qualitative semi-structured interview guide,'' \emph{Journal of advanced nursing}, vol.~72, no.~12, pp. 2954--2965, 2016.
+
+\bibitem{baltes2022sampling}
+S.~Baltes and P.~Ralph, ``Sampling in software engineering research: A critical review and guidelines,'' \emph{Empirical Software Engineering}, vol.~27, no.~4, pp. 1--31, 2022.
+
 \end{thebibliography}

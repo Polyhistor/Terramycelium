@@ -61,6 +61,7 @@
 \usepackage{multirow}
 \usepackage{tabularx}
 \usepackage{rotating}
+\usepackage{enumitem}
 \usepackage[numbers]{natbib}
 
 %
@@ -484,7 +485,7 @@ The paper is structured as follows: Section~\ref{sec:background} provides an ove
 
 \section{Background} \label{sec:background} 
 
-This section offers fundamental definitions necessary for understanding the intricacies of the research. This chapter seeks to establish the conceptual framework required for comprehending the terminology utilised in the study. 
+This section offers fundamental definitions necessary for understanding the intricacies of the research. This section seeks to establish the conceptual framework required for comprehending the terminology utilised in the study. 
 
 \subsection{Definition of Big Data} Various academic definitions have been reviewed to define BD in this research. According to Kaisler et al. \cite{Kaisler2013}, BD refers to data that exceeds the capacity of current technologies to store, manage, and process effectively. The author Srivastava et al. \cite{Srivastava2016} define big data as the use of extensive data sets for managing the gathering or reporting of data that aids multiple recipients in decision-making. The phrase BD is defined by Sagiroglu et al. \cite{Sagiroglu2013} as referring to extensive data sets characterised by their huge size, diverse and intricate structure, and the challenges associated with storing, analysing, and visualising them for subsequent processes or outcomes. In this research, BD is defined as "\emph{the process of identifying patterns from large datasets to achieve progress, management, and predictive analysis in specialised fields}". 
 
@@ -702,7 +703,7 @@ A systematic strategy for presenting software and system requirements that inclu
 
 An inflection point in mathematics is a critical point where the curvature of a curve changes direction, indicating a shift from one behaviour to another \cite{inflectionPoint}. This significant moment is characterised by the breaking down of the previous structure and the emergence of a new one. Currently, there are concrete indicators and factors that suggest a significant change is imminent. The 2023 New Vantage Partners research indicates that investments in data are increasing and staying robust, despite possible economic challenges \cite{newvantagepartners2023}. However, the survey indicates that only 23.9\% of organisations describe themselves as data-driven. 
 
-This chapter is aimed at delineating theories that underpin the artifact. These theories are referred to as \emph{design theories} in design science research \cite{Rose}. These theories form the basis of understanding the underlying pircinples that govern the design of Terramycelium.
+This section is aimed at delineating theories that underpin the artifact. These theories are referred to as \emph{design theories} in design science research \cite{Rose}. These theories form the basis of understanding the underlying pircinples that govern the design of Terramycelium.
 
 
 This study utilises the architecture definition defined in ISO/IEC 42010 \cite{ISO42010}, which defines architecture as the underlying concepts or properties of a system within its context, manifested in its elements, relationships, and design and evolution principles.
@@ -1416,7 +1417,7 @@ In addition, the data acquired in the analytical service of the weather domain i
 After capturing the ingestion rate in bytes, it is essential to further explore other metrics to provide a comprehensive analysis of the system's performance during high data load conditions.
 
 
-\paragraph{Ingestion Latency:}
+\paragraph{Ingestion Latency}
 
 Ingestion latency measures the time between when a data record is published to Kafka and when it is processed by the system. It is calculated for each Kafka record that is ingested using a specific formula.
 
@@ -1428,7 +1429,7 @@ Where:
     \item \(publish\_time\) represents the timestamp when the record was published to Kafka. If the Kafka record lacks a timestamp, the current time is assigned as a default, making the latency calculation a fallback measure.
 \end{itemize}
 
-The latency metric may be found in Figure~\ref{cusetomerAndWeatherDomainAnalyaticalServicesLatencies}. The figure shows that the latency in both domains' analytical services is negligible, with one spike reaching 400 seconds and the rest maintaining a constant ingestion latency of roughly 50 to 100 seconds. The weather domain experiences lower latency than customer latency, averaging 50 seconds. This is because this domain uses a less amount of data.
+The latency numbers captured are presented in Figure~\ref{cusetomerAndWeatherDomainAnalyaticalServicesLatencies}. The figure shows that the latency in both domains' analytical services is negligible, with one spike reaching 400 seconds and the rest maintaining a constant ingestion latency of roughly 50 to 100 seconds. The weather domain experiences lower latency than customer latency, averaging 50 seconds. This is because this domain uses a less amount of data.
 
 \begin{figure*}[h]
   \centering
@@ -1437,11 +1438,11 @@ The latency metric may be found in Figure~\ref{cusetomerAndWeatherDomainAnalyati
   \label{cusetomerAndWeatherDomainAnalyaticalServicesLatencies}
 \end{figure*}
 
-The findings are remarkable given the intricacies and asynchronous nature of a domain-driven distributed BD system utilising Kafka. The occasional increase to 400 seconds in ingestion latency is noteworthy but falls within acceptable limits, particularly given the Kafka's internal features like indexing methods, offset management, and sticky partition behaviour.
+The findings are significant given the intricacies and asynchronous nature of the domain-driven distributed BD system utilising Kafka. The occasional increase to 400 seconds in ingestion latency is noteworthy but falls within acceptable limits, particularly given the Kafka's internal features like indexing methods, offset management, and sticky partition behaviour.
 
-\paragraph{CPU Usage:} \label{cpuUsageInS1}   
+\paragraph{CPU Usage} \label{cpuUsageInS1}   
 
-The telemetry processing service is crucial to the infrastructure and offers valuable information when monitoring CPU utilisation. It is crucial to monitor this service since it provides immediate insights into data processing efficiency. Increased CPU utilisation could indicate potential processing bottlenecks. 
+The telemetry processing service is crucial to the infrastructure and offers valuable information when monitoring CPU utilisation. It is crucial to monitor this service since it provides immediate insights into data processing efficiency. Therefore, increased CPU utilisation in this service implies potential processing bottlenecks. 
 
 Furthermore, CPU utilisation metrics are calculated at certain intervals. Due to the asynchronous nature of receiving telemetry data from different services, monitoring the CPU consumption of individual services may not provide an accurate representation of the current system load. The telemetry service consistently processes data to ensure that its measurements accurately reflect the system's load. 
 
@@ -1449,12 +1450,12 @@ It is important to consider this finding while assessing scalability and forecas
 
 Figure~\ref{openTelemetryServiceCpuUsage} illustrates the CPU utiliation trends of the telemetry processing service, emphasising the interplay between data intake rates and resource consumption.
 
-\begin{figure}[h]
+\begin{figure*}[h]
     \centering
     \includegraphics[width=\textwidth]{images/Open-telemetry-service-CPU-usage.png}
     \caption{Open Telemetry Service CPU Usage}
     \label{openTelemetryServiceCpuUsage}
-\end{figure}
+\end{figure*}
 
 The CPU utilisation in the Open Telemetry service metrics shows a continuous level of around 24 percent, with occasional peaks reaching 25.8 percent at certain times. The behaviour is a result of the architecture in which events are consistently transmitted to the associated services. A full table showing the CPU utilisation during a certain period can be found in Table~\ref{table:telemetry-cpu-usage} to clarify this issue. The tabulation offers insights into the variation in CPU usage at different times and under varied conditions, showing periods of stable CPU usage, periods of inactivity, and occasional spikes in utilisation.
 
@@ -1510,16 +1511,16 @@ Similarly, as shown in Figure~\ref{kubernetesClusterReadAndWrite}, an average of
   \label{kubernetesClusterNetworkStatistics}
 \end{figure}
 
-After thoroughly analysing the telemetry and infrastructure data, it is clear that the asynchronous and event-driven architecture of our BD system significantly impacts its performance dynamics. In this asynchronous event-driven paradigm, it is crucial to acknowledge that the amount of data handled, measured in gigabytes, is less important than the system's efficiency in handling incoming data streams.
+After thoroughly analysing the telemetry and infrastructure data, it is clear that the asynchronous and event-driven architecture of this BD architecture positively impacts its performance dynamics. In this asynchronous event-driven paradigm, it is crucial to acknowledge that the amount of data handled, measured in gigabytes, is less important than the system's efficiency in handling incoming data streams.
 
 The telemetry service demonstrates its resilience in data processing by maintaining a continuously moderate CPU consumption, even when faced with fluctuating data input rates. Similarly, the Kubernetes cluster occasionally experiences surges in CPU utilisation during data-intensive tasks, but overall it maintains a well-distributed workload. This is evidence of the system's proficiency in handling and allocating work among its nodes.
 
 The data statistics about read, write, and network transfers provide additional clarification on this matter. Although the amount of data being read, written, or transported in gigabytes may appear substantial, what truly matters is not the sheer number, but rather the system's efficiency in managing these processes. The average data read is 5.37GB and the average data written is 12.2GB. These figures, when compared to the network statistics shown in Figure~\ref{kubernetesClusterNetworkStatistics}, demonstrate the system's effectiveness in managing data and performing network operations without becoming overloaded.
 
-The metrics not only demonstrate the stability and efficiency of our BD infrastructure, but also offer empirical evidence that, in an event-driven asynchronous system like Terramycelium, the focus is not solely on the amount of data processed, but rather on the effectiveness and reliability with which it is managed. This observation indicates possible consequences for scalability considerations in future implementations of similar structures.
+The metrics not only demonstrate the stability and efficiency of our BD infrastructure, but also offer empirical evidence that, in an event-driven asynchronous system like Terramycelium, the focus is not solely on the amount of data processed, but rather on the effectiveness and reliability with which it is managed. This observation indicates possible consequences for scalability considerations in future implementations of similar architectures.
 
 
-\paragraph{Memory Utilisation:}
+\paragraph{Memory Utilisation}
 
 Memory utilisation is a crucial measure when assessing system efficiency. An efficient memory management system demonstrates a system's capability to process real-time data and adapt to varying workloads. The memory usage seen in the telemetry processing service, a vital element of the infrastructure, offers precise insights into the system's ability to handle data. Examining these memory patterns provides a more distinct comprehension of the service's effectiveness in handling different data rates and identifies places where memory optimisation may be required to improve overall performance.
 
@@ -1527,7 +1528,7 @@ In the weather domain, memory utilisation can be categorised into two primary ty
 
 The customer domain has a same pattern, wherein operational services have consistent memory use as a result of predominantly handling static client data. On the other side, the analytical services, which thoroughly examine client habits and preferences, may experience occasional surges, particularly when dealing with large datasets.
 
-The memory utilisation trends across the various services is visualised in Figure~\ref{kubernetesClusterMemoryUsage}. The address for each service is specified in the respective service definitions in the Github repositories. It is important to note that the service running on port 8000 is the operational service in the customer domain, while the service on port 8001 is the analytical service for the customer domain. The service running on port 8005 is the operational service for the weather domain, whereas the service on port 8006 is the analytical service for the same domain. The service running on port 8008 is the application responsible for processing telemetry data.
+The memory utilisation trends across the various services is visualised in Figure~\ref{kubernetesClusterMemoryUsage}. The address for each service is specified in the respective service definitions in the Github repositories \cite{terramyceliumInfrastructure,terramyceliumHelmChartsAndApplications}. It is important to note that the service running on port 8000 is the operational service in the customer domain, while the service on port 8001 is the analytical service for the customer domain. The service running on port 8005 is the operational service for the weather domain, whereas the service on port 8006 is the analytical service for the same domain. The service running on port 8008 is the application responsible for processing telemetry data.
 
 
 \begin{figure}
@@ -1537,7 +1538,9 @@ The memory utilisation trends across the various services is visualised in Figur
   \label{kubernetesClusterMemoryUsage}
 \end{figure}
 
-The association between CPU and memory usage is further explained in Table~\ref{table:memory-cpu-correlation}. This table illustrates the allocation of memory across several services at specific instances of CPU use. It is evident that periods of increased CPU activity align with higher memory allocation, especially in the telemetry processing service. This alignment clarifies the system's ability to scale and respond effectively during moments of high computing demand. Similarly, as the CPU utilisation decreases, there is also a decrease in the amount of memory being used, which highlights the effective management of resources during periods of less demanding processing. The ability to efficiently use memory in a way that can adapt to different needs is crucial for sustaining the performance of a system and ensuring that real-time data is managed smoothly across the entire infrastructure.
+The association between CPU and memory usage is further explained in Table~\ref{table:memory-cpu-correlation}. This table illustrates the allocation of memory across several services at specific instances of CPU use. It is evident that periods of increased CPU activity align with higher memory allocation, especially in the telemetry processing service. This alignment clarifies the system's ability to scale and respond effectively during moments of high computing demand. 
+
+Similarly, as the CPU utilisation decreases, there is also a decrease in the amount of memory being used, which highlights the effective management of resources during periods of less demanding processing. The ability to efficiently use memory in a way that can adapt to different needs is crucial for sustaining the performance of a system and ensuring that real-time data is managed smoothly across the entire infrastructure.
 
 \begin{table*}
   \centering
@@ -1566,9 +1569,9 @@ The association between CPU and memory usage is further explained in Table~\ref{
 \end{table*}
 
 
-\paragraph{Error Rate:}
+\paragraph{Error Rate}
 
-Error rates within the FAST API services are determined through meticulous analysis of logs and monitoring of exception blocks. Every domain is assigned a specific Kafka topic exclusively for the purpose of reporting errors. However, as depicted in Figure~\ref{numberOfErrorsInTelemetryProcessingService}, only the OpenTelemetry service encountered issues. However, the Weather and Customer domains did not have any errors.
+Error rates within the FAST API services are determined through analysis of logs and monitoring of exception blocks. Every domain is assigned a specific Kafka topic exclusively for the purpose of reporting errors. However, as depicted in Figure~\ref{numberOfErrorsInTelemetryProcessingService}, only the OpenTelemetry service encountered issues. However, the Weather and Customer domains did not have any errors.
 
 The intrinsic ability of event-driven systems to recover quickly and effectively adds greatly to the low occurrence of errors. The decoupling between components in these systems guarantees that transitory errors in one service are typically contained, preventing them from spreading and causing interruptions throughout the entire system. This tendency is clearly seen in the prototype, highlighting the inherent advantages of event-driven architectures in ensuring the resilience of the system. The term "peak" refers to the highest point or maximum value of something. It represents the culmination or apex of a certain phenomenon or trend.
 
@@ -1590,7 +1593,7 @@ Concurrently, within the customer domain, a novel endpoint is created. This endp
 
 A methodical analysis is conducted based on the metrics of interest:
 
-\paragraph{Volume and Size of Messages:} The system processed a remarkable sum of 771,305 messages. Collectively, these messages have a combined volume of around 1 GB, and they are all sent to the customer-domain-stream-data topic. The statistical data related to the streaming subject is illustrated in Figure~\ref{customerDomainStreamingTopicStatistics}.
+\paragraph{Volume and Size of Messages} The system processed a sum of 771,305 messages. Collectively, these messages have a combined volume of around 1 GB, and they are all sent to the customer-domain-stream-data topic. The statistical data related to the streaming subject is illustrated in Figure~\ref{customerDomainStreamingTopicStatistics}.
 
 
 \begin{figure}
@@ -1600,7 +1603,7 @@ A methodical analysis is conducted based on the metrics of interest:
   \label{customerDomainStreamingTopicStatistics}
 \end{figure}
 
-\subsection{Memory and CPU Utilisation:} The memory usage is crucial in this high-speed data scenario. Regularly monitoring memory consumption was crucial in assessing the overall health and efficiency of the system. The memory usage in the customer domain reached a significant peak, measuring 12,852,592,640 bytes. The complexity of the chunking logic used in the streaming operation is the reason for this (Figure~\ref{memoryUtilizationInCustomerDomainInHighVelocityCase}). In contrast, the weather domain, which functions as the recipient of data, indicated a more conservative use of memory. This is believed to be a result of its more straightforward data processing logic, which does not include the additional steps of chunking (Figure~\ref{memoryUtilizationInWeatherDomainInHighVelocityCase}).
+\paragraph{Memory and CPU Utilisation} The memory usage is crucial in this high-speed data scenario. Regularly monitoring memory consumption was crucial in assessing the overall health and efficiency of the system. The memory usage in the customer domain reached a significant peak, measuring 12,852,592,640 bytes. The complexity of the chunking logic used in the streaming operation is the reason for this (Figure~\ref{memoryUtilizationInCustomerDomainInHighVelocityCase}). In contrast, the weather domain, which functions as the recipient of data, indicated a more conservative use of memory. This is believed to be a result of its more straightforward data processing logic, which does not include the additional steps of chunking (Figure~\ref{memoryUtilizationInWeatherDomainInHighVelocityCase}).
 
 \begin{figure}[h]
   \centering
@@ -1618,7 +1621,7 @@ A methodical analysis is conducted based on the metrics of interest:
 
 Furthermore, the CPU consumption has only grown by 5\% compared to the statistics mentioned in Section~\ref{cpuUsageInS1} for both the Kubernetes cluster and its associated services. Therefore, no further data is provided for this metric.
 
-\paragraph{Duration of Processing and Latency of Ingestion:} The latency of ingestion, defined as the time delay between receiving a data packet and processing it, remained constant during the observed timeframe. The delay continuously registers a value of 0.0000148 seconds at various time intervals throughout the monitoring period. This observation suggests that the system's data ingestion mechanism does not experience substantial delays in processing. However, a more comprehensive evaluation can be obtained by comparing its performance benchmarks with other platforms (Figure~\ref{kafkaIngestionLatencyInStreamingCase}). The system's ability to maintain consistent latency indicates its capacity to sustain performance levels without interruption, especially during periods of heavy data flow.
+\paragraph{Duration of Processing and Latency of Ingestion} The latency of ingestion, defined as the time delay between receiving a data packet and processing it, remained constant during the observed timeframe. The delay continuously registers a value of 0.0000148 seconds at various time intervals throughout the monitoring period. This observation suggests that the system's data ingestion mechanism does not experience substantial delays in processing. However, a more comprehensive evaluation can be obtained by comparing its performance benchmarks with other platforms (Figure~\ref{kafkaIngestionLatencyInStreamingCase}). The system's ability to maintain consistent latency indicates its capacity to sustain performance levels without interruption, especially during periods of heavy data flow.
 
 \begin{figure*}
   \centering
@@ -1706,7 +1709,7 @@ The CPU utilisation remains constant at 18.6\% during the recorded time period. 
   \label{cpuUtilizationInDataScientistApplication}
 \end{figure*}
 
-\subsection{Memory Utilisation in the Data Scientist Application:}
+\paragraph{Memory Utilisation in the Data Scientist Application:}
 The memory utilisation remains consistently at around 12.56 GB during all observations. This suggests that the application possesses efficient memory management and does not encounter memory leaks or substantial variations. This is illustrated in Figure~\ref{memoryUtilizationInDataScientistApplication}.
 
 
@@ -1717,7 +1720,7 @@ The memory utilisation remains consistently at around 12.56 GB during all observ
   \label{memoryUtilizationInDataScientistApplication}
 \end{figure*}
 
-\paragraph{Query Processing Duration:}
+\paragraph{Query Processing Duration}
 The duration of query processing consistently stayed at 10 seconds throughout the measured time period. Nevertheless, there is a decrease to 2 seconds at the conclusion of the observation period (Figure~\ref{queryProcessingDurationInDataScienceApplication}). This abrupt decline indicates potential opportunities for optimising or modifying the characteristics of the processed queries.
 
 
@@ -1738,16 +1741,15 @@ The experimentation phase lasts around four months and involves a methodical pro
 
 \subsubsection{Challenges in Infrastructure} 
 
-\begin{enumerate} 
-  \item The confluent helm charts were incompatible because they relied on an alpha version of a Kubernetes resource called PodResourceBudget. The resource was in alpha stage until V1.22, however this experiment was conducted on version 1.27. The Nginx Ingress attempted to utilise the cloud manager to establish a load balancer, which led to the ingress service's external IP being stuck in a perpetual pending state. This happened because the cluster was initiated in a local development environment, resulting in the unavailability of a cloud service to deploy a load balancer such as EKS or AKS.
+\begin{enumerate}[label=({\alph*}) , leftmargin=30px]
+    \item The confluent helm charts were incompatible because they relied on an alpha version of a Kubernetes resource called PodResourceBudget. The resource was in alpha stage until V1.22, however this experiment was conducted on version 1.27. The Nginx Ingress attempted to utilise the cloud manager to establish a load balancer, which led to the ingress service's external IP being stuck in a perpetual pending state. This happened because the cluster was initiated in a local development environment, resulting in the unavailability of a cloud service to deploy a load balancer such as EKS or AKS.
     \item A further infrastructure obstacle emerged with the Kafka pod, which had recurring failures. Due to Kafka's extensive use of file storage, such as segment files and log files, the initial allocation of 64GB for the Kafka instance was inadequate. Afterwards, the configuration was modified, increasing the cluster storage capacity to 300GB.
     \item During the development process, Prometheus and Grafana need a host address for the purpose of intercommunication. The same applied to both the telemetry processing service and the Prometheus metrics scraper. Nevertheless, due to the fact that the prototype was created within a solitary computational setting, a significant portion of the communication relied on the main system. This presented challenges, as the loopback address or localhost in each Docker container resolved to the container's loopback interface, rather than the host's interface. In order to address this problem, a separate DNS was utilised that specifically pointed to the host.
-The enumeration is concluded.
 \end{enumerate} 
 
 \subsubsection{Integration Challenges} 
 
-\begin{enumerate}[resume] 
+\begin{enumerate} [label=({\alph*}) , leftmargin=30px]
   \item An important obstacle was encountered when attempting to establish a connection between the Keycloak helm chart and the Postgress DB, despite specifically configuring a login and password. The cluster necessitated repeated restarts. The final answer entailed transitioning from Minikube to KIND.
     The user's text is simply "item". Once the entrance was established, the objective was to precisely route traffic to different services. The majority of services had their own dedicated servers, which required the proper configuration of the reverse proxy to ensure that upstream servers could reply effectively. For example, the Keycloak server experienced difficulties in identifying some host paths, as it expected a root path for serving files. Both the server and proxy required modifications to ensure proper functioning. Most services encountered similar problems because many open-source software needed to be configured in order to deliver their assets on paths other than the root.
     The user's text is a single item. Hosting Vault UI through an ingress encountered difficulties because Vault-UI carries out several redirections on different application paths, making rewriting or pass-through methods ineffective. This problem elicited inquiries on prominent online platforms such as Stackoverflow and Vault's GitHub repository. As of February 7th, 2023, no feasible answer became apparent. The only feasible method entailed allocating a domain to vault-ui and directing traffic through a load balancer. Nevertheless, as Vault-UI primarily served as a graphical interface for interacting with Vault and not a core architectural element, the experiment's integrity remained unaffected.
@@ -1755,7 +1757,8 @@ The enumeration is concluded.
 \end{enumerate}
 
 \subsubsection{Challenges in Managing Data} 
-\begin{enumerate}
+
+\begin{enumerate} [label=({\alph*}) , leftmargin=30px]
     \item One of the main difficulties in designing the data quantum was figuring out the precise nature of the data resolution provided by the analytical service. Using FastAPI, which is inherently event-driven, it is not advisable to block the main thread by making continuous requests to an HTTP endpoint for events. A solution utilised a function that was executed conditionally to retrieve all events related to a certain topic, either at the system's initialization or through an endpoint.
     The user's text is simply "item". Another problem connected to the creation of the local-host-based cluster came in the context of ingress. In order to route incoming traffic to the Kafka REST proxy, nginx was configured to perform target rewriting. While this method is suitable for incoming network requests, outgoing requests present challenges. For instance, when the Kafka rest proxy API provided the consumer URL, it excluded the rewriting rules, which required the use of custom code to alter the URL.
     The user's text is simply "item". Handling the data flow for domain B, specifically the customer reviews domain, presented difficulties because of the substantial size of the Yelp academic datasets, with some reaching up to 5GB. In order to provide version control and avoid server and stream timeouts, it was necessary to divide these JSON files into smaller chunks. A bespoke Python script was created to manage the division of JSON files into smaller chunks, guaranteeing that no file surpassed 99MB.
@@ -1765,7 +1768,7 @@ The enumeration is concluded.
 \end{enumerate}
 
 \subsubsection{Performance Challenges} 
-\begin{enumerate}
+\begin{enumerate} [label=({\alph*}) , leftmargin=30px]
     \item While transferring operational data from the operational service to the analytical service, storage information was sent along with the success event. This strategy presented causality concerns. Following queries, which were intended to process this data and record it in Datalichen, relied on the distributed storage data. To tackle this issue, it was necessary to take into account a centralised configuration pattern.
     The user's text is a single item. The Apple M2 chip architecture presented an extra performance difficulty by hindering Psutil's ability to accurately represent CPU utilisation.
 \end{enumerate}
@@ -1826,16 +1829,65 @@ Construct validity is a cornerstone of our research methodology, particularly in
 
 \section{Evaluation 2: Expert Opinion}
 
-In the preceding chapter, a prototype of Terramycelium is fabricated and exposed to several simulations. Expert review is utilised as the second evaluation approach for the artefact in this chapter. In order to acquire expert opinions, the research technique adheres to the standards set forth by Kallio (2016) in their systematic study. The research technique is explained in Section~\ref{expertOpinionResearchMethodology}.
+In the preceding section, a prototype of Terramycelium is fabricated and exposed to several simulations. Expert review is utilised as the second evaluation approach for the artefact. In order to acquire expert opinions, the research technique adheres to the standards set forth by Kallio (2016) in their systematic study.
 
-The examination of expert perspectives starts by analysing emergent themes in "Thematic Analysis" \ref{expertOpinion_thematicAnalysis}, a comparative "Matrix of Responses" \ref{expertOpinion_matrixResponses}, and a "Quantitative Summary" \ref{expertOpinion_quantitativeSummary} of the compiled data. The concept of reflective synthesis is discussed in the article "Synthesis and Reflection" \ref{expertOpinion_synthesisReflection}, which includes expert evaluations of the architectural strategy in "Feedback and Reflections on Architectural Approach" \ref{expertOpinion_feedbackArchitecturalApproach}. The book "Insights on Data Handling and Architectural Intent" \ref{expertOpinion_dataHandlingIntent} delves into in-depth analysis of data strategy, while "Nuances of Data Ownership, Privacy, and Governance" \ref{expertOpinion_dataOwnership} examines the intricate legal aspects associated with these matters. The chapter progresses to the section titled "Relevance and Future Implications" \ref{expertOpinion_futureImplications}, where it analyses and evaluates the shortcomings in the "Limitations of the Current Reference Architecture" \ref{expertOpinion_limitations}. It concludes with a discussion on "Technological Considerations and Expert Insights" \ref{expertOpinion_technologicalConsiderations}, which sets the stage for the references section.
+\subsection{Research methodology for gathering expert opinion}
 
-\section{Thematic Analysis} \label{expertOpinion_thematicAnalysis}
+The research methodology for soliciting expert feedback comprised five stages: \begin{enumerate}[label=\alph*)]
+  \item Rationalizing the need for expert opinion
+  \item Developing a preliminary guide
+  \item Designing a rigorous data collection method
+  \item Pilot testing the guide
+  \item Presenting the results
+  \end{enumerate}
+  
+  Given the study's architectural focus, expert feedback was deemed an appropriate approach \citep{creswell2007qualitative}. In a novel domain, erudite perspectives could offer invaluable insights and enhance the theoretical underpinnings' robustness.
+  
+  \subsubsection{Rationale for Expert Opinion}
+  
+  The intricacy of a domain-driven distributed reference architecture for big data necessitated an evaluation transcending theoretical confines. Experts possess unparalleled depth of knowledge, enabling them to assess practical relevance, identify oversights, and ensure industry alignment, scalability, and benchmarking against existing solutions.
+  
+  Furthermore, their detached stance served as a critical counterweight, ensuring an unbiased assessment, often lacking in internal evaluations. Seeking expert opinion was essential for a comprehensive and nuanced review, validating the architecture's robustness against diverse challenges.
+  
+  \subsubsection{Developing the Guide}
+  
+  The semi-structured protocol aimed to extract an exhaustive dataset while ensuring participant-centricity. Close-ended questions facilitated quantifiable data extraction and conversation initiation.
+  
+  The guide was segmented into main themes and ancillary follow-up questions, adhering to a logical trajectory \cite{kallio2016systematic}.
+  
+  \subsubsection{Data Collection Method}
+  
+  Purposive sampling identified experts, providing in-depth insights through targeted selection \cite{baltes2022sampling}. Contacts were initiated with professionals in relevant roles, such as data engineers, architects, and scholars in big data systems. Over two months, three experts across different sectors were selected (Table~\ref{tab:experts}).
+  
+  \begin{table}[htbp]
+    \centering
+    \caption{Participant Demographics}
+    \label{tab:experts}
+    \begin{tabular}{llll}
+    \hline
+    Expert & Role & Experience & Industry \\
+    \hline
+    i1 & Solution Engineer & 10 years & Software Development \\
+    i2 & Solution Architect & 11 years & Big Data Solutions \\
+    i3 & Principal Architect & 32 years & Biotechnology Research \\
+    \hline
+    \end{tabular}
+  \end{table}
+    
+  
+  Expert opinions were collected via Zoom. Transcripts were reviewed, rectified, and coded in NVivo based on predefined themes, including 'Applicability \& Industrial Relevance', 'Strengths \& Distinctive Features', and 'Challenges \& Potential Barriers'.
+  
+
+  \subsubsection{Pilot Testing}
+  
+  The guide underwent internal peer review and an empirical pilot study to diagnose incongruities, refine ancillary questions, and calibrate the discourse trajectory. This iterative refinement accentuated the study's rigor.
+
+\subsection{Thematic Analysis} \label{expertOpinion_thematicAnalysis}
 
 This section systematically identifies and analyses prominent topics seen in expert comments. This examination not only emphasises reoccurring concepts but also places the range of viewpoints that shape the artifact's structure into its proper context.
 
 
-\subsection{Applicability \& Industrial Relevance:}
+\subsubsection{Applicability \& Industrial Relevance}
 
 The domain-driven and distributed nature of the Terramycelium architecture elicits various viewpoints regarding its compatibility with existing industry practices and anticipated future developments. Although this architectural approach incorporates promising and advanced approaches, it is clear that they are not uniformly embraced in all industries.
 
@@ -1885,7 +1937,7 @@ Considering the opinions of specialists, it is clear that Terramycelium provides
 
 Overall, the domain-driven distributed design of the Terramycelium architecture shows great potential. However, its deviation from conventional approaches may be seen as a possible obstacle to wider acceptance. The difficulty lies in synchronising its sophisticated characteristics with the existing level of preparedness and environment in the industry.
 
-\subsection{Strengths \& Distinctive Features:}
+\subsubsection{Strengths \& Distinctive Features}
 
 The Terramycelium architecture received praise for its unique characteristics and apparent advantages, especially in terms of incorporating domain-driven design and data engineering.
 
@@ -1976,11 +2028,11 @@ Aside from discussing how it differs from other methods and recognising its dist
 
 In wrapping up, the overall sentiment suggests that while certain components of Terramycelium might find parallels in the industry, its holistic approach and integration of domain-driven design with data engineering make it a unique offering. The challenge, however, remains in ensuring this distinctiveness translates into practical advantages in the evolving landscape of data operations.
 
-\subsection{Challenges \& Potential Barriers:}
+\subsubsection{Challenges \& Potential Barriers}
 
 A number of specialists offered their perspectives on possible difficulties and obstacles for the Terramycelium framework. The worries revolve around many difficulties like the availability of skillsets, the inherent challenges of data governance, and concerns related to scalability.
 
-I have found a significant issue involving the necessary competence to effectively utilise the architecture, particularly at the local level.
+i1 have found a significant issue involving the necessary competence to effectively utilise the architecture, particularly at the local level.
 
 
 \,
@@ -2020,7 +2072,7 @@ Additionally, i1 emphasised how crucial governance flexibility is, particularly 
 
 \,
 
-I1 specifically brought up the difficulties that could develop as a result of changing ownership patterns and dependencies.
+i1 specifically brought up the difficulties that could develop as a result of changing ownership patterns and dependencies.
 
 \,
 
@@ -2103,12 +2155,12 @@ To summarise, although Terramycelium has certain advantages, it nevertheless fac
 
 \section{Matrix of Responses} \label{expertOpinion_matrixResponses}
 
-The experts' perspectives on the Terramycelium architecture's applicability, strengths, and challenges are succinctly outlined in the table reftab:responses, which aggregates their responses.
+The experts' perspectives on the Terramycelium architecture's applicability, strengths, and challenges are succinctly outlined in the table \ref{tab:responses}, which aggregates their responses.
 
-\begin{table}[h]
+\begin{table*}[h]
   \centering
   \caption{Mapping of expert responses against themes.}
-  \begin{tabular}{@{}llp{0.3\columnwidth}p{0.3\columnwidth}@{}}
+  \begin{tabular}{@{}llp{0.7\columnwidth}p{0.9\columnwidth}@{}}
   \hline
   Expert & Applicability & Strengths & Challenges \\
   \hline
@@ -2118,7 +2170,7 @@ The experts' perspectives on the Terramycelium architecture's applicability, str
   \hline
   \end{tabular}
   \label{tab:responses}
-\end{table}
+\end{table*}
 
 
 \section{Quantitative Summary} \label{expertOpinion_quantitativeSummary}
@@ -2127,7 +2179,7 @@ The experts' perspectives on the Terramycelium architecture's applicability, str
 The coding data clearly indicates that opinions and debates differed across several areas of the Terramycelium architecture. The numerical overview of these codings is presented in Table~\ref{tab:coding_summary}.
 
 
-\begin{table}
+\begin{table*}
   \centering
   \caption{Summary of coding references.}
   \begin{tabular}{p{0.6\textwidth}p{0.15\textwidth}p{0.15\textwidth}}
@@ -2147,7 +2199,7 @@ The coding data clearly indicates that opinions and debates differed across seve
   \hline
   \end{tabular}
   \label{tab:coding_summary}
-  \end{table}
+  \end{table*}
 
 
 The themes "Applicability and Industrial Relevance", "Challenges and Potential Barriers", and "Strength and Distinctive Features" had the most coding references, with 9 references apiece, indicating their importance in the expert debates.
@@ -2162,13 +2214,13 @@ The theme "Challenges and Potential Barriers" received equal attention in both "
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=\textwidth]{images/Quantitative-Summary-For-Codes.png}
+  \includegraphics[width=\columnwidth]{images/Quantitative-Summary-For-Codes.png}
   \caption{Quantitative Summary For Expert Opinion}
   \label{fig:quantitativeSummaryForExpertOpinion}
 \end{figure}
 
 
-Furthermore, after each interview, a survey containing questions related to each area, as specified in Section~\ref{expertOpinionSurvey}, is created and meant to be distributed to three experts. The survey formulates questions using a Likert scale that spans from 'Strongly Disagree' to 'Strongly Agree'. The experts' responses, which demonstrate a range of opinions, are converted into numerical numbers for a concise depiction in the table. The mappings are as follows:
+Furthermore, after each interview, a survey containing questions related to each area, is created and meant to be distributed to three experts. The survey formulates questions using a Likert scale that spans from 'Strongly Disagree' to 'Strongly Agree'. The experts' responses, which demonstrate a range of opinions, are converted into numerical numbers for a concise depiction in the table. The mappings are as follows:
 
 \begin{itemize}
   \item Strongly Agree: 2
@@ -2213,20 +2265,26 @@ The implementation of Terramycelium's comprehensive suite of components, such as
 
 \subsection{Final Notes} \label{sec:discussion}
 
-The Terramycelium RA is a data management architecture that combines domain-driven design with event-driven communication, enhancing its applicability in data management challenges. It incorporates features like Data Lichen, bitemporality, and immutability, demonstrating an adaptive approach to the evolving landscape of data processing. The architecture has received positive feedback from experts, including professionals from leading data and eventing solutions companies. However, the Terramycelium faces challenges, including its complexity, which requires significant investment in skill development and training, which may be a barrier for organizations lacking resources or unwilling to undergo transformation. The lack of open-source support for components like Data Lichen adds to this challenge. The architecture's technical merits are acknowledged for its robustness and innovation, but it also requires a deep understanding of organizational culture, team dynamics, and change management strategies. The forthcoming chapter will analyze and synthesize the research findings, contextualizing them within the broader academic and practical landscape of BD systems.
+The Terramycelium RA is a data management architecture that combines domain-driven design with event-driven communication, enhancing its applicability in data management challenges. It incorporates features like Data Lichen, bitemporality, and immutability, demonstrating an adaptive approach to the evolving landscape of data processing. The architecture has received positive feedback from experts, including professionals from leading data and eventing solutions companies. However, the Terramycelium faces challenges, including its complexity, which requires significant investment in skill development and training, which may be a barrier for organizations lacking resources or unwilling to undergo transformation. The lack of open-source support for components like Data Lichen adds to this challenge. The architecture's technical merits are acknowledged for its robustness and innovation, but it also requires a deep understanding of organizational culture, team dynamics, and change management strategies. The forthcoming section will analyze and synthesize the research findings, contextualizing them within the broader academic and practical landscape of BD systems.
 
 
 \section{Discussion} \label{sec:discussion}
 
-This study's exploration of the Terramycelium RA unveils a novel approach to managing the intricacies of BD systems. Utilizing a complex adaptive system model, Terramycelium advances a distributed, domain-driven architecture, aiming to enhance scalability, maintainability, and adaptability beyond what traditional monolithic architectures offer. This initiative is commendable for its effort to reconcile the inherent volatility and diversity of BD with the principles of modern software engineering. However, the real-world applicability and scalability of such an architecture across varying domains and data scales remain to be rigorously tested.
+This study explored Terramycelium, a novel approach to managing the complexities of BD systems. Utilizing a complex adaptive system model, Terramycelium proposes a distributed, domain-driven architecture aiming to enhance scalability, maintainability, and adaptability beyond what traditional monolithic architectures offer. This initiative is commendable for its effort to reconcile the inherent volatility and diversity of BD with the principles of modern software engineering. However, as the following discussion highlights, the real-world applicability and scalability of such an architecture across varying domains and data scales require rigorous testing.
 
-Terramycelium's emphasis on domain-driven decentralization and event-driven services advocates for a modular structure closely aligned with contemporary engineering practices. While its potential for integration with existing technologies and adaptability for future advancements is notable, the practical challenges associated with implementing such a distributed system, particularly in terms of data consistency, transaction management, and operational complexity, warrant further examination.
+The initial evaluation, conducted through prototyping and case mechanism experiments, suggested potential benefits in data management strategies. However, the limited scope of these evaluations necessitates further investigation to represent diverse BD scenarios and workloads. The compatibility with microservices and the support for engineering practices also need to be contextualized within the broader spectrum of BD applications, considering varying operational and business requirements.
 
-The architecture's evaluation, conducted through prototyping and case mechanism experiments, suggests potential benefits in data management strategies. However, the scope of these evaluations and their ability to represent diverse BD scenarios and workloads must be critically assessed. Moreover, the compatibility with microservices and the support for engineering practices need to be contextualized within the broader spectrum of BD applications, considering varying operational and business requirements.
+Expert feedback provided valuable insights into the strengths and weaknesses of Terramycelium. The architecture's emphasis on domain-driven decentralization and event-driven services aligns with contemporary engineering practices and offers potential for integration with existing technologies (i1). However, concerns were raised regarding the practical challenges associated with implementing such a distributed system, particularly in terms of data consistency, transaction management, and operational complexity (i2, i3).
+
+The domain-driven and distributed nature of Terramycelium elicited diverse viewpoints regarding its compatibility with existing industry practices and anticipated future developments. While experts acknowledged the promising and advanced approaches (i1, i2), they also highlighted potential challenges related to team configurations, organizational scale, and industry readiness (i2). The architecture's complexity might pose adoption hurdles for some organizations, even larger ones (i3).
+
+Experts commended Terramycelium for its unique characteristics, particularly the integration of domain-driven design and data engineering (i1). This holistic approach, along with the architecture's adaptability and comprehensive ecosystem, were highlighted as potential strengths (i2, i3). The use of immutable logs and the ability to self-provision components were also recognized as valuable features (i3). Additionally, the modular architecture with clear boundaries between components was praised for its clarity and potential benefits (i2).
 
 The broader implications of this study, touching upon organizational and operational aspects of BD systems, highlight a shift towards more agile and responsive data management strategies. This envisioned transition aligns with the demand for data-driven organizational processes. Nonetheless, the transition to such decentralized architectures raises significant considerations regarding data governance, security, and privacy, areas that demand detailed scrutiny.
 
-Future research directions proposed for integrating Terramycelium with emerging technologies and validating its effectiveness across different sectors are well-founded. The incorporation of artificial intelligence and machine learning could indeed amplify the architecture's capabilities. However, the tangible impact of such integrations on the architecture's performance, usability, and cost-effectiveness needs clear articulation, supported by empirical evidence.
+Future research directions proposed for integrating Terramycelium with emerging technologies and validating its effectiveness across different sectors are well-founded. The incorporation of artificial intelligence and machine learning could indeed amplify the architecture's capabilities. However, as suggested earlier, the tangible impact of such integrations on the architecture's performance, usability, and cost-effectiveness needs clear articulation, supported by empirical evidence.
+
+Terramycelium presents a promising vision for managing complex BD systems. Its focus on domain-driven design, adaptability, and integration with modern engineering practices offers significant advantages. However, real-world applicability, scalability, and the practicalities of implementation require further investigation. Addressing the potential challenges identified through expert feedback and further research are crucial steps towards realizing the full potential of this innovative architecture.
 
 
 
