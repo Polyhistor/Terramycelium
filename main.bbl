@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{100}
 
 \bibitem{AtaeiACIS}
 Pouya Ataei and Andrew Litchfield.
@@ -226,6 +226,11 @@ Matthias Galster and Paris Avgeriou.
 Rick Kazman, Len Bass, Gregory Abowd, and Mike Webb.
 \newblock Saam: A method for analyzing the properties of software architectures.
 \newblock In {\em Proceedings of 16th International Conference on Software Engineering}, pages 81--90. IEEE, 1994.
+
+\bibitem{Bengtsson2004}
+PerOlof Bengtsson, Nico Lassing, Jan Bosch, and Hans van Vliet.
+\newblock Architecture-level modifiability analysis (alma).
+\newblock {\em Journal of Systems and Software}, 69(1-2):129--147, 2004.
 
 \bibitem{Williams2002}
 Lloyd~G Williams and Connie~U Smith.
