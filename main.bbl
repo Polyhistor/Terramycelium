@@ -391,10 +391,20 @@ Sergey Khrononov.
 \newblock {\em Learning Domain-Driven Design: Aligning Your Architecture with the Business using Context Maps, Strategic Design, and Agile Techniques}.
 \newblock Packt Publishing, Birmingham, UK, 2021.
 
+\bibitem{khononov2021learning}
+Vlad Khononov.
+\newblock {\em Learning Domain-Driven Design}.
+\newblock " O'Reilly Media, Inc.", 2021.
+
 \bibitem{reynolds1987flocks}
 Craig~W Reynolds.
 \newblock Flocks, herds and schools: A distributed behavioral model.
 \newblock In {\em Proceedings of the 14th annual conference on Computer graphics and interactive techniques}, pages 25--34, 1987.
+
+\bibitem{lansing2003complex}
+J~Stephen Lansing.
+\newblock Complex adaptive systems.
+\newblock {\em Annual review of anthropology}, 32(1):183--204, 2003.
 
 \bibitem{montesi2016circuit}
 Fabrizio Montesi and Janine Weber.
@@ -411,6 +421,11 @@ Ben Stopford.
 \newblock {\em Designing Event-Driven Systems}.
 \newblock O'Reilly Media, Inc., 2018.
 
+\bibitem{simon2000brewer}
+Salom{\'e} Simon.
+\newblock Brewer’s cap theorem.
+\newblock {\em CS341 Distributed Information Systems, University of Basel (HS2012)}, 2000.
+
 \bibitem{MStodaytomorrow}
 N.~Dragoni, S.~Giallorenzo, A.~Lafuente, M.~Mazzara, F.~Montesi, R.~Mustafin, and L.~Safina.
 \newblock Microservices: yesterday, today, and tomorrow.
@@ -418,14 +433,17 @@ N.~Dragoni, S.~Giallorenzo, A.~Lafuente, M.~Mazzara, F.~Montesi, R.~Mustafin, an
 
 \bibitem{KIND2023}
 Kubernetes Special Interest~Group (SIG).
-\newblock kind - kubernetes in docker, 2023.
+\newblock kind - kubernetes in docker.
+\newblock https://kind.sigs.k8s.io/, 2023.
 
 \bibitem{terramyceliumInfrastructure}
-Github repository for terramycelium infrastructure, 2024.
+Github repository for terramycelium infrastructure.
+\newblock https://anonymous.4open.science/r/InfrastructureForMetamycelium-8F00/, 2024.
 
 \bibitem{ArtifactHub2023}
 Artifact~Hub Team.
-\newblock Artifact hub, 2023.
+\newblock Artifact hub.
+\newblock https://artifacthub.io/, 2023.
 
 \bibitem{HashiCorpVaultHelm2023}
 HashiCorp.
@@ -472,7 +490,8 @@ Kevin Lee and Lucy Wang.
 \newblock In {\em Proceedings of the 2020 International Conference on Big Data}, pages 456--467, 2020.
 
 \bibitem{terramyceliumHelmChartsAndApplications}
-Github repository for terramycelium helm charts and applications, 2024.
+Github repository for terramycelium helm charts and applications.
+\newblock https://anonymous.4open.science/r/helmChartsAndApplicationsForMetamycelium-D440/, 2024.
 
 \bibitem{creswell2007qualitative}
 John~W Creswell, William~E Hanson, Vicki~L Clark~Plano, and Alejandro Morales.
