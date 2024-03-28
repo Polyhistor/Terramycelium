@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Homebrew) (preloaded format=pdflatex 2023.6.22)  28 MAR 2024 12:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Homebrew) (preloaded format=pdflatex 2023.6.22)  28 MAR 2024 14:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1002,14 +1002,14 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <images/OPA-istio-flow.png, id=630, 1304.875pt x 603.25375pt>
 File: images/OPA-istio-flow.png Graphic file (type png)
 <use images/OPA-istio-flow.png>
-Package pdftex.def Info: images/OPA-istio-flow.png  used on input line 703.
+Package pdftex.def Info: images/OPA-istio-flow.png  used on input line 704.
 (pdftex.def)             Requested size: 505.12177pt x 233.51907pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 711.
+Package pdftex.def Info: notaglinelogo.png  used on input line 712.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1030,188 +1030,13 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 Underfull \vbox (badness 1867) has occurred while \output is active []
 
 
-Underfull \hbox (badness 7869) in paragraph at lines 739--739
-[]|\T1/ptm/m/n/8 The sys-tem is sub-
- []
-
-
-Underfull \hbox (badness 3019) in paragraph at lines 739--739
-\T1/ptm/m/n/8 Do-main B, and pro-
- []
-
-
-Underfull \hbox (badness 7869) in paragraph at lines 754--754
-[]|\T1/ptm/m/n/8 The sys-tem is sub-
- []
-
-
-Underfull \hbox (badness 2478) in paragraph at lines 754--754
-\T1/ptm/m/n/8 jected to a high ve-
- []
-
-
-Underfull \hbox (badness 1931) in paragraph at lines 754--754
-\T1/ptm/m/n/8 main A streams data
- []
-
-
-Underfull \hbox (badness 4940) in paragraph at lines 754--754
-\T1/ptm/m/n/8 main B stream pro-
- []
-
-
-Underfull \hbox (badness 1831) in paragraph at lines 768--768
-\T1/ptm/m/n/8 mented when do-main
- []
-
-
-Underfull \hbox (badness 5787) in paragraph at lines 768--768
-[]|\T1/ptm/m/n/8 Variety, In-ter-op-er-abil-
- []
-
-
-Underfull \hbox (badness 1681) in paragraph at lines 768--768
-[]|\T1/ptm/m/n/8 The sys-tem can han-
- []
-
-
-Underfull \hbox (badness 1472) in paragraph at lines 782--782
-[]|\T1/ptm/m/n/8 The sys-tem pro-cesses
- []
-
-
-Underfull \hbox (badness 4713) in paragraph at lines 782--782
-\T1/ptm/m/n/8 com-plex queries that
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 782--782
-\T1/ptm/m/n/8 hap-pens when an
- []
-
-
-Underfull \hbox (badness 1565) in paragraph at lines 782--782
-\T1/ptm/m/n/8 ex-ter-nal data sci-en-tist
- []
-
-
-Underfull \hbox (badness 2237) in paragraph at lines 782--782
-\T1/ptm/m/n/8 queries both do-mains
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 782--782
-[]|\T1/ptm/m/n/8 Computational
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 782--782
-\T1/ptm/m/n/8 Ef-fi-ciency,
- []
-
-
-Underfull \hbox (badness 2343) in paragraph at lines 782--782
-[]|\T1/ptm/m/n/8 The sys-tem can ef-fi-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 796--796
-[]|\T1/ptm/m/n/8 This sce-nario
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 796--796
-\T1/ptm/m/n/8 un-der-scores the
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 796--796
-\T1/ptm/m/n/8 sys-tem's abil-ity
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 796--796
-\T1/ptm/m/n/8 to man-age se-crets
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 796--796
-\T1/ptm/m/n/8 fo-cus-ing on stor-age,
- []
-
-
-Underfull \hbox (badness 1997) in paragraph at lines 796--796
-\T1/ptm/m/n/8 re-trieval, and ro-ta-tion
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 796--796
-\T1/ptm/m/n/8 in con-junc-tion with
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 796--796
-\T1/ptm/m/n/8 OpenID Con-nect's
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 796--796
-\T1/ptm/m/n/8 stan-dard flow with
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 796--796
-[]|\T1/ptm/m/n/8 Confidentiality,
- []
-
-
-Underfull \hbox (badness 6978) in paragraph at lines 796--796
-[]|\T1/ptm/m/n/8 The sys-tem se-curely
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 796--796
-\T1/ptm/m/n/8 man-ages se-crets,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 796--796
-\T1/ptm/m/n/8 en-sur-ing timely
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 796--796
-\T1/ptm/m/n/8 stor-age, re-trieval,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 796--796
-\T1/ptm/m/n/8 and ro-ta-tion
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 796--796
-\T1/ptm/m/n/8 while main-tain-ing
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 796--796
-\T1/ptm/m/n/8 con-fi-den-tial-ity and
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 810--810
-[]|\T1/ptm/m/n/8 Confidentiality,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 810--810
-\T1/ptm/m/n/8 Data In-tegrity,
+Underfull \hbox (badness 2165) in paragraph at lines 797--797
+[]|\T1/ptm/m/n/8 This sce-nario un-der-scores the sys-tem's
  []
 
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 818.
+Package pdftex.def Info: notaglinelogo.png  used on input line 819.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1231,7 +1056,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [20 <./images/MetamyceliumConcrete.jpg>]
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 824.
+Package pdftex.def Info: notaglinelogo.png  used on input line 827.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1249,42 +1074,70 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [21 <./images/OPA-istio-flow.png (PNG copy)>]
-<images/Datalichen-dashboard.png, id=668, 1077.02374pt x 291.0875pt>
+<images/Datalichen-dashboard.png, id=671, 1077.02374pt x 291.0875pt>
 File: images/Datalichen-dashboard.png Graphic file (type png)
 <use images/Datalichen-dashboard.png>
-Package pdftex.def Info: images/Datalichen-dashboard.png  used on input line 833.
+Package pdftex.def Info: images/Datalichen-dashboard.png  used on input line 834.
 (pdftex.def)             Requested size: 505.12177pt x 136.51799pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/intra-domain-flow.jpg, id=669, 1591.9475pt x 664.4825pt>
+<images/intra-domain-flow.jpg, id=672, 1591.9475pt x 664.4825pt>
 File: images/intra-domain-flow.jpg Graphic file (type jpg)
 <use images/intra-domain-flow.jpg>
-Package pdftex.def Info: images/intra-domain-flow.jpg  used on input line 840.
+Package pdftex.def Info: images/intra-domain-flow.jpg  used on input line 841.
 (pdftex.def)             Requested size: 505.12177pt x 210.83397pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/kafka-topics.png, id=671, 2543.5025pt x 726.715pt>
+<images/kafka-topics.png, id=674, 2543.5025pt x 726.715pt>
 File: images/kafka-topics.png Graphic file (type png)
 <use images/kafka-topics.png>
-Package pdftex.def Info: images/kafka-topics.png  used on input line 851.
+Package pdftex.def Info: images/kafka-topics.png  used on input line 852.
 (pdftex.def)             Requested size: 505.12177pt x 144.32025pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/Scenario-s1.png, id=673, 1116.17pt x 395.4775pt>
+<images/Scenario-s1.png, id=676, 1116.17pt x 395.4775pt>
 File: images/Scenario-s1.png Graphic file (type png)
 <use images/Scenario-s1.png>
-Package pdftex.def Info: images/Scenario-s1.png  used on input line 860.
+Package pdftex.def Info: images/Scenario-s1.png  used on input line 861.
 (pdftex.def)             Requested size: 505.12177pt x 178.97098pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+
+LaTeX Font Warning: Font shape `T1/phv/n/sl' undefined
+(Font)              using `T1/phv/n/n' instead on input line 873.
+
+<images/kafka-open-telemetry-topic-screenshot.png, id=680, 2144.01pt x 359.3425pt>
+File: images/kafka-open-telemetry-topic-screenshot.png Graphic file (type png)
+<use images/kafka-open-telemetry-topic-screenshot.png>
+Package pdftex.def Info: images/kafka-open-telemetry-topic-screenshot.png  used on input line 881.
+(pdftex.def)             Requested size: 505.12177pt x 84.65933pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<images/open-telemetry-flow.png, id=681, 1426.32875pt x 377.41pt>
+File: images/open-telemetry-flow.png Graphic file (type png)
+<use images/open-telemetry-flow.png>
+Package pdftex.def Info: images/open-telemetry-flow.png  used on input line 888.
+(pdftex.def)             Requested size: 505.12177pt x 133.65611pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<images/open-telemetry-trace-example.png, id=682, 700.6175pt x 577.15625pt>
+File: images/open-telemetry-trace-example.png Graphic file (type png)
+<use images/open-telemetry-trace-example.png>
+Package pdftex.def Info: images/open-telemetry-trace-example.png  used on input line 897.
+(pdftex.def)             Requested size: 242.67355pt x 199.91171pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 869.
+Package pdftex.def Info: notaglinelogo.png  used on input line 904.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1302,37 +1155,9 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [22]
-
-LaTeX Font Warning: Font shape `T1/phv/n/sl' undefined
-(Font)              using `T1/phv/n/n' instead on input line 872.
-
-<images/kafka-open-telemetry-topic-screenshot.png, id=686, 2144.01pt x 359.3425pt>
-File: images/kafka-open-telemetry-topic-screenshot.png Graphic file (type png)
-<use images/kafka-open-telemetry-topic-screenshot.png>
-Package pdftex.def Info: images/kafka-open-telemetry-topic-screenshot.png  used on input line 880.
-(pdftex.def)             Requested size: 505.12177pt x 84.65933pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/open-telemetry-flow.png, id=687, 1426.32875pt x 377.41pt>
-File: images/open-telemetry-flow.png Graphic file (type png)
-<use images/open-telemetry-flow.png>
-Package pdftex.def Info: images/open-telemetry-flow.png  used on input line 887.
-(pdftex.def)             Requested size: 505.12177pt x 133.65611pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/open-telemetry-trace-example.png, id=689, 700.6175pt x 577.15625pt>
-File: images/open-telemetry-trace-example.png Graphic file (type png)
-<use images/open-telemetry-trace-example.png>
-Package pdftex.def Info: images/open-telemetry-trace-example.png  used on input line 896.
-(pdftex.def)             Requested size: 242.67355pt x 199.91171pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 906.
+Package pdftex.def Info: notaglinelogo.png  used on input line 921.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1350,14 +1175,26 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [23 <./images/Datalichen-dashboard.png> <./images/intra-domain-flow.jpg (PNG copy)>]
-Underfull \vbox (badness 2846) has occurred while \output is active []
+<images/Kafka-ingestion-in-Bytes.png, id=710, 1734.48pt x 558.085pt>
+File: images/Kafka-ingestion-in-Bytes.png Graphic file (type png)
+<use images/Kafka-ingestion-in-Bytes.png>
+Package pdftex.def Info: images/Kafka-ingestion-in-Bytes.png  used on input line 934.
+(pdftex.def)             Requested size: 505.12177pt x 162.52176pt.
 
 
-Underfull \vbox (badness 2846) has occurred while \output is active []
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<images/total-data-ingested-in-bytes.jpeg, id=711, 1731.46875pt x 610.28pt>
+File: images/total-data-ingested-in-bytes.jpeg Graphic file (type jpg)
+<use images/total-data-ingested-in-bytes.jpeg>
+Package pdftex.def Info: images/total-data-ingested-in-bytes.jpeg  used on input line 941.
+(pdftex.def)             Requested size: 242.67355pt x 85.53174pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 912.
+Package pdftex.def Info: notaglinelogo.png  used on input line 947.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1375,37 +1212,23 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [24 <./images/kafka-topics.png> <./images/Scenario-s1.png (PNG copy)> <./images/kafka-open-telemetry-topic-screenshot.png>]
-<images/Kafka-ingestion-in-Bytes.png, id=713, 1734.48pt x 558.085pt>
-File: images/Kafka-ingestion-in-Bytes.png Graphic file (type png)
-<use images/Kafka-ingestion-in-Bytes.png>
-Package pdftex.def Info: images/Kafka-ingestion-in-Bytes.png  used on input line 933.
-(pdftex.def)             Requested size: 505.12177pt x 162.52176pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/total-data-ingested-in-bytes.jpeg, id=714, 1731.46875pt x 610.28pt>
-File: images/total-data-ingested-in-bytes.jpeg Graphic file (type jpg)
-<use images/total-data-ingested-in-bytes.jpeg>
-Package pdftex.def Info: images/total-data-ingested-in-bytes.jpeg  used on input line 940.
-(pdftex.def)             Requested size: 242.67355pt x 85.53174pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/weather-domain-ingested-data-in-bytes.png, id=716, 1670.24pt x 551.05875pt>
+<images/weather-domain-ingested-data-in-bytes.png, id=723, 1670.24pt x 551.05875pt>
 File: images/weather-domain-ingested-data-in-bytes.png Graphic file (type png)
 <use images/weather-domain-ingested-data-in-bytes.png>
-Package pdftex.def Info: images/weather-domain-ingested-data-in-bytes.png  used on input line 949.
+Package pdftex.def Info: images/weather-domain-ingested-data-in-bytes.png  used on input line 950.
 (pdftex.def)             Requested size: 505.12177pt x 166.64743pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Reference `dataIngestedInWeatherDomainTable' on page 25 undefined on input line 982.
+Underfull \hbox (badness 3375) in paragraph at lines 1021--1022
+[]$\OML/cmm/m/it/10 publish[]time$ \T1/ptm/n/n/10 rep-re-sents the times-tamp when the
+ []
 
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 1014.
+Package pdftex.def Info: notaglinelogo.png  used on input line 1025.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1423,29 +1246,26 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [25 <./images/open-telemetry-flow.png (PNG copy)> <./images/open-telemetry-trace-example.png>]
-Underfull \hbox (badness 3375) in paragraph at lines 1020--1021
-[]$\OML/cmm/m/it/10 publish[]time$ \T1/ptm/n/n/10 rep-re-sents the times-tamp when the
- []
-
-<images/customer-and-weather-domain-analytics-service-latency.png, id=732, 1725.44624pt x 502.87875pt>
+<images/customer-and-weather-domain-analytics-service-latency.png, id=738, 1725.44624pt x 502.87875pt>
 File: images/customer-and-weather-domain-analytics-service-latency.png Graphic file (type png)
 <use images/customer-and-weather-domain-analytics-service-latency.png>
-Package pdftex.def Info: images/customer-and-weather-domain-analytics-service-latency.png  used on input line 1027.
+Package pdftex.def Info: images/customer-and-weather-domain-analytics-service-latency.png  used on input line 1028.
 (pdftex.def)             Requested size: 505.12177pt x 147.2123pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/Open-telemetry-service-CPU-usage.png, id=734, 1280.785pt x 370.38374pt>
+<images/Open-telemetry-service-CPU-usage.png, id=740, 1280.785pt x 370.38374pt>
 File: images/Open-telemetry-service-CPU-usage.png Graphic file (type png)
 <use images/Open-telemetry-service-CPU-usage.png>
-Package pdftex.def Info: images/Open-telemetry-service-CPU-usage.png  used on input line 1046.
+Package pdftex.def Info: images/Open-telemetry-service-CPU-usage.png  used on input line 1047.
 (pdftex.def)             Requested size: 505.12177pt x 146.07108pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 1052.
+Package pdftex.def Info: notaglinelogo.png  used on input line 1081.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1463,36 +1283,28 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [26 <./images/Kafka-ingestion-in-Bytes.png> <./images/total-data-ingested-in-bytes.jpeg>]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<images/kubernetes-cluster-CPU-usage.png, id=748, 706.64pt x 372.39125pt>
+<images/kubernetes-cluster-CPU-usage.png, id=753, 706.64pt x 372.39125pt>
 File: images/kubernetes-cluster-CPU-usage.png Graphic file (type png)
 <use images/kubernetes-cluster-CPU-usage.png>
-Package pdftex.def Info: images/kubernetes-cluster-CPU-usage.png  used on input line 1083.
+Package pdftex.def Info: images/kubernetes-cluster-CPU-usage.png  used on input line 1084.
 (pdftex.def)             Requested size: 242.67355pt x 127.88416pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/Kubernetes-cluster-data-read-write.png, id=751, 695.59875pt x 370.38374pt>
+<images/Kubernetes-cluster-data-read-write.png, id=756, 695.59875pt x 370.38374pt>
 File: images/Kubernetes-cluster-data-read-write.png Graphic file (type png)
 <use images/Kubernetes-cluster-data-read-write.png>
-Package pdftex.def Info: images/Kubernetes-cluster-data-read-write.png  used on input line 1092.
+Package pdftex.def Info: images/Kubernetes-cluster-data-read-write.png  used on input line 1093.
 (pdftex.def)             Requested size: 242.67355pt x 129.21237pt.
-
-Underfull \vbox (badness 1515) has occurred while \output is active []
-
-<images/kubernetes-cluster-network-data-received-and-sent.png, id=752, 696.6025pt x 372.39125pt>
+<images/kubernetes-cluster-network-data-received-and-sent.png, id=757, 696.6025pt x 372.39125pt>
 File: images/kubernetes-cluster-network-data-received-and-sent.png Graphic file (type png)
 <use images/kubernetes-cluster-network-data-received-and-sent.png>
-Package pdftex.def Info: images/kubernetes-cluster-network-data-received-and-sent.png  used on input line 1100.
+Package pdftex.def Info: images/kubernetes-cluster-network-data-received-and-sent.png  used on input line 1101.
 (pdftex.def)             Requested size: 242.67355pt x 129.7252pt.
-
-Underfull \vbox (badness 1406) has occurred while \output is active []
-
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 1107.
+Package pdftex.def Info: notaglinelogo.png  used on input line 1118.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1510,9 +1322,14 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [27 <./images/weather-domain-ingested-data-in-bytes.png> <./images/customer-and-weather-domain-analytics-service-latency.png>]
+<images/Memory-usage-for-various-services-in-kube.png, id=771, 1141.26375pt x 387.4475pt>
+File: images/Memory-usage-for-various-services-in-kube.png Graphic file (type png)
+<use images/Memory-usage-for-various-services-in-kube.png>
+Package pdftex.def Info: images/Memory-usage-for-various-services-in-kube.png  used on input line 1128.
+(pdftex.def)             Requested size: 242.67355pt x 82.38322pt.
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 1117.
+Package pdftex.def Info: notaglinelogo.png  used on input line 1135.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1530,25 +1347,19 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [28 <./images/Open-telemetry-service-CPU-usage.png> <./images/kubernetes-cluster-CPU-usage.png> <./images/Kubernetes-cluster-data-read-write.png> <./images/kubernetes-cluster-network-data-received-and-sent.png>]
-<images/Memory-usage-for-various-services-in-kube.png, id=776, 1141.26375pt x 387.4475pt>
-File: images/Memory-usage-for-various-services-in-kube.png Graphic file (type png)
-<use images/Memory-usage-for-various-services-in-kube.png>
-Package pdftex.def Info: images/Memory-usage-for-various-services-in-kube.png  used on input line 1127.
-(pdftex.def)             Requested size: 242.67355pt x 82.38322pt.
-
-Underfull \vbox (badness 4846) has occurred while \output is active []
-
-<images/number-of-errors-in-telemetry-processing-service.png, id=779, 1123.19624pt x 382.42876pt>
+<images/number-of-errors-in-telemetry-processing-service.png, id=785, 1123.19624pt x 382.42876pt>
 File: images/number-of-errors-in-telemetry-processing-service.png Graphic file (type png)
 <use images/number-of-errors-in-telemetry-processing-service.png>
-Package pdftex.def Info: images/number-of-errors-in-telemetry-processing-service.png  used on input line 1171.
+Package pdftex.def Info: images/number-of-errors-in-telemetry-processing-service.png  used on input line 1172.
 (pdftex.def)             Requested size: 242.67355pt x 82.62321pt.
-
-Underfull \vbox (badness 1527) has occurred while \output is active []
-
+<images/customer-domain-stream-data-topic-statistics.png, id=787, 869.2475pt x 811.03pt>
+File: images/customer-domain-stream-data-topic-statistics.png Graphic file (type png)
+<use images/customer-domain-stream-data-topic-statistics.png>
+Package pdftex.def Info: images/customer-domain-stream-data-topic-statistics.png  used on input line 1193.
+(pdftex.def)             Requested size: 242.67355pt x 226.41858pt.
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 1188.
+Package pdftex.def Info: notaglinelogo.png  used on input line 1199.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1565,34 +1376,34 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
 
-[29 <./images/Memory-usage-for-various-services-in-kube.png> <./images/number-of-errors-in-telemetry-processing-service.png>]
-<images/customer-domain-stream-data-topic-statistics.png, id=794, 869.2475pt x 811.03pt>
-File: images/customer-domain-stream-data-topic-statistics.png Graphic file (type png)
-<use images/customer-domain-stream-data-topic-statistics.png>
-Package pdftex.def Info: images/customer-domain-stream-data-topic-statistics.png  used on input line 1192.
-(pdftex.def)             Requested size: 242.67355pt x 226.41858pt.
-<images/memory-utilization-in-customer-domain-in-streaming-case.png, id=797, 820.06375pt x 768.8725pt>
+[29 <./images/Memory-usage-for-various-services-in-kube.png> <./images/number-of-errors-in-telemetry-processing-service.png> <./images/customer-domain-stream-data-topic-statistics.png>]
+<images/memory-utilization-in-customer-domain-in-streaming-case.png, id=803, 820.06375pt x 768.8725pt>
 File: images/memory-utilization-in-customer-domain-in-streaming-case.png Graphic file (type png)
 <use images/memory-utilization-in-customer-domain-in-streaming-case.png>
-Package pdftex.def Info: images/memory-utilization-in-customer-domain-in-streaming-case.png  used on input line 1201.
+Package pdftex.def Info: images/memory-utilization-in-customer-domain-in-streaming-case.png  used on input line 1202.
 (pdftex.def)             Requested size: 227.62204pt x 213.4057pt.
-<images/memory-utilization-in-weather-domain-in-streaming-case.png, id=798, 810.02625pt x 757.83125pt>
+<images/memory-utilization-in-weather-domain-in-streaming-case.png, id=804, 810.02625pt x 757.83125pt>
 File: images/memory-utilization-in-weather-domain-in-streaming-case.png Graphic file (type png)
 <use images/memory-utilization-in-weather-domain-in-streaming-case.png>
-Package pdftex.def Info: images/memory-utilization-in-weather-domain-in-streaming-case.png  used on input line 1208.
+Package pdftex.def Info: images/memory-utilization-in-weather-domain-in-streaming-case.png  used on input line 1209.
 (pdftex.def)             Requested size: 227.62204pt x 212.9545pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/kafka-ingestion-latency-sum-streaming-case.png, id=801, 1335.99126pt x 391.4625pt>
+<images/kafka-ingestion-latency-sum-streaming-case.png, id=806, 1335.99126pt x 391.4625pt>
 File: images/kafka-ingestion-latency-sum-streaming-case.png Graphic file (type png)
 <use images/kafka-ingestion-latency-sum-streaming-case.png>
-Package pdftex.def Info: images/kafka-ingestion-latency-sum-streaming-case.png  used on input line 1219.
+Package pdftex.def Info: images/kafka-ingestion-latency-sum-streaming-case.png  used on input line 1220.
 (pdftex.def)             Requested size: 505.12177pt x 148.00465pt.
+<images/processing-duration-streaming-case-in-weather-domain.png, id=808, 1324.95pt x 393.47pt>
+File: images/processing-duration-streaming-case-in-weather-domain.png Graphic file (type png)
+<use images/processing-duration-streaming-case-in-weather-domain.png>
+Package pdftex.def Info: images/processing-duration-streaming-case-in-weather-domain.png  used on input line 1230.
+(pdftex.def)             Requested size: 505.12177pt x 150.00645pt.
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 1225.
+Package pdftex.def Info: notaglinelogo.png  used on input line 1237.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1609,77 +1420,71 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
 
-[30 <./images/customer-domain-stream-data-topic-statistics.png> <./images/memory-utilization-in-customer-domain-in-streaming-case.png>]
-<images/processing-duration-streaming-case-in-weather-domain.png, id=815, 1324.95pt x 393.47pt>
-File: images/processing-duration-streaming-case-in-weather-domain.png Graphic file (type png)
-<use images/processing-duration-streaming-case-in-weather-domain.png>
-Package pdftex.def Info: images/processing-duration-streaming-case-in-weather-domain.png  used on input line 1229.
-(pdftex.def)             Requested size: 505.12177pt x 150.00645pt.
-<images/data-scientist-data-lichen-flow-with-authentication.jpg, id=817, 883.3pt x 531.9875pt>
+[30 <./images/memory-utilization-in-customer-domain-in-streaming-case.png> <./images/memory-utilization-in-weather-domain-in-streaming-case.png>]
+File: notaglinelogo.png Graphic file (type png)
+<use notaglinelogo.png>
+Package pdftex.def Info: notaglinelogo.png  used on input line 1252.
+(pdftex.def)             Requested size: 91.32pt x 23.1352pt.
+
+Overfull \hbox (505.12177pt too wide) has occurred while \output is active
+[]
+ []
+
+
+Overfull \hbox (505.12177pt too wide) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[31 <./images/kafka-ingestion-latency-sum-streaming-case.png> <./images/processing-duration-streaming-case-in-weather-domain.png>]
+<images/data-scientist-data-lichen-flow-with-authentication.jpg, id=828, 883.3pt x 531.9875pt>
 File: images/data-scientist-data-lichen-flow-with-authentication.jpg Graphic file (type jpg)
 <use images/data-scientist-data-lichen-flow-with-authentication.jpg>
-Package pdftex.def Info: images/data-scientist-data-lichen-flow-with-authentication.jpg  used on input line 1256.
+Package pdftex.def Info: images/data-scientist-data-lichen-flow-with-authentication.jpg  used on input line 1257.
 (pdftex.def)             Requested size: 505.12177pt x 304.22636pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-File: notaglinelogo.png Graphic file (type png)
-<use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 1277.
-(pdftex.def)             Requested size: 91.32pt x 23.1352pt.
-
-Overfull \hbox (505.12177pt too wide) has occurred while \output is active
-[]
- []
-
-
-Overfull \hbox (505.12177pt too wide) has occurred while \output is active
-[]
- []
-
-
-Underfull \hbox (badness 10000) has occurred while \output is active
-[]
- []
-
-[31 <./images/memory-utilization-in-weather-domain-in-streaming-case.png>]
-<images/Secret-Retrieval-Delay-in-Seconds-In-Data-Scientist-Application.png, id=832, 1970.36125pt x 524.96124pt>
+<images/Secret-Retrieval-Delay-in-Seconds-In-Data-Scientist-Application.png, id=830, 1970.36125pt x 524.96124pt>
 File: images/Secret-Retrieval-Delay-in-Seconds-In-Data-Scientist-Application.png Graphic file (type png)
 <use images/Secret-Retrieval-Delay-in-Seconds-In-Data-Scientist-Application.png>
-Package pdftex.def Info: images/Secret-Retrieval-Delay-in-Seconds-In-Data-Scientist-Application.png  used on input line 1288.
+Package pdftex.def Info: images/Secret-Retrieval-Delay-in-Seconds-In-Data-Scientist-Application.png  used on input line 1289.
 (pdftex.def)             Requested size: 505.12177pt x 134.57225pt.
-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/CPU-utilization-data-scientist-application.png, id=834, 1972.36874pt x 541.02126pt>
+<images/CPU-utilization-data-scientist-application.png, id=832, 1972.36874pt x 541.02126pt>
 File: images/CPU-utilization-data-scientist-application.png Graphic file (type png)
 <use images/CPU-utilization-data-scientist-application.png>
-Package pdftex.def Info: images/CPU-utilization-data-scientist-application.png  used on input line 1298.
+Package pdftex.def Info: images/CPU-utilization-data-scientist-application.png  used on input line 1299.
 (pdftex.def)             Requested size: 505.12177pt x 138.54884pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/memory-utilization-in-data-scientist-application.png, id=836, 1985.4175pt x 547.04375pt>
+<images/memory-utilization-in-data-scientist-application.png, id=834, 1985.4175pt x 547.04375pt>
 File: images/memory-utilization-in-data-scientist-application.png Graphic file (type png)
 <use images/memory-utilization-in-data-scientist-application.png>
-Package pdftex.def Info: images/memory-utilization-in-data-scientist-application.png  used on input line 1309.
+Package pdftex.def Info: images/memory-utilization-in-data-scientist-application.png  used on input line 1310.
 (pdftex.def)             Requested size: 505.12177pt x 139.17294pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<images/query-processing-duration-in-data-science-application.png, id=838, 1964.33875pt x 538.01pt>
+<images/query-processing-duration-in-data-science-application.png, id=836, 1964.33875pt x 538.01pt>
 File: images/query-processing-duration-in-data-science-application.png Graphic file (type png)
 <use images/query-processing-duration-in-data-science-application.png>
-Package pdftex.def Info: images/query-processing-duration-in-data-science-application.png  used on input line 1320.
+Package pdftex.def Info: images/query-processing-duration-in-data-science-application.png  used on input line 1321.
 (pdftex.def)             Requested size: 505.12177pt x 138.34415pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 1329.
+Package pdftex.def Info: notaglinelogo.png  used on input line 1340.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1696,15 +1501,15 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
 
-[32 <./images/kafka-ingestion-latency-sum-streaming-case.png> <./images/processing-duration-streaming-case-in-weather-domain.png>]
-Underfull \vbox (badness 1694) has occurred while \output is active []
+[32]
+Underfull \vbox (badness 5431) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 1337.
+Package pdftex.def Info: notaglinelogo.png  used on input line 1349.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1729,7 +1534,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 1348.
+Package pdftex.def Info: notaglinelogo.png  used on input line 1349.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1747,16 +1552,13 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [34 <./images/CPU-utilization-data-scientist-application.png> <./images/memory-utilization-in-data-scientist-application.png> <./images/query-processing-duration-in-data-science-application.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \hbox (badness 3039) in paragraph at lines 1356--1359
+Underfull \hbox (badness 3039) in paragraph at lines 1357--1360
 \T1/ptm/n/n/10 types of data, pre-sented dif-fi-cul-ties with semi-
  []
 
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 1365.
+Package pdftex.def Info: notaglinelogo.png  used on input line 1386.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1774,13 +1576,13 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [35]
-Underfull \hbox (badness 6412) in paragraph at lines 1388--1389
+Underfull \hbox (badness 6412) in paragraph at lines 1389--1390
 []\T1/ptm/b/n/10 Veracity\T1/ptm/n/n/10 : The domain-specific char-ac-ter of Ter-
  []
 
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 1418.
+Package pdftex.def Info: notaglinelogo.png  used on input line 1447.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1798,28 +1600,48 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [36]
-Overfull \hbox (1.7245pt too wide) in paragraph at lines 1457--1466
+Overfull \hbox (1.7245pt too wide) in paragraph at lines 1458--1467
  [][] 
  []
 
 
-Underfull \hbox (badness 2894) in paragraph at lines 1483--1484
+Underfull \hbox (badness 2894) in paragraph at lines 1484--1485
 \T1/ptm/n/n/10 The domain-driven and dis-tributed na-ture of the Ter-
  []
 
 
-Overfull \hbox (6.80005pt too wide) in paragraph at lines 1490--1495
+Overfull \hbox (6.80005pt too wide) in paragraph at lines 1491--1496
 [] 
  []
 
 
-Overfull \hbox (6.80005pt too wide) in paragraph at lines 1504--1509
+Overfull \hbox (6.80005pt too wide) in paragraph at lines 1505--1510
+[] 
+ []
+
+
+Overfull \hbox (6.80005pt too wide) in paragraph at lines 1519--1524
+[] 
+ []
+
+
+Underfull \hbox (badness 2277) in paragraph at lines 1534--1535
+\T1/ptm/n/n/10 The Ter-ramycelium ar-chi-tec-ture re-ceived praise for its
+ []
+
+
+Overfull \hbox (6.80005pt too wide) in paragraph at lines 1542--1547
+[] 
+ []
+
+
+Overfull \hbox (6.80005pt too wide) in paragraph at lines 1558--1563
 [] 
  []
 
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 1515.
+Package pdftex.def Info: notaglinelogo.png  used on input line 1564.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1837,68 +1659,73 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [37]
-Overfull \hbox (6.80005pt too wide) in paragraph at lines 1518--1523
-[] 
- []
-
-
-Underfull \hbox (badness 2277) in paragraph at lines 1533--1534
-\T1/ptm/n/n/10 The Ter-ramycelium ar-chi-tec-ture re-ceived praise for its
- []
-
-
-Overfull \hbox (6.80005pt too wide) in paragraph at lines 1541--1546
-[] 
- []
-
-
-Overfull \hbox (6.80005pt too wide) in paragraph at lines 1557--1562
-[] 
- []
-
-
-Underfull \hbox (badness 4899) in paragraph at lines 1566--1567
+Underfull \hbox (badness 4899) in paragraph at lines 1567--1568
 []\T1/ptm/n/n/10 The ar-chi-tec-ture's adapt-able char-ac-ter-is-tics and all-
  []
 
 
-Overfull \hbox (6.80005pt too wide) in paragraph at lines 1571--1576
+Overfull \hbox (6.80005pt too wide) in paragraph at lines 1572--1577
 [] 
  []
 
 
-Overfull \hbox (6.80005pt too wide) in paragraph at lines 1585--1590
+Overfull \hbox (6.80005pt too wide) in paragraph at lines 1586--1591
 [] 
  []
 
 
-Overfull \hbox (6.80005pt too wide) in paragraph at lines 1599--1604
+Overfull \hbox (6.80005pt too wide) in paragraph at lines 1600--1605
 [] 
  []
 
 
-Overfull \hbox (6.80005pt too wide) in paragraph at lines 1612--1617
+Overfull \hbox (6.80005pt too wide) in paragraph at lines 1613--1618
 [] 
  []
 
 
-Overfull \hbox (6.80005pt too wide) in paragraph at lines 1632--1637
+Overfull \hbox (6.80005pt too wide) in paragraph at lines 1633--1638
 [] 
  []
 
 
-Overfull \hbox (6.80005pt too wide) in paragraph at lines 1645--1650
+Overfull \hbox (6.80005pt too wide) in paragraph at lines 1646--1651
 [] 
  []
 
 
-Overfull \hbox (6.80005pt too wide) in paragraph at lines 1658--1663
+Overfull \hbox (6.80005pt too wide) in paragraph at lines 1659--1664
+[] 
+ []
+
+
+Overfull \hbox (6.80005pt too wide) in paragraph at lines 1672--1677
+[] 
+ []
+
+
+Overfull \hbox (6.80005pt too wide) in paragraph at lines 1686--1691
+[] 
+ []
+
+
+Overfull \hbox (6.80005pt too wide) in paragraph at lines 1699--1704
+[] 
+ []
+
+
+Overfull \hbox (6.80005pt too wide) in paragraph at lines 1712--1717
+[] 
+ []
+
+
+Overfull \hbox (6.80005pt too wide) in paragraph at lines 1725--1730
 [] 
  []
 
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 1664.
+Package pdftex.def Info: notaglinelogo.png  used on input line 1734.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1916,37 +1743,12 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [38]
-Overfull \hbox (6.80005pt too wide) in paragraph at lines 1671--1676
+Overfull \hbox (6.80005pt too wide) in paragraph at lines 1738--1743
 [] 
  []
 
 
-Overfull \hbox (6.80005pt too wide) in paragraph at lines 1685--1690
-[] 
- []
-
-
-Overfull \hbox (6.80005pt too wide) in paragraph at lines 1698--1703
-[] 
- []
-
-
-Overfull \hbox (6.80005pt too wide) in paragraph at lines 1711--1716
-[] 
- []
-
-
-Overfull \hbox (6.80005pt too wide) in paragraph at lines 1724--1729
-[] 
- []
-
-
-Overfull \hbox (6.80005pt too wide) in paragraph at lines 1737--1742
-[] 
- []
-
-
-Underfull \hbox (badness 2644) in paragraph at lines 1760--1760
+Underfull \hbox (badness 2644) in paragraph at lines 1761--1761
 []|\T1/ptm/m/n/8 Stresses on the cross-functional na-ture and the
  []
 
@@ -1954,28 +1756,34 @@ Underfull \hbox (badness 2644) in paragraph at lines 1760--1760
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1778--1779
+Underfull \hbox (badness 10000) in paragraph at lines 1779--1780
 []|\T1/ptm/m/n/8 Number of Items
  []
 
 
-Underfull \hbox (badness 1603) in paragraph at lines 1796--1797
+Underfull \hbox (badness 1603) in paragraph at lines 1797--1798
 []\T1/ptm/n/n/10 The themes "Ap-pli-ca-bil-ity and In-dus-trial Rel-e-vance",
  []
 
-<images/Quantitative-Summary-For-Codes.png, id=916, 1397.22pt x 540.0175pt>
+<images/Quantitative-Summary-For-Codes.png, id=918, 1397.22pt x 540.0175pt>
 File: images/Quantitative-Summary-For-Codes.png Graphic file (type png)
 <use images/Quantitative-Summary-For-Codes.png>
-Package pdftex.def Info: images/Quantitative-Summary-For-Codes.png  used on input line 1808.
+Package pdftex.def Info: images/Quantitative-Summary-For-Codes.png  used on input line 1809.
 (pdftex.def)             Requested size: 242.67355pt x 93.7876pt.
 
-Overfull \hbox (1.32298pt too wide) in paragraph at lines 1837--1837
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (1.32298pt too wide) in paragraph at lines 1838--1838
 []|\T1/ptm/b/n/8 10| 
  []
 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 1839.
+Package pdftex.def Info: notaglinelogo.png  used on input line 1857.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1993,9 +1801,18 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [39 <./images/Quantitative-Summary-For-Codes.png>]
+Underfull \hbox (badness 2689) in paragraph at lines 1869--1870
+[]\T1/ptm/n/n/10 Expert feed-back pro-vided valu-able in-sights into the
+ []
+
+
+Underfull \hbox (badness 6927) in paragraph at lines 1871--1872
+[]\T1/ptm/n/n/10 The domain-driven and dis-tributed na-ture of Ter-
+ []
+
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 1860.
+Package pdftex.def Info: notaglinelogo.png  used on input line 1872.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -2012,27 +1829,24 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
 
-[40]
-Underfull \hbox (badness 2689) in paragraph at lines 1868--1869
-[]\T1/ptm/n/n/10 Expert feed-back pro-vided valu-able in-sights into the
- []
-
-
-Underfull \hbox (badness 6927) in paragraph at lines 1870--1871
-[]\T1/ptm/n/n/10 The domain-driven and dis-tributed na-ture of Ter-
- []
-
-(./main.bbl
+[40] (./main.bbl
 
 LaTeX Font Warning: Font shape `T1/ptm/n/it' undefined
 (Font)              using `T1/ptm/n/n' instead on input line 6.
 
 
-Underfull \vbox (badness 2503) has occurred while \output is active []
+Underfull \hbox (badness 2418) in paragraph at lines 28--32
+[]\T1/ptm/n/it/10 Nicolaus Henke, Jacques Bughin, Michael Chui,
+ []
+
+
+Underfull \hbox (badness 7238) in paragraph at lines 39--42
+[]\T1/ptm/n/it/10 Robert Cloutier, Ger-rit Muller, Di-nesh Verma,
+ []
 
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 7.
+Package pdftex.def Info: notaglinelogo.png  used on input line 67.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -2050,19 +1864,6 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [41]
-Underfull \hbox (badness 2418) in paragraph at lines 28--32
-[]\T1/ptm/n/it/10 Nicolaus Henke, Jacques Bughin, Michael Chui,
- []
-
-
-Underfull \hbox (badness 7238) in paragraph at lines 39--42
-[]\T1/ptm/n/it/10 Robert Cloutier, Ger-rit Muller, Di-nesh Verma,
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 Underfull \hbox (badness 2818) in paragraph at lines 104--107
 []\T1/ptm/n/it/10 Antonio Buc-chiarone, Nicola Drag-oni, Schahram
  []
@@ -2077,26 +1878,7 @@ Underfull \hbox (badness 1831) in paragraph at lines 124--127
 []\T1/ptm/n/it/10 Mariam Ki-ran, Pe-ter Mur-phy, In-der Monga, Jon
  []
 
-File: notaglinelogo.png Graphic file (type png)
-<use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 158.
-(pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
-Overfull \hbox (505.12177pt too wide) has occurred while \output is active
-[]
- []
-
-
-Overfull \hbox (505.12177pt too wide) has occurred while \output is active
-[]
- []
-
-
-Underfull \hbox (badness 10000) has occurred while \output is active
-[]
- []
-
-[42]
 Underfull \hbox (badness 10000) in paragraph at lines 169--170
 []\T1/ptm/n/it/10 ISO/IEC 26550: 2015-software and sys-tems
  []
@@ -2116,14 +1898,38 @@ Underfull \hbox (badness 2103) in paragraph at lines 187--190
 []\T1/ptm/n/it/10 Roel J Wieringa.  De-sign sci-ence method-ol-ogy
  []
 
+File: notaglinelogo.png Graphic file (type png)
+<use notaglinelogo.png>
+Package pdftex.def Info: notaglinelogo.png  used on input line 205.
+(pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
+Overfull \hbox (505.12177pt too wide) has occurred while \output is active
+[]
+ []
+
+
+Overfull \hbox (505.12177pt too wide) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[42]
 Underfull \hbox (badness 3209) in paragraph at lines 207--209
 []\T1/ptm/n/it/10 IEEE In-ter-na-tional Or-ga-ni-za-tion for Stan-dard-iza-
  []
 
+
+Underfull \hbox (badness 1776) in paragraph at lines 329--332
+[]\T1/ptm/n/it/10 J. Rose, H. Gö-bel, S. Cron-holm, J. Hol-gers-son,
+ []
+
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 284.
+Package pdftex.def Info: notaglinelogo.png  used on input line 342.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -2141,11 +1947,6 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [43]
-Underfull \hbox (badness 1776) in paragraph at lines 329--332
-[]\T1/ptm/n/it/10 J. Rose, H. Gö-bel, S. Cron-holm, J. Hol-gers-son,
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 349--353
 []\T1/ptm/n/it/10 Gartner.  Es-sen-tial guide to data fab-ric.
  []
@@ -2170,9 +1971,50 @@ Underfull \hbox (badness 10000) in paragraph at lines 444--447
 []\T1/ptm/n/it/10 Artifact Hub Team.  Ar-ti-fact hub.
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 449--452
+[]\T1/ptm/n/it/10 HashiCorp.  Vault helm chart.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 449--452
+\T1/ptm/n/it/10 https://artifacthub.io/packages/helm/hashicorp/vault,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 464--467
+[]\T1/ptm/n/it/10 GroupLens.  Movie-lens 20m dataset.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 464--467
+[]$\T1/ptm/n/it/10 https : / / www . kaggle . com / datasets / grouplens /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 498--500
+[]\T1/ptm/n/it/10 Github repos-i-tory for ter-ramycelium
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 498--500
+\T1/ptm/n/it/10 helm charts and ap-pli-ca-tions.
+ []
+
+
+Overfull \hbox (117.55244pt too wide) in paragraph at lines 498--500
+\T1/ptm/n/it/10 https://anonymous.4open.science/r/helmChartsAndApplicationsForMetamycelium-
+ []
+
+
+Underfull \hbox (badness 3058) in paragraph at lines 502--505
+[]\T1/ptm/n/it/10 John W Creswell, William E Han-son, Vicki L
+ []
+
+)
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 456.
+Package pdftex.def Info: notaglinelogo.png  used on input line 1900.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -2190,52 +2032,22 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [44]
-Underfull \hbox (badness 10000) in paragraph at lines 463--466
-[]\T1/ptm/n/it/10 GroupLens.  Movie-lens 20m dataset.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 463--466
-[]$\T1/ptm/n/it/10 https : / / www . kaggle . com / datasets / grouplens /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 493--495
-[]\T1/ptm/n/it/10 Github repos-i-tory for ter-ramycelium
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 493--495
-\T1/ptm/n/it/10 helm charts and ap-pli-ca-tions.
- []
-
-
-Overfull \hbox (117.55244pt too wide) in paragraph at lines 493--495
-\T1/ptm/n/it/10 https://anonymous.4open.science/r/helmChartsAndApplicationsForMetamycelium-
- []
-
-
-Underfull \hbox (badness 3058) in paragraph at lines 497--500
-[]\T1/ptm/n/it/10 John W Creswell, William E Han-son, Vicki L
- []
-
-)
-<Pouya-Ataei.jpg, id=955, 301.125pt x 376.40625pt>
+<Pouya-Ataei.jpg, id=960, 301.125pt x 376.40625pt>
 File: Pouya-Ataei.jpg Graphic file (type jpg)
 <use Pouya-Ataei.jpg>
-Package pdftex.def Info: Pouya-Ataei.jpg  used on input line 1899.
+Package pdftex.def Info: Pouya-Ataei.jpg  used on input line 1900.
 (pdftex.def)             Requested size: 72.26688pt x 90.33359pt.
 File: Pouya-Ataei.jpg Graphic file (type jpg)
 <use Pouya-Ataei.jpg>
-Package pdftex.def Info: Pouya-Ataei.jpg  used on input line 1899.
+Package pdftex.def Info: Pouya-Ataei.jpg  used on input line 1900.
 (pdftex.def)             Requested size: 72.26688pt x 90.33359pt.
 File: bullet.png Graphic file (type png)
 <use bullet.png>
-Package pdftex.def Info: bullet.png  used on input line 1903.
+Package pdftex.def Info: bullet.png  used on input line 1904.
 (pdftex.def)             Requested size: 5.0pt x 14.6871pt.
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 1905.
+Package pdftex.def Info: notaglinelogo.png  used on input line 1906.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -2252,12 +2064,11 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
 
-[45 <./Pouya-Ataei.jpg>] (./main.aux)
+[45
+
+ <./Pouya-Ataei.jpg>] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-
-LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -2266,21 +2077,21 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 5F8DEB751A546A71A42B823AF2360815;12878.
  ) 
 Here is how much of TeX's memory you used:
- 13824 strings out of 476025
- 233908 string characters out of 5779036
+ 13827 strings out of 476025
+ 233959 string characters out of 5779036
  1882388 words of memory out of 5000000
- 33686 multiletter control sequences out of 15000+600000
+ 33688 multiletter control sequences out of 15000+600000
  595161 words of font info for 132 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,13n,76p,1659b,905s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,13n,76p,1659b,813s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{section*.1} has been referenced but does not exist, replaced by a fixed one
 
 </opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (45 pages, 3540479 bytes).
+Output written on main.pdf (45 pages, 3539794 bytes).
 PDF statistics:
- 1097 PDF objects out of 1200 (max. 8388607)
- 945 compressed objects within 10 object streams
- 322 named destinations out of 1000 (max. 500000)
+ 1100 PDF objects out of 1200 (max. 8388607)
+ 948 compressed objects within 10 object streams
+ 323 named destinations out of 1000 (max. 500000)
  728 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -447,7 +447,8 @@ Artifact~Hub Team.
 
 \bibitem{HashiCorpVaultHelm2023}
 HashiCorp.
-\newblock Vault helm chart, 2023.
+\newblock Vault helm chart.
+\newblock https://artifacthub.io/packages/helm/hashicorp/vault, 2023.
 
 \bibitem{YelpDataset}
 Yelp.
@@ -463,6 +464,10 @@ NEMAC+FernLeaf Collaborative.
 {GroupLens}.
 \newblock Movielens 20m dataset.
 \newblock \url{https://www.kaggle.com/datasets/grouplens/movielens-20m-dataset}, 2024.
+
+\bibitem{visualcrossing}
+Visual crossing.
+\newblock \url{https://www.visualcrossing.com/}.
 
 \bibitem{Carroll1995}
 John~M. Carroll.

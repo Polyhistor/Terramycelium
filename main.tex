@@ -674,29 +674,30 @@ After establishing the fundamental scripts for initialising the cluster, the pro
 
 We conducted an extensive search for helm charts for all artefact components and selected a mature and well respected chart from Bitnami for Nginx. Using this method is favoured over developing unique directives for Nginx ingress in Kubernetes and linking services to each other through Kubernetes architectural elements such as Services or StatefulSets.
 
-After this a search has been done for other charts for other components of the concrete architecture on Artefact Hub. After selecting an appropriate chart for Nginx ingress, Keycloak, and Vault, the telemetry processor service is created. 
+After this, a search has been done for other charts for other components of the concrete architecture on Artefact Hub. After selecting an appropriate chart for Nginx ingress, Keycloak, and Vault, the telemetry processor service is created. 
 
-Initially, a FastAPI app is set up in this procedure. The programme is containerised using Docker, hosted on Github sites, and integrated into Terraform helm release resources for deployment on the local KIND cluster. The Kubernetes ingress controller is configured as Nginx and deployed to the local cluster using Terraform. 
+Initially, a FastAPI app is set up. The programme is containerised using Docker, hosted on Github sites, and integrated into Terraform helm release resources for deployment on the local KIND cluster. The Kubernetes ingress controller is configured as Nginx and deployed to the local cluster using Terraform. 
 
-Once the control setup is established, the ingress resources are configured to direct traffic to Kafka-rest-proxy. The Kafka-rest-proxy is included in the artefact to simplify the data access from the cluster. Kafka utilises a binary protocol instead of HTTP, whereas most services depend on HTTP for network connection. 
-
-
-Once the Nginx ingress and Kafka REST proxy are properly setup, Keycloak is installed and incorporated into various components of the architecture. The Vault is integrated into the cluster using HashiCorp's official helm chart \cite{HashiCorpVaultHelm2023}. 
+Once the ingress controller is established, the ingress resources are configured to direct traffic to Kafka-rest-proxy. The Kafka-rest-proxy is included in the artefact to simplify the data access from the cluster. Kafka utilises the binary protocol instead of HTTP, whereas most services depend on HTTP for network connection. 
 
 
-Next, the major system to be implemented is Data Lichen. Data Lichen required a new frontend to be developed from the beginning, a template engine for Node.js called EJS, was selected. This template engine was selected for its ability to simplify development and speed up the operations of this trial. 
 
-The goal is to create a simple user interface for Data Lichen that successfully showcases the framework's potential design and capability, rather than building a comprehensive frontend. Various teams may opt to adopt Data Lichen in diverse manners. Data Lichen must be developed from the beginning because there is no existing open-source technology that offers the necessary features.
+Upon successful configuration of the Nginx ingress and Kafka REST proxy, Keycloak is installed and seamlessly integrated into various components of the architecture. The Vault is incorporated into the cluster using HashiCorp's official helm chart \cite{HashiCorpVaultHelm2023}. 
+
+
+Next, the major system to be implemented is Data Lichen. Data Lichen required a new frontend to be developed from the scratch. A template engine for Node.js called EJS is chosen for this purpose. This template engine was selected for its ability to simplify development and speed up the operations of this trial. 
+
+The goal is to create a simple user interface for Data Lichen that successfully showcases the framework's potential design and capability, rather than building a comprehensive frontend. Various teams may opt to adopt Data Lichen in diverse manners. Data Lichen must be developed from the scratch because there is no existing open-source technology that offers the necessary features.
 
 Once Data Lichen has been organised and implemented in the cluster, an Istio service mesh is established. To achieve this goal, various Kubernetes namespaces are established, and various services are categorised within the same namespace for the service mesh to manage and function. Istio's Kiali dashboard is implemented to enhance development experience and observability. 
 
 Minio's chart is installed and the dashboard is active. The last component that needed to be deployed was Open Policy Agent (OPA). There are multiple methods to incorporate OPA into an architecture. This can be accomplished via a solo Envoy proxy, a Kubernetes operator, a load balancer with Gloo Edge, or through Istio. 
 
-Istio was chosen because it has already been selected and deployed on the cluster. Automatically injecting policies into services inside a particular service mesh is a complex operation. The experiment involved extending the Envoy sidecar with an external authorizer API to implement inbound and outbound policies. 
+Istio was chosen because it has already been selected and deployed on the cluster. Nevertheless, automatically injecting policies into services inside a particular service mesh is a complex operation. This was done extending the Envoy sidecar with an external authorizer API to implement inbound and outbound policies. 
 
-Proficiency in Envoy, Kubernetes, Istio, Rego (OPA's policy language), and GoLang was essential. OPA is incorporated into the service mesh as an independent service known as a sidecar proxy. The OPA functions as an admission controller, evaluating requests sent to the Kubernetes API server. 
+OPA is incorporated into the service mesh as an independent service known as a sidecar proxy. The OPA functions as an admission controller, evaluating requests sent to the Kubernetes API server. 
 
-OPA assesses these petitions based on established policy guidelines. Approved requests are executed by the API server, whereas refused requests result in an error message sent to the user. OPA's policies manage all interactions among services and pods within a namespace. OPA assists in ensuring adherence to predetermined security and operational regulations within a Kubernetes setting. This is depicted in Figure~\ref{OPAISTIO}.
+OPA assesses these requests based on established policy guidelines. Approved requests are executed by the API server, whereas refused requests result in an error message sent to the user. OPA's policies manage all interactions among services and pods within a namespace. OPA assists in ensuring adherence to predetermined security and operational regulations within a Kubernetes setting. This is depicted in Figure~\ref{OPAISTIO}.
 
 \begin{figure*}[h]
   \centering
@@ -705,19 +706,19 @@ OPA assesses these petitions based on established policy guidelines. Approved re
   \label{OPAISTIO}
 \end{figure*}
 
-Once OPA was understood, the analytics service of the domain was created using the Python framework FastAPI. To meet the requirements of Terramycelium a domain incorporating operational and analytical systems must be established. Since this experiment is not a genuine business, it is logical to establish a simulated operational service that mimics real-world activity, such as generating large amounts of data at a high speed. 
+Once OPA was implemented, the analytics service of the domain was created using the Python framework FastAPI. To meet the requirements of Terramycelium a domain incorporating operational and analytical systems must be established. Since this experiment is not a genuine business, it is logical to establish a simulated operational service that mimics real-world activity, such as generating large amounts of data at a high speed. 
 
-Two important data sources studied and selected for creating these domains are the Yelp Academic Dataset \cite{YelpDataset} and the data from the U.S. Climate Resilience Toolkit's Climate Explorer \cite{ClimateExplorer}. The decision is based on the extensive and detailed data provided by each source, their accessibility, and their ability to generate valuable analytical insights when utilised together.
+Two important data sources studied and selected for creating these domains are the Yelp Academic Dataset \cite{YelpDataset} and the data from the U.S. Climate Resilience Toolkit's Climate Explorer \cite{ClimateExplorer}. This decision is based on the extensive and detailed data provided by these sources, their accessibility, and their ability to generate valuable analytical insights when utilised together.
 
-The Yelp Academic Dataset is selected for its comprehensive compilation of restaurant reviews, containing structured and semi-structured data that encompasses customer feedback, business information, and temporal patterns. Another option, the MovieLens dataset \cite{MovieLens20MDataset}, was found less suitable because it focuses only on movie ratings, limiting the scope of potential analysis.
+The Yelp Academic Dataset is selected for its comprehensive compilation of restaurant reviews, containing structured and semi-structured data that encompasses customer feedback, business information, and temporal patterns. Another option, the MovieLens dataset \cite{MovieLens20MDataset}, has been considered as well, but was found less suitable because it focuses only on movie ratings, limiting the scope of potential analysis.
 
-The climatic Explorer dataset, which provides a detailed record of past and predicted climatic factors in the United States, is selected as an appropriate option for studying possible connections between weather trends and restaurant evaluations. Although options like Visual Crossing Weather Data Services have been examined, Climate Explorer's extensive global coverage and historical data are preferred.
+The climatic Explorer dataset, which provides a detailed record of past and predicted climatic factors in the United States, is selected as an appropriate option for studying possible connections between weather trends and restaurant evaluations. Although options like Visual Crossing Weather Data Services \cite{visualcrossing} have been examined, Climate Explorer's extensive global coverage and historical data are preferred.
 
 The datasets qualify as BD because of their amount, variety, and velocity. The Yelp Academic Dataset comprises millions of reviews for over a hundred thousand businesses, making it a data source with a large volume and variety. The Climate Explorer dataset, updated frequently, adds a speed component to the data structure. Collectively, they offer a chance for sophisticated analytical investigations in a data-rich setting.
 
 \subsection{Stage 2: Amalgamation}
 
-The initial phase of developing the prototype involves establishing the foundational services within the cluster. This step focuses on establishing connections and ensuring that the architecture can effectively react to external inputs. Selected situations are applied to the system to achieve this. 
+The initial phase of developing the prototype involves establishing the foundational services within the cluster. This step focuses on establishing connections and ensuring that the architecture can effectively react to external stimuli. Selected situations are applied to the system to achieve this. 
 
 Scenarios are commonly used to evaluate new architectural designs because they offer a robust way to simulate real-world situations, allowing for the assessment of the architecture's performance in different scenarios. 
 
@@ -728,7 +729,7 @@ Based on the templates in Carroll's work \cite{Carroll1995} and the examples in 
 \begin{table}[tbp]
    \renewcommand{\arraystretch}{1.5} % Adjust v
   \caption{Scenario S1: High Volume Data Ingestion Scenario}
-  \begin{tabularx}{\columnwidth}{|>{\raggedright\arraybackslash}p{5cm}|X|}
+  \begin{tabularx}{\columnwidth}{|>{\raggedright\arraybackslash}p{2.8cm}|X|}
   \hline
   \textbf{Scenario Description:} & The system is subjected to a high volume of data, simulating peak data ingestion rates. The scenario is implemented when Domain A retrieves high volumes of data from Domain B, and processes it.  \\
   \hline
@@ -743,7 +744,7 @@ Based on the templates in Carroll's work \cite{Carroll1995} and the examples in 
 \begin{table}[tbp]
    \renewcommand{\arraystretch}{1.5} % Adjust v
   \caption{Scenario S2: High Velocity Data Ingestion Scenario}
-  \begin{tabularx}{\columnwidth}{|>{\raggedright\arraybackslash}p{5cm}|X|}
+  \begin{tabularx}{\columnwidth}{|>{\raggedright\arraybackslash}p{2.8cm}|X|}
   \hline
   \textbf{Scenario Description:} & The system is subjected to a high velocity of data, simulating peak data ingestion rates. The scenario is implemented when Domain A streams data into domain B and domain B stream processes the data.    \\
   \hline
@@ -757,7 +758,7 @@ Based on the templates in Carroll's work \cite{Carroll1995} and the examples in 
 \begin{table}[tbp]
    \renewcommand{\arraystretch}{1.5} % Adjust v
   \caption{Scenario S3: Data Variety Scenario}
-  \begin{tabularx}{\columnwidth}{|>{\raggedright\arraybackslash}p{5cm}|X|}
+  \begin{tabularx}{\columnwidth}{|>{\raggedright\arraybackslash}p{2.8cm}|X|}
   \hline
   \textbf{Scenario Description:} & The system is exposed to a diverse range of data types and formats. This scenario is implemented when domain B retrieves files in different format from domain A and processes it. \\
   \hline
@@ -771,7 +772,7 @@ Based on the templates in Carroll's work \cite{Carroll1995} and the examples in 
 \begin{table}[tbp]
    \renewcommand{\arraystretch}{1.5} % Adjust v
   \caption{Scenario S4: Complex Query Scenario}
-  \begin{tabularx}{\columnwidth}{|>{\raggedright\arraybackslash}p{5cm}|X|}
+  \begin{tabularx}{\columnwidth}{|>{\raggedright\arraybackslash}p{2.8cm}|X|}
   \hline
   \textbf{Scenario Description:} & The system processes complex queries that involve multiple large datasets. This scenario happens when an external data scientist queries both domains and tries to understand a relationship between the datasets. \\
   \hline
@@ -785,7 +786,7 @@ Based on the templates in Carroll's work \cite{Carroll1995} and the examples in 
 \begin{table}[tbp]
    \renewcommand{\arraystretch}{1.5} % Adjust v
   \caption{Scenario S5: Secret Management Scenario}
-  \begin{tabularx}{\columnwidth}{|>{\raggedright\arraybackslash}p{5cm}|X|}
+  \begin{tabularx}{\columnwidth}{|>{\raggedright\arraybackslash}p{2.8cm}|X|}
   \hline
   \textbf{Scenario Description:} & This scenario underscores the system's ability to manage secrets securely and efficiently, focusing on storage, retrieval, and rotation using Hashicorp Vault in conjunction with OpenID Connect's standard flow with bearer tokens. \\
   \hline
@@ -799,7 +800,7 @@ Based on the templates in Carroll's work \cite{Carroll1995} and the examples in 
 \begin{table}[tbp]
    \renewcommand{\arraystretch}{1.5} % Adjust v
   \caption{Scenario S6: Data Security Scenario}
-  \begin{tabularx}{\columnwidth}{|>{\raggedright\arraybackslash}p{5cm}|X|}
+  \begin{tabularx}{\columnwidth}{|>{\raggedright\arraybackslash}p{2.8cm}|X|}
   \hline
   \textbf{Scenario Description:} & The system's capability is evaluated regarding ensuring data security throughout access, processing, and transmission. OpenID Connect with bearer tokens is leveraged for authentication. \\
   \hline
@@ -822,11 +823,11 @@ By doing this, important measurements are recorded, leading to a more thorough c
 
 Before establishing the inter-domain link, it is important to review the intra-domain flow. Each operational service in the domain handles data by initially receiving an event from the analytical service and then requesting the data. The data is kept in Minio after being processed. A message is sent to a particular topic to indicate that the data storage process has been completed. 
 
-The message is transmitted to a Kafka-rest-proxy and then to the Kafka cluster. This event contains the object's address in MinIO and other pertinent metadata. The analytics service establishes a consumer group and subscribes to a particular topic. The analytical service retrieves any new event transmitted to that topic on a background thread. 
+The message is transmitted to a Kafka-rest-proxy and then to the Kafka cluster. This event contains the object's address in MinIO and other pertinent metadata. The analytics service establishes a consumer group and subscribes to that particular topic. The analytical service retrieves any new event transmitted to that topic on a background thread. 
 
 Upon receiving the event, the analytical service utilises the metadata within the event's body to extract the object's address. Once the address is known, the analytical service directly accesses MinIO to retrieve the data. The service processes the data and saves it in an embedded SQlite database. 
 
-At this stage, the required data quality metadata and bitemporality metadata are generated. The metadata, service name, service address, and unique identifier are sent as an event to Kafka on a specified topic. Data Lichen establishes a consumer group, subscribes to a particular topic, retrieves the data, and subsequently presents the information for each domain. Data Lichen presents this information in a specially designed table as shown in Figure~\ref{dataLichenDashboard}. Utilising a distinct identification for each service guarantees that the listing and presentation of services are uniform and dependable, yielding consistent outcomes with every action. The flow is depicted in Figure~\ref{intraDomain}.
+At this stage, the required data quality metadata and bitemporality metadata are generated. The metadata, service name, service address, and unique identifier are sent as an event to Kafka on a specified topic. Data Lichen establishes a consumer group, subscribes to that particular topic, retrieves the data, and subsequently presents the information for each domain. Data Lichen presents this information in a specially designed table as shown in Figure~\ref{dataLichenDashboard}. Utilising a distinct identification for each service guarantees that the listing and presentation of services are uniform and dependable, yielding consistent outcomes with every action. The flow is depicted in Figure~\ref{intraDomain}.
 
 \begin{figure*}[h]
   \centering
@@ -842,7 +843,7 @@ At this stage, the required data quality metadata and bitemporality metadata are
   \label{intraDomain}
 \end{figure*}
 
-Domain A requests a 5GB JSON file from domain B in this instance. Domain A possesses the meteorological data, but domain B possesses the customer ratings and business data. An event is sent from the domain to Data Lichen to obtain a list of all datasets along with metadata such as actual-time, processing-time, completeness, and correctness. 
+Domain A requests a 5GB JSON file from domain B in this instance. Domain A possesses the meteorological data, but domain B possesses the customer ratings and business data. An event is sent from the domain A to Data Lichen to obtain a list of all datasets along with metadata such as actual-time, processing-time, completeness, and correctness. 
 
 The information contains the address of the data domain to be retrieved. The address is utilised to send an event to domain B for data retrieval. This activates the internal process of domain B, leading to the production and storage of datasets in the distributed storage service. After the procedure is finished, an event is sent to the data processing completion topic, to which domain A is subscribed. Figure~\ref{kafkaTopics} provides an overview of the Kafka topics utilised in this investigation.
 
@@ -872,7 +873,7 @@ These metrics collectively evaluate the system's capacity to sustain performance
 \paragraph{Data Ingestion Rate}
 Each service is instrumented using OpenTelemetry SDKs to capture telemetry data for FastAPI requests and manual spans for specified processes. The collected data is then exported to Kafka using the KafkaRESTProxyExporter class to measure the data intake rate. 
 
-Figure~\ref{openTelemetryTopic} illustrates the open telemetry Kafka topic and a large number of events recorded in this subject. The open telemetry processor service consumes all events sent to this topic. The service gathers and maintains metrics, which are then extracted by Prometheus and subsequently sent to Grafana. The flow is depicted in Figure~\ref{openTelemetryFlow}.
+Figure~\ref{openTelemetryTopic} illustrates the open telemetry Kafka topic and a large number of events recorded in this topic. The open telemetry processor service consumes all events sent to this topic. The service gathers and maintains metrics, which are then extracted by Prometheus and subsequently sent to Grafana. The flow is depicted in Figure~\ref{openTelemetryFlow}. The JSON displayed in Figure~\ref{openTelemetryTraceSpan} depicts an example of a trace span JSON that is communicated over Kafka to the open telemetry service.
 
 
 \begin{figure*}[h]
@@ -889,7 +890,7 @@ Figure~\ref{openTelemetryTopic} illustrates the open telemetry Kafka topic and a
   \label{openTelemetryFlow}
 \end{figure*}
 
-The JSON displayed in Figure~\ref{openTelemetryTraceSpan} depicts an example of a trace span JSON that is communicated over Kafka to the open telemetry service.
+
 
 \begin{figure}[h!]
   \centering
@@ -898,7 +899,7 @@ The JSON displayed in Figure~\ref{openTelemetryTraceSpan} depicts an example of 
   \label{openTelemetryTraceSpan}
 \end{figure}
 
-Before presenting the experiment results, it is crucial to define the specific meaning of `heavy load of data' in the context of this study. In BD, there is no commonly accepted criterion for defining 'high volume', particularly in decentralised, domain-driven architectures such as Terramycelium. There is no single standard benchmark that universally defines what qualifies as a heavy data load in these systems. 
+Before presenting the experiment results, it is important to define the specific meaning of `heavy load of data' in the context of this study. In BD, there is no commonly accepted criterion for defining `high volume', particularly in decentralised, domain-driven architectures such as Terramycelium. There is no single standard benchmark that universally defines what qualifies as a heavy data load in these systems. 
 
 Academic research and business reports suggest that daily data intake can reach terabytes or more, particularly in high-velocity streams such as social media or e-commerce transactions \cite{AtaeiBigDataEnvirons}. 
 
@@ -979,7 +980,7 @@ The system's performance during large data input is empirically evaluated by vis
 \end{table}
 
 
-In addition, the data acquired in the analytical service of the weather domain is presented in the Table \ref{dataIngestedInWeatherDomainTable}.
+In addition, the data acquired in the analytical service of the weather domain is presented in the Table \ref{dataIngestedInWeatherDomainAnalyticalServiceTable}. After capturing the ingestion rate in bytes, it is essential to further explore other metrics to provide a comprehensive analysis of the system's performance during high data load conditions.
 
 \begin{table}[ht]
   \centering
@@ -1005,12 +1006,12 @@ In addition, the data acquired in the analytical service of the weather domain i
   \label{dataIngestedInWeatherDomainAnalyticalServiceTable}
 \end{table}
 
-After capturing the ingestion rate in bytes, it is essential to further explore other metrics to provide a comprehensive analysis of the system's performance during high data load conditions.
+
 
 
 \paragraph{Ingestion Latency}
 
-Ingestion latency measures the time between when a data record is published to Kafka and when it is processed by the system. It is calculated for each Kafka record that is ingested using a specific formula.
+Ingestion latency measures the time between when a data record is published to Kafka and when it is processed by the domains. It is calculated for each Kafka record that is ingested using a specific formula.
 
 \[ Latency = current\_time - publish\_time \] 
 
@@ -1102,13 +1103,13 @@ Similarly, as shown in Figure~\ref{kubernetesClusterReadAndWrite}, an average of
   \label{kubernetesClusterNetworkStatistics}
 \end{figure}
 
-After thoroughly analysing the telemetry and infrastructure data, it is clear that the asynchronous and event-driven architecture of this BD architecture positively impacts its performance dynamics. In this asynchronous event-driven paradigm, it is crucial to acknowledge that the amount of data handled, measured in gigabytes, is less important than the system's efficiency in handling incoming data streams.
+After thoroughly analysing the telemetry and infrastructure data, it is clear that the asynchronous and event-driven architecture of this BD architecture positively impacts its performance dynamics. In this asynchronous event-driven paradigm, it is important to acknowledge that the amount of data handled, measured in gigabytes, is less important than the system's efficiency in handling incoming data streams.
 
 The telemetry service demonstrates its resilience in data processing by maintaining a continuously moderate CPU consumption, even when faced with fluctuating data input rates. Similarly, the Kubernetes cluster occasionally experiences surges in CPU utilisation during data-intensive tasks, but overall it maintains a well-distributed workload. This is evidence of the system's proficiency in handling and allocating work among its nodes.
 
 The data statistics about read, write, and network transfers provide additional clarification on this matter. Although the amount of data being read, written, or transported in gigabytes may appear substantial, what truly matters is not the sheer number, but rather the system's efficiency in managing these processes. The average data read is 5.37GB and the average data written is 12.2GB. These figures, when compared to the network statistics shown in Figure~\ref{kubernetesClusterNetworkStatistics}, demonstrate the system's effectiveness in managing data and performing network operations without becoming overloaded.
 
-The metrics not only demonstrate the stability and efficiency of our BD infrastructure, but also offer empirical evidence that, in an event-driven asynchronous system like Terramycelium, the focus is not solely on the amount of data processed, but rather on the effectiveness and reliability with which it is managed. This observation indicates possible consequences for scalability considerations in future implementations of similar architectures.
+The metrics not only demonstrate the stability and efficiency of the BD infrastructure, but also offer empirical evidence that, in an event-driven asynchronous system like Terramycelium, the focus is not solely on the amount of data processed, but rather on the effectiveness and reliability with which it is managed. This observation indicates possible consequences for scalability considerations in future implementations of similar architectures.
 
 
 \paragraph{Memory Utilisation}
@@ -1210,7 +1211,7 @@ A methodical analysis is conducted based on the metrics of interest:
   \label{memoryUtilizationInWeatherDomainInHighVelocityCase}
 \end{figure}
 
-Furthermore, the CPU consumption has only grown by 5\% compared to the statistics mentioned in Section~\ref{cpuUsageInS1} for both the Kubernetes cluster and its associated services. Therefore, no further data is provided for this metric.
+Furthermore, the CPU consumption has only grown by 5\% compared to the statistics mentioned in the section titled CPU Usage for both the Kubernetes cluster and its associated services. Therefore, no further data is provided for this metric.
 
 \paragraph{Duration of Processing and Latency of Ingestion} The latency of ingestion, defined as the time delay between receiving a data packet and processing it, remained constant during the observed timeframe. The delay continuously registers a value of 0.0000148 seconds at various time intervals throughout the monitoring period. This observation suggests that the system's data ingestion mechanism does not experience substantial delays in processing. However, a more comprehensive evaluation can be obtained by comparing its performance benchmarks with other platforms (Figure~\ref{kafkaIngestionLatencyInStreamingCase}). The system's ability to maintain consistent latency indicates its capacity to sustain performance levels without interruption, especially during periods of heavy data flow.
 
@@ -1244,7 +1245,7 @@ Based on the extensive results obtained from Scenarios S1 and S2, which include 
 
 Subsequently, an evaluation is conducted for Scenarios S4, S5, and S6 as a whole. The decision to test these scenarios concurrently is based on the fact that they have common system operations and the capacity to provide a thorough system evaluation while maximising efficiency. Furthermore, the interconnected relationship between OpenID Connect and bearer token systems implies that doing a simultaneous test would provide a comprehensive understanding of the system's performance.
 
-A Python service is initialised to faithfully replicate the behaviour and workload of an external data scientist. While Jupyter Notebook was originally designed to replicate the tasks performed by data scientists, a separate Python service has emerged as the best option. Its inherent low-level characteristics allow for precise management and enhance the efficiency of capturing metrics. Similar to previous services, this Python service is equipped to provide telemetry data to a telemetry processing application via Kafka REST proxy. 
+A Python service is initialised to replicate the behaviour and workload of an external data scientist. While Jupyter Notebook was originally designed to replicate the tasks performed by data scientists, a separate Python service has emerged as the best option. Its inherent low-level characteristics allow for precise management and enhance the efficiency of capturing metrics. Similar to previous services, this Python service is equipped to provide telemetry data to a telemetry processing application via Kafka REST proxy. 
 
 Keycloak, the authentication and authorization server, plays a crucial role in this ecosystem. Upon initiation, the Python service acquires authorization by creating a client in Keycloak. The following confidential information, crucial for the functioning of the service, is securely stored in and retrieved from HashiCorp Vault. 
 
@@ -1323,7 +1324,7 @@ The duration of query processing consistently stayed at 10 seconds throughout th
 \end{figure*}
 
 
-An essential element contributing to the system's reliable performance is its domain-driven asynchronous and event-driven architecture, which is in line with the research conducted by Braun (2021) on distributed systems. This architecture demonstrates exceptional proficiency in handling simultaneous data access and ensuring the integrity of domain models in asynchronous scenarios, concepts that are also discussed in Kleppmann's renowned book, "Designing Data-Intensive Applications" (2017). The significance of data consistency and network resilience in contemporary distributed architectures is underscored by Kleppmann (2017). The prototype's capacity to manage simultaneous updates and uphold data integrity demonstrates the effectiveness of this architectural approach in the construction of distributed systems.
+An essential element contributing to the system's reliable performance is its domain-driven asynchronous and event-driven architecture, which is in line with the research conducted by Braun (2021) on distributed systems. This architecture demonstrates good proficiency in handling simultaneous data access and ensuring the integrity of domain models in asynchronous scenarios, concepts that are also discussed in Kleppmann's renowned book, "Designing Data-Intensive Applications" (2017). The prototype's capacity to manage simultaneous updates and uphold data integrity demonstrates the effectiveness of this architectural approach in the construction of distributed systems.
 
 
 \subsection{Challenges and Duration of the Experiment}
@@ -1333,7 +1334,7 @@ The experimentation phase lasts around four months and involves a methodical pro
 \subsubsection{Challenges in Infrastructure} 
 
 \begin{enumerate}[label=({\alph*}) , leftmargin=30px]
-    \item The confluent helm charts were incompatible because they relied on an alpha version of a Kubernetes resource called PodResourceBudget. The resource was in alpha stage until V1.22, however this experiment was conducted on version 1.27. The Nginx Ingress attempted to utilise the cloud manager to establish a load balancer, which led to the ingress service's external IP being stuck in a perpetual pending state. This happened because the cluster was initiated in a local development environment, resulting in the unavailability of a cloud service to deploy a load balancer such as EKS or AKS.
+    \item The Confluent Helm charts were incompatible because they relied on an alpha version of a Kubernetes resource called PodResourceBudget. The resource was in alpha stage until V1.22, however this experiment was conducted on version 1.27. The Nginx Ingress attempted to utilise the cloud manager to establish a load balancer, which led to the ingress service's external IP being stuck in a perpetual pending state. This happened because the cluster was initiated in a local development environment, resulting in the unavailability of a cloud service to deploy a load balancer such as EKS or AKS.
     \item A further infrastructure obstacle emerged with the Kafka pod, which had recurring failures. Due to Kafka's extensive use of file storage, such as segment files and log files, the initial allocation of 64GB for the Kafka instance was inadequate. Afterwards, the configuration was modified, increasing the cluster storage capacity to 300GB.
     \item During the development process, Prometheus and Grafana need a host address for the purpose of intercommunication. The same applied to both the telemetry processing service and the Prometheus metrics scraper. Nevertheless, due to the fact that the prototype was created within a solitary computational setting, a significant portion of the communication relied on the main system. This presented challenges, as the loopback address or localhost in each Docker container resolved to the container's loopback interface, rather than the host's interface. In order to address this problem, a separate DNS was utilised that specifically pointed to the host.
 \end{enumerate} 
@@ -1342,7 +1343,7 @@ The experimentation phase lasts around four months and involves a methodical pro
 
 \begin{enumerate} [label=({\alph*}) , leftmargin=30px]
   \item An important obstacle was encountered when attempting to establish a connection between the Keycloak helm chart and the Postgress DB, despite specifically configuring a login and password. The cluster necessitated repeated restarts. The final answer entailed transitioning from Minikube to KIND.
-    The user's text is simply "item". Once the entrance was established, the objective was to precisely route traffic to different services. The majority of services had their own dedicated servers, which required the proper configuration of the reverse proxy to ensure that upstream servers could reply effectively. For example, the Keycloak server experienced difficulties in identifying some host paths, as it expected a root path for serving files. Both the server and proxy required modifications to ensure proper functioning. Most services encountered similar problems because many open-source software needed to be configured in order to deliver their assets on paths other than the root.
+     Once the entrance was established, the objective was to precisely route traffic to different services. The majority of services had their own dedicated servers, which required the proper configuration of the reverse proxy to ensure that upstream servers could reply effectively. For example, the Keycloak server experienced difficulties in identifying some host paths, as it expected a root path for serving files. Both the server and proxy required modifications to ensure proper functioning. Most services encountered similar problems because many open-source software needed to be configured in order to deliver their assets on paths other than the root.
     The user's text is a single item. Hosting Vault UI through an ingress encountered difficulties because Vault-UI carries out several redirections on different application paths, making rewriting or pass-through methods ineffective. This problem elicited inquiries on prominent online platforms such as Stackoverflow and Vault's GitHub repository. As of February 7th, 2023, no feasible answer became apparent. The only feasible method entailed allocating a domain to vault-ui and directing traffic through a load balancer. Nevertheless, as Vault-UI primarily served as a graphical interface for interacting with Vault and not a core architectural element, the experiment's integrity remained unaffected.
     The user's text is a single item. Despite being deployed as a helm chart, the utilisation of Prometheus for metrics and logs retrieval by Kiali made the network connection complex. Difficulties emerged as a result of intricate networking issues and the inherent service accounts of Kubernetes. Understanding the external authorizer API used by Envoy and enabling it in a Kubernetes cluster's service mesh within a specified namespace was not easy. There was a widespread confusion over the lifecycle of service mesh objects, the admission reviews, and the admission controller.
 \end{enumerate}
@@ -1351,11 +1352,11 @@ The experimentation phase lasts around four months and involves a methodical pro
 
 \begin{enumerate} [label=({\alph*}) , leftmargin=30px]
     \item One of the main difficulties in designing the data quantum was figuring out the precise nature of the data resolution provided by the analytical service. Using FastAPI, which is inherently event-driven, it is not advisable to block the main thread by making continuous requests to an HTTP endpoint for events. A solution utilised a function that was executed conditionally to retrieve all events related to a certain topic, either at the system's initialization or through an endpoint.
-    The user's text is simply "item". Another problem connected to the creation of the local-host-based cluster came in the context of ingress. In order to route incoming traffic to the Kafka REST proxy, nginx was configured to perform target rewriting. While this method is suitable for incoming network requests, outgoing requests present challenges. For instance, when the Kafka rest proxy API provided the consumer URL, it excluded the rewriting rules, which required the use of custom code to alter the URL.
-    The user's text is simply "item". Handling the data flow for domain B, specifically the customer reviews domain, presented difficulties because of the substantial size of the Yelp academic datasets, with some reaching up to 5GB. In order to provide version control and avoid server and stream timeouts, it was necessary to divide these JSON files into smaller chunks. A bespoke Python script was created to manage the division of JSON files into smaller chunks, guaranteeing that no file surpassed 99MB.
+     Another problem connected to the creation of the local-host-based cluster came in the context of ingress. In order to route incoming traffic to the Kafka REST proxy, nginx was configured to perform target rewriting. While this method is suitable for incoming network requests, outgoing requests present challenges. For instance, when the Kafka rest proxy API provided the consumer URL, it excluded the rewriting rules, which required the use of custom code to alter the URL.
+     Handling the data flow for domain B, specifically the customer reviews domain, presented difficulties because of the substantial size of the Yelp academic datasets, with some reaching up to 5GB. In order to provide version control and avoid server and stream timeouts, it was necessary to divide these JSON files into smaller chunks. A bespoke Python script was created to manage the division of JSON files into smaller chunks, guaranteeing that no file surpassed 99MB.
     \item SQLite, used in analytical services to store many types of data, presented difficulties with semi-structured data such as JSON. The lack of uniformity in JSON data formats within the customer domain required the development of separate tables to accommodate various semi-structured data sets. In order to address this issue, a bespoke function was created to dynamically generate SQLite tables.
-    The user's text is simply "item". A noticeable inefficiency arose when initially gathering metrics from different services using normal Python and Node APIs. It was quickly determined that many traces were missing important metadata, such as service name, service version, and environment, which are necessary for proper visualisation. This mistake required a repetition of the first scenario in order to provide the best possible visualisation and narrative consistency.
-    The user's text is simply a bullet point marker. An associated matter pertained to the automated removal of outdated Kafka consumers by the Kafka-rest-proxy service. As a consequence of this activity, there was a failure in the service when making further queries to Kafka. In order to alleviate this issue, a bespoke function was created to modify the consumer and restore a connection to the REST server.
+     A noticeable inefficiency arose when initially gathering metrics from different services using normal Python and Node APIs. It was quickly determined that many traces were missing important metadata, such as service name, service version, and environment, which are necessary for proper visualisation. This mistake required a repetition of the first scenario in order to provide the best possible visualisation and narrative consistency.
+    An associated matter pertained to the automated removal of outdated Kafka consumers by the Kafka-rest-proxy service. As a consequence of this activity, there was a failure in the service when making further queries to Kafka. In order to alleviate this issue, a bespoke function was created to modify the consumer and restore a connection to the REST server.
 \end{enumerate}
 
 \subsubsection{Performance Challenges} 
