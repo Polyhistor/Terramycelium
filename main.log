@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Homebrew) (preloaded format=pdflatex 2023.6.22)  28 MAR 2024 17:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Homebrew) (preloaded format=pdflatex 2023.6.22)  28 MAR 2024 17:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1769,18 +1769,13 @@ Underfull \hbox (badness 1603) in paragraph at lines 1797--1798
 File: images/Quantitative-Summary-For-Codes.png Graphic file (type png)
 <use images/Quantitative-Summary-For-Codes.png>
 Package pdftex.def Info: images/Quantitative-Summary-For-Codes.png  used on input line 1809.
-(pdftex.def)             Requested size: 242.67355pt x 93.7876pt.
-
-Overfull \hbox (1.32298pt too wide) in paragraph at lines 1838--1838
-[]|\T1/ptm/b/n/8 10| 
- []
-
+(pdftex.def)             Requested size: 505.12177pt x 195.23015pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 1853.
+Package pdftex.def Info: notaglinelogo.png  used on input line 1835.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1797,10 +1792,15 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
 
-[39 <./images/Quantitative-Summary-For-Codes.png>]
+[39]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 3158) has occurred while \output is active []
+
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 1868.
+Package pdftex.def Info: notaglinelogo.png  used on input line 1840.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1817,13 +1817,13 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
 
-[40]
-Underfull \hbox (badness 2689) in paragraph at lines 1869--1870
+[40 <./images/Quantitative-Summary-For-Codes.png>]
+Underfull \hbox (badness 2689) in paragraph at lines 1843--1844
 []\T1/ptm/n/n/10 Expert feed-back pro-vided valu-able in-sights into the
  []
 
 
-Underfull \hbox (badness 6927) in paragraph at lines 1871--1872
+Underfull \hbox (badness 6927) in paragraph at lines 1845--1846
 []\T1/ptm/n/n/10 The domain-driven and dis-tributed na-ture of Ter-
  []
 
@@ -1837,14 +1837,9 @@ Underfull \hbox (badness 2418) in paragraph at lines 28--32
 []\T1/ptm/n/it/10 Nicolaus Henke, Jacques Bughin, Michael Chui,
  []
 
-
-Underfull \hbox (badness 7238) in paragraph at lines 39--42
-[]\T1/ptm/n/it/10 Robert Cloutier, Ger-rit Muller, Di-nesh Verma,
- []
-
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 52.
+Package pdftex.def Info: notaglinelogo.png  used on input line 38.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1862,6 +1857,11 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [41]
+Underfull \hbox (badness 7238) in paragraph at lines 39--42
+[]\T1/ptm/n/it/10 Robert Cloutier, Ger-rit Muller, Di-nesh Verma,
+ []
+
+
 Underfull \hbox (badness 2818) in paragraph at lines 104--107
 []\T1/ptm/n/it/10 Antonio Buc-chiarone, Nicola Drag-oni, Schahram
  []
@@ -1891,14 +1891,9 @@ Underfull \hbox (badness 2126) in paragraph at lines 172--175
 []\T1/ptm/n/it/10 Mustapha Der-ras, Lau-rent Deru-elle, Jean Michel
  []
 
-
-Underfull \hbox (badness 2103) in paragraph at lines 187--190
-[]\T1/ptm/n/it/10 Roel J Wieringa.  De-sign sci-ence method-ol-ogy
- []
-
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 195.
+Package pdftex.def Info: notaglinelogo.png  used on input line 181.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1916,13 +1911,18 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [42]
+Underfull \hbox (badness 2103) in paragraph at lines 187--190
+[]\T1/ptm/n/it/10 Roel J Wieringa.  De-sign sci-ence method-ol-ogy
+ []
+
+
 Underfull \hbox (badness 3209) in paragraph at lines 207--209
 []\T1/ptm/n/it/10 IEEE In-ter-na-tional Or-ga-ni-za-tion for Stan-dard-iza-
  []
 
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 322.
+Package pdftex.def Info: notaglinelogo.png  used on input line 309.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1989,7 +1989,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 464--467
 []$\T1/ptm/n/it/10 https : / / www . kaggle . com / datasets / grouplens /
  []
 
+File: notaglinelogo.png Graphic file (type png)
+<use notaglinelogo.png>
+Package pdftex.def Info: notaglinelogo.png  used on input line 492.
+(pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
+Overfull \hbox (505.12177pt too wide) has occurred while \output is active
+[]
+ []
+
+
+Overfull \hbox (505.12177pt too wide) has occurred while \output is active
+[]
+ []
+
+
+Underfull \hbox (badness 10000) has occurred while \output is active
+[]
+ []
+
+[44]
 Underfull \hbox (badness 10000) in paragraph at lines 498--500
 []\T1/ptm/n/it/10 Github repos-i-tory for ter-ramycelium
  []
@@ -2009,42 +2028,23 @@ Underfull \hbox (badness 3058) in paragraph at lines 502--505
 []\T1/ptm/n/it/10 John W Creswell, William E Han-son, Vicki L
  []
 
-File: notaglinelogo.png Graphic file (type png)
-<use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 505.
-(pdftex.def)             Requested size: 91.32pt x 23.1352pt.
-
-Overfull \hbox (505.12177pt too wide) has occurred while \output is active
-[]
- []
-
-
-Overfull \hbox (505.12177pt too wide) has occurred while \output is active
-[]
- []
-
-
-Underfull \hbox (badness 10000) has occurred while \output is active
-[]
- []
-
-[44])
-<Pouya-Ataei.jpg, id=960, 301.125pt x 376.40625pt>
+)
+<Pouya-Ataei.jpg, id=958, 301.125pt x 376.40625pt>
 File: Pouya-Ataei.jpg Graphic file (type jpg)
 <use Pouya-Ataei.jpg>
-Package pdftex.def Info: Pouya-Ataei.jpg  used on input line 1900.
+Package pdftex.def Info: Pouya-Ataei.jpg  used on input line 1874.
 (pdftex.def)             Requested size: 72.26688pt x 90.33359pt.
 File: Pouya-Ataei.jpg Graphic file (type jpg)
 <use Pouya-Ataei.jpg>
-Package pdftex.def Info: Pouya-Ataei.jpg  used on input line 1900.
+Package pdftex.def Info: Pouya-Ataei.jpg  used on input line 1874.
 (pdftex.def)             Requested size: 72.26688pt x 90.33359pt.
 File: bullet.png Graphic file (type png)
 <use bullet.png>
-Package pdftex.def Info: bullet.png  used on input line 1904.
+Package pdftex.def Info: bullet.png  used on input line 1878.
 (pdftex.def)             Requested size: 5.0pt x 14.6871pt.
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 1906.
+Package pdftex.def Info: notaglinelogo.png  used on input line 1880.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -2074,21 +2074,21 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 5F8DEB751A546A71A42B823AF2360815;12878.
  ) 
 Here is how much of TeX's memory you used:
- 13827 strings out of 476025
- 233959 string characters out of 5779036
- 1881388 words of memory out of 5000000
- 33688 multiletter control sequences out of 15000+600000
+ 13825 strings out of 476025
+ 233919 string characters out of 5779036
+ 1877388 words of memory out of 5000000
+ 33687 multiletter control sequences out of 15000+600000
  595161 words of font info for 132 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,13n,76p,1659b,945s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,13n,76p,1659b,935s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{section*.1} has been referenced but does not exist, replaced by a fixed one
 
 </opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (45 pages, 3540558 bytes).
+Output written on main.pdf (45 pages, 3538411 bytes).
 PDF statistics:
- 1100 PDF objects out of 1200 (max. 8388607)
- 948 compressed objects within 10 object streams
- 323 named destinations out of 1000 (max. 500000)
+ 1098 PDF objects out of 1200 (max. 8388607)
+ 946 compressed objects within 10 object streams
+ 322 named destinations out of 1000 (max. 500000)
  728 words of extra memory for PDF output out of 10000 (max. 10000000)
 
