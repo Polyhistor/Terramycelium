@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Homebrew) (preloaded format=pdflatex 2023.6.22)  28 MAR 2024 14:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Homebrew) (preloaded format=pdflatex 2023.6.22)  28 MAR 2024 17:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1634,14 +1634,9 @@ Overfull \hbox (6.80005pt too wide) in paragraph at lines 1542--1547
 [] 
  []
 
-
-Overfull \hbox (6.80005pt too wide) in paragraph at lines 1558--1563
-[] 
- []
-
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 1564.
+Package pdftex.def Info: notaglinelogo.png  used on input line 1552.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1659,6 +1654,11 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [37]
+Overfull \hbox (6.80005pt too wide) in paragraph at lines 1558--1563
+[] 
+ []
+
+
 Underfull \hbox (badness 4899) in paragraph at lines 1567--1568
 []\T1/ptm/n/n/10 The ar-chi-tec-ture's adapt-able char-ac-ter-is-tics and all-
  []
@@ -1718,14 +1718,9 @@ Overfull \hbox (6.80005pt too wide) in paragraph at lines 1712--1717
 [] 
  []
 
-
-Overfull \hbox (6.80005pt too wide) in paragraph at lines 1725--1730
-[] 
- []
-
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 1734.
+Package pdftex.def Info: notaglinelogo.png  used on input line 1718.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1743,6 +1738,11 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [38]
+Overfull \hbox (6.80005pt too wide) in paragraph at lines 1725--1730
+[] 
+ []
+
+
 Overfull \hbox (6.80005pt too wide) in paragraph at lines 1738--1743
 [] 
  []
@@ -1771,9 +1771,6 @@ File: images/Quantitative-Summary-For-Codes.png Graphic file (type png)
 Package pdftex.def Info: images/Quantitative-Summary-For-Codes.png  used on input line 1809.
 (pdftex.def)             Requested size: 242.67355pt x 93.7876pt.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
 Overfull \hbox (1.32298pt too wide) in paragraph at lines 1838--1838
 []|\T1/ptm/b/n/8 10| 
  []
@@ -1783,7 +1780,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 1857.
+Package pdftex.def Info: notaglinelogo.png  used on input line 1853.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1801,18 +1798,9 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [39 <./images/Quantitative-Summary-For-Codes.png>]
-Underfull \hbox (badness 2689) in paragraph at lines 1869--1870
-[]\T1/ptm/n/n/10 Expert feed-back pro-vided valu-able in-sights into the
- []
-
-
-Underfull \hbox (badness 6927) in paragraph at lines 1871--1872
-[]\T1/ptm/n/n/10 The domain-driven and dis-tributed na-ture of Ter-
- []
-
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 1872.
+Package pdftex.def Info: notaglinelogo.png  used on input line 1868.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1829,7 +1817,17 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
 
-[40] (./main.bbl
+[40]
+Underfull \hbox (badness 2689) in paragraph at lines 1869--1870
+[]\T1/ptm/n/n/10 Expert feed-back pro-vided valu-able in-sights into the
+ []
+
+
+Underfull \hbox (badness 6927) in paragraph at lines 1871--1872
+[]\T1/ptm/n/n/10 The domain-driven and dis-tributed na-ture of Ter-
+ []
+
+(./main.bbl
 
 LaTeX Font Warning: Font shape `T1/ptm/n/it' undefined
 (Font)              using `T1/ptm/n/n' instead on input line 6.
@@ -1846,7 +1844,7 @@ Underfull \hbox (badness 7238) in paragraph at lines 39--42
 
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 67.
+Package pdftex.def Info: notaglinelogo.png  used on input line 52.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1900,7 +1898,7 @@ Underfull \hbox (badness 2103) in paragraph at lines 187--190
 
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 205.
+Package pdftex.def Info: notaglinelogo.png  used on input line 195.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1922,14 +1920,9 @@ Underfull \hbox (badness 3209) in paragraph at lines 207--209
 []\T1/ptm/n/it/10 IEEE In-ter-na-tional Or-ga-ni-za-tion for Stan-dard-iza-
  []
 
-
-Underfull \hbox (badness 1776) in paragraph at lines 329--332
-[]\T1/ptm/n/it/10 J. Rose, H. Gö-bel, S. Cron-holm, J. Hol-gers-son,
- []
-
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 342.
+Package pdftex.def Info: notaglinelogo.png  used on input line 322.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1947,6 +1940,11 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [43]
+Underfull \hbox (badness 1776) in paragraph at lines 329--332
+[]\T1/ptm/n/it/10 J. Rose, H. Gö-bel, S. Cron-holm, J. Hol-gers-son,
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 349--353
 []\T1/ptm/n/it/10 Gartner.  Es-sen-tial guide to data fab-ric.
  []
@@ -2011,10 +2009,9 @@ Underfull \hbox (badness 3058) in paragraph at lines 502--505
 []\T1/ptm/n/it/10 John W Creswell, William E Han-son, Vicki L
  []
 
-)
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 1900.
+Package pdftex.def Info: notaglinelogo.png  used on input line 505.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -2031,7 +2028,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
 
-[44]
+[44])
 <Pouya-Ataei.jpg, id=960, 301.125pt x 376.40625pt>
 File: Pouya-Ataei.jpg Graphic file (type jpg)
 <use Pouya-Ataei.jpg>
@@ -2079,16 +2076,16 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Here is how much of TeX's memory you used:
  13827 strings out of 476025
  233959 string characters out of 5779036
- 1882388 words of memory out of 5000000
+ 1881388 words of memory out of 5000000
  33688 multiletter control sequences out of 15000+600000
  595161 words of font info for 132 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,13n,76p,1659b,813s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,13n,76p,1659b,945s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{section*.1} has been referenced but does not exist, replaced by a fixed one
 
 </opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></opt/homebrew/Cellar/texlive/20230313_2/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (45 pages, 3539794 bytes).
+Output written on main.pdf (45 pages, 3540558 bytes).
 PDF statistics:
  1100 PDF objects out of 1200 (max. 8388607)
  948 compressed objects within 10 object streams
